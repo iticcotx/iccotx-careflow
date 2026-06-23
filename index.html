@@ -466,16 +466,16 @@ footer b{color:var(--txt-dim)}
 .tbtn.full{width:100%}
 
 /* ============ COMMAND HERO ============ */
-.hero{margin:18px 0 4px;padding:26px 22px;border-radius:var(--radius);position:relative;overflow:hidden;
+.hero{margin:18px 0 4px;padding:26px 22px;border-radius:var(--radius);position:relative;
   background:linear-gradient(120deg,rgba(255,255,255,.9),rgba(232,240,255,.78));
   border:1px solid var(--stroke-strong);box-shadow:var(--shadow);backdrop-filter:blur(14px)}
-.hero::after{content:"";position:absolute;inset:0;background:
+.hero::after{content:"";position:absolute;inset:0;border-radius:inherit;background:
   radial-gradient(420px 200px at 90% 0%,rgba(10,159,194,.14),transparent 70%),
   radial-gradient(420px 220px at 0% 100%,rgba(138,63,224,.12),transparent 70%);pointer-events:none}
 .hero h2{margin:0 0 4px;font-size:23px;font-weight:800;letter-spacing:-.2px}
 .hero h2 b{color:var(--cyan-deep)}
 .hero p{margin:0 0 16px;font-size:14px;color:var(--txt-dim)}
-.cmdwrap{position:relative;display:flex;gap:10px;flex-wrap:wrap;z-index:2}
+.cmdwrap{position:relative;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
 .cmdwrap input{flex:1;min-width:240px;padding:17px 18px;border-radius:14px;border:1px solid var(--stroke-strong);
   background:rgba(255,255,255,.92);color:var(--txt);font-family:inherit;font-size:17px;outline:none;transition:box-shadow var(--speed),border var(--speed)}
 .cmdwrap input:focus{border-color:var(--cyan-deep);box-shadow:0 0 0 3px rgba(10,159,194,.16),0 0 36px -12px rgba(10,159,194,.5)}
@@ -485,7 +485,7 @@ footer b{color:var(--txt-dim)}
   display:flex;align-items:center;gap:9px;white-space:nowrap;transition:transform var(--speed)}
 .cmdgo:hover{transform:translateY(-2px)}
 .cmdgo svg{width:19px;height:19px}
-.ac{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:40;background:rgba(255,255,255,.99);
+.ac{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;background:#fff;
   border:1px solid var(--stroke-strong);border-radius:14px;box-shadow:0 22px 50px -18px rgba(30,50,110,.5);
   overflow:hidden;display:none}
 .ac.show{display:block}
@@ -497,7 +497,7 @@ footer b{color:var(--txt-dim)}
 .ac-item b{font-size:14.5px;font-weight:650}
 .ac-item .acmeta{margin-left:auto;font-size:11px;color:var(--txt-mute)}
 .ac-item.gen .acn{background:linear-gradient(135deg,#8a3fe0,#6322b3)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;position:relative;z-index:2}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;position:relative;z-index:1}
 .chip{font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px;cursor:pointer;color:var(--cyan-deep);
   background:rgba(10,159,194,.09);border:1px solid rgba(10,159,194,.25);transition:all var(--speed)}
 .chip:hover{background:rgba(10,159,194,.18);transform:translateY(-1px)}
@@ -624,19 +624,6 @@ footer b{color:var(--txt-dim)}
   </div>
   <p class="hint">Tap any protocol to expand · <b id="count">7</b> chief-complaint order sets · Red-flag alerts always shown first</p>
 
-  <!-- LIVE FLOOR BOARD -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg>
-    Live Floor Board — Active Cases &amp; Real-Time KPIs
-  </div>
-  <div class="board-bar">
-    <span class="conn local" id="conn"><span class="cdot"></span><span id="connTxt">Connecting…</span></span>
-    <button class="btn primary" id="newCaseBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>New Case</button>
-    <button class="btn" id="seedBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v6M12 22v-6M2 12h6M22 12h-6"/><circle cx="12" cy="12" r="3"/></svg>Add demo data</button>
-  </div>
-  <div class="kpis" id="kpis"></div>
-  <div class="cases" id="cases"></div>
-
   <!-- PROTOCOL GRID -->
   <div class="section-title">
     <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
@@ -723,28 +710,6 @@ footer b{color:var(--txt-dim)}
 <!-- FLOATING ACTIONS -->
 <div class="fab-row">
   <button class="fab dose" id="openDose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>Dosing</button>
-  <button class="fab" id="openFast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>FAST Timer</button>
-</div>
-
-<!-- FAST TIMER MODAL -->
-<div class="modal" id="fastModal">
-  <div class="sheet">
-    <div class="sheet-head">
-      <h2 style="color:var(--p8)">⚡ Stroke FAST Timer</h2>
-      <button class="x" data-close>×</button>
-    </div>
-    <p style="font-size:12.5px;color:var(--txt-dim);margin:0">Tracks time from arrival. tPA goal: <b style="color:var(--ok)">door-to-needle ≤60 min</b>. Time = brain.</p>
-    <div class="timer-display">
-      <div class="tclock" id="clock">00:00</div>
-      <div class="tlabel">Elapsed since arrival</div>
-      <div class="tgoal" id="goalTxt">Door-to-needle target: 60:00 remaining</div>
-    </div>
-    <div class="timer-btns">
-      <button class="tbtn go" id="startTimer">Start</button>
-      <button class="tbtn" id="resetTimer">Reset</button>
-    </div>
-    <div class="milestones" id="milestones"></div>
-  </div>
 </div>
 
 <!-- WORKFLOW VIEW -->
@@ -754,37 +719,12 @@ footer b{color:var(--txt-dim)}
       <div class="wftitle"><h2 id="wfTitle">—</h2><div class="wfsub" id="wfSub"></div></div>
       <span class="wfacuity" id="wfAcuity"></span>
       <span class="wfsrc" id="wfSrc"></span>
-      <button class="wfstart" id="wfStart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Start as case</button>
       <button class="wfx" id="wfClose">×</button>
     </div>
     <div class="wftabs" id="wfTabs"></div>
     <div class="wfprog"><div id="wfbar"></div></div>
     <div class="wfbody" id="wfBody"></div>
     <div class="wfdisc">⚠ Clinical decision support only — verify against patient context, allergies, and current guidelines. Does not replace physician judgment. AI-generated workflows are unreviewed drafts.</div>
-  </div>
-</div>
-
-<!-- NEW CASE MODAL -->
-<div class="modal" id="caseModal">
-  <div class="sheet">
-    <div class="sheet-head">
-      <h2 style="color:var(--cyan-deep)">＋ New Case</h2>
-      <button class="x" data-close>×</button>
-    </div>
-    <p style="font-size:12.5px;color:var(--txt-dim);margin:0 0 14px">Arrival time is stamped now. Pick the chief complaint, then log milestones from the floor board.</p>
-    <div class="field"><label>Chief Complaint</label><div class="cc-grid" id="ccGrid"></div></div>
-    <div class="field"><label>Room / Bed label</label><input id="caseRoom" placeholder="e.g. Room 4, Triage, Hall-2" autocomplete="off"/></div>
-    <div class="field"><label>Acuity (ESI)</label>
-      <select id="caseAcuity">
-        <option value="">— optional —</option>
-        <option value="1">1 · Resuscitation</option>
-        <option value="2">2 · Emergent</option>
-        <option value="3">3 · Urgent</option>
-        <option value="4">4 · Less urgent</option>
-        <option value="5">5 · Non-urgent</option>
-      </select>
-    </div>
-    <button class="tbtn go full" id="createCase">Start Case</button>
   </div>
 </div>
 
@@ -1093,43 +1033,7 @@ function closeModal(el){el.classList.remove('show');}
 document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',e=>closeModal(e.target.closest('.modal'))));
 document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m);}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal.show').forEach(closeModal);});
-document.getElementById('openFast').addEventListener('click',()=>openModal('fastModal'));
 document.getElementById('openDose').addEventListener('click',()=>{openModal('doseModal');document.getElementById('doseSearch').focus();});
-
-/* ====================== FAST TIMER ====================== */
-const MILES=[
-  {t:600,b:"CT Head completed",s:"Target ≤25 min — scan started ≤10 min"},
-  {t:1500,b:"CT read + labs back",s:"Target ≤45 min"},
-  {t:2700,b:"tPA decision",s:"Eligibility confirmed"},
-  {t:3600,b:"Door-to-needle ≤60 min",s:"tPA bolus given if eligible"}
-];
-const msBox=document.getElementById('milestones');
-MILES.forEach(m=>{
-  const el=document.createElement('div');el.className='ms';el.dataset.t=m.t;
-  el.innerHTML=`<div class="mt">${fmt(m.t)}</div><div class="md"><b>${m.b}</b><span>${m.s}</span></div>
-  <svg class="mcheck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>`;
-  msBox.appendChild(el);
-});
-let timerInt=null,elapsed=0,running=false;
-const clock=document.getElementById('clock'),goalTxt=document.getElementById('goalTxt'),startBtn=document.getElementById('startTimer');
-function fmt(s){const m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
-function tick(){
-  elapsed++;clock.textContent=fmt(elapsed);
-  const rem=3600-elapsed;
-  if(rem>=0){goalTxt.className='tgoal';goalTxt.textContent='Door-to-needle target: '+fmt(rem)+' remaining';}
-  else{goalTxt.className='tgoal over';goalTxt.textContent='⚠ Over 60-min target by '+fmt(-rem);}
-  document.querySelectorAll('.ms').forEach(m=>m.classList.toggle('hit',elapsed>=+m.dataset.t));
-}
-startBtn.addEventListener('click',()=>{
-  if(running){clearInterval(timerInt);running=false;startBtn.textContent='Resume';startBtn.className='tbtn go';}
-  else{timerInt=setInterval(tick,1000);running=true;startBtn.textContent='Pause';startBtn.className='tbtn stop';}
-});
-document.getElementById('resetTimer').addEventListener('click',()=>{
-  clearInterval(timerInt);running=false;elapsed=0;clock.textContent='00:00';
-  goalTxt.className='tgoal';goalTxt.textContent='Door-to-needle target: 60:00 remaining';
-  startBtn.textContent='Start';startBtn.className='tbtn go';
-  document.querySelectorAll('.ms').forEach(m=>m.classList.remove('hit'));
-});
 
 /* ====================== DOSING ====================== */
 const doseBody=document.getElementById('doseBody');
@@ -1144,156 +1048,13 @@ document.getElementById('doseSearch').addEventListener('input',e=>{
   document.querySelectorAll('.drow').forEach(r=>r.classList.toggle('dhide',q&&!r.dataset.s.includes(q)));
 });
 
-/* ====================== LIVE FLOOR BOARD ====================== */
+/* ====================== SUPABASE (AI workflow caching) ====================== */
 const CFG=window.ICCOTX_CONFIG||{};
-let db=null, liveMode=false, CASES=[];
-const protoByKey=Object.fromEntries(PROTOCOLS.map(p=>[p.key,p]));
-const LS_KEY='iccotx_cases';
-const nowISO=()=>new Date().toISOString();
+let db=null, liveMode=false;
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-
-const Store={
-  async list(){
-    if(liveMode){
-      const {data,error}=await db.from('cases').select('*').order('arrived_at',{ascending:false});
-      if(error){console.warn('Supabase list:',error.message);return CASES;}
-      return data||[];
-    }
-    try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]');}catch(e){return [];}
-  },
-  async create(row){
-    if(liveMode){const {error}=await db.from('cases').insert(row);if(error)console.warn('insert:',error.message);}
-    else{const a=await this.list();row.id='loc_'+Date.now()+'_'+Math.floor(Math.random()*1e4);a.unshift(row);localStorage.setItem(LS_KEY,JSON.stringify(a));}
-  },
-  async update(id,patch){
-    if(liveMode){const {error}=await db.from('cases').update(patch).eq('id',id);if(error)console.warn('update:',error.message);}
-    else{const a=await this.list();const i=a.findIndex(c=>c.id===id);if(i>-1){Object.assign(a[i],patch);localStorage.setItem(LS_KEY,JSON.stringify(a));}}
-  }
-};
-
-const elapsedMin=(from,to)=>(new Date(to||Date.now())-new Date(from))/60000;
-const fmtMin=m=>{if(m==null||isNaN(m))return '—';if(m<60)return Math.round(m)+'m';return Math.floor(m/60)+'h'+String(Math.round(m%60)).padStart(2,'0');};
-const clockSince=iso=>{const s=Math.max(0,Math.floor((Date.now()-new Date(iso))/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');};
-const isToday=iso=>new Date(iso).toDateString()===new Date().toDateString();
-
-async function refresh(){CASES=await Store.list();renderKpis();renderCases();}
-
-function renderKpis(){
-  const active=CASES.filter(c=>!c.closed);
-  const today=CASES.filter(c=>isToday(c.arrived_at));
-  const closedToday=today.filter(c=>c.closed);
-  const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
-  const pct=(n,d)=>d?Math.round(100*n/d):0;
-  const ecg=avg(today.filter(c=>c.ecg_at).map(c=>elapsedMin(c.arrived_at,c.ecg_at)));
-  const prov=avg(today.filter(c=>c.provider_at).map(c=>elapsedMin(c.arrived_at,c.provider_at)));
-  const lwbs=pct(closedToday.filter(c=>c.dispo==='lwbs').length,today.length);
-  const xfer=pct(closedToday.filter(c=>c.dispo==='transfer').length,closedToday.length);
-  const k=[
-    {v:active.length,l:'Active now',acc:'--cyan'},
-    {v:today.length,l:'Cases today',acc:'--p7'},
-    {v:fmtMin(ecg),l:'Avg door→ECG',acc:'--p1',flag:ecg>10},
-    {v:fmtMin(prov),l:'Avg door→provider',acc:'--p3',flag:prov>30},
-    {v:lwbs+'%',l:'LWBS rate',acc:'--p5',flag:lwbs>2},
-    {v:xfer+'%',l:'Transfer rate',acc:'--p9'}
-  ];
-  document.getElementById('kpis').innerHTML=k.map(x=>
-    `<div class="kpi ${x.flag?'flag':''}" style="--accent:var(${x.acc})"><div class="kval">${x.v}</div><div class="klbl">${x.l}</div></div>`).join('');
+if(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY&&window.supabase){
+  try{ db=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY); liveMode=true; }catch(e){ liveMode=false; }
 }
-
-function stageBtn(c,field,label){
-  if(c[field])return `<div class="stage done">${label}<small>${fmtMin(elapsedMin(c.arrived_at,c[field]))}</small></div>`;
-  return `<button class="stage" data-stage="${field}">${label}</button>`;
-}
-function renderCases(){
-  const box=document.getElementById('cases');
-  const active=CASES.filter(c=>!c.closed);
-  if(!active.length){box.innerHTML='<div class="cases-empty">No active cases. Tap <b>＋ New Case</b> to start tracking — or <b>Add demo data</b> to see it in action.</div>';return;}
-  box.innerHTML=active.map(c=>{
-    const p=protoByKey[c.protocol_key]||{accent:'--cyan',title:c.protocol_title||'Case'};
-    const mins=elapsedMin(c.arrived_at);
-    const ecls=mins>60?'crit':mins>30?'warn':'';
-    return `<div class="casecard" style="--accent:var(${p.accent})" data-id="${c.id}">
-      <div class="ctop"><span class="room">${esc(c.room||'—')}</span>
-        <span class="ptag">${esc(p.title.split(' / ')[0])}${c.acuity?' · ESI '+c.acuity:''}</span>
-        <span class="etime ${ecls}" data-arr="${c.arrived_at}">${clockSince(c.arrived_at)}</span></div>
-      <div class="stages">${stageBtn(c,'ecg_at','ECG')}${stageBtn(c,'provider_at','Provider')}</div>
-      <div class="dispo-row">
-        <button class="dbtn" data-dispo="discharge">D/C</button>
-        <button class="dbtn" data-dispo="admit">Admit</button>
-        <button class="dbtn" data-dispo="transfer">Transfer</button>
-        <button class="dbtn lwbs" data-dispo="lwbs">LWBS</button>
-      </div></div>`;
-  }).join('');
-}
-document.getElementById('cases').addEventListener('click',async e=>{
-  const card=e.target.closest('.casecard');if(!card)return;const id=card.dataset.id;
-  const st=e.target.closest('.stage[data-stage]');
-  if(st){await Store.update(id,{[st.dataset.stage]:nowISO()});return refresh();}
-  const d=e.target.closest('.dbtn');
-  if(d){await Store.update(id,{dispo:d.dataset.dispo,dispo_at:nowISO(),closed:true});return refresh();}
-});
-setInterval(()=>{
-  document.querySelectorAll('.casecard .etime').forEach(el=>{
-    const m=elapsedMin(el.dataset.arr);el.textContent=clockSince(el.dataset.arr);
-    el.className='etime '+(m>60?'crit':m>30?'warn':'');
-  });
-},1000);
-
-// new case modal
-let selKey=null;
-const ccGrid=document.getElementById('ccGrid');
-PROTOCOLS.forEach(p=>{
-  const b=document.createElement('button');b.type='button';b.className='cc-opt';b.style.setProperty('--accent',`var(${p.accent})`);
-  b.innerHTML=`<span class="ccn">${p.n}</span><span>${p.title.split(' / ')[0]}</span>`;
-  b.addEventListener('click',()=>{selKey=p.key;[...ccGrid.children].forEach(x=>x.classList.toggle('sel',x===b));});
-  ccGrid.appendChild(b);
-});
-document.getElementById('newCaseBtn').addEventListener('click',()=>{
-  selKey=null;[...ccGrid.children].forEach(x=>x.classList.remove('sel'));
-  document.getElementById('caseRoom').value='';document.getElementById('caseAcuity').value='';
-  openModal('caseModal');
-});
-document.getElementById('createCase').addEventListener('click',async()=>{
-  if(!selKey){alert('Pick a chief complaint first.');return;}
-  const p=protoByKey[selKey];
-  await Store.create({protocol_key:selKey,protocol_title:p.title,
-    room:document.getElementById('caseRoom').value.trim()||'Unassigned',
-    acuity:document.getElementById('caseAcuity').value?+document.getElementById('caseAcuity').value:null,
-    arrived_at:nowISO(),closed:false});
-  closeModal(document.getElementById('caseModal'));refresh();
-});
-document.getElementById('seedBtn').addEventListener('click',async()=>{
-  const samples=[
-    {k:'chest',room:'Room 1',acuity:2,off:8,ecg:4,prov:12},
-    {k:'stroke',room:'Room 2',acuity:1,off:22,ecg:6,prov:9},
-    {k:'sob',room:'Hall-2',acuity:3,off:14,ecg:7},
-    {k:'uti',room:'Room 5',acuity:4,off:42,prov:18,dispo:'discharge'},
-    {k:'gi',room:'Room 3',acuity:3,off:55,prov:25,dispo:'transfer'}
-  ];
-  for(const s of samples){
-    const p=protoByKey[s.k],arr=new Date(Date.now()-s.off*60000);
-    await Store.create({protocol_key:s.k,protocol_title:p.title,room:s.room,acuity:s.acuity,arrived_at:arr.toISOString(),
-      ecg_at:s.ecg?new Date(arr.getTime()+s.ecg*60000).toISOString():null,
-      provider_at:s.prov?new Date(arr.getTime()+s.prov*60000).toISOString():null,
-      dispo:s.dispo||null,dispo_at:s.dispo?nowISO():null,closed:!!s.dispo});
-  }
-  refresh();
-});
-
-async function initBoard(){
-  const conn=document.getElementById('conn'),txt=document.getElementById('connTxt');
-  if(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY&&window.supabase){
-    try{
-      db=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY);
-      liveMode=true;conn.className='conn live';txt.textContent='Live · synced across devices';
-      db.channel('cases-rt').on('postgres_changes',{event:'*',schema:'public',table:'cases'},refresh).subscribe();
-    }catch(e){liveMode=false;conn.className='conn local';txt.textContent='Local mode (this browser)';}
-  }else{
-    conn.className='conn local';txt.textContent='Local mode (this browser)';
-  }
-  refresh();
-}
-initBoard();
 
 /* ====================== WORKFLOW ENGINE ====================== */
 const STAGES=[
@@ -1472,17 +1233,6 @@ document.getElementById('wfBody').addEventListener('click',e=>{ const it=e.targe
 document.getElementById('wfClose').addEventListener('click',()=>document.getElementById('wfview').classList.remove('show'));
 document.getElementById('wfview').addEventListener('click',e=>{ if(e.target.id==='wfview')document.getElementById('wfview').classList.remove('show'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape')document.getElementById('wfview').classList.remove('show'); });
-document.getElementById('wfStart').addEventListener('click',async()=>{
-  if(!CURWF)return;
-  const room=prompt('Room / bed label for this case?',''); if(room===null)return;
-  const m=matchComplaint(CURWF.title);
-  const key=m?m.key:'general';
-  await Store.create({protocol_key:key,protocol_title:CURWF.title,room:room.trim()||'Unassigned',arrived_at:nowISO(),closed:false});
-  document.getElementById('wfview').classList.remove('show');
-  refresh();
-  document.getElementById('cases').scrollIntoView({behavior:'smooth',block:'center'});
-});
-
 // command bar
 const cmd=document.getElementById('cmd'), ac=document.getElementById('ac');
 function renderAC(){
