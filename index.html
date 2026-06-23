@@ -77,10 +77,11 @@ header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 
   backdrop-filter:blur(12px);transition:transform var(--speed),border-color var(--speed)}
 .ccard:hover{transform:translateY(-3px);border-color:var(--accent)}
 .ccard .nm{flex:1;min-width:0}
-.ccard .nm b{display:block;font-size:15px;font-weight:700;line-height:1.25}
-.ccard .nm span{font-size:12px;color:var(--txt-mute)}
-.ccard .esi{font-size:11px;font-weight:800;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
-  padding:4px 9px;border-radius:999px;white-space:nowrap}
+.ccard .nm b{display:block;font-size:15px;font-weight:700;line-height:1.25;overflow-wrap:anywhere}
+.ccard .nm span{font-size:12px;color:var(--txt-mute);line-height:1.35;margin-top:2px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ccard .esi{flex:none;font-size:11px;font-weight:800;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
+  padding:4px 9px;border-radius:999px;white-space:nowrap;max-width:74px;overflow:hidden;text-overflow:ellipsis}
 .ccard .arrow{width:18px;height:18px;color:var(--txt-mute);flex:none}
 
 .empty{text-align:center;padding:60px 20px;color:var(--txt-mute)}
@@ -206,6 +207,7 @@ const SECTIONS=[
   {k:'compliance',label:'Texas FSED Compliance',cls:'comp',icon:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'}
 ];
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const parseEsi=a=>{ if(!a) return ''; const m=String(a).replace(/esi/ig,'').match(/\d\s*[-–]\s*\d|\d/); return m?m[0].replace(/\s+/g,''):''; };
 
 let DATA=[], CATS=[], catColor={}, activeCat='all', query='';
 
@@ -235,7 +237,7 @@ function render(){
     html+=`<div class="catblock" style="--accent:${col}"><h2><span class="cdot"></span>${esc(cat)} <small>${items.length}</small></h2><div class="grid">`;
     html+=items.map(w=>`<div class="ccard" style="--accent:${col}" data-id="${esc(w.id)}">
       <div class="nm"><b>${esc(w.name)}</b>${w.summary?`<span>${esc(w.summary)}</span>`:''}</div>
-      ${w.acuity?`<span class="esi">ESI ${esc(w.acuity)}</span>`:''}
+      ${parseEsi(w.acuity)?`<span class="esi">ESI ${esc(parseEsi(w.acuity))}</span>`:''}
       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
     </div>`).join('');
     html+='</div></div>';
@@ -248,8 +250,8 @@ function openDetail(id){
   const col=catColor[wf.category]||'var(--cyan)';
   document.getElementById('dhead').style.setProperty('--accent',col);
   document.getElementById('dTitle').textContent=wf.name;
-  document.getElementById('dCat').textContent=wf.category;
-  document.getElementById('dEsi').textContent=wf.acuity?('ESI '+wf.acuity):'';
+  document.getElementById('dCat').textContent=wf.category+(wf.acuity?(' · Acuity ESI '+wf.acuity):'');
+  document.getElementById('dEsi').textContent=parseEsi(wf.acuity)?('ESI '+parseEsi(wf.acuity)):'';
   document.getElementById('dEsi').style.setProperty('--accent',col);
   document.getElementById('dSummary').textContent=wf.summary||'';
   let html='';
