@@ -118,7 +118,7 @@ header.top::after{
 .search input{
   width:100%;padding:15px 16px 15px 48px;border-radius:14px;
   background:var(--panel);border:1px solid var(--stroke);
-  color:var(--txt);font-size:15px;font-family:inherit;outline:none;
+  color:var(--txt);font-size:16px;font-family:inherit;outline:none;
   backdrop-filter:blur(14px);transition:border var(--speed),box-shadow var(--speed);
 }
 .search input::placeholder{color:var(--txt-mute)}
@@ -140,11 +140,11 @@ header.top::after{
 .btn svg{width:17px;height:17px}
 .btn.active{background:rgba(10,159,194,.12);border-color:var(--cyan-deep);color:var(--cyan-deep)}
 
-.hint{font-size:12px;color:var(--txt-mute);margin:-6px 2px 14px}
+.hint{font-size:13.5px;color:var(--txt-mute);margin:-6px 2px 14px}
 .hint b{color:var(--cyan)}
 
 /* ============ GRID ============ */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;align-items:start}
 .card.wide{grid-column:1/-1}
 
 /* ============ CARD ============ */
@@ -164,7 +164,7 @@ header.top::after{
   box-shadow:0 0 18px -2px var(--accent);
 }
 .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
-.card.open{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 22px 60px -26px var(--accent)}
+.card.open{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 22px 60px -26px var(--accent)}
 .card.hidden{display:none}
 
 .chead{
@@ -172,13 +172,13 @@ header.top::after{
 }
 .cnum{
   width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;
-  font-weight:800;font-size:16px;color:#fff;
+  font-weight:800;font-size:17px;color:#fff;
   background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 72%,#0a1020));
   box-shadow:0 0 20px -6px var(--accent);
 }
 .cttl{flex:1;min-width:0}
-.cttl h3{margin:0;font-size:15.5px;font-weight:750;line-height:1.2}
-.cttl span{font-size:11.5px;color:var(--txt-dim);font-weight:500}
+.cttl h3{margin:0;font-size:17.5px;font-weight:750;line-height:1.22}
+.cttl span{font-size:13px;color:var(--txt-dim);font-weight:500}
 .chev{width:22px;height:22px;flex:none;color:var(--txt-mute);transition:transform var(--speed),color var(--speed)}
 .card.open .chev{transform:rotate(180deg);color:var(--accent)}
 
@@ -186,19 +186,19 @@ header.top::after{
 .card.open .cbody{grid-template-rows:1fr}
 .cbody-inner{overflow:hidden}
 .cpad{padding:2px 18px 18px}
-.card.wide .cpad{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 26px}
+.card.wide .cpad,.card.open .cpad{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:8px 32px}
 
 /* sections inside card */
 .sec{margin-top:14px}
 .sec:first-child{margin-top:6px}
 .sec h4{
-  margin:0 0 8px;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;
+  margin:0 0 9px;font-size:12.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
   color:var(--accent);display:flex;align-items:center;gap:7px;
 }
 .sec h4 .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
 .sec ul{margin:0;padding:0;list-style:none}
 .sec li{
-  position:relative;padding:4px 0 4px 18px;font-size:13.3px;color:var(--txt-dim);line-height:1.45;
+  position:relative;padding:5px 0 5px 19px;font-size:14.6px;color:var(--txt-dim);line-height:1.5;
 }
 .sec li::before{content:"";position:absolute;left:3px;top:11px;width:5px;height:5px;border-radius:50%;
   background:var(--accent);opacity:.7}
@@ -220,7 +220,7 @@ header.top::after{
 
 /* tag for disposition */
 .dispo{margin-top:14px;display:flex;align-items:flex-start;gap:9px;
-  font-size:12.8px;color:var(--txt-dim);background:rgba(10,159,194,.06);
+  font-size:14px;color:var(--txt-dim);background:rgba(10,159,194,.06);
   border:1px dashed var(--stroke-strong);border-radius:11px;padding:11px 12px}
 .dispo svg{width:16px;height:16px;flex:none;color:var(--accent);margin-top:1px}
 .dispo b{color:var(--txt)}
@@ -235,8 +235,8 @@ header.top::after{
 
 /* ============ SECTION TITLES ============ */
 .section-title{
-  display:flex;align-items:center;gap:12px;margin:38px 4px 16px;font-size:13px;
-  font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--txt-dim);
+  display:flex;align-items:center;gap:12px;margin:38px 4px 16px;font-size:14.5px;
+  font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--txt-dim);
 }
 .section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--stroke-strong),transparent)}
 .section-title .ic{width:22px;height:22px;color:var(--cyan)}
@@ -263,8 +263,8 @@ header.top::after{
 }
 .flow-step:hover .flow-ic{transform:translateY(-3px) scale(1.05)}
 .flow-ic svg{width:23px;height:23px}
-.flow-step b{display:block;font-size:12px;font-weight:700;color:var(--txt)}
-.flow-step span{font-size:10.5px;color:var(--txt-mute)}
+.flow-step b{display:block;font-size:13.5px;font-weight:700;color:var(--txt)}
+.flow-step span{font-size:12px;color:var(--txt-mute)}
 
 /* ============ SEPSIS PANEL ============ */
 .sepsis{
@@ -389,11 +389,11 @@ footer b{color:var(--txt-dim)}
 }
 .panel::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;
   background:linear-gradient(90deg,var(--cyan),transparent);box-shadow:0 0 16px -2px var(--cyan)}
-.panel h4{margin:0 0 12px;font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
+.panel h4{margin:0 0 12px;font-size:13.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
   color:var(--cyan);display:flex;align-items:center;gap:9px}
 .panel h4 .pic{width:18px;height:18px}
 .panel ul{margin:0;padding:0;list-style:none}
-.panel li{position:relative;padding:5px 0 5px 22px;font-size:13.3px;color:var(--txt-dim);line-height:1.45}
+.panel li{position:relative;padding:6px 0 6px 23px;font-size:14.6px;color:var(--txt-dim);line-height:1.5}
 .panel li b{color:var(--txt);font-weight:650}
 .panel li .tick{position:absolute;left:0;top:7px;width:14px;height:14px;color:var(--ok)}
 .panel li .arr{position:absolute;left:2px;top:6px;color:var(--cyan);font-weight:800}
@@ -422,7 +422,7 @@ footer b{color:var(--txt-dim)}
   background:linear-gradient(90deg,var(--accent,var(--cyan)),transparent);box-shadow:0 0 14px -2px var(--accent,var(--cyan))}
 .kpi .kval{font-size:30px;font-weight:800;color:var(--txt);line-height:1;font-variant-numeric:tabular-nums}
 .kpi .kval small{font-size:14px;color:var(--txt-mute);font-weight:600}
-.kpi .klbl{font-size:10.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--txt-dim);margin-top:8px;font-weight:700}
+.kpi .klbl{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--txt-dim);margin-top:8px;font-weight:700}
 .kpi.flag .kval{color:var(--danger)}
 
 .cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:12px}
@@ -869,8 +869,7 @@ PROTOCOLS.forEach(p=>{
     </div>
     <div class="cbody"><div class="cbody-inner"><div class="cpad">
       <div style="display:contents">${sections}</div>
-      ${p.wide?'':''}
-      <div style="${p.wide?'grid-column:1/-1':''}">${rf}${dispo}</div>
+      <div style="grid-column:1/-1">${rf}${dispo}</div>
     </div></div></div>`;
   card.querySelector('.chead').addEventListener('click',()=>card.classList.toggle('open'));
   grid.appendChild(card);
