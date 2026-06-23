@@ -1,0 +1,378 @@
+[
+  {
+    "id": "sprain-strain",
+    "name": "Sprain / Strain",
+    "category": "Musculoskeletal / Injury",
+    "synonyms": ["pulled muscle", "twisted ankle", "torn ligament", "wrenched joint", "soft tissue injury"],
+    "acuity": "Low",
+    "summary": "Acute soft-tissue ligament/muscle injury without obvious deformity or neurovascular compromise.",
+    "stages": {
+      "triage": [
+        "Mechanism, time of injury, ability to bear weight/use limb",
+        "Vitals and pain score",
+        "Screen for deformity, open wound, or numbness suggesting fracture/dislocation",
+        "Apply validated rules (e.g., Ottawa ankle/knee) to gauge X-ray need"
+      ],
+      "nursing": [
+        "Ice pack and elevation while awaiting eval",
+        "Remove rings/constricting items from injured extremity",
+        "Document distal pulses, capillary refill, sensation, motor function",
+        "Reassure and initiate RICE education"
+      ],
+      "keyOrders": [
+        "Neurovascular check of affected limb",
+        "Plain X-ray if fracture rules positive*",
+        "Elastic wrap or removable splint/brace for support",
+        "Crutches or sling for offloading if indicated"
+      ],
+      "labs": [
+        "None routinely indicated for isolated sprain/strain"
+      ],
+      "imaging": [
+        "Plain X-ray only if Ottawa/clinical rules suggest fracture*",
+        "Defer MRI/ultrasound to outpatient ortho if persistent instability*"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO q6-8h with food (if no contraindication)",
+        "Acetaminophen 650-1000 mg PO q6h, max 3 g/day",
+        "Topical diclofenac gel to localized area* if indicated",
+        "Avoid opioids; reserve only for severe short-term pain"
+      ],
+      "reassess": [
+        "Recheck neurovascular status after splint/wrap applied",
+        "Confirm pain controlled and patient ambulating safely if applicable",
+        "Verify X-ray (if done) shows no fracture"
+      ],
+      "disposition": [
+        "Discharge home with RICE and activity modification",
+        "Refer to orthopedics/sports medicine if no improvement in 1-2 weeks*",
+        "Transfer to ER or call 911 if deformity, suspected open/displaced fracture, or loss of pulse/sensation"
+      ],
+      "discharge": [
+        "Written RICE instructions and activity restrictions",
+        "Proper use of crutches/brace and weight-bearing limits",
+        "Expected recovery timeline (days to weeks)",
+        "Return precautions: increasing pain, numbness, color change, fever"
+      ],
+      "followup": [
+        "PCP or sports medicine in 1-2 weeks if not improving",
+        "Physical therapy referral for moderate sprains*",
+        "Return sooner if symptoms worsen"
+      ]
+    },
+    "redFlags": [
+      "Obvious deformity or suspected displaced/open fracture",
+      "Absent distal pulse, pallor, or progressive numbness (compartment/vascular concern)",
+      "Inability to bear any weight with severe pain suggesting fracture",
+      "Joint dislocation requiring reduction"
+    ],
+    "compliance": [
+      "Urgent care manages uncomplicated soft-tissue injury; transfer per EMTALA only if emergent at a hospital-based site",
+      "Document neurovascular exam before and after splinting",
+      "Provide written return precautions; minimize opioid prescribing",
+      "Refer suspected fracture/instability to appropriate ER or outpatient ortho"
+    ]
+  },
+  {
+    "id": "minor-extremity-injury-possible-fracture",
+    "name": "Minor Extremity Injury / Possible Fracture",
+    "category": "Musculoskeletal / Injury",
+    "synonyms": ["broken bone", "possible break", "hand/foot injury", "wrist injury", "cracked bone"],
+    "acuity": "Low-Moderate",
+    "summary": "Closed, stable extremity injury with possible non-displaced fracture suitable for X-ray and splinting.",
+    "stages": {
+      "triage": [
+        "Mechanism, energy of injury, time elapsed",
+        "Vitals and pain score",
+        "Assess for deformity, open wound, point tenderness, swelling",
+        "Apply Ottawa ankle/foot/knee rules where applicable"
+      ],
+      "nursing": [
+        "Immobilize and elevate; apply ice",
+        "Document distal neurovascular status",
+        "Remove rings/jewelry distal to injury",
+        "Control any minor bleeding and clean abrasions"
+      ],
+      "keyOrders": [
+        "Plain X-ray of injured area (2+ views)",
+        "Splinting/buddy-taping for stable fractures",
+        "Sling, walking boot, or crutches as appropriate",
+        "Repeat neurovascular check after immobilization"
+      ],
+      "labs": [
+        "None routinely indicated for isolated closed injury"
+      ],
+      "imaging": [
+        "Plain X-ray on site for suspected fracture",
+        "Defer CT/MRI and complex/intra-articular imaging to ER or ortho*"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO q6-8h with food",
+        "Acetaminophen 650-1000 mg PO q6h, max 3 g/day",
+        "Tdap/Td booster if open wound and not current",
+        "Short course low-dose opioid only if severe pain and no alternative*"
+      ],
+      "reassess": [
+        "Confirm fracture stability and alignment on X-ray",
+        "Verify intact neurovascular status post-splint",
+        "Ensure splint not too tight and patient comfortable"
+      ],
+      "disposition": [
+        "Discharge home with splint and timely ortho follow-up for stable, non-displaced fracture",
+        "Refer to orthopedics within 3-7 days for definitive care",
+        "Transfer to ER or call 911 if open, displaced, angulated, or intra-articular fracture, or neurovascular compromise"
+      ],
+      "discharge": [
+        "Splint care and elevation instructions",
+        "Strict non-weight-bearing or activity limits as indicated",
+        "Signs of compartment syndrome and tight-cast/splint warning",
+        "Confirmed ortho follow-up appointment or contact info"
+      ],
+      "followup": [
+        "Orthopedics in 3-7 days for casting/definitive management",
+        "PCP if no specialist access",
+        "Return immediately for worsening pain, numbness, or color change"
+      ]
+    },
+    "redFlags": [
+      "Open fracture or fracture with overlying wound",
+      "Significant deformity, angulation, or displacement",
+      "Neurovascular deficit (pulselessness, pallor, progressive numbness)",
+      "Suspected compartment syndrome (pain out of proportion, tense compartment)",
+      "Hip/femur/pelvis injury or high-energy mechanism"
+    ],
+    "compliance": [
+      "Urgent care handles stable closed extremity injury; emergent/displaced/open injuries go to ER (EMTALA at hospital-affiliated sites)",
+      "Document pre- and post-splint neurovascular exam",
+      "Update tetanus prophylaxis for any open wound and document",
+      "Arrange and document ortho follow-up; prudent controlled-substance use with state PMP check"
+    ]
+  },
+  {
+    "id": "acute-low-back-pain",
+    "name": "Acute Low Back Pain",
+    "category": "Musculoskeletal / Injury",
+    "synonyms": ["lumbago", "back strain", "lower back pain", "thrown out back", "pulled back muscle"],
+    "acuity": "Low",
+    "summary": "Acute mechanical/musculoskeletal low back pain without neurologic deficit or systemic red flags.",
+    "stages": {
+      "triage": [
+        "Onset, mechanism, radiation, prior episodes",
+        "Vitals and pain score",
+        "Screen for red flags: trauma, fever, bowel/bladder change, saddle anesthesia, weakness",
+        "Assess gait and ability to ambulate"
+      ],
+      "nursing": [
+        "Position of comfort; assist with ambulation",
+        "Document any motor/sensory deficit and reflexes",
+        "Ask about anticoagulation, cancer history, IV drug use, weight loss",
+        "Reassure regarding benign nature of most cases"
+      ],
+      "keyOrders": [
+        "Focused neuro exam including straight-leg raise",
+        "POC urinalysis if flank pain/infection suspected*",
+        "POC glucose if relevant*",
+        "Heat application for muscle spasm"
+      ],
+      "labs": [
+        "None routinely for uncomplicated mechanical back pain",
+        "UA if pyelonephritis/stone suspected*"
+      ],
+      "imaging": [
+        "No imaging for uncomplicated acute back pain in first 4-6 weeks",
+        "Defer X-ray/MRI to outpatient if red flags or no improvement*; emergent MRI via ER if cauda equina suspected"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO q6-8h or naproxen 500 mg PO BID with food",
+        "Acetaminophen 650-1000 mg PO q6h, max 3 g/day",
+        "Short course cyclobenzaprine 5-10 mg PO qHS for spasm* (caution sedation)",
+        "Avoid opioids and bed rest; encourage activity as tolerated"
+      ],
+      "reassess": [
+        "Confirm no evolving neuro deficit",
+        "Verify pain controlled and patient ambulating safely",
+        "Re-screen for missed red flags before discharge"
+      ],
+      "disposition": [
+        "Discharge home with activity, analgesia, and reassurance",
+        "Refer to PCP/physical therapy if not improved in 4-6 weeks*",
+        "Transfer to ER or call 911 if cauda equina signs, acute weakness, fever with back pain, or suspected AAA/epidural abscess"
+      ],
+      "discharge": [
+        "Stay active; avoid prolonged bed rest",
+        "Analgesic schedule and heat/stretching guidance",
+        "Return precautions: leg weakness, numbness, incontinence, fever",
+        "Expected gradual improvement over days to weeks"
+      ],
+      "followup": [
+        "PCP in 1-2 weeks if persistent",
+        "Physical therapy for recurrent/persistent pain*",
+        "Return immediately for any red-flag symptom"
+      ]
+    },
+    "redFlags": [
+      "Saddle anesthesia, urinary retention/incontinence, bilateral leg weakness (cauda equina)",
+      "Fever with back pain or IV drug use (epidural abscess/discitis)",
+      "Progressive or significant motor weakness",
+      "History of cancer, unexplained weight loss, or night pain",
+      "Severe trauma, anticoagulation, or suspected abdominal aortic aneurysm"
+    ],
+    "compliance": [
+      "Urgent care treats uncomplicated mechanical low back pain; emergent neuro/vascular causes to ER (EMTALA where applicable)",
+      "Imaging not indicated early without red flags (avoid low-value imaging)",
+      "Document neuro exam and red-flag screen",
+      "Prudent muscle relaxant use; avoid opioids; check PMP if controlled substance considered"
+    ]
+  },
+  {
+    "id": "joint-pain-swelling",
+    "name": "Joint Pain / Swelling",
+    "category": "Musculoskeletal / Injury",
+    "synonyms": ["swollen joint", "arthralgia", "inflamed joint", "gout flare", "joint effusion"],
+    "acuity": "Low-Moderate",
+    "summary": "Painful/swollen joint from likely gout, overuse, or mild arthritis without signs of septic joint.",
+    "stages": {
+      "triage": [
+        "Onset, number of joints, prior gout/arthritis, trauma, fever",
+        "Vitals including temperature",
+        "Inspect for warmth, erythema, effusion, range of motion",
+        "Screen for systemic illness or recent infection"
+      ],
+      "nursing": [
+        "Elevate and rest affected joint; ice for swelling",
+        "Document temperature and joint exam findings",
+        "Ask about medications, alcohol, purine intake, tick exposure",
+        "Assess ability to bear weight/use joint"
+      ],
+      "keyOrders": [
+        "Focused joint exam and vitals",
+        "POC glucose if relevant*",
+        "Compression wrap/support for swelling",
+        "Defer arthrocentesis to ER/specialist if septic joint suspected"
+      ],
+      "labs": [
+        "Limited; consider rapid strep/viral testing only if clinically relevant*",
+        "Defer CBC, ESR/CRP, uric acid, joint fluid analysis to outpatient/ER*"
+      ],
+      "imaging": [
+        "Plain X-ray of joint if trauma, chronic change, or effusion*",
+        "Defer ultrasound/MRI and aspiration to ER or rheumatology/ortho*"
+      ],
+      "meds": [
+        "Acute gout: indomethacin 50 mg PO TID or naproxen 500 mg PO BID (if no renal/GI contraindication)",
+        "Colchicine 1.2 mg then 0.6 mg 1 hr later for gout flare*",
+        "Acetaminophen 650-1000 mg PO q6h for analgesia",
+        "Short prednisone taper if NSAID/colchicine contraindicated* (avoid if infection suspected)"
+      ],
+      "reassess": [
+        "Confirm no fever or signs suggesting septic joint",
+        "Verify pain improving and joint mobile",
+        "Re-evaluate diagnosis if monoarticular and toxic-appearing"
+      ],
+      "disposition": [
+        "Discharge home with anti-inflammatory therapy for likely gout/overuse",
+        "Refer to rheumatology/PCP for recurrent or undiagnosed arthritis*",
+        "Transfer to ER or call 911 if suspected septic joint, fever, or systemic toxicity"
+      ],
+      "discharge": [
+        "Medication instructions and renal/GI precautions",
+        "Rest, ice, elevation, and dietary advice for gout",
+        "Return precautions: fever, spreading redness, severe pain, inability to move joint",
+        "Recheck plan if not improved in a few days"
+      ],
+      "followup": [
+        "PCP in 3-7 days for medication response and urate management*",
+        "Rheumatology referral for recurrent/inflammatory arthritis*",
+        "Return promptly if fever or rapid worsening"
+      ]
+    },
+    "redFlags": [
+      "Hot, swollen joint with fever (possible septic arthritis)",
+      "Inability to bear weight with severe pain and systemic illness",
+      "Rapidly spreading erythema or signs of cellulitis/sepsis",
+      "Recent joint surgery or prosthetic joint with new pain/swelling",
+      "Immunocompromise with acute monoarticular swelling"
+    ],
+    "compliance": [
+      "Urgent care manages low-risk arthralgia/gout; suspected septic joint requires ER aspiration (EMTALA where applicable)",
+      "Do not give corticosteroids if joint infection cannot be excluded",
+      "Document temperature and joint exam; arrange follow-up for definitive diagnosis",
+      "Counsel on NSAID/colchicine risks; provide written return precautions"
+    ]
+  },
+  {
+    "id": "minor-head-injury",
+    "name": "Minor Head Injury",
+    "category": "Musculoskeletal / Injury",
+    "synonyms": ["bump on head", "minor concussion", "head bump", "mild head trauma", "scalp injury"],
+    "acuity": "Low-Moderate",
+    "summary": "Low-risk closed head injury, GCS 15, without high-risk features or focal neurologic deficit.",
+    "stages": {
+      "triage": [
+        "Mechanism, loss of consciousness, amnesia, time since injury",
+        "Vitals and GCS/mental status",
+        "Apply Canadian CT Head rule to identify high-risk features",
+        "Ask about anticoagulants/antiplatelets and intoxication"
+      ],
+      "nursing": [
+        "Frequent neuro and GCS checks",
+        "Inspect scalp for laceration/hematoma; control bleeding",
+        "Document pupils, gaze, and focal deficits",
+        "Monitor for vomiting, worsening headache, or confusion"
+      ],
+      "keyOrders": [
+        "Serial neuro exams and GCS monitoring",
+        "Scalp wound cleaning/closure if minor laceration",
+        "POC glucose if altered mental status*",
+        "No on-site head CT; arrange ER transfer if imaging indicated"
+      ],
+      "labs": [
+        "None routinely; POC glucose if altered*"
+      ],
+      "imaging": [
+        "Head CT NOT available in urgent care",
+        "Transfer to ER for CT if any high-risk feature (Canadian CT Head rule positive), anticoagulation, or repeated vomiting"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg PO q6h for headache (preferred)",
+        "Avoid NSAIDs/aspirin acutely if bleeding risk/uncertainty*",
+        "Antiemetic (e.g., ondansetron 4 mg) for nausea*",
+        "Local anesthetic and wound care for scalp laceration repair"
+      ],
+      "reassess": [
+        "Repeat GCS/neuro exam before discharge",
+        "Confirm no new focal deficit, persistent vomiting, or worsening headache",
+        "Verify reliable adult observer available at home"
+      ],
+      "disposition": [
+        "Discharge home with concussion precautions if low-risk and GCS 15",
+        "Refer to PCP/neurology for persistent post-concussive symptoms*",
+        "Transfer to ER or call 911 if any high-risk feature, anticoagulation, focal deficit, or declining mental status"
+      ],
+      "discharge": [
+        "Written head-injury/concussion instructions for patient and observer",
+        "24-48 hr observation by responsible adult; wake checks if advised",
+        "Cognitive/physical rest and gradual return to activity",
+        "Return precautions: worsening headache, repeated vomiting, confusion, weakness, seizure, unequal pupils"
+      ],
+      "followup": [
+        "PCP in a few days to assess recovery",
+        "Neurology/concussion clinic for prolonged symptoms*",
+        "Return immediately for any deterioration"
+      ]
+    },
+    "redFlags": [
+      "GCS < 15, focal neurologic deficit, or seizure",
+      "Repeated vomiting, worsening or severe headache",
+      "Anticoagulant/antiplatelet use or known bleeding disorder",
+      "Suspected skull fracture, signs of basilar fracture, or penetrating injury",
+      "Loss of consciousness with high-risk mechanism or age over 65 with dangerous mechanism"
+    ],
+    "compliance": [
+      "Urgent care lacks CT; any high-risk head injury must be transferred to ER (EMTALA at hospital-based sites)",
+      "Document GCS, neuro exam, anticoagulation status, and CT-rule decision",
+      "Provide written head-injury precautions to patient and a reliable observer",
+      "Update tetanus for open scalp wounds; report suspected abuse/assault per Texas mandatory reporting"
+    ]
+  }
+]

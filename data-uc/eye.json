@@ -1,0 +1,241 @@
+[
+  {
+    "id": "conjunctivitis-red-eye",
+    "name": "Conjunctivitis / Red Eye",
+    "category": "Eye",
+    "synonyms": ["pink eye", "red eye", "viral conjunctivitis", "bacterial conjunctivitis", "allergic conjunctivitis"],
+    "acuity": "Low",
+    "summary": "Walk-in evaluation and treat-and-release of uncomplicated infectious or allergic conjunctivitis with vision preserved.",
+    "stages": {
+      "triage": [
+        "Confirm no vision loss, no severe pain, no photophobia, no recent trauma/chemical exposure",
+        "Ask about contact lens use, unilateral vs bilateral, discharge type (watery vs purulent), duration",
+        "Screen for fever, recent URI, sick contacts, allergy history",
+        "Isolate/seat away from others given contagiousness; perform hand hygiene"
+      ],
+      "nursing": [
+        "Vitals including temperature",
+        "Document visual acuity each eye (Snellen) with current correction",
+        "Note discharge, lid swelling, periorbital erythema, preauricular node",
+        "Provide tissues; reinforce hand hygiene and avoid eye touching"
+      ],
+      "keyOrders": [
+        "Distance visual acuity testing",
+        "Penlight/external eye exam for injection pattern, discharge, foreign body, corneal clarity",
+        "Fluorescein staining with cobalt blue light if pain/abrasion/contact lens suspected*",
+        "Evert lids to exclude retained foreign body if indicated*",
+        "Pupillary exam for size, reactivity, symmetry"
+      ],
+      "labs": [
+        "Generally none for routine conjunctivitis",
+        "Conjunctival culture not routinely available in urgent care; defer to ophthalmology if hyperacute/severe* if indicated",
+        "Consider rapid adenovirus testing only if available* if indicated"
+      ],
+      "imaging": [
+        "No imaging for uncomplicated conjunctivitis",
+        "Defer CT orbit to ER if orbital cellulitis or globe injury suspected"
+      ],
+      "meds": [
+        "Allergic: olopatadine 0.1-0.2% ophthalmic 1 drop affected eye(s) once-twice daily; add oral cetirizine 10 mg daily",
+        "Bacterial (purulent): erythromycin 0.5% ointment QID x5-7d or trimethoprim-polymyxin B 1 drop QID x5-7d",
+        "Contact-lens wearer with bacterial signs: fluoroquinolone drop (e.g., ofloxacin 0.3%) covering Pseudomonas*",
+        "Viral: supportive care, cool compresses, preservative-free artificial tears QID",
+        "Avoid topical steroids in urgent care; defer to ophthalmology*"
+      ],
+      "reassess": [
+        "Recheck visual acuity stable before discharge",
+        "Confirm pain controlled and no worsening photophobia",
+        "Verify patient/caregiver can instill drops correctly"
+      ],
+      "disposition": [
+        "Discharge home for routine viral, bacterial, or allergic conjunctivitis",
+        "Refer to ophthalmology within 24-48h if contact-lens-related, herpetic suspicion, or no improvement",
+        "Transfer to ER or call 911 if vision loss, severe pain, photophobia with hazy cornea, chemical burn, or suspected orbital cellulitis"
+      ],
+      "discharge": [
+        "Hand hygiene; discard/replace eye makeup; do not share towels/pillows",
+        "Discontinue contact lens use until symptom-free and per provider",
+        "Cool compresses and artificial tears for comfort",
+        "Return precautions: worsening pain, decreasing vision, light sensitivity, no improvement in 48-72h"
+      ],
+      "followup": [
+        "PCP if symptoms persist beyond 7-10 days",
+        "Ophthalmology for contact-lens, recurrent, or non-resolving cases",
+        "School/work return per local guidance once discharge resolved"
+      ]
+    },
+    "redFlags": [
+      "Significant vision loss or marked decrease in acuity",
+      "Severe eye pain, photophobia, or ciliary flush suggesting keratitis/uveitis",
+      "Hazy or opacified cornea, hypopyon, or fixed/irregular pupil",
+      "Periorbital/orbital swelling with proptosis, pain on eye movement, or fever (orbital cellulitis)",
+      "Contact-lens wearer with corneal infiltrate or ulcer",
+      "Chemical exposure or penetrating trauma"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; vision-threatening presentations require EMTALA-mindful transfer to ER/ophthalmology",
+      "Document visual acuity on every red-eye visit as standard of care",
+      "Avoid prescribing topical steroids without ophthalmology involvement",
+      "Provide written Texas return precautions and document referral",
+      "No controlled substances indicated for routine conjunctivitis"
+    ]
+  },
+  {
+    "id": "superficial-ocular-foreign-body",
+    "name": "Superficial Ocular Foreign Body",
+    "category": "Eye",
+    "synonyms": ["foreign body in eye", "something in my eye", "corneal foreign body", "conjunctival foreign body", "metal speck in eye"],
+    "acuity": "Low-Moderate",
+    "summary": "Removal of a superficial, non-penetrating conjunctival or corneal foreign body with abrasion care.",
+    "stages": {
+      "triage": [
+        "Determine mechanism; exclude high-velocity projectile, grinding/hammering metal-on-metal, or blast (penetrating risk)",
+        "Screen for vision loss, severe pain, or visible globe deformity",
+        "Note time of injury, eye protection use, contact lenses",
+        "If chemical or high-velocity penetrating injury suspected, escalate immediately"
+      ],
+      "nursing": [
+        "Vitals",
+        "Document visual acuity each eye before manipulation",
+        "Prepare topical anesthetic, fluorescein strips, irrigation, sterile applicators",
+        "Position patient supine with adequate lighting"
+      ],
+      "keyOrders": [
+        "Topical anesthetic (proparacaine 0.5%) to facilitate exam",
+        "Penlight and slit-lamp/loupe exam; evert upper and lower lids to find FB",
+        "Fluorescein staining to identify abrasion, rust ring, or Seidel sign (positive Seidel = ER)",
+        "Foreign body removal: copious saline irrigation, then moistened cotton applicator or 25-27g needle/spud for embedded corneal FB",
+        "Document any residual rust ring"
+      ],
+      "labs": [
+        "None routinely indicated"
+      ],
+      "imaging": [
+        "No imaging for confirmed superficial FB",
+        "Defer CT orbit to ER if intraocular/penetrating FB suspected (do NOT MRI metallic FB)"
+      ],
+      "meds": [
+        "Prophylactic antibiotic: erythromycin 0.5% ointment QID or polymyxin-trimethoprim drops QID x3-5d",
+        "Contact-lens wearers: anti-pseudomonal fluoroquinolone drop (ofloxacin/ciprofloxacin) QID",
+        "Oral analgesia: acetaminophen 650-1000 mg or ibuprofen 400-600 mg PRN",
+        "Preservative-free artificial tears for comfort",
+        "Do NOT prescribe topical anesthetic for home use (toxic to cornea)"
+      ],
+      "reassess": [
+        "Re-stain to confirm FB fully removed and characterize residual abrasion",
+        "Recheck visual acuity after removal",
+        "Confirm no Seidel sign, no anterior chamber abnormality"
+      ],
+      "disposition": [
+        "Discharge home after successful removal of superficial FB with abrasion care",
+        "Refer to ophthalmology within 24h for retained/deep corneal FB, large rust ring, or central visual-axis involvement",
+        "Transfer to ER or call 911 if penetrating/intraocular FB, positive Seidel, hyphema, or significant vision loss"
+      ],
+      "discharge": [
+        "No eye rubbing; no contact lenses until cleared and re-examined",
+        "Use prescribed antibiotic and artificial tears; expect foreign-body sensation 24h",
+        "Wear eye protection in future high-risk activities",
+        "Return precautions: increasing pain, decreasing vision, discharge, photophobia, or no improvement in 24-48h"
+      ],
+      "followup": [
+        "Recheck in 24-48h (urgent care or PCP) to confirm abrasion healing",
+        "Ophthalmology next-day for rust ring removal if not fully cleared",
+        "Sooner return if symptoms worsen"
+      ]
+    },
+    "redFlags": [
+      "High-velocity mechanism (grinding, hammering, blast) suggesting intraocular foreign body",
+      "Positive Seidel sign or visible globe laceration/extruding contents",
+      "Hyphema, irregular/teardrop pupil, or shallow anterior chamber",
+      "Significant or progressive vision loss",
+      "Foreign body in central visual axis or deeply embedded/unable to remove",
+      "Chemical or thermal injury accompanying the foreign body"
+    ],
+    "compliance": [
+      "Urgent care manages superficial FB only; suspected penetrating/intraocular injury is an EMTALA-relevant ER transfer",
+      "Never dispense topical anesthetic for home use due to corneal toxicity",
+      "Avoid MRI when metallic intraocular FB is possible",
+      "Document pre- and post-removal visual acuity and informed consent for the procedure",
+      "Report work-related eye injuries appropriately and document for workers' compensation per Texas requirements"
+    ]
+  },
+  {
+    "id": "stye-hordeolum",
+    "name": "Stye / Hordeolum",
+    "category": "Eye",
+    "synonyms": ["stye", "sty", "hordeolum", "eyelid bump", "chalazion", "infected eyelid gland"],
+    "acuity": "Low",
+    "summary": "Conservative treat-and-release management of a localized eyelid gland infection without orbital involvement.",
+    "stages": {
+      "triage": [
+        "Confirm localized lid lump without vision change, fever, or spreading facial swelling",
+        "Distinguish acute tender hordeolum from chronic non-tender chalazion",
+        "Screen for periorbital/orbital signs: proptosis, pain on eye movement, diffuse swelling",
+        "Note duration, prior episodes, blepharitis history"
+      ],
+      "nursing": [
+        "Vitals including temperature",
+        "Document visual acuity each eye",
+        "Inspect lid margin, point of tenderness, internal vs external location",
+        "Provide warm compress for comfort during wait"
+      ],
+      "keyOrders": [
+        "External lid exam and lid eversion to locate internal hordeolum",
+        "Penlight exam to confirm globe uninvolved and pupil normal",
+        "Warm compress demonstration",
+        "Lid hygiene instruction (dilute baby shampoo or lid scrubs)*",
+        "Incision and drainage only if pointing and not resolving — generally defer to ophthalmology* if indicated"
+      ],
+      "labs": [
+        "None routinely indicated",
+        "Consider wound culture only if drained and atypical/recurrent* if indicated"
+      ],
+      "imaging": [
+        "No imaging for uncomplicated stye",
+        "Defer CT orbit to ER if orbital/preseptal cellulitis suspected"
+      ],
+      "meds": [
+        "Primary therapy: warm compresses 10-15 min 3-4x/day plus gentle lid massage",
+        "Erythromycin 0.5% ophthalmic ointment to lid margin BID if drainage/secondary conjunctivitis*",
+        "Lid hygiene for associated blepharitis",
+        "Oral analgesia: acetaminophen or ibuprofen PRN",
+        "Oral antibiotics (e.g., doxycycline/dicloxacillin) only if early preseptal spread — consider ER/ophthalmology referral*"
+      ],
+      "reassess": [
+        "Confirm no progression to periorbital/orbital cellulitis",
+        "Verify vision unchanged and globe uninvolved",
+        "Ensure patient understands warm-compress technique"
+      ],
+      "disposition": [
+        "Discharge home with conservative care for uncomplicated hordeolum",
+        "Refer to ophthalmology for persistent chalazion, recurrent lesions, or need for I&D/intralesional steroid",
+        "Transfer to ER or call 911 if orbital cellulitis signs: proptosis, painful/restricted eye movement, vision change, fever, or spreading erythema"
+      ],
+      "discharge": [
+        "Continue warm compresses and lid hygiene; do not squeeze or pop the lesion",
+        "Avoid eye makeup and contact lenses until resolved",
+        "Most resolve in 1-2 weeks; residual painless nodule may persist as chalazion",
+        "Return precautions: increasing swelling/redness, vision change, fever, or pain with eye movement"
+      ],
+      "followup": [
+        "PCP or ophthalmology if not improving within 1-2 weeks",
+        "Ophthalmology for chalazion excision or recurrent styes",
+        "Sooner if spreading or systemic symptoms develop"
+      ]
+    },
+    "redFlags": [
+      "Proptosis, pain or restriction with eye movement, or diplopia (orbital cellulitis)",
+      "Diffuse spreading periorbital/facial erythema or warmth",
+      "Fever or systemic toxicity",
+      "Vision change or afferent pupillary defect",
+      "Rapidly enlarging mass or recurrent lesion in same site (concern for sebaceous carcinoma)"
+    ],
+    "compliance": [
+      "Urgent care provides conservative management; orbital cellulitis is an emergency requiring EMTALA-mindful ER transfer",
+      "Eyelid I&D and intralesional steroid injection generally exceed routine urgent-care scope — refer to ophthalmology",
+      "Document visual acuity and absence of orbital signs",
+      "Provide written Texas return precautions",
+      "Prescribe oral antibiotics judiciously and only when infection extends beyond a simple stye"
+    ]
+  }
+]

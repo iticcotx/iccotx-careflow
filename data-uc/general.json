@@ -1,0 +1,624 @@
+[
+  {
+    "id": "low-risk-fever-adult",
+    "name": "Low-Risk Fever (Adult)",
+    "category": "General / Other",
+    "synonyms": ["high temperature", "febrile illness", "running a fever", "pyrexia"],
+    "acuity": "Low-Moderate",
+    "summary": "Stable, well-appearing adult with isolated low-risk fever and no toxic features.",
+    "stages": {
+      "triage": [
+        "Confirm temperature; document onset and duration",
+        "Screen for sepsis red flags: hypotension, confusion, RR >22, SpO2 <92%",
+        "Assess hydration, mental status, general appearance",
+        "Ask travel, sick contacts, immunocompromise, recent antibiotics"
+      ],
+      "nursing": [
+        "Full vitals including SpO2 and orthostatics if dizzy",
+        "Recheck temperature after antipyretic",
+        "Encourage oral fluids while awaiting workup",
+        "Notify provider immediately if SIRS criteria met"
+      ],
+      "keyOrders": [
+        "Vital sign reassessment per protocol",
+        "POC glucose if altered or diabetic",
+        "Antipyretic administration",
+        "*Oral rehydration if mild volume depletion"
+      ],
+      "labs": [
+        "Rapid flu/COVID/strep as indicated by symptoms",
+        "UA if urinary symptoms or flank pain",
+        "*Fingerstick glucose if indicated",
+        "Defer blood cultures/CBC/lactate to ER if sepsis suspected"
+      ],
+      "imaging": [
+        "Chest X-ray if cough, dyspnea, or focal lung findings",
+        "*No imaging if clearly viral and localized source absent",
+        "Defer CT/advanced imaging to ER if indicated"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg PO q6h (max 3 g/day)",
+        "Ibuprofen 400-600 mg PO q6-8h with food if no contraindication",
+        "Targeted antibiotics only if bacterial source confirmed (e.g., UTI, strep)",
+        "*Oseltamivir 75 mg PO BID x5d if influenza positive and within 48h"
+      ],
+      "reassess": [
+        "Recheck vitals and appearance before discharge",
+        "Confirm fever responds to antipyretic",
+        "Ensure tolerating oral fluids",
+        "Re-evaluate for any evolving red flags"
+      ],
+      "disposition": [
+        "Discharge home if well-appearing and stable",
+        "PCP follow-up for persistent or unexplained fever",
+        "Transfer to ER or call 911 if hypotension, AMS, hypoxia, or suspected sepsis"
+      ],
+      "discharge": [
+        "Fever control and hydration instructions",
+        "Return precautions: fever >3 days, confusion, SOB, rash, stiff neck",
+        "Antipyretic dosing limits explained",
+        "Provide written return-precaution sheet"
+      ],
+      "followup": [
+        "PCP within 2-3 days if fever persists",
+        "Return sooner for worsening symptoms",
+        "*Specialty referral if recurrent unexplained fever"
+      ]
+    },
+    "redFlags": [
+      "Hypotension, tachycardia, or signs of sepsis/shock",
+      "Altered mental status or new confusion",
+      "Hypoxia (SpO2 <92%) or respiratory distress",
+      "Petechial/purpuric rash or neck stiffness (meningitis concern)",
+      "Immunocompromised or neutropenic fever"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; sepsis/toxic patients require EMTALA-appropriate ER transfer",
+      "Document return precautions and stable vitals at discharge",
+      "Antibiotic stewardship: treat only confirmed bacterial sources",
+      "Report reportable communicable diseases to Texas DSHS as required"
+    ]
+  },
+  {
+    "id": "tension-headache",
+    "name": "Tension Headache",
+    "category": "General / Other",
+    "synonyms": ["stress headache", "muscle tension headache", "band-like headache"],
+    "acuity": "Low",
+    "summary": "Benign, bilateral pressure-type headache without neuro deficits or red-flag features.",
+    "stages": {
+      "triage": [
+        "Characterize headache: onset, quality, location, severity",
+        "Screen thunderclap/worst-ever headache or sudden onset",
+        "Ask about fever, neuro deficits, head trauma, anticoagulants",
+        "Confirm prior similar headaches and usual pattern"
+      ],
+      "nursing": [
+        "Full vitals including blood pressure",
+        "Brief focused neuro screen (gross strength, speech, gait)",
+        "Dim lights and reduce stimulation if photophobia",
+        "Notify provider for any focal deficit or severe hypertension"
+      ],
+      "keyOrders": [
+        "Blood pressure measurement",
+        "POC glucose if dizzy or diabetic",
+        "Pain scale documentation",
+        "*Hydration if dehydration contributing"
+      ],
+      "labs": [
+        "Usually none for classic tension headache",
+        "*POC glucose if indicated",
+        "Defer labs/LP to ER if secondary cause suspected"
+      ],
+      "imaging": [
+        "No imaging for typical tension headache",
+        "Defer CT head to ER if red flags (thunderclap, deficit, trauma)",
+        "*Outpatient MRI referral if chronic atypical pattern"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO or naproxen 500 mg PO",
+        "Acetaminophen 1000 mg PO if NSAID contraindicated",
+        "*Cyclobenzaprine 5-10 mg PO if significant muscle tension",
+        "Avoid opioids and butalbital due to overuse/rebound risk"
+      ],
+      "reassess": [
+        "Reassess pain 30-60 min after analgesia",
+        "Confirm no evolving neuro signs",
+        "Verify BP improved with pain control",
+        "Ensure ambulating safely before discharge"
+      ],
+      "disposition": [
+        "Discharge home once pain controlled",
+        "PCP or neurology referral for frequent/chronic headaches",
+        "Transfer to ER or call 911 if thunderclap onset, focal deficit, or AMS"
+      ],
+      "discharge": [
+        "Headache hygiene: hydration, sleep, stress, screen breaks",
+        "Limit analgesic use to avoid medication-overuse headache",
+        "Return precautions: worst-ever headache, weakness, vision loss, vomiting",
+        "Provide written instructions"
+      ],
+      "followup": [
+        "PCP within 1-2 weeks if recurrent",
+        "Neurology referral for chronic or escalating headaches",
+        "Headache diary recommended"
+      ]
+    },
+    "redFlags": [
+      "Sudden 'thunderclap' or worst-ever headache",
+      "Focal neuro deficit, AMS, or seizure",
+      "Headache with fever and neck stiffness",
+      "New headache age >50 or with cancer/immunosuppression",
+      "Headache after significant head trauma or on anticoagulation"
+    ],
+    "compliance": [
+      "Urgent care cannot perform CT/LP; refer red-flag presentations to ER",
+      "Controlled-substance prudence: avoid opioids/butalbital for benign headache",
+      "Document neuro exam and return precautions",
+      "EMTALA transfer for any emergent secondary headache concern"
+    ]
+  },
+  {
+    "id": "mild-allergic-reaction",
+    "name": "Mild Allergic Reaction",
+    "category": "General / Other",
+    "synonyms": ["hives", "urticaria", "allergic rash", "itchy reaction"],
+    "acuity": "Low-Moderate",
+    "summary": "Localized or cutaneous allergic reaction (hives/itching) without airway or systemic compromise.",
+    "stages": {
+      "triage": [
+        "Screen IMMEDIATELY for anaphylaxis: airway, breathing, hypotension, vomiting",
+        "Identify trigger, timing, and prior reaction history",
+        "Assess extent of skin involvement and mucosal swelling",
+        "Confirm no tongue/throat swelling or wheeze"
+      ],
+      "nursing": [
+        "Full vitals including SpO2",
+        "Continuous observation if facial/lip involvement",
+        "Have epinephrine and airway equipment ready",
+        "Escalate immediately if any airway/respiratory change"
+      ],
+      "keyOrders": [
+        "Vitals with SpO2",
+        "Administer antihistamine per provider order",
+        "Remove/avoid ongoing trigger",
+        "*Cool compresses for pruritus"
+      ],
+      "labs": [
+        "None required for mild cutaneous reaction",
+        "Defer tryptase/allergy workup to outpatient allergist",
+        "*POC as clinically indicated"
+      ],
+      "imaging": [
+        "Not indicated",
+        "Defer to ER only if airway compromise"
+      ],
+      "meds": [
+        "Cetirizine 10 mg PO or diphenhydramine 25-50 mg PO",
+        "Famotidine 20 mg PO as adjunct H2 blocker",
+        "Prednisone 40-60 mg PO daily x3-5d for significant urticaria",
+        "*EpiPen prescription and teaching if systemic-risk history"
+      ],
+      "reassess": [
+        "Observe 30-60 min for progression",
+        "Recheck airway, breathing, skin spread",
+        "Confirm symptoms stable or improving",
+        "Verify no new systemic symptoms"
+      ],
+      "disposition": [
+        "Discharge home if isolated cutaneous reaction stable",
+        "Allergy/immunology referral for recurrent reactions",
+        "Transfer to ER or call 911 if airway swelling, wheeze, hypotension, or vomiting (anaphylaxis)"
+      ],
+      "discharge": [
+        "Antihistamine schedule and trigger avoidance",
+        "Anaphylaxis warning signs and EpiPen use if prescribed",
+        "Return precautions: throat tightness, SOB, dizziness, widespread swelling",
+        "Written instructions provided"
+      ],
+      "followup": [
+        "PCP within a few days if symptoms persist",
+        "Allergy referral for identification/testing",
+        "*Carry epinephrine if at risk"
+      ]
+    },
+    "redFlags": [
+      "Airway swelling, stridor, hoarseness, or throat tightness",
+      "Wheeze, dyspnea, or hypoxia",
+      "Hypotension, syncope, or tachycardia",
+      "GI symptoms (vomiting/cramping) with skin involvement = anaphylaxis",
+      "Rapidly progressive angioedema"
+    ],
+    "compliance": [
+      "Anaphylaxis is an emergency requiring epinephrine and 911/ER transfer per EMTALA",
+      "Urgent care should stock epinephrine and basic airway support",
+      "Document observation period and discharge stability",
+      "Provide epinephrine auto-injector script when systemic risk present"
+    ]
+  },
+  {
+    "id": "mild-dehydration",
+    "name": "Mild Dehydration",
+    "category": "General / Other",
+    "synonyms": ["fluid loss", "volume depletion", "low fluids", "dry"],
+    "acuity": "Low-Moderate",
+    "summary": "Mild-to-moderate volume depletion in a stable adult able to tolerate oral or short IV rehydration.",
+    "stages": {
+      "triage": [
+        "Assess cause: vomiting, diarrhea, heat, poor intake",
+        "Check for orthostatic symptoms and urine output",
+        "Screen severe signs: lethargy, hypotension, tachycardia",
+        "Identify diabetes or comorbidities affecting fluid status"
+      ],
+      "nursing": [
+        "Full vitals with orthostatic blood pressures",
+        "Assess mucous membranes, skin turgor, cap refill",
+        "Offer oral rehydration solution trial",
+        "Notify provider if unable to tolerate PO"
+      ],
+      "keyOrders": [
+        "Orthostatic vitals",
+        "POC glucose; *POC ketones if diabetic",
+        "Oral rehydration trial",
+        "*IV normal saline bolus 500-1000 mL if PO fails"
+      ],
+      "labs": [
+        "POC glucose; UA for ketones/concentration",
+        "*Basic metabolic panel if available and electrolyte concern",
+        "Defer extensive labs to ER if severe"
+      ],
+      "imaging": [
+        "Not indicated for uncomplicated dehydration",
+        "Defer to ER if surgical abdomen suspected"
+      ],
+      "meds": [
+        "Oral rehydration solution / electrolyte fluids",
+        "Ondansetron 4 mg ODT for nausea/vomiting",
+        "*IV NS 1 L if oral intake fails",
+        "Treat underlying cause (e.g., antidiarrheal if appropriate)"
+      ],
+      "reassess": [
+        "Recheck vitals and orthostatics after fluids",
+        "Confirm tolerating PO and improved symptoms",
+        "Reassess mental status and urine output",
+        "Verify resolution of tachycardia"
+      ],
+      "disposition": [
+        "Discharge home if rehydrated and tolerating PO",
+        "PCP follow-up for ongoing GI illness",
+        "Transfer to ER or call 911 if hypotension, AMS, anuria, or failure of rehydration"
+      ],
+      "discharge": [
+        "Oral rehydration plan and small frequent sips",
+        "Avoid plain water alone; use electrolyte fluids",
+        "Return precautions: no urine, dizziness, persistent vomiting, confusion",
+        "Written instructions provided"
+      ],
+      "followup": [
+        "PCP within 1-2 days if symptoms continue",
+        "Return for inability to keep fluids down",
+        "*Specialist referral if recurrent dehydration"
+      ]
+    },
+    "redFlags": [
+      "Hypotension or persistent tachycardia after fluids",
+      "Altered mental status or marked lethargy",
+      "Anuria or signs of acute kidney injury",
+      "Intractable vomiting unable to tolerate any PO",
+      "Suspected DKA or severe electrolyte disturbance"
+    ],
+    "compliance": [
+      "Severe dehydration/shock requires ER transfer under EMTALA",
+      "IV therapy limited to short stabilization; not for prolonged management",
+      "Document intake tolerance and hemodynamic stability at discharge",
+      "Provide clear return precautions"
+    ]
+  },
+  {
+    "id": "dental-pain",
+    "name": "Dental Pain",
+    "category": "General / Other",
+    "synonyms": ["toothache", "tooth pain", "odontalgia", "dental abscess pain"],
+    "acuity": "Low",
+    "summary": "Localized dental/tooth pain or simple abscess without airway or deep-space spread.",
+    "stages": {
+      "triage": [
+        "Localize pain; assess swelling and duration",
+        "Screen for facial cellulitis, trismus, or airway concern",
+        "Ask about fever, trauma, and prior dental work",
+        "Check ability to swallow and open mouth fully"
+      ],
+      "nursing": [
+        "Full vitals including temperature",
+        "Inspect oral cavity, gums, and any visible abscess",
+        "Assess for facial/submandibular swelling",
+        "Notify provider if swelling crossing facial planes"
+      ],
+      "keyOrders": [
+        "Temperature and vitals",
+        "Oral exam and pain scale",
+        "*Warm saline rinse instruction",
+        "*Incision/drainage NOT typically performed in urgent care"
+      ],
+      "labs": [
+        "Usually none",
+        "*Glucose if diabetic with infection",
+        "Defer cultures to dental/ER if deep infection"
+      ],
+      "imaging": [
+        "No imaging typically; dental X-ray usually outpatient",
+        "Defer CT to ER if deep-space infection suspected",
+        "*Panoramic dental film referred to dentist"
+      ],
+      "meds": [
+        "Ibuprofen 600 mg PO + acetaminophen 1000 mg PO alternating",
+        "Amoxicillin 500 mg PO TID x5-7d if abscess/infection",
+        "Clindamycin 300 mg PO QID if penicillin allergy",
+        "*Topical benzocaine for temporary relief; avoid opioids"
+      ],
+      "reassess": [
+        "Confirm pain improved with analgesia",
+        "Reassess swelling and ability to swallow",
+        "Verify no airway compromise",
+        "Confirm understanding of dental follow-up need"
+      ],
+      "disposition": [
+        "Discharge home with dentist referral",
+        "Urgent dental referral within 24-48h for definitive care",
+        "Transfer to ER or call 911 if airway compromise, Ludwig angina, or spreading facial infection"
+      ],
+      "discharge": [
+        "Analgesia plan and antibiotic instructions if prescribed",
+        "Warm saline rinses and soft diet",
+        "Return precautions: facial swelling, fever, difficulty swallowing/breathing",
+        "Stress that antibiotics are temporizing, not curative"
+      ],
+      "followup": [
+        "Dentist within 24-72h for definitive treatment",
+        "Return sooner if swelling spreads",
+        "*Oral surgery referral for complex abscess"
+      ]
+    },
+    "redFlags": [
+      "Floor-of-mouth swelling, drooling, or trouble swallowing (Ludwig angina)",
+      "Trismus or rapidly spreading facial cellulitis",
+      "Airway compromise or voice change",
+      "High fever with systemic toxicity",
+      "Periorbital extension of infection"
+    ],
+    "compliance": [
+      "Definitive dental care is outside urgent-care scope; refer to dentist",
+      "Deep-space/airway infections require ER transfer under EMTALA",
+      "Controlled-substance prudence: NSAIDs/acetaminophen first-line, avoid opioids",
+      "Antibiotics are a bridge to dental treatment, not a cure"
+    ]
+  },
+  {
+    "id": "medication-refill",
+    "name": "Medication Refill",
+    "category": "General / Other",
+    "synonyms": ["prescription refill", "out of meds", "bridge prescription", "refill request"],
+    "acuity": "Low",
+    "summary": "Short bridge refill of a stable, non-controlled chronic medication when PCP access is delayed.",
+    "stages": {
+      "triage": [
+        "Confirm medication, dose, last fill, and prescriber",
+        "Verify reason PCP cannot refill",
+        "Screen for symptoms of uncontrolled disease",
+        "Identify whether medication is controlled (generally not refilled)"
+      ],
+      "nursing": [
+        "Relevant vitals (e.g., BP for antihypertensives, glucose for diabetics)",
+        "Confirm current pharmacy and med list",
+        "Document adherence and side effects",
+        "Flag any abnormal vitals to provider"
+      ],
+      "keyOrders": [
+        "Targeted vitals based on medication class",
+        "*POC glucose for diabetic meds",
+        "*BP check for cardiac/HTN meds",
+        "Verify prescription via pharmacy/records if possible"
+      ],
+      "labs": [
+        "Generally none; condition-specific monitoring deferred to PCP",
+        "*POC glucose if indicated",
+        "Defer INR/level monitoring to PCP or lab"
+      ],
+      "imaging": [
+        "Not indicated"
+      ],
+      "meds": [
+        "Short bridge supply (e.g., 7-30 days) of stable non-controlled medication",
+        "No initiation of controlled substances for refill requests",
+        "Confirm no contraindications/interactions before prescribing",
+        "*Defer complex titration to PCP"
+      ],
+      "reassess": [
+        "Confirm patient understands this is a temporary bridge",
+        "Verify vitals acceptable for the medication",
+        "Ensure PCP follow-up arranged",
+        "Document rationale for bridge refill"
+      ],
+      "disposition": [
+        "Discharge home with short bridge prescription",
+        "Refer to PCP to re-establish ongoing management",
+        "Transfer to ER or call 911 if signs of acute decompensation (e.g., hypertensive emergency, severe hyperglycemia)"
+      ],
+      "discharge": [
+        "Emphasize establishing/continuing PCP care",
+        "Provide bridge quantity and pharmacy info",
+        "Return precautions specific to the condition",
+        "Advise not to rely on urgent care for chronic refills"
+      ],
+      "followup": [
+        "PCP within the bridge window to assume care",
+        "*Specialist follow-up as appropriate",
+        "Assist with PCP referral if uninsured/unestablished"
+      ]
+    },
+    "redFlags": [
+      "Symptoms of uncontrolled/decompensated disease",
+      "Request for controlled substances (opioids, benzodiazepines, stimulants)",
+      "Abnormal vitals suggesting acute crisis",
+      "Drug-seeking or inconsistent history",
+      "Medications requiring lab monitoring not available"
+    ],
+    "compliance": [
+      "Urgent care provides bridge refills only; not a chronic-care home",
+      "Controlled-substance prudence: do not refill controlled meds; check Texas PMP/PDMP",
+      "Verify prescription legitimacy before refilling",
+      "Document medical necessity and PCP referral"
+    ]
+  },
+  {
+    "id": "work-school-note-physical",
+    "name": "Work / School Note & Physical",
+    "category": "General / Other",
+    "synonyms": ["doctor's note", "return-to-work note", "sports physical", "school physical", "preparticipation exam"],
+    "acuity": "Low",
+    "summary": "Administrative visit for work/school notes or routine physical/preparticipation exam in a well patient.",
+    "stages": {
+      "triage": [
+        "Clarify purpose: note, clearance, or physical exam",
+        "Confirm patient is well with no acute complaint",
+        "Identify any required forms to complete",
+        "Screen for symptoms that would defer clearance"
+      ],
+      "nursing": [
+        "Full vitals and BMI",
+        "Vision screen if required for physical",
+        "Collect history forms and immunization records",
+        "Flag abnormal vitals to provider"
+      ],
+      "keyOrders": [
+        "Vitals, height/weight, vision check",
+        "*Urine drug screen if employer-mandated",
+        "Complete required forms",
+        "*POC tests only if employer/sport requires"
+      ],
+      "labs": [
+        "Generally none for routine note/physical",
+        "*Urine drug screen or TB test if required",
+        "Defer screening labs to PCP"
+      ],
+      "imaging": [
+        "Not indicated for routine clearance"
+      ],
+      "meds": [
+        "None typically required",
+        "*Update immunizations if needed (see immunization protocol)"
+      ],
+      "reassess": [
+        "Verify exam findings support clearance",
+        "Identify any condition needing PCP evaluation first",
+        "Confirm forms completed accurately",
+        "Document any restrictions"
+      ],
+      "disposition": [
+        "Discharge home with completed note/form",
+        "Refer to PCP/cardiology if exam reveals concern (e.g., murmur, abnormal BP)",
+        "Transfer to ER or call 911 if unexpected acute finding (e.g., chest pain, severe hypertension)"
+      ],
+      "discharge": [
+        "Provide signed note/clearance documentation",
+        "Explain any activity restrictions",
+        "Advise PCP follow-up for any flagged findings",
+        "Return precautions for new symptoms"
+      ],
+      "followup": [
+        "PCP for abnormal findings or further workup",
+        "*Cardiology referral if cardiac concern on sports physical",
+        "Routine periodic exams with PCP"
+      ]
+    },
+    "redFlags": [
+      "Exertional chest pain, syncope, or concerning cardiac history (sports physical)",
+      "Severe uncontrolled hypertension",
+      "New murmur or abnormal cardiopulmonary exam",
+      "Findings suggesting undiagnosed serious illness",
+      "Inability to safely clear for requested activity"
+    ],
+    "compliance": [
+      "Provider must only sign clearances supported by exam findings",
+      "Follow employer/UIL/school documentation requirements accurately",
+      "Refer abnormal findings rather than clearing inappropriately",
+      "Maintain confidentiality of medical information"
+    ]
+  },
+  {
+    "id": "tetanus-immunization",
+    "name": "Tetanus / Immunization",
+    "category": "General / Other",
+    "synonyms": ["tetanus shot", "Tdap", "Td booster", "vaccine", "vaccination", "immunization update"],
+    "acuity": "Low",
+    "summary": "Routine or wound-indicated tetanus and other adult vaccinations in a stable patient.",
+    "stages": {
+      "triage": [
+        "Determine reason: routine, wound prophylaxis, or catch-up",
+        "Obtain immunization history and last tetanus date",
+        "Screen for vaccine allergies/contraindications",
+        "Assess any wound: clean vs dirty, depth, contamination"
+      ],
+      "nursing": [
+        "Vitals and brief allergy review",
+        "Verify vaccine type, lot, expiration before administration",
+        "Provide Vaccine Information Statement (VIS)",
+        "Observe 15 min post-injection for reaction"
+      ],
+      "keyOrders": [
+        "Wound cleaning/irrigation if applicable",
+        "Administer indicated vaccine (Td/Tdap, etc.)",
+        "*Tetanus immune globulin (TIG) for high-risk wound if undervaccinated",
+        "Document lot number and site"
+      ],
+      "labs": [
+        "None required for routine immunization",
+        "Defer titer testing to PCP if needed"
+      ],
+      "imaging": [
+        "Not indicated unless deep foreign body in wound (then X-ray)"
+      ],
+      "meds": [
+        "Tdap or Td booster per indication",
+        "Tetanus prophylaxis: Tdap if dirty wound and >5y since last dose",
+        "*TIG 250 units IM for high-risk wound in undervaccinated patient",
+        "*Other adult vaccines (influenza, etc.) as available"
+      ],
+      "reassess": [
+        "Observe for immediate allergic reaction",
+        "Confirm wound care adequate if applicable",
+        "Document vaccines given and next due dates",
+        "Verify patient stable before discharge"
+      ],
+      "disposition": [
+        "Discharge home after observation period",
+        "Refer to PCP/pharmacy for full vaccine series completion",
+        "Transfer to ER or call 911 if anaphylaxis post-vaccination"
+      ],
+      "discharge": [
+        "Expected local soreness and low-grade fever counseling",
+        "Acetaminophen/ibuprofen for injection-site discomfort",
+        "Return precautions: signs of anaphylaxis, spreading infection",
+        "Provide updated immunization record"
+      ],
+      "followup": [
+        "PCP for remaining series doses or catch-up schedule",
+        "Wound recheck if applicable",
+        "Report administration to Texas immunization registry (ImmTrac2) with consent"
+      ]
+    },
+    "redFlags": [
+      "Anaphylaxis or severe allergic reaction post-vaccine",
+      "Severe contaminated wound with systemic signs",
+      "Signs of established tetanus (trismus, spasms)",
+      "High fever or systemic illness after vaccination",
+      "Prior severe reaction to the vaccine component"
+    ],
+    "compliance": [
+      "Maintain epinephrine/anaphylaxis readiness and 15-min observation",
+      "Provide VIS and document lot/site/expiration per CDC requirements",
+      "Report to Texas ImmTrac2 registry with patient consent",
+      "Anaphylaxis requires epinephrine and ER transfer under EMTALA"
+    ]
+  }
+]

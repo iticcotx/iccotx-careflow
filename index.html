@@ -64,6 +64,27 @@ header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 
 .cchip.active{background:rgba(10,159,194,.13);border-color:var(--cyan-deep);color:var(--cyan-deep)}
 .cchip .dotc{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:middle;background:var(--accent,var(--cyan))}
 
+/* mode toggle */
+.modes{display:flex;gap:8px;background:var(--panel);border:1px solid var(--stroke);border-radius:15px;padding:6px;
+  backdrop-filter:blur(12px);box-shadow:var(--shadow);width:fit-content;max-width:100%;margin:18px 0 4px;flex-wrap:wrap}
+.mode{border:none;background:transparent;cursor:pointer;font-family:inherit;font-weight:750;font-size:15px;color:var(--txt-dim);
+  padding:12px 22px;border-radius:11px;display:flex;align-items:center;gap:9px;transition:all var(--speed)}
+.mode:hover{color:var(--txt)}.mode svg{width:19px;height:19px}
+.mode.active{color:#fff}
+.mode[data-set="ER"].active{background:linear-gradient(135deg,#e6485f,#c62a4a);box-shadow:0 10px 24px -12px rgba(230,56,88,.8)}
+.mode[data-set="Urgent Care"].active{background:linear-gradient(135deg,#0db0d4,#0488a8);box-shadow:0 10px 24px -12px rgba(10,159,194,.8)}
+
+/* favourite star + section heads */
+.ccard .fav{flex:none;width:30px;height:30px;border:none;background:transparent;cursor:pointer;color:var(--txt-mute);
+  display:grid;place-items:center;border-radius:8px;transition:all var(--speed);margin:-2px -4px -2px -2px}
+.ccard .fav svg{width:19px;height:19px}
+.ccard .fav:hover{color:var(--warn);background:rgba(217,134,19,.14)}
+.ccard .fav.on{color:var(--warn)}
+.catblock h2 .hstar{color:var(--warn);font-size:16px;line-height:1}
+.othhead{margin:36px 2px 6px;font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-mute);
+  display:flex;align-items:center;gap:10px}
+.othhead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--stroke-strong),transparent)}
+
 /* directory */
 .catblock{margin-top:26px}
 .catblock h2{display:flex;align-items:center;gap:11px;margin:0 0 14px;font-size:15px;font-weight:800;letter-spacing:1.1px;
@@ -81,7 +102,7 @@ header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 
 .ccard .nm span{font-size:12px;color:var(--txt-mute);line-height:1.35;margin-top:2px;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .ccard .esi{flex:none;font-size:11px;font-weight:800;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
-  padding:4px 9px;border-radius:999px;white-space:nowrap;max-width:74px;overflow:hidden;text-overflow:ellipsis}
+  padding:4px 9px;border-radius:999px;white-space:nowrap;max-width:118px;overflow:hidden;text-overflow:ellipsis}
 .ccard .arrow{width:18px;height:18px;color:var(--txt-mute);flex:none}
 
 .empty{text-align:center;padding:60px 20px;color:var(--txt-mute)}
@@ -155,13 +176,18 @@ footer b{color:var(--txt-dim)}
     </div>
   </header>
 
+  <div class="modes" id="modes">
+    <button class="mode active" data-set="ER"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h2l1-5h12l1 5h2M5 17v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M16 17v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M9 7h6M12 4v6"/></svg>Emergency Room</button>
+    <button class="mode" data-set="Urgent Care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6z"/><path d="M12 8v6M9 11h6"/></svg>Urgent Care</button>
+  </div>
+
   <div class="searchbar">
     <div class="box">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="search" type="search" placeholder="Search any chief complaint — e.g. chest pain, sepsis, dog bite, DKA, vaginal bleeding…" autocomplete="off" />
       <button class="clearx" id="clearx" aria-label="clear">×</button>
     </div>
-    <div class="meta-line"><b id="count">…</b> chief complaints across <b id="catcount">…</b> body systems · tap any to open its full workflow</div>
+    <div class="meta-line"><b id="count">…</b> chief complaints across <b id="catcount">…</b> categories · ★ favourites &amp; Top 10 pinned on home · tap any to open its full workflow</div>
   </div>
 
   <div class="cats" id="cats"></div>
@@ -209,64 +235,95 @@ const SECTIONS=[
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const parseEsi=a=>{ if(!a) return ''; const m=String(a).replace(/esi/ig,'').match(/\d\s*[-–]\s*\d|\d/); return m?m[0].replace(/\s+/g,''):''; };
 
-let DATA=[], CATS=[], catColor={}, activeCat='all', query='';
+let DATA=[], catColor={}, activeSetting='ER', activeCat='all', query='';
+let favs=new Set(); try{ favs=new Set(JSON.parse(localStorage.getItem('iccotx_favs')||'[]')); }catch(e){}
 
+const favKey=w=>w.setting+'|'+w.id;
+const isFav=w=>favs.has(favKey(w));
+function toggleFav(id){
+  const w=DATA.find(x=>x.id===id&&x.setting===activeSetting); if(!w) return;
+  const k=favKey(w); favs.has(k)?favs.delete(k):favs.add(k);
+  localStorage.setItem('iccotx_favs',JSON.stringify([...favs]));
+  render();
+}
 function getList(wf,key){
   if(key==='redFlags') return wf.redFlags||[];
   if(key==='compliance') return wf.compliance||[];
   return (wf.stages&&wf.stages[key])||[];
 }
+const badgeText=w=> w.setting==='ER' ? (parseEsi(w.acuity)?'ESI '+parseEsi(w.acuity):'') : (w.acuity||'');
+
+function cardHtml(w){
+  const col=catColor[w.category]||'var(--cyan)', fav=isFav(w), b=badgeText(w);
+  return `<div class="ccard" style="--accent:${col}" data-id="${esc(w.id)}">
+    <button class="fav ${fav?'on':''}" data-fav="${esc(w.id)}" aria-label="Favourite"><svg viewBox="0 0 24 24" fill="${fav?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 17.3l-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.8 1.6 7z"/></svg></button>
+    <div class="nm"><b>${esc(w.name)}</b>${w.summary?`<span>${esc(w.summary)}</span>`:''}</div>
+    ${b?`<span class="esi">${esc(b)}</span>`:''}
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+  </div>`;
+}
+function blockHtml(title,items,accent,opts){
+  opts=opts||{}; if(!items.length) return '';
+  const lead=opts.star?'<span class="hstar">★</span>':'<span class="cdot"></span>';
+  return `<div class="catblock" style="--accent:${accent||'var(--cyan)'}"><h2>${lead}${esc(title)} <small>${items.length}</small></h2><div class="grid">${items.map(cardHtml).join('')}</div></div>`;
+}
 
 function render(){
   const dir=document.getElementById('directory');
+  const items=DATA.filter(w=>w.setting===activeSetting);
+  document.getElementById('count').textContent=items.length;
+  document.getElementById('catcount').textContent=new Set(items.map(w=>w.category)).size;
   const q=query.toLowerCase().trim();
-  const match=wf=>{
-    if(activeCat!=='all'&&wf.category!==activeCat) return false;
-    if(!q) return true;
-    const hay=(wf.name+' '+wf.category+' '+(wf.synonyms||[]).join(' ')+' '+(wf.summary||'')).toLowerCase();
-    return hay.includes(q);
-  };
-  const shown=DATA.filter(match);
-  document.getElementById('count').textContent=shown.length;
-  if(!shown.length){ dir.innerHTML='<div class="empty"><h3>No matching complaint</h3><div>Try another term, or clear the search.</div></div>'; return; }
-  let html='';
-  CATS.forEach(cat=>{
-    const items=shown.filter(w=>w.category===cat);
-    if(!items.length) return;
-    const col=catColor[cat];
-    html+=`<div class="catblock" style="--accent:${col}"><h2><span class="cdot"></span>${esc(cat)} <small>${items.length}</small></h2><div class="grid">`;
-    html+=items.map(w=>`<div class="ccard" style="--accent:${col}" data-id="${esc(w.id)}">
-      <div class="nm"><b>${esc(w.name)}</b>${w.summary?`<span>${esc(w.summary)}</span>`:''}</div>
-      ${parseEsi(w.acuity)?`<span class="esi">ESI ${esc(parseEsi(w.acuity))}</span>`:''}
-      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
-    </div>`).join('');
-    html+='</div></div>';
-  });
+  if(q){
+    const f=items.filter(w=>(w.name+' '+w.category+' '+(w.synonyms||[]).join(' ')+' '+(w.summary||'')).toLowerCase().includes(q));
+    if(!f.length){ dir.innerHTML='<div class="empty"><h3>No matching complaint</h3><div>Try another term, or clear the search.</div></div>'; return; }
+    const cats=[...new Set(f.map(w=>w.category))];
+    dir.innerHTML=cats.map(c=>blockHtml(c,f.filter(w=>w.category===c),catColor[c])).join(''); return;
+  }
+  if(activeCat!=='all'){
+    dir.innerHTML=blockHtml(activeCat,items.filter(w=>w.category===activeCat),catColor[activeCat]); return;
+  }
+  const favItems=items.filter(isFav);
+  const topItems=items.filter(w=>w.top).sort((a,b)=>a.top-b.top);
+  const others=items.filter(w=>!w.top);
+  let html=blockHtml('Favourites',favItems,'var(--warn)',{star:true});
+  html+=blockHtml('Top 10 — '+activeSetting,topItems,activeSetting==='ER'?'#e6485f':'#0db0d4');
+  if(others.length){
+    html+='<div class="othhead">Others</div>';
+    const cats=[...new Set(others.map(w=>w.category))];
+    html+=cats.map(c=>blockHtml(c,others.filter(w=>w.category===c),catColor[c])).join('');
+  }
   dir.innerHTML=html;
 }
 
 function openDetail(id){
-  const wf=DATA.find(w=>w.id===id); if(!wf) return;
+  const wf=DATA.find(w=>w.id===id&&w.setting===activeSetting)||DATA.find(w=>w.id===id); if(!wf) return;
   const col=catColor[wf.category]||'var(--cyan)';
   document.getElementById('dhead').style.setProperty('--accent',col);
   document.getElementById('dTitle').textContent=wf.name;
-  document.getElementById('dCat').textContent=wf.category+(wf.acuity?(' · Acuity ESI '+wf.acuity):'');
-  document.getElementById('dEsi').textContent=parseEsi(wf.acuity)?('ESI '+parseEsi(wf.acuity)):'';
+  document.getElementById('dCat').textContent=wf.category+(wf.acuity?(' · '+(wf.setting==='ER'?'Acuity ESI ':'Acuity ')+wf.acuity):'');
+  const b=badgeText(wf);
+  document.getElementById('dEsi').textContent=b;
   document.getElementById('dEsi').style.setProperty('--accent',col);
+  document.getElementById('dEsi').style.display=b?'':'none';
   document.getElementById('dSummary').textContent=wf.summary||'';
   let html='';
   SECTIONS.forEach(s=>{
     const list=getList(wf,s.k); if(!list||!list.length) return;
-    html+=`<div class="sec ${s.cls||''}"><h3><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${s.icon}</svg>${s.label}</h3>
+    const label = s.k==='compliance' ? (wf.setting==='ER'?'Texas FSED Compliance':'Urgent Care Compliance') : s.label;
+    html+=`<div class="sec ${s.cls||''}"><h3><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${s.icon}</svg>${esc(label)}</h3>
       <ul>${list.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`;
   });
   document.getElementById('dSections').innerHTML=html;
-  document.getElementById('dbody')&&(document.querySelector('.dbody').scrollTop=0);
+  const body=document.querySelector('.dbody'); if(body) body.scrollTop=0;
   document.getElementById('detail').classList.add('show');
 }
 function closeDetail(){document.getElementById('detail').classList.remove('show');}
 
-document.getElementById('directory').addEventListener('click',e=>{const c=e.target.closest('.ccard');if(c)openDetail(c.dataset.id);});
+document.getElementById('directory').addEventListener('click',e=>{
+  const fav=e.target.closest('.fav'); if(fav){ e.stopPropagation(); toggleFav(fav.dataset.fav); return; }
+  const c=e.target.closest('.ccard'); if(c) openDetail(c.dataset.id);
+});
 document.getElementById('dClose').addEventListener('click',closeDetail);
 document.getElementById('detail').addEventListener('click',e=>{if(e.target.id==='detail')closeDetail();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail();});
@@ -276,15 +333,25 @@ const search=document.getElementById('search'),clearx=document.getElementById('c
 search.addEventListener('input',()=>{query=search.value;clearx.style.display=query?'block':'none';render();});
 clearx.addEventListener('click',()=>{search.value='';query='';clearx.style.display='none';render();search.focus();});
 
+document.getElementById('modes').addEventListener('click',e=>{
+  const b=e.target.closest('.mode'); if(!b) return;
+  activeSetting=b.dataset.set; activeCat='all'; query='';
+  search.value=''; clearx.style.display='none';
+  [...document.getElementById('modes').children].forEach(x=>x.classList.toggle('active',x===b));
+  buildCats(); render(); window.scrollTo({top:0,behavior:'smooth'});
+});
+document.getElementById('cats').addEventListener('click',e=>{
+  const b=e.target.closest('.cchip'); if(!b) return;
+  activeCat=b.dataset.cat;
+  [...document.getElementById('cats').children].forEach(x=>x.classList.toggle('active',x===b));
+  render();
+});
+
 function buildCats(){
-  const catbox=document.getElementById('cats');
-  CATS.forEach((c,i)=>{ catColor[c]=CAT_COLORS[i%CAT_COLORS.length]; });
-  let html=`<button class="cchip active" data-cat="all">All systems</button>`;
-  html+=CATS.map(c=>`<button class="cchip" data-cat="${esc(c)}" style="--accent:${catColor[c]}"><span class="dotc"></span>${esc(c)}</button>`).join('');
-  catbox.innerHTML=html;
-  catbox.addEventListener('click',e=>{const b=e.target.closest('.cchip');if(!b)return;
-    activeCat=b.dataset.cat;[...catbox.children].forEach(x=>x.classList.toggle('active',x===b));render();});
-  document.getElementById('catcount').textContent=CATS.length;
+  const cats=[...new Set(DATA.filter(w=>w.setting===activeSetting).map(w=>w.category))];
+  let html='<button class="cchip active" data-cat="all">All</button>';
+  html+=cats.map(c=>`<button class="cchip" data-cat="${esc(c)}" style="--accent:${catColor[c]}"><span class="dotc"></span>${esc(c)}</button>`).join('');
+  document.getElementById('cats').innerHTML=html;
 }
 
 async function load(){
@@ -292,12 +359,13 @@ async function load(){
     const r=await fetch('catalog.json?cb='+Date.now());
     if(!r.ok) throw new Error('no catalog');
     DATA=await r.json();
-    DATA.sort((a,b)=>a.name.localeCompare(b.name));
-    CATS=[...new Set(DATA.map(w=>w.category))];
-    buildCats();
-    render();
+    DATA.sort((a,b)=>(a.top&&b.top?a.top-b.top:0)||a.name.localeCompare(b.name));
+    [...new Set(DATA.map(w=>w.category))].forEach((c,i)=>{ if(!(c in catColor)) catColor[c]=CAT_COLORS[i%CAT_COLORS.length]; });
+    activeSetting=DATA.some(w=>w.setting==='ER')?'ER':((DATA[0]&&DATA[0].setting)||'ER');
+    [...document.getElementById('modes').children].forEach(x=>x.classList.toggle('active',x.dataset.set===activeSetting));
+    buildCats(); render();
   }catch(e){
-    document.getElementById('directory').innerHTML='<div class="empty"><div class="spin"></div><h3>Building the workflow catalog…</h3><div>The clinical workflows are being generated. This page will show them once ready — refresh in a moment.</div></div>';
+    document.getElementById('directory').innerHTML='<div class="empty"><div class="spin"></div><h3>Building the workflow catalog…</h3><div>The clinical workflows are being generated. Refresh in a moment.</div></div>';
     document.getElementById('count').textContent='0';
   }
 }

@@ -1,0 +1,329 @@
+[
+  {
+    "id": "nausea-vomiting-gastroenteritis",
+    "name": "Nausea / Vomiting / Gastroenteritis",
+    "category": "Gastrointestinal",
+    "synonyms": ["stomach flu", "stomach bug", "throwing up", "puking", "viral gastroenteritis", "food poisoning"],
+    "acuity": "Low-Moderate",
+    "summary": "Acute self-limited nausea/vomiting, typically viral or foodborne, managed with antiemetics and oral rehydration in adults.",
+    "stages": {
+      "triage": [
+        "Onset, frequency, and duration of vomiting; presence of diarrhea",
+        "Assess hydration: dizziness, urine output, dry mouth, lightheadedness on standing",
+        "Screen for blood/bile in emesis, severe or localized abdominal pain",
+        "Sick contacts, recent travel, suspect food source",
+        "Pregnancy status in females of childbearing age"
+      ],
+      "nursing": [
+        "Vitals including orthostatic BP/HR if dehydration suspected",
+        "Weight and general appearance/mucous membrane check",
+        "Quiet area with emesis basin; limit oral intake until antiemetic given",
+        "Reassess intake tolerance after medication"
+      ],
+      "keyOrders": [
+        "Point-of-care glucose",
+        "Orthostatic vital signs",
+        "Oral rehydration trial (small frequent sips) after antiemetic",
+        "*IV fluids if available and moderate dehydration / failed PO trial"
+      ],
+      "labs": [
+        "*Urine pregnancy test if female of childbearing age (if indicated)",
+        "*Urinalysis for ketones/concentration if indicated",
+        "*POC glucose if diabetic or altered",
+        "Electrolytes/CBC typically deferred to ER/outpatient if needed"
+      ],
+      "imaging": [
+        "None routinely",
+        "*Defer abdominal imaging (CT/US) to ER if obstruction or surgical abdomen suspected"
+      ],
+      "meds": [
+        "Ondansetron 4 mg ODT/IV, may repeat once",
+        "*Promethazine 12.5-25 mg PO/PR if indicated (caution sedation)",
+        "*Metoclopramide 10 mg if indicated",
+        "Oral rehydration solution; advance to bland diet (BRAT) as tolerated",
+        "*IV normal saline bolus 500-1000 mL if dehydrated and IV available"
+      ],
+      "reassess": [
+        "Recheck ability to tolerate oral fluids 30-60 min after antiemetic",
+        "Reassess hydration status and vitals before discharge",
+        "Confirm no worsening or localizing abdominal pain"
+      ],
+      "disposition": [
+        "Discharge home if tolerating PO and stable vitals",
+        "PCP follow-up if symptoms persist beyond 48-72 h",
+        "Transfer to ER or call 911 if intractable vomiting, signs of severe dehydration/shock, bloody/bilious emesis, severe abdominal pain, or altered mental status"
+      ],
+      "discharge": [
+        "Oral rehydration instructions; small frequent clear fluids then bland diet",
+        "Hand hygiene to prevent spread",
+        "Continue antiemetic as prescribed; avoid dairy/fatty/spicy foods 24-48 h",
+        "Return precautions: persistent vomiting >24 h, no urine output, blood in emesis/stool, severe pain"
+      ],
+      "followup": [
+        "PCP if not improved in 48-72 h",
+        "Earlier follow-up for elderly, diabetic, or immunocompromised",
+        "*Stool studies via PCP if prolonged or bloody diarrhea"
+      ]
+    },
+    "redFlags": [
+      "Signs of severe dehydration or hemodynamic instability",
+      "Bilious or bloody (hematemesis/coffee-ground) vomiting",
+      "Severe, localized, or peritoneal abdominal pain",
+      "Altered mental status, severe headache, or stiff neck",
+      "Suspected bowel obstruction, GI bleed, DKA, or pregnancy complication"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; arrange EMTALA-appropriate ER transfer for unstable or surgical presentations",
+      "Document hydration assessment and PO tolerance prior to discharge",
+      "Provide clear written return precautions",
+      "Report suspected foodborne outbreaks to Texas DSHS as required",
+      "Limit antiemetics to short outpatient courses; counsel on driving/sedation"
+    ]
+  },
+  {
+    "id": "diarrhea",
+    "name": "Diarrhea",
+    "category": "Gastrointestinal",
+    "synonyms": ["loose stools", "the runs", "watery stools", "traveler's diarrhea"],
+    "acuity": "Low-Moderate",
+    "summary": "Acute diarrhea in adults, usually self-limited viral/bacterial, managed with rehydration and selective antimicrobials.",
+    "stages": {
+      "triage": [
+        "Duration, frequency, and character of stools (watery vs bloody)",
+        "Associated fever, abdominal cramps, vomiting",
+        "Hydration assessment: thirst, urine output, dizziness",
+        "Recent travel, antibiotics, sick contacts, suspect foods",
+        "Immunocompromise, age, comorbidities"
+      ],
+      "nursing": [
+        "Vitals including orthostatic BP/HR if indicated",
+        "Weight and mucous membrane/hydration check",
+        "Encourage oral rehydration during visit",
+        "Collect stool sample if studies ordered"
+      ],
+      "keyOrders": [
+        "Point-of-care glucose",
+        "Orthostatic vital signs",
+        "Oral rehydration trial",
+        "*IV fluids if available and dehydrated/failed PO"
+      ],
+      "labs": [
+        "*Stool occult blood / fecal studies if bloody or prolonged (if indicated)",
+        "*Urine pregnancy test if applicable",
+        "*Urinalysis for hydration/ketones if indicated",
+        "*C. difficile testing deferred to outpatient if recent antibiotics",
+        "Electrolytes deferred to ER/outpatient if significant"
+      ],
+      "imaging": [
+        "None routinely",
+        "*Defer abdominal CT to ER if severe pain or suspected colitis/obstruction"
+      ],
+      "meds": [
+        "Oral rehydration solution; advance diet as tolerated",
+        "Loperamide 4 mg then 2 mg per loose stool (max 16 mg/day) - avoid if bloody stool or high fever",
+        "*Bismuth subsalicylate if indicated",
+        "*Azithromycin 500 mg daily x3 d or ciprofloxacin for dysentery/traveler's diarrhea if indicated",
+        "*IV normal saline bolus if dehydrated and IV available"
+      ],
+      "reassess": [
+        "Reassess hydration and PO tolerance before discharge",
+        "Reconsider bacterial cause if high fever or bloody stools",
+        "Confirm stable vitals"
+      ],
+      "disposition": [
+        "Discharge home if stable and hydrated",
+        "PCP follow-up if persistent >7 days or recurrent",
+        "Transfer to ER or call 911 if severe dehydration/shock, significant GI bleeding, severe abdominal pain, high fever with toxic appearance, or altered mental status"
+      ],
+      "discharge": [
+        "Rehydration and hand-hygiene instructions",
+        "Avoid antidiarrheals if bloody stool or fever",
+        "Diet advice: bland foods, avoid dairy/caffeine/alcohol short term",
+        "Return precautions: bloody stools, high fever, no urine output, severe pain, dizziness"
+      ],
+      "followup": [
+        "PCP if no improvement in 5-7 days or recurrent",
+        "Earlier follow-up for elderly/immunocompromised",
+        "*Stool studies/referral for chronic or bloody diarrhea"
+      ]
+    },
+    "redFlags": [
+      "Severe dehydration or hemodynamic instability",
+      "Grossly bloody diarrhea or signs of GI bleed",
+      "Severe or localized abdominal pain / peritoneal signs",
+      "High fever with toxic appearance or altered mental status",
+      "Immunocompromised host with significant illness"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; transfer unstable patients per EMTALA",
+      "Use antibiotics judiciously; avoid empiric antibiotics in suspected EHEC/bloody diarrhea",
+      "Report reportable enteric infections to Texas DSHS as required",
+      "Document hydration assessment and return precautions",
+      "Counsel on antidiarrheal contraindications"
+    ]
+  },
+  {
+    "id": "constipation",
+    "name": "Constipation",
+    "category": "Gastrointestinal",
+    "synonyms": ["can't poop", "irregular bowel movements", "hard stools", "blocked up"],
+    "acuity": "Low",
+    "summary": "Adult functional constipation managed with bowel regimen and lifestyle counseling after excluding obstruction.",
+    "stages": {
+      "triage": [
+        "Frequency and consistency of stools; duration of symptoms",
+        "Associated abdominal pain, distension, nausea/vomiting",
+        "Last bowel movement and flatus; any rectal bleeding",
+        "Medications (opioids, anticholinergics), fluid/fiber intake",
+        "Red-flag screen: weight loss, melena, new onset in older adult"
+      ],
+      "nursing": [
+        "Vitals",
+        "Abdominal inspection for distension",
+        "*Assist with bowel-regimen teaching",
+        "Review medication list contributing to constipation"
+      ],
+      "keyOrders": [
+        "Abdominal exam",
+        "*Digital rectal exam for impaction if indicated",
+        "*POC glucose if diabetic",
+        "*Manual disimpaction / enema if fecal impaction and within scope"
+      ],
+      "labs": [
+        "Usually none",
+        "*Urine pregnancy test if applicable",
+        "*TSH/electrolytes deferred to outpatient if chronic/refractory",
+        "*Fecal occult blood if indicated"
+      ],
+      "imaging": [
+        "Usually none",
+        "*Plain abdominal X-ray (KUB) if available to assess stool burden/obstruction",
+        "*Defer abdominal CT to ER if obstruction suspected"
+      ],
+      "meds": [
+        "Polyethylene glycol 17 g in 8 oz fluid daily",
+        "*Docusate 100 mg BID and/or senna 8.6-17.2 mg at bedtime if indicated",
+        "*Bisacodyl 10 mg PO/PR if indicated",
+        "*Glycerin suppository or saline enema for distal stool if indicated",
+        "Increase fiber, fluids, and activity; supplement with psyllium"
+      ],
+      "reassess": [
+        "Reassess for relief if enema/disimpaction performed",
+        "Confirm no obstructive features (vomiting, severe distension)",
+        "Verify tolerating oral intake"
+      ],
+      "disposition": [
+        "Discharge home with bowel regimen if stable and no obstruction",
+        "PCP follow-up for chronic/recurrent constipation or red flags",
+        "Transfer to ER or call 911 if suspected bowel obstruction, severe pain, significant rectal bleeding, vomiting, or peritoneal signs"
+      ],
+      "discharge": [
+        "Bowel regimen instructions and expected timeline",
+        "Increase dietary fiber, fluids, and physical activity",
+        "Review/adjust constipating medications with PCP",
+        "Return precautions: severe pain, vomiting, distension, no BM/flatus, rectal bleeding"
+      ],
+      "followup": [
+        "PCP for persistent or chronic constipation",
+        "GI referral for alarm features (weight loss, bleeding, anemia, age >50 new onset)",
+        "*Colorectal cancer screening if overdue"
+      ]
+    },
+    "redFlags": [
+      "Suspected bowel obstruction (vomiting, distension, no flatus)",
+      "Severe or peritoneal abdominal pain",
+      "Significant rectal bleeding or melena",
+      "Unintentional weight loss or new-onset constipation in older adult",
+      "Systemic signs of toxicity"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; transfer suspected obstruction per EMTALA",
+      "Document exclusion of obstruction before laxative therapy",
+      "Refer age-appropriate patients for colorectal cancer screening and alarm-feature workup",
+      "Provide written bowel-regimen and return precautions",
+      "Avoid chronic stimulant laxative overuse counseling"
+    ]
+  },
+  {
+    "id": "mild-abdominal-pain",
+    "name": "Mild Abdominal Pain",
+    "category": "Gastrointestinal",
+    "synonyms": ["belly ache", "stomach pain", "tummy ache", "abdominal cramps"],
+    "acuity": "Low-Moderate",
+    "summary": "Evaluation of mild, non-acute abdominal pain in adults to identify benign causes and exclude surgical emergencies.",
+    "stages": {
+      "triage": [
+        "Pain location, onset, character, radiation, and severity (mild = able to function)",
+        "Associated nausea/vomiting, fever, urinary or bowel changes",
+        "Relation to meals; last BM; trauma history",
+        "Pregnancy status in females of childbearing age",
+        "Screen red flags: severe/worsening pain, rigidity, syncope"
+      ],
+      "nursing": [
+        "Full vitals including temperature",
+        "Focused abdominal exam observation; note guarding/rebound for provider",
+        "*Clean catch urine collection",
+        "Pain assessment and reassessment"
+      ],
+      "keyOrders": [
+        "Abdominal exam by provider",
+        "Point-of-care glucose",
+        "*Urine pregnancy test if applicable",
+        "*Urinalysis dipstick if indicated"
+      ],
+      "labs": [
+        "*Urinalysis for UTI/hematuria (if indicated)",
+        "*Urine pregnancy test if female of childbearing age",
+        "*POC glucose if indicated",
+        "CBC/CMP/lipase typically deferred to ER if surgical cause suspected"
+      ],
+      "imaging": [
+        "*Plain abdominal X-ray if available for constipation/free air screen (limited)",
+        "Defer abdominal/pelvic CT or ultrasound to ER or outpatient",
+        "*Outpatient US referral for gallbladder/pelvic causes if stable"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg for analgesia",
+        "*Antacid/PPI (e.g., omeprazole 20 mg daily) if dyspepsia suspected",
+        "*Antispasmodic (dicyclomine 20 mg) for cramping if indicated",
+        "*Treat identified cause (e.g., antibiotics for confirmed UTI)",
+        "Avoid opioids; avoid NSAIDs if gastritis/ulcer suspected"
+      ],
+      "reassess": [
+        "Reassess pain and exam after analgesia",
+        "Confirm no progression, rebound, guarding, or worsening vitals",
+        "Verify oral tolerance and ability to ambulate"
+      ],
+      "disposition": [
+        "Discharge home if mild, stable, benign exam, and reassuring vitals",
+        "PCP or specialist (GI/surgery) follow-up for persistent symptoms",
+        "Transfer to ER or call 911 if severe/worsening pain, peritoneal signs, hemodynamic instability, suspected appendicitis/obstruction/ectopic, or GI bleeding"
+      ],
+      "discharge": [
+        "Clear diet and analgesia instructions",
+        "Specific return precautions for worsening or localized pain",
+        "Avoid NSAIDs if ulcer/gastritis suspected",
+        "Return precautions: severe/persistent pain, fever, vomiting, bleeding, fainting"
+      ],
+      "followup": [
+        "PCP within a few days if symptoms persist",
+        "GI/surgical referral for recurrent or unexplained pain",
+        "*Outpatient imaging or labs as arranged"
+      ]
+    },
+    "redFlags": [
+      "Severe, sudden, or progressively worsening pain",
+      "Peritoneal signs: rigidity, rebound, involuntary guarding",
+      "Hemodynamic instability, syncope, or pallor",
+      "Suspected appendicitis, obstruction, perforation, AAA, or ectopic pregnancy",
+      "GI bleeding (hematemesis, melena, hematochezia) or intractable vomiting"
+    ],
+    "compliance": [
+      "Urgent care is not a freestanding ER; transfer surgical/unstable abdomens per EMTALA",
+      "Always document pregnancy testing in reproductive-age females",
+      "Avoid masking serious pathology; do not over-medicate before exam",
+      "Provide explicit written return precautions and timely follow-up",
+      "Exercise controlled-substance prudence; avoid opioids for undifferentiated abdominal pain"
+    ]
+  }
+]

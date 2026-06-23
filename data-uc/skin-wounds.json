@@ -1,0 +1,744 @@
+[
+  {
+    "id": "rash",
+    "name": "Rash",
+    "category": "Skin / Wounds",
+    "synonyms": ["skin eruption", "hives", "breakout", "dermatitis", "skin irritation"],
+    "acuity": "Low",
+    "summary": "Evaluation of acute or subacute non-emergent skin eruptions in ambulatory adults.",
+    "stages": {
+      "triage": [
+        "Vitals; assess for fever or systemic symptoms",
+        "Onset, distribution, new exposures (drugs, foods, plants, products)",
+        "Screen for airway/throat swelling, wheeze, or hypotension (anaphylaxis)",
+        "Ask about mucosal involvement, blistering, or skin sloughing"
+      ],
+      "nursing": [
+        "Document distribution, morphology, and percent body surface area",
+        "Photograph lesion if charting allows",
+        "Review medication and allergy list",
+        "Note prior similar episodes and treatments tried"
+      ],
+      "keyOrders": [
+        "Vital signs including temperature",
+        "Skin exam with full-body survey",
+        "POC glucose if diabetic with skin findings*",
+        "Wood lamp exam if fungal suspected* if indicated"
+      ],
+      "labs": [
+        "Usually none for uncomplicated rash",
+        "Rapid strep if scarlatiniform rash with pharyngitis*",
+        "KOH prep if available for suspected tinea* if indicated",
+        "Defer biopsy and serologies to dermatology/outpatient"
+      ],
+      "imaging": [
+        "Not indicated for isolated rash"
+      ],
+      "meds": [
+        "Cetirizine 10 mg PO daily or diphenhydramine 25-50 mg PO for itch",
+        "Topical hydrocortisone 1% or triamcinolone 0.1% BID for localized inflammation",
+        "Topical antifungal (clotrimazole) BID if tinea*",
+        "Short oral prednisone taper for widespread allergic dermatitis* if indicated"
+      ],
+      "reassess": [
+        "Recheck for spreading, systemic symptoms, or airway change",
+        "Confirm patient tolerates first antihistamine dose",
+        "Re-evaluate working diagnosis before discharge"
+      ],
+      "disposition": [
+        "Discharge home with symptomatic care for most localized rashes",
+        "PCP or dermatology referral if persistent, unclear, or chronic",
+        "Transfer to ER or call 911 if airway swelling, anaphylaxis, mucosal involvement, blistering/sloughing, or petechiae with fever"
+      ],
+      "discharge": [
+        "Avoid suspected trigger; use fragrance-free moisturizers",
+        "Return for spreading, fever, blistering, or breathing difficulty",
+        "Take antihistamines as directed; warn re sedation with diphenhydramine"
+      ],
+      "followup": [
+        "PCP in 1-2 weeks if not resolving",
+        "Dermatology referral for recurrent or undiagnosed rash",
+        "Sooner if worsening"
+      ]
+    },
+    "redFlags": [
+      "Anaphylaxis: airway swelling, wheeze, hypotension",
+      "Mucosal involvement, blistering, or skin sloughing (SJS/TEN)",
+      "Purpura/petechiae with fever (meningococcemia)",
+      "Rapidly spreading rash with systemic toxicity"
+    ],
+    "compliance": [
+      "Urgent care manages low-acuity rashes; refer complex/chronic dermatoses out",
+      "EMTALA-style transfer to ER for suspected SJS/TEN, anaphylaxis, or sepsis",
+      "Document return precautions and trigger avoidance",
+      "Urgent care is not a freestanding ER"
+    ]
+  },
+  {
+    "id": "mild-cellulitis",
+    "name": "Mild Cellulitis",
+    "category": "Skin / Wounds",
+    "synonyms": ["skin infection", "soft tissue infection", "erysipelas"],
+    "acuity": "Low-Moderate",
+    "summary": "Outpatient management of nonpurulent, uncomplicated cellulitis without systemic toxicity.",
+    "stages": {
+      "triage": [
+        "Vitals; flag fever, tachycardia, or hypotension",
+        "Mark borders of erythema with skin marker and time",
+        "Assess for rapid spread, severe pain, or crepitus",
+        "Screen diabetes, immunosuppression, and PAD"
+      ],
+      "nursing": [
+        "Measure and outline area of erythema/warmth",
+        "Elevate affected limb",
+        "Check for portal of entry (tinea pedis, wound, ulcer)",
+        "Photograph and document baseline"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Border demarcation for tracking",
+        "POC glucose if diabetic",
+        "Wound culture if drainage present* if indicated"
+      ],
+      "labs": [
+        "Often none for mild cellulitis",
+        "POC glucose in diabetics",
+        "Defer CBC/CRP/blood cultures to ER if systemic illness suspected"
+      ],
+      "imaging": [
+        "Usually none",
+        "Plain X-ray if foreign body or gas in tissue suspected* if indicated",
+        "Defer ultrasound/CT to ER for abscess vs necrotizing concern"
+      ],
+      "meds": [
+        "Cephalexin 500 mg PO QID x 5-7 days (nonpurulent)",
+        "Dicloxacillin 500 mg PO QID as alternative",
+        "Clindamycin 300-450 mg PO QID if penicillin-allergic",
+        "Add MRSA coverage (TMP-SMX or doxycycline) if purulent features*"
+      ],
+      "reassess": [
+        "Recheck demarcated borders for progression",
+        "Confirm patient stable and able to take oral meds",
+        "Reassess pain out of proportion (necrotizing concern)"
+      ],
+      "disposition": [
+        "Discharge home on oral antibiotics with limb elevation",
+        "PCP follow-up to confirm improvement in 48 hours",
+        "Transfer to ER or call 911 if systemic toxicity, rapid spread, crepitus, pain out of proportion, or need for IV antibiotics"
+      ],
+      "discharge": [
+        "Complete full antibiotic course; elevate limb",
+        "Re-outline marked border; return if spreads beyond it",
+        "Return for fever, worsening pain, or no improvement in 48 hours"
+      ],
+      "followup": [
+        "Recheck in 48 hours (urgent care or PCP)",
+        "PCP for recurrent cellulitis workup",
+        "Treat predisposing tinea pedis"
+      ]
+    },
+    "redFlags": [
+      "Pain out of proportion, crepitus, bullae, or skin necrosis (necrotizing fasciitis)",
+      "Systemic toxicity: high fever, hypotension, confusion (sepsis)",
+      "Rapidly advancing erythema",
+      "Immunocompromised or facial/orbital involvement"
+    ],
+    "compliance": [
+      "Urgent care treats mild, nonpurulent cellulitis without systemic signs",
+      "EMTALA-style transfer to ER for sepsis or necrotizing infection",
+      "Document border marking and 48-hour recheck plan",
+      "Antibiotic stewardship per local resistance patterns"
+    ]
+  },
+  {
+    "id": "cutaneous-abscess",
+    "name": "Cutaneous Abscess",
+    "category": "Skin / Wounds",
+    "synonyms": ["boil", "skin abscess", "furuncle", "pus pocket"],
+    "acuity": "Low-Moderate",
+    "summary": "Incision and drainage of simple superficial skin abscesses in ambulatory adults.",
+    "stages": {
+      "triage": [
+        "Vitals; screen for fever or systemic signs",
+        "Assess size, fluctuance, and location",
+        "Flag high-risk sites (face, hand, genital, perirectal)",
+        "Screen diabetes and immunosuppression"
+      ],
+      "nursing": [
+        "Prepare I&D tray and local anesthetic",
+        "Document size and surrounding cellulitis",
+        "Photograph baseline",
+        "Verify tetanus status"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Incision and drainage with packing if cavity large",
+        "Wound culture of purulent drainage",
+        "POC glucose if diabetic"
+      ],
+      "labs": [
+        "Wound culture if purulent (especially recurrent/severe)",
+        "POC glucose in diabetics",
+        "Defer CBC/blood cultures to ER if systemic illness"
+      ],
+      "imaging": [
+        "Usually none",
+        "Bedside ultrasound to confirm fluid collection if available* if indicated",
+        "Defer CT for deep/complex collections to ER"
+      ],
+      "meds": [
+        "Local anesthetic (lidocaine 1% with epinephrine, avoid digits/end-arteries)",
+        "I&D is primary therapy; antibiotics not always needed",
+        "TMP-SMX DS 1-2 tabs PO BID or doxycycline 100 mg BID if surrounding cellulitis or risk factors",
+        "Acetaminophen/ibuprofen for pain"
+      ],
+      "reassess": [
+        "Confirm adequate drainage and hemostasis",
+        "Verify patient understands packing/wound care",
+        "Reassess for spreading cellulitis"
+      ],
+      "disposition": [
+        "Discharge home after I&D with wound-care instructions",
+        "Wound recheck/packing removal in 24-48 hours",
+        "Transfer to ER or call 911 if deep/complex abscess, perirectal/facial danger zone, systemic toxicity, or requires OR drainage"
+      ],
+      "discharge": [
+        "Keep dressing clean and dry; warm compresses",
+        "Return for fever, increasing redness, or worsening pain",
+        "Complete antibiotics if prescribed"
+      ],
+      "followup": [
+        "Wound check in 24-48 hours for packing removal",
+        "PCP for recurrent abscesses (consider MRSA decolonization)",
+        "Surgery referral if complex"
+      ]
+    },
+    "redFlags": [
+      "Perirectal, facial danger triangle, or hand/deep space abscess",
+      "Systemic toxicity or surrounding necrosis",
+      "Immunocompromised host with rapidly enlarging collection",
+      "Suspected deep or septic-joint involvement"
+    ],
+    "compliance": [
+      "Urgent care performs simple I&D within scope; refer complex sites out",
+      "Verify and update tetanus prophylaxis",
+      "EMTALA-style transfer to ER for deep/danger-zone abscess or sepsis",
+      "Document procedure, consent, and follow-up plan"
+    ]
+  },
+  {
+    "id": "insect-bite-sting",
+    "name": "Insect Bite / Sting",
+    "category": "Skin / Wounds",
+    "synonyms": ["bug bite", "bee sting", "wasp sting", "spider bite", "mosquito bite"],
+    "acuity": "Low",
+    "summary": "Management of local reactions to insect bites/stings and screening for systemic allergy.",
+    "stages": {
+      "triage": [
+        "Vitals; screen immediately for anaphylaxis",
+        "Identify insect/exposure and time of sting",
+        "Assess for airway/throat tightness, wheeze, or hives spreading",
+        "Note prior systemic reactions"
+      ],
+      "nursing": [
+        "Remove retained stinger if present",
+        "Clean site; apply cold compress",
+        "Mark area of erythema/swelling",
+        "Monitor for evolving systemic symptoms"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Stinger removal and wound cleansing",
+        "Cold compress and elevation",
+        "Tetanus update if skin broken* if indicated"
+      ],
+      "labs": [
+        "None for typical local reaction",
+        "Defer allergy testing to allergist outpatient"
+      ],
+      "imaging": [
+        "Not indicated"
+      ],
+      "meds": [
+        "Cetirizine 10 mg PO daily or diphenhydramine 25-50 mg PO for itch",
+        "Topical hydrocortisone 1% or triamcinolone for local swelling",
+        "Acetaminophen/ibuprofen for pain",
+        "IM epinephrine 0.3 mg if anaphylaxis develops, then transfer*"
+      ],
+      "reassess": [
+        "Observe for delayed systemic reaction (15-30 min)",
+        "Recheck airway and vitals if any allergic symptoms",
+        "Confirm large local reactions are not cellulitis"
+      ],
+      "disposition": [
+        "Discharge home with antihistamines and wound care",
+        "Prescribe epinephrine auto-injector and allergist referral if systemic reaction history",
+        "Transfer to ER or call 911 if anaphylaxis, airway compromise, or hypotension"
+      ],
+      "discharge": [
+        "Cold compress, antihistamine, avoid scratching",
+        "Return for spreading redness, fever, or breathing difficulty",
+        "Carry epinephrine auto-injector if prescribed"
+      ],
+      "followup": [
+        "PCP if signs of secondary infection",
+        "Allergist if systemic reaction occurred",
+        "Return precautions reviewed"
+      ]
+    },
+    "redFlags": [
+      "Anaphylaxis: airway swelling, wheeze, hypotension, diffuse hives",
+      "Signs of secondary cellulitis or necrotic spider bite",
+      "Multiple stings with systemic toxicity",
+      "Suspected venomous bite needing antivenom (ER)"
+    ],
+    "compliance": [
+      "Urgent care manages local reactions and gives epinephrine for anaphylaxis then transfers",
+      "EMTALA-style transfer to ER/911 for anaphylaxis or systemic envenomation",
+      "Prescribe auto-injector and document return precautions",
+      "Update tetanus when skin barrier broken"
+    ]
+  },
+  {
+    "id": "contact-dermatitis-poison-ivy",
+    "name": "Contact Dermatitis / Poison Ivy",
+    "category": "Skin / Wounds",
+    "synonyms": ["allergic rash", "poison oak", "poison sumac", "irritant dermatitis", "urushiol rash"],
+    "acuity": "Low",
+    "summary": "Treatment of localized to moderate allergic/irritant contact dermatitis in adults.",
+    "stages": {
+      "triage": [
+        "Vitals; assess distribution and percent body surface area",
+        "Identify exposure (plants, metals, chemicals, cosmetics)",
+        "Screen for facial/genital or extensive involvement",
+        "Note prior episodes and treatments"
+      ],
+      "nursing": [
+        "Advise washing skin and clothing to remove allergen",
+        "Document distribution and severity",
+        "Photograph affected areas",
+        "Review medication/allergy history"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Skin exam with BSA estimate",
+        "Cool compresses for weeping lesions",
+        "No POC testing typically required"
+      ],
+      "labs": [
+        "None routinely",
+        "Defer patch testing to dermatology/allergist"
+      ],
+      "imaging": [
+        "Not indicated"
+      ],
+      "meds": [
+        "Mid/high-potency topical steroid (triamcinolone 0.1% or clobetasol) BID for localized disease",
+        "Oral prednisone taper (e.g., 40-60 mg tapered over 14-21 days) for severe/extensive",
+        "Cetirizine 10 mg PO daily or hydroxyzine for itch",
+        "Cool oatmeal baths and emollients"
+      ],
+      "reassess": [
+        "Confirm extent and rule out superinfection",
+        "Ensure understanding of allergen avoidance",
+        "Reassess if facial/periorbital swelling present"
+      ],
+      "disposition": [
+        "Discharge home with topical/oral steroids and antihistamines",
+        "PCP/dermatology if severe, recurrent, or unclear trigger",
+        "Transfer to ER if airway involvement, severe facial swelling, or signs of systemic infection"
+      ],
+      "discharge": [
+        "Wash exposed clothing/tools to remove urushiol",
+        "Complete full steroid taper; avoid identified trigger",
+        "Return for spreading infection, fever, or worsening swelling"
+      ],
+      "followup": [
+        "PCP in 1-2 weeks if not improving",
+        "Dermatology/allergist for recurrent dermatitis",
+        "Sooner if secondary infection"
+      ]
+    },
+    "redFlags": [
+      "Periorbital/facial swelling threatening airway or vision",
+      "Signs of secondary bacterial infection (impetiginization, fever)",
+      "Extensive blistering mimicking burn",
+      "Systemic symptoms suggesting another diagnosis"
+    ],
+    "compliance": [
+      "Urgent care manages routine contact dermatitis within scope",
+      "Use short steroid courses prudently; counsel on tapering",
+      "EMTALA-style transfer for airway-threatening facial involvement",
+      "Document trigger avoidance and return precautions"
+    ]
+  },
+  {
+    "id": "sunburn",
+    "name": "Sunburn",
+    "category": "Skin / Wounds",
+    "synonyms": ["solar burn", "UV burn", "sun poisoning"],
+    "acuity": "Low",
+    "summary": "Supportive care of first/superficial second-degree UV burns without systemic compromise.",
+    "stages": {
+      "triage": [
+        "Vitals; assess hydration and percent body surface area",
+        "Screen for dehydration, syncope, or heat illness",
+        "Assess blistering (superficial partial thickness)",
+        "Note medications that increase photosensitivity"
+      ],
+      "nursing": [
+        "Cool compresses; encourage oral fluids",
+        "Document BSA and degree of burn",
+        "Assess for signs of heat exhaustion",
+        "Photograph extensive areas"
+      ],
+      "keyOrders": [
+        "Vital signs including temperature",
+        "Oral rehydration",
+        "Cool compresses and emollients",
+        "POC glucose if syncopal/dehydrated* if indicated"
+      ],
+      "labs": [
+        "None for routine sunburn",
+        "Defer electrolytes to ER if severe dehydration/heat illness"
+      ],
+      "imaging": [
+        "Not indicated"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO q6-8h for pain/inflammation",
+        "Aloe vera or fragrance-free emollients topically",
+        "Topical hydrocortisone 1% for mild inflammation",
+        "Oral fluids; avoid breaking blisters"
+      ],
+      "reassess": [
+        "Recheck hydration status and vitals",
+        "Reassess for heat illness if febrile/dizzy",
+        "Confirm pain controlled with oral analgesics"
+      ],
+      "disposition": [
+        "Discharge home with supportive care",
+        "PCP if extensive blistering or slow healing",
+        "Transfer to ER if signs of heat stroke, large-BSA partial-thickness burn, or severe dehydration"
+      ],
+      "discharge": [
+        "Cool compresses, moisturizers, hydration, NSAIDs",
+        "Avoid sun; use SPF 30+ once healed",
+        "Return for fever, infection of blisters, or dizziness"
+      ],
+      "followup": [
+        "PCP if not improving in several days",
+        "Wound check if blisters become infected",
+        "Counsel on future sun protection"
+      ]
+    },
+    "redFlags": [
+      "Heat stroke: confusion, high core temperature, collapse",
+      "Severe dehydration or syncope",
+      "Extensive partial-thickness burn (large BSA)",
+      "Signs of secondary infection of blistered skin"
+    ],
+    "compliance": [
+      "Urgent care manages minor sunburn; large/deep burns or heat stroke go to ER",
+      "EMTALA-style transfer to ER/911 for heat stroke or severe dehydration",
+      "Document BSA, hydration, and return precautions",
+      "Counsel on photosensitizing medications"
+    ]
+  },
+  {
+    "id": "laceration-repair",
+    "name": "Laceration Repair",
+    "category": "Skin / Wounds",
+    "synonyms": ["cut", "stitches", "wound closure", "gash"],
+    "acuity": "Low-Moderate",
+    "summary": "Closure of simple, uncomplicated lacerations with intact neurovascular and tendon function.",
+    "stages": {
+      "triage": [
+        "Vitals; control active bleeding with pressure",
+        "Time and mechanism of injury (clean vs contaminated)",
+        "Screen for arterial bleeding, deep structure injury",
+        "Verify tetanus status"
+      ],
+      "nursing": [
+        "Apply direct pressure; assess distal neurovascular function",
+        "Irrigate copiously with saline",
+        "Prepare closure tray and local anesthetic",
+        "Document wound length, depth, and contamination"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Wound irrigation and exploration for foreign body/tendon involvement",
+        "Local anesthesia and primary closure (sutures, staples, adhesive, or strips)",
+        "Tetanus prophylaxis per status"
+      ],
+      "labs": [
+        "None routine",
+        "POC glucose if diabetic with wound* if indicated"
+      ],
+      "imaging": [
+        "Plain X-ray if radiopaque foreign body (glass/metal) suspected*",
+        "Defer to ER for suspected deep/joint/tendon involvement requiring imaging"
+      ],
+      "meds": [
+        "Lidocaine 1% (with epinephrine except digits/end-arteries) for local anesthesia",
+        "Acetaminophen/ibuprofen for pain",
+        "Topical antibiotic ointment under dressing",
+        "Oral antibiotics only for high-risk/contaminated wounds* if indicated"
+      ],
+      "reassess": [
+        "Confirm hemostasis and wound edge approximation",
+        "Recheck distal neurovascular status post-repair",
+        "Verify tetanus given if due"
+      ],
+      "disposition": [
+        "Discharge home with wound-care and suture-removal timeline",
+        "Hand/plastics referral for cosmetic or functional concerns",
+        "Transfer to ER or call 911 if uncontrolled bleeding, arterial injury, tendon/nerve involvement, or deep contaminated wounds beyond scope"
+      ],
+      "discharge": [
+        "Keep wound clean and dry 24-48 hours; then gentle cleansing",
+        "Suture removal timeline (face 3-5d, scalp/trunk 7-10d, extremities 10-14d)",
+        "Return for redness, drainage, fever, or wound dehiscence"
+      ],
+      "followup": [
+        "Wound check or suture removal at urgent care/PCP per site",
+        "Specialist referral if function or cosmesis at risk",
+        "Sooner if infection signs"
+      ]
+    },
+    "redFlags": [
+      "Uncontrolled or pulsatile (arterial) bleeding",
+      "Tendon, nerve, joint, or deep structure involvement",
+      "Heavily contaminated, bite, or crush wounds",
+      "Wounds over 8-12 hours old or with significant tissue loss"
+    ],
+    "compliance": [
+      "Urgent care repairs simple lacerations; refer functional/cosmetic-critical sites",
+      "Mandatory tetanus assessment and documentation",
+      "EMTALA-style transfer to ER for vascular/tendon/nerve injury",
+      "Document neurovascular exam before and after repair; obtain consent"
+    ]
+  },
+  {
+    "id": "minor-burn",
+    "name": "Minor Burn",
+    "category": "Skin / Wounds",
+    "synonyms": ["thermal burn", "scald", "first-degree burn", "superficial burn"],
+    "acuity": "Low-Moderate",
+    "summary": "Care of small superficial or superficial partial-thickness burns in non-critical areas.",
+    "stages": {
+      "triage": [
+        "Vitals; estimate BSA and depth",
+        "Mechanism (thermal, chemical, electrical) and time",
+        "Screen for airway/inhalation injury, large BSA, or critical-area burns",
+        "Verify tetanus status"
+      ],
+      "nursing": [
+        "Cool burn with room-temp water; remove jewelry/clothing",
+        "Gentle cleansing; do not rupture intact blisters",
+        "Document depth, BSA, and location",
+        "Photograph baseline"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Wound cleansing and non-adherent dressing",
+        "Tetanus prophylaxis per status",
+        "Pain control"
+      ],
+      "labs": [
+        "None for minor burns",
+        "Defer labs to ER for large/electrical/chemical burns"
+      ],
+      "imaging": [
+        "Not indicated for minor thermal burns"
+      ],
+      "meds": [
+        "Acetaminophen/ibuprofen for pain",
+        "Topical antibiotic (bacitracin) or silver sulfadiazine (avoid on face) under dressing",
+        "Non-adherent dressing with petrolatum gauze",
+        "Oral opioid for short-term severe pain* if indicated"
+      ],
+      "reassess": [
+        "Reassess depth (may evolve) and pain control",
+        "Confirm BSA remains within urgent-care scope",
+        "Verify tetanus addressed"
+      ],
+      "disposition": [
+        "Discharge home with dressing and wound-care plan",
+        "Burn-clinic referral for deeper or slow-healing burns",
+        "Transfer to ER or burn center if large BSA, full-thickness, face/hands/feet/perineum/joints, circumferential, electrical/chemical, or inhalation injury"
+      ],
+      "discharge": [
+        "Daily dressing changes; keep clean and dry",
+        "Do not pop blisters; use prescribed topical",
+        "Return for increasing pain, drainage, fever, or spreading redness"
+      ],
+      "followup": [
+        "Wound check in 24-48 hours",
+        "Burn clinic/plastics if not healing or deep",
+        "PCP as needed"
+      ]
+    },
+    "redFlags": [
+      "Burns to face, hands, feet, perineum, or over joints",
+      "Large BSA, full-thickness, or circumferential burns",
+      "Electrical, chemical, or suspected inhalation injury",
+      "Signs of infection or inadequate pain control"
+    ],
+    "compliance": [
+      "Urgent care treats small superficial burns; critical-area/large burns go to ER or burn center",
+      "Mandatory tetanus assessment",
+      "EMTALA-style transfer to ER/burn center per ABA referral criteria",
+      "Report suspected abuse-related burns per Texas mandatory reporting"
+    ]
+  },
+  {
+    "id": "wound-check-suture-removal",
+    "name": "Wound Check / Suture Removal",
+    "category": "Skin / Wounds",
+    "synonyms": ["stitch removal", "wound recheck", "dressing change", "staple removal"],
+    "acuity": "Low",
+    "summary": "Routine follow-up of healing wounds and removal of sutures/staples in stable patients.",
+    "stages": {
+      "triage": [
+        "Vitals; screen for fever or signs of infection",
+        "Confirm original injury date and closure type",
+        "Assess pain, drainage, and wound integrity",
+        "Review tetanus status from index visit"
+      ],
+      "nursing": [
+        "Inspect wound for approximation, erythema, drainage",
+        "Prepare suture/staple removal kit",
+        "Clean wound with saline",
+        "Document healing progress"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Wound inspection and gentle cleansing",
+        "Suture/staple removal if adequately healed",
+        "Wound culture if purulent drainage* if indicated"
+      ],
+      "labs": [
+        "None routinely",
+        "Wound culture only if infected* if indicated",
+        "POC glucose if diabetic with poor healing* if indicated"
+      ],
+      "imaging": [
+        "Not indicated unless retained foreign body suspected* if indicated"
+      ],
+      "meds": [
+        "Topical antibiotic ointment after removal if needed",
+        "Adhesive strips to support wound edges post-removal",
+        "Acetaminophen/ibuprofen for mild discomfort",
+        "Oral antibiotics if early infection identified* if indicated"
+      ],
+      "reassess": [
+        "Confirm wound edges stable after removal",
+        "Reassess for dehiscence or infection",
+        "Verify patient comfortable with ongoing care"
+      ],
+      "disposition": [
+        "Discharge home after removal and wound check",
+        "PCP/specialist referral if delayed healing or complication",
+        "Transfer to ER if deep infection, abscess, or significant dehiscence beyond scope"
+      ],
+      "discharge": [
+        "Keep area clean; apply adhesive strips until they fall off",
+        "Protect scar from sun; use SPF once healed",
+        "Return for redness, drainage, fever, or wound reopening"
+      ],
+      "followup": [
+        "PCP if scar concerns or delayed healing",
+        "Recheck if infection signs develop",
+        "Specialist if functional/cosmetic issue"
+      ]
+    },
+    "redFlags": [
+      "Spreading erythema, purulent drainage, or fever (infection)",
+      "Significant wound dehiscence",
+      "Underlying abscess or deep-space infection",
+      "Poor healing in immunocompromised/diabetic patient"
+    ],
+    "compliance": [
+      "Routine wound checks and suture removal are within urgent-care scope",
+      "EMTALA-style transfer for deep infection or significant dehiscence",
+      "Document healing status and return precautions",
+      "Coordinate with original treating provider when appropriate"
+    ]
+  },
+  {
+    "id": "animal-human-bite-low-risk",
+    "name": "Animal / Human Bite (Low-Risk)",
+    "category": "Skin / Wounds",
+    "synonyms": ["dog bite", "cat bite", "human bite", "puncture wound bite"],
+    "acuity": "Low-Moderate",
+    "summary": "Care of superficial low-risk bites without deep-structure injury or systemic infection.",
+    "stages": {
+      "triage": [
+        "Vitals; screen for systemic infection",
+        "Biting source, provoked vs unprovoked, vaccination/rabies risk",
+        "Assess depth, location, and neurovascular function",
+        "Verify tetanus status"
+      ],
+      "nursing": [
+        "Copious irrigation with saline",
+        "Assess for joint, tendon, or bone involvement",
+        "Document wound, source animal, and exposure history",
+        "Photograph baseline"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "High-volume wound irrigation and exploration",
+        "Tetanus prophylaxis per status",
+        "Wound culture if signs of infection* if indicated"
+      ],
+      "labs": [
+        "None routine for low-risk bite",
+        "Wound culture if infected* if indicated",
+        "Defer extensive workup to ER if systemic illness"
+      ],
+      "imaging": [
+        "Plain X-ray if fracture, deep puncture, or retained tooth/foreign body suspected*",
+        "Defer advanced imaging to ER for deep-structure concern"
+      ],
+      "meds": [
+        "Amoxicillin-clavulanate 875/125 mg PO BID x 5-7 days (first-line prophylaxis/treatment)",
+        "Doxycycline + metronidazole or clindamycin if penicillin-allergic",
+        "Acetaminophen/ibuprofen for pain",
+        "Generally close cosmetically important wounds loosely; leave most puncture/cat bites open"
+      ],
+      "reassess": [
+        "Recheck neurovascular and tendon function",
+        "Confirm rabies and tetanus risk addressed",
+        "Reassess for early infection"
+      ],
+      "disposition": [
+        "Discharge home on antibiotics with wound care",
+        "Wound recheck in 24-48 hours",
+        "Transfer to ER or call 911 if deep hand/joint bite, signs of established infection/sepsis, high rabies risk needing PEP, or extensive injury"
+      ],
+      "discharge": [
+        "Elevate; keep wound clean; complete antibiotics",
+        "Return for redness, swelling, drainage, fever, or reduced movement",
+        "Watch for early infection (cat bites high risk)"
+      ],
+      "followup": [
+        "Wound check in 24-48 hours",
+        "PCP/health dept for rabies follow-up and animal observation",
+        "Hand surgery referral if function affected"
+      ]
+    },
+    "redFlags": [
+      "Deep hand, joint, or tendon involvement (high infection risk)",
+      "Established infection or systemic toxicity",
+      "High rabies risk requiring post-exposure prophylaxis",
+      "Crush injury or significant tissue loss"
+    ],
+    "compliance": [
+      "Urgent care manages low-risk bites; refer deep hand/joint bites and rabies PEP needs",
+      "Texas mandatory animal-bite reporting to local health authority",
+      "Update tetanus; assess rabies risk and arrange PEP/animal observation",
+      "EMTALA-style transfer to ER for high-risk or infected bites"
+    ]
+  }
+]

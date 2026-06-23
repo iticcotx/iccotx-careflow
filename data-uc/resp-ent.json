@@ -1,0 +1,590 @@
+[
+  {
+    "id": "upper-respiratory-infection-common-cold",
+    "name": "Upper Respiratory Infection (Common Cold)",
+    "category": "Respiratory / ENT",
+    "synonyms": ["common cold", "head cold", "viral URI", "nasopharyngitis"],
+    "acuity": "Low",
+    "summary": "Self-limited viral upper-airway infection managed with symptomatic care and return precautions.",
+    "stages": {
+      "triage": [
+        "Confirm walk-in, ambulatory, no respiratory distress",
+        "Vital signs including SpO2 and temperature",
+        "Screen onset, duration, fever pattern, and exposures",
+        "Identify high-risk comorbidities (asthma, COPD, immunocompromise)"
+      ],
+      "nursing": [
+        "Document symptom timeline and severity",
+        "Assess hydration and oral intake",
+        "Offer antipyretic if febrile and uncomfortable",
+        "Reinforce hand hygiene and cough etiquette"
+      ],
+      "keyOrders": [
+        "Vital signs with pulse oximetry",
+        "Visual exam of nose, throat, ears, and chest auscultation",
+        "Rapid COVID/influenza swab* if indicated by season/exposure"
+      ],
+      "labs": [
+        "Usually none needed for classic viral URI",
+        "Rapid strep* if indicated by sore-throat predominance",
+        "Rapid flu/COVID* if indicated"
+      ],
+      "imaging": [
+        "Not indicated for uncomplicated URI",
+        "Chest X-ray* if indicated by suspected pneumonia (focal findings, high fever)"
+      ],
+      "meds": [
+        "Acetaminophen 650 mg PO q6h PRN or ibuprofen 400-600 mg PO q6-8h PRN",
+        "Oral/nasal decongestant (pseudoephedrine 60 mg q4-6h or oxymetazoline spray <=3 days)",
+        "Guaifenesin 200-400 mg PO q4h PRN cough/congestion",
+        "Saline nasal spray and throat lozenges; avoid antibiotics (viral)"
+      ],
+      "reassess": [
+        "Recheck SpO2 and work of breathing before discharge",
+        "Confirm symptom control and ability to hydrate",
+        "Reassess if any red-flag features emerge"
+      ],
+      "disposition": [
+        "Discharge home with symptomatic care for most patients",
+        "PCP follow-up if symptoms persist >10 days or worsen",
+        "Transfer to ER or call 911 if respiratory distress, SpO2 <92%, or chest pain"
+      ],
+      "discharge": [
+        "Expect 7-10 day course; symptoms peak days 2-3",
+        "Return for fever >3-4 days, ear pain, dyspnea, or worsening",
+        "Hydration, rest, and OTC dosing instructions"
+      ],
+      "followup": [
+        "PCP if no improvement by 10 days",
+        "Return to urgent care sooner if red flags develop"
+      ]
+    },
+    "redFlags": [
+      "Respiratory distress, stridor, or SpO2 <92%",
+      "Chest pain or signs of pneumonia/sepsis",
+      "Inability to maintain hydration or altered mental status",
+      "Immunocompromised host with high fever"
+    ],
+    "compliance": [
+      "Within Texas urgent-care scope as symptomatic treat-and-release care",
+      "Avoid unnecessary antibiotics per antimicrobial stewardship",
+      "Provide written return precautions; EMTALA-style stabilize-and-transfer if distress",
+      "Urgent care is not a freestanding ER; escalate true emergencies via 911"
+    ]
+  },
+  {
+    "id": "sore-throat-pharyngitis",
+    "name": "Sore Throat / Pharyngitis",
+    "category": "Respiratory / ENT",
+    "synonyms": ["pharyngitis", "throat infection", "strep throat", "tonsillitis"],
+    "acuity": "Low-Moderate",
+    "summary": "Evaluation of acute pharyngitis with rapid strep testing and Centor-guided antibiotic use.",
+    "stages": {
+      "triage": [
+        "Confirm patent airway and ability to swallow secretions",
+        "Vital signs and temperature",
+        "Apply Centor/McIsaac criteria (fever, exudate, nodes, no cough)",
+        "Screen for drooling, trismus, or muffled voice"
+      ],
+      "nursing": [
+        "Assess hydration and pain level",
+        "Inspect tonsils for exudate, asymmetry, or uvular deviation",
+        "Palpate anterior cervical nodes",
+        "Offer analgesia/antipyretic"
+      ],
+      "keyOrders": [
+        "Vital signs with SpO2",
+        "Rapid strep antigen test (RADT) per Centor score",
+        "Throat culture* if indicated when RADT negative but high suspicion"
+      ],
+      "labs": [
+        "Rapid strep antigen test",
+        "Monospot/heterophile* if indicated (adolescent/young adult, posterior nodes, fatigue)",
+        "Rapid COVID/flu* if indicated"
+      ],
+      "imaging": [
+        "Not routinely indicated",
+        "Soft-tissue neck X-ray or CT* deferred to ER if indicated by suspected abscess/epiglottitis"
+      ],
+      "meds": [
+        "Penicillin VK 500 mg PO BID x10d or amoxicillin 500 mg PO BID x10d if strep positive",
+        "Azithromycin or cephalexin if penicillin-allergic",
+        "Ibuprofen 400-600 mg PO and/or acetaminophen for pain",
+        "Single dose dexamethasone 10 mg PO* for severe odynophagia if no contraindication",
+        "Salt-water gargles and lozenges"
+      ],
+      "reassess": [
+        "Confirm patient can swallow liquids before discharge",
+        "Reassess airway if any voice change or pooling secretions",
+        "Verify analgesia adequate"
+      ],
+      "disposition": [
+        "Discharge home with antibiotics only if strep-confirmed",
+        "PCP/ENT referral for recurrent tonsillitis",
+        "Transfer to ER or call 911 if drooling, stridor, trismus, or suspected peritonsillar/retropharyngeal abscess or epiglottitis"
+      ],
+      "discharge": [
+        "Complete full antibiotic course if prescribed",
+        "Return for difficulty swallowing/breathing, drooling, or neck swelling",
+        "May return to work/school 24h after antibiotics and afebrile"
+      ],
+      "followup": [
+        "PCP if symptoms persist >7 days",
+        "ENT for >=3-4 tonsillitis episodes/year"
+      ]
+    },
+    "redFlags": [
+      "Drooling, stridor, or difficulty managing secretions",
+      "Trismus, muffled hot-potato voice, or uvular deviation (peritonsillar abscess)",
+      "Severe unilateral swelling or neck stiffness",
+      "Suspected epiglottitis or airway compromise"
+    ],
+    "compliance": [
+      "Test-confirm strep before antibiotics per stewardship guidelines",
+      "Airway emergencies (epiglottitis, abscess) require immediate ER transfer/911",
+      "Document Centor scoring rationale and return precautions",
+      "Urgent care manages uncomplicated pharyngitis only; not a substitute for ER airway care"
+    ]
+  },
+  {
+    "id": "sinusitis",
+    "name": "Sinusitis",
+    "category": "Respiratory / ENT",
+    "synonyms": ["sinus infection", "rhinosinusitis", "acute bacterial sinusitis"],
+    "acuity": "Low",
+    "summary": "Diagnosis and watchful-waiting versus antibiotic management of acute rhinosinusitis.",
+    "stages": {
+      "triage": [
+        "Vital signs and temperature",
+        "Characterize duration (<10 days favors viral) and double-worsening pattern",
+        "Screen for facial pain/pressure, purulent drainage, congestion",
+        "Identify orbital or neurologic warning signs"
+      ],
+      "nursing": [
+        "Assess facial tenderness over maxillary/frontal sinuses",
+        "Check for periorbital swelling or visual complaints",
+        "Document symptom duration and severity",
+        "Offer analgesia"
+      ],
+      "keyOrders": [
+        "Vital signs with SpO2",
+        "Focused head/face and nasal exam",
+        "POC glucose* if indicated in diabetic with severe infection"
+      ],
+      "labs": [
+        "Generally none for uncomplicated sinusitis",
+        "Rapid COVID/flu* if indicated by overlapping symptoms"
+      ],
+      "imaging": [
+        "Plain X-ray not recommended; not useful for routine sinusitis",
+        "CT sinus/orbit* deferred to ER if indicated by orbital/intracranial complication"
+      ],
+      "meds": [
+        "Symptomatic first-line: saline irrigation, intranasal fluticasone, analgesics",
+        "Oral/topical decongestant short course (oxymetazoline <=3 days)",
+        "Amoxicillin-clavulanate 875/125 mg PO BID x5-7d if bacterial criteria met (>10d, severe, or double-worsening)",
+        "Doxycycline 100 mg PO BID if penicillin-allergic",
+        "Acetaminophen or ibuprofen for pain"
+      ],
+      "reassess": [
+        "Confirm no orbital/neurologic signs before discharge",
+        "Set watchful-waiting expectations if viral",
+        "Verify pain control"
+      ],
+      "disposition": [
+        "Discharge home with symptomatic care or delayed/immediate antibiotic plan",
+        "PCP/ENT referral for recurrent or chronic sinusitis",
+        "Transfer to ER or call 911 if vision change, proptosis, periorbital cellulitis, severe headache, or altered mental status"
+      ],
+      "discharge": [
+        "Most viral cases resolve in 7-10 days",
+        "Return for worsening after initial improvement or new orbital/neuro symptoms",
+        "Saline rinse and decongestant instructions"
+      ],
+      "followup": [
+        "PCP if no improvement in 7 days on antibiotics",
+        "ENT for recurrent (>=4/year) or chronic sinusitis"
+      ]
+    },
+    "redFlags": [
+      "Periorbital/orbital swelling, proptosis, or vision changes",
+      "Severe headache, neck stiffness, or altered mental status",
+      "High fever with toxic appearance",
+      "Suspected intracranial or orbital extension"
+    ],
+    "compliance": [
+      "Reserve antibiotics for bacterial criteria per stewardship",
+      "Orbital/intracranial complications require emergent ER transfer/911 and CT",
+      "Document viral-vs-bacterial decision and return precautions",
+      "Within urgent-care scope for uncomplicated acute rhinosinusitis"
+    ]
+  },
+  {
+    "id": "ear-pain-otitis",
+    "name": "Ear Pain / Otitis",
+    "category": "Respiratory / ENT",
+    "synonyms": ["earache", "otitis media", "otitis externa", "swimmer's ear", "ear infection"],
+    "acuity": "Low",
+    "summary": "Otoscopic evaluation distinguishing otitis media from externa with targeted therapy.",
+    "stages": {
+      "triage": [
+        "Vital signs and temperature",
+        "Localize pain (canal vs deep), tragal tenderness, discharge",
+        "Screen for hearing loss, dizziness, recent water exposure",
+        "Identify mastoid swelling/redness or facial weakness"
+      ],
+      "nursing": [
+        "Otoscopic exam of canal and tympanic membrane",
+        "Assess for canal edema, discharge, or TM bulging/perforation",
+        "Document hearing complaints",
+        "Offer analgesia"
+      ],
+      "keyOrders": [
+        "Vital signs",
+        "Otoscopy (pneumatic* if indicated)",
+        "Cerumen removal/ear cleaning* if indicated to visualize TM"
+      ],
+      "labs": [
+        "Not routinely indicated",
+        "Culture of discharge* if indicated for refractory otitis externa"
+      ],
+      "imaging": [
+        "Not indicated for routine otitis",
+        "CT temporal bone* deferred to ER if indicated by suspected mastoiditis"
+      ],
+      "meds": [
+        "Acute otitis media: amoxicillin 875 mg PO BID x5-7d (or amox-clav if recent abx)",
+        "Otitis externa: ofloxacin or ciprofloxacin-dexamethasone otic drops",
+        "Analgesia with ibuprofen and/or acetaminophen",
+        "Keep affected ear dry for otitis externa",
+        "Doxycycline/azithromycin if penicillin-allergic for AOM"
+      ],
+      "reassess": [
+        "Confirm pain control",
+        "Reassess for mastoid involvement or facial nerve signs",
+        "Verify proper drop instillation technique"
+      ],
+      "disposition": [
+        "Discharge home with appropriate oral or topical therapy",
+        "PCP/ENT referral for recurrent or persistent cases",
+        "Transfer to ER or call 911 if mastoid swelling/redness, facial palsy, severe vertigo, or toxic appearance"
+      ],
+      "discharge": [
+        "Expect improvement in 48-72h",
+        "Return for worsening pain, swelling behind ear, fever, or facial weakness",
+        "Avoid water exposure; complete therapy"
+      ],
+      "followup": [
+        "PCP if not improving in 48-72h",
+        "ENT for recurrent otitis or persistent effusion/hearing loss"
+      ]
+    },
+    "redFlags": [
+      "Postauricular swelling/erythema or protruding ear (mastoiditis)",
+      "Facial nerve palsy or severe vertigo",
+      "Toxic appearance or signs of intracranial extension",
+      "Immunocompromised host with severe otitis externa (malignant otitis)"
+    ],
+    "compliance": [
+      "Antibiotic stewardship; consider observation for mild AOM where appropriate",
+      "Mastoiditis/complicated otitis requires ER transfer and imaging",
+      "Document otoscopic findings and return precautions",
+      "Within urgent-care scope for uncomplicated otitis media and externa"
+    ]
+  },
+  {
+    "id": "acute-bronchitis-cough",
+    "name": "Acute Bronchitis / Cough",
+    "category": "Respiratory / ENT",
+    "synonyms": ["chest cold", "acute bronchitis", "viral bronchitis", "cough illness"],
+    "acuity": "Low-Moderate",
+    "summary": "Symptomatic management of self-limited cough illness while excluding pneumonia.",
+    "stages": {
+      "triage": [
+        "Vital signs with SpO2 and temperature",
+        "Assess cough duration, sputum, and work of breathing",
+        "Screen for fever, focal chest pain, and comorbidities (asthma/COPD)",
+        "Identify risk factors for pneumonia or PE"
+      ],
+      "nursing": [
+        "Lung auscultation for focal findings, wheeze, or crackles",
+        "Assess hydration and dyspnea",
+        "Offer antipyretic/analgesic",
+        "Reinforce smoking cessation if applicable"
+      ],
+      "keyOrders": [
+        "Vital signs with pulse oximetry",
+        "Lung auscultation and respiratory effort assessment",
+        "Nebulized albuterol* if indicated for wheezing/bronchospasm",
+        "Rapid flu/COVID swab* if indicated"
+      ],
+      "labs": [
+        "Usually none for uncomplicated bronchitis",
+        "Rapid flu/COVID* if indicated",
+        "POC glucose* if indicated in diabetics with illness"
+      ],
+      "imaging": [
+        "Chest X-ray* if indicated by abnormal vitals, focal exam, or pneumonia suspicion",
+        "No imaging for classic uncomplicated bronchitis"
+      ],
+      "meds": [
+        "Symptomatic: dextromethorphan/guaifenesin, honey, hydration",
+        "Albuterol inhaler 2 puffs q4-6h PRN* if wheezing/bronchospasm",
+        "Ibuprofen/acetaminophen for fever and chest-wall soreness",
+        "Avoid antibiotics (viral etiology in most cases)"
+      ],
+      "reassess": [
+        "Recheck SpO2 and respiratory effort before discharge",
+        "Confirm no hypoxia or focal findings suggesting pneumonia",
+        "Reassess response if neb given"
+      ],
+      "disposition": [
+        "Discharge home with symptomatic care for uncomplicated bronchitis",
+        "PCP follow-up for cough >3 weeks or recurrent episodes",
+        "Transfer to ER or call 911 if SpO2 <92%, respiratory distress, hemoptysis, or suspected PE/pneumonia needing admission"
+      ],
+      "discharge": [
+        "Cough may last 2-3 weeks even after illness resolves",
+        "Return for dyspnea, SpO2 drop, high fever, or blood in sputum",
+        "Hydration, rest, and proper inhaler use if prescribed"
+      ],
+      "followup": [
+        "PCP if cough persists >3 weeks or worsens",
+        "Pulmonary referral for recurrent/chronic cough"
+      ]
+    },
+    "redFlags": [
+      "SpO2 <92% or respiratory distress",
+      "Hemoptysis or pleuritic chest pain with dyspnea (suspect PE)",
+      "Focal consolidation, high fever, or toxic appearance",
+      "Severe COPD/asthma exacerbation not responding to nebulizer"
+    ],
+    "compliance": [
+      "Antibiotics not indicated for uncomplicated acute bronchitis per stewardship",
+      "Hypoxia or pneumonia needing admission requires ER transfer/911",
+      "Document SpO2, lung exam, and return precautions",
+      "Within urgent-care scope; not for unstable respiratory failure"
+    ]
+  },
+  {
+    "id": "influenza-like-illness",
+    "name": "Influenza-like Illness",
+    "category": "Respiratory / ENT",
+    "synonyms": ["flu", "the flu", "ILI", "influenza"],
+    "acuity": "Low-Moderate",
+    "summary": "Rapid testing and antiviral decision-making for febrile respiratory illness within urgent care.",
+    "stages": {
+      "triage": [
+        "Vital signs with SpO2 and temperature",
+        "Document symptom onset (antiviral window <48h) and exposures",
+        "Screen for dyspnea and dehydration",
+        "Identify high-risk groups (>=65, pregnancy, chronic disease, immunocompromise)"
+      ],
+      "nursing": [
+        "Assess hydration and respiratory status",
+        "Offer antipyretic",
+        "Place in respiratory precautions/mask",
+        "Document onset time for antiviral eligibility"
+      ],
+      "keyOrders": [
+        "Vital signs with pulse oximetry",
+        "Rapid influenza antigen/PCR swab",
+        "Rapid COVID swab* if indicated to differentiate",
+        "Nebulizer* if indicated for wheezing in at-risk patients"
+      ],
+      "labs": [
+        "Rapid influenza test",
+        "Rapid COVID* if indicated",
+        "POC glucose* if indicated in diabetics"
+      ],
+      "imaging": [
+        "Not routine",
+        "Chest X-ray* if indicated by hypoxia or pneumonia suspicion"
+      ],
+      "meds": [
+        "Oseltamivir 75 mg PO BID x5d if within ~48h or high-risk/severe",
+        "Acetaminophen or ibuprofen for fever/myalgia",
+        "Hydration and rest; cough/congestion symptomatic care",
+        "Baloxavir single dose* as alternative if indicated"
+      ],
+      "reassess": [
+        "Recheck SpO2 and hydration before discharge",
+        "Confirm tolerating oral intake",
+        "Reassess for distress in high-risk patients"
+      ],
+      "disposition": [
+        "Discharge home with antiviral (if eligible) and supportive care",
+        "PCP follow-up for high-risk or persistent symptoms",
+        "Transfer to ER or call 911 if SpO2 <92%, respiratory distress, chest pain, or dehydration/altered mentation"
+      ],
+      "discharge": [
+        "Fever typically 3-5 days; isolate until afebrile 24h",
+        "Return for dyspnea, persistent high fever, or worsening after improvement",
+        "Hydration and antiviral adherence instructions"
+      ],
+      "followup": [
+        "PCP if not improving in 5-7 days",
+        "Encourage annual influenza vaccination"
+      ]
+    },
+    "redFlags": [
+      "Respiratory distress or SpO2 <92%",
+      "Chest pain, severe dehydration, or altered mental status",
+      "Secondary bacterial pneumonia or sepsis signs",
+      "High-risk host deteriorating despite care"
+    ],
+    "compliance": [
+      "Start antivirals promptly for eligible/high-risk per CDC guidance",
+      "Severe influenza or pneumonia needing admission requires ER transfer/911",
+      "Implement respiratory precautions; provide return precautions",
+      "Within urgent-care scope for uncomplicated ILI; report per Texas public-health requirements where applicable"
+    ]
+  },
+  {
+    "id": "covid-19",
+    "name": "COVID-19",
+    "category": "Respiratory / ENT",
+    "synonyms": ["coronavirus", "SARS-CoV-2", "COVID"],
+    "acuity": "Low-Moderate",
+    "summary": "Outpatient testing, risk stratification, and antiviral management for SARS-CoV-2 infection.",
+    "stages": {
+      "triage": [
+        "Vital signs with SpO2 and temperature",
+        "Document symptom onset (Paxlovid window <=5 days) and exposures",
+        "Screen for dyspnea and hypoxia (consider ambulatory SpO2)",
+        "Identify high-risk comorbidities and vaccination status"
+      ],
+      "nursing": [
+        "Mask and respiratory isolation precautions",
+        "Assess work of breathing and hydration",
+        "Offer antipyretic",
+        "Document onset for antiviral eligibility"
+      ],
+      "keyOrders": [
+        "Vital signs with pulse oximetry (consider ambulatory walk test)",
+        "Rapid COVID antigen/PCR swab",
+        "Rapid flu swab* if indicated to differentiate",
+        "Nebulizer* if indicated for bronchospasm"
+      ],
+      "labs": [
+        "Rapid COVID test",
+        "Rapid flu* if indicated",
+        "POC glucose* if indicated in diabetics"
+      ],
+      "imaging": [
+        "Not routine for mild disease",
+        "Chest X-ray* if indicated by hypoxia or pneumonia suspicion (defer CT/advanced imaging to ER)"
+      ],
+      "meds": [
+        "Nirmatrelvir-ritonavir (Paxlovid) 5-day course if high-risk and <=5 days onset (check drug interactions/renal dosing)",
+        "Acetaminophen or ibuprofen for fever/myalgia",
+        "Hydration and supportive care; cough management",
+        "Molnupiravir* as alternative if indicated when Paxlovid contraindicated"
+      ],
+      "reassess": [
+        "Recheck resting and ambulatory SpO2 before discharge",
+        "Confirm tolerating oral intake and no distress",
+        "Reassess high-risk patients carefully"
+      ],
+      "disposition": [
+        "Discharge home with isolation guidance and antiviral if eligible",
+        "PCP follow-up for high-risk or persistent symptoms",
+        "Transfer to ER or call 911 if SpO2 <92%, respiratory distress, chest pain, confusion, or bluish lips"
+      ],
+      "discharge": [
+        "Isolate per current CDC guidance; mask around others",
+        "Return for shortness of breath, persistent chest pain, or SpO2 drop",
+        "Home pulse-ox monitoring advice for high-risk patients"
+      ],
+      "followup": [
+        "PCP for symptom progression or post-COVID concerns",
+        "Encourage vaccination/boosters per current recommendations"
+      ]
+    },
+    "redFlags": [
+      "SpO2 <92% at rest or with ambulation",
+      "Respiratory distress, persistent chest pain, or bluish lips",
+      "Confusion or inability to stay awake",
+      "Dehydration or rapid clinical deterioration"
+    ],
+    "compliance": [
+      "Verify antiviral eligibility, renal dosing, and drug interactions before prescribing",
+      "Hypoxia/severe disease requires ER transfer/911 and stabilization",
+      "Follow current CDC isolation guidance; provide return precautions",
+      "Reportable per Texas DSHS communicable-disease requirements where applicable; within urgent-care scope for mild-moderate disease"
+    ]
+  },
+  {
+    "id": "allergic-rhinitis",
+    "name": "Allergic Rhinitis",
+    "category": "Respiratory / ENT",
+    "synonyms": ["hay fever", "seasonal allergies", "nasal allergies", "allergic rhinoconjunctivitis"],
+    "acuity": "Low",
+    "summary": "Symptom-based management of allergic nasal/ocular symptoms with stepwise pharmacotherapy.",
+    "stages": {
+      "triage": [
+        "Vital signs and temperature (typically afebrile)",
+        "Characterize triggers, seasonality, and sneeze/itch/congestion pattern",
+        "Differentiate from infection (absence of fever/purulence)",
+        "Screen for wheezing or asthma history"
+      ],
+      "nursing": [
+        "Inspect nasal mucosa (pale/boggy turbinates) and conjunctiva",
+        "Assess for associated wheeze",
+        "Document triggers and prior treatments",
+        "Review inhaler/spray technique if relevant"
+      ],
+      "keyOrders": [
+        "Vital signs with SpO2",
+        "Focused nasal and eye exam",
+        "Peak flow/nebulizer* if indicated when concurrent wheeze"
+      ],
+      "labs": [
+        "Generally none in urgent care",
+        "Allergy testing deferred to outpatient/allergist (not done in urgent care)"
+      ],
+      "imaging": [
+        "Not indicated",
+        "Defer any sinus imaging to outpatient if chronic/atypical"
+      ],
+      "meds": [
+        "Intranasal corticosteroid (fluticasone 2 sprays each nostril daily) first-line",
+        "Second-generation oral antihistamine (cetirizine 10 mg or loratadine 10 mg daily)",
+        "Antihistamine eye drops (olopatadine) for ocular symptoms",
+        "Intranasal antihistamine (azelastine)* if indicated for breakthrough",
+        "Saline nasal irrigation and trigger avoidance"
+      ],
+      "reassess": [
+        "Confirm no respiratory distress or wheeze",
+        "Verify understanding of daily controller therapy",
+        "Reassess if asthma component present"
+      ],
+      "disposition": [
+        "Discharge home with stepwise allergy regimen",
+        "PCP/allergist referral for refractory or perennial symptoms",
+        "Transfer to ER or call 911 if signs of anaphylaxis (airway swelling, wheeze, hypotension)"
+      ],
+      "discharge": [
+        "Use nasal steroid daily for best effect (may take days to peak)",
+        "Return for wheezing, facial pain/fever (possible sinusitis), or no relief",
+        "Allergen avoidance and adherence counseling"
+      ],
+      "followup": [
+        "PCP if symptoms uncontrolled on therapy",
+        "Allergist for testing/immunotherapy consideration"
+      ]
+    },
+    "redFlags": [
+      "Signs of anaphylaxis: airway swelling, stridor, wheeze, hypotension",
+      "Acute respiratory distress",
+      "Periorbital swelling with fever suggesting infection",
+      "New severe asthma exacerbation"
+    ],
+    "compliance": [
+      "Allergy/immunotherapy testing deferred to outpatient allergist (out of urgent-care scope)",
+      "Anaphylaxis requires epinephrine and immediate ER transfer/911",
+      "Document medication plan and return precautions",
+      "Within urgent-care scope for symptomatic management of uncomplicated allergic rhinitis"
+    ]
+  }
+]

@@ -1,0 +1,250 @@
+[
+  {
+    "id": "urinary-tract-infection-dysuria",
+    "name": "Urinary Tract Infection / Dysuria",
+    "category": "Genitourinary",
+    "synonyms": ["UTI", "bladder infection", "cystitis", "painful urination", "burning with urination"],
+    "acuity": "Low-Moderate",
+    "summary": "Evaluation and treatment of lower urinary symptoms in ambulatory adults; identify uncomplicated cystitis vs. complicated/upper-tract infection needing escalation.",
+    "stages": {
+      "triage": [
+        "Chief complaint: dysuria, frequency, urgency, suprapubic discomfort, hematuria",
+        "Vitals incl. temperature; flag fever >38C or hypotension",
+        "Screen for flank/back pain, rigors, vomiting (pyelonephritis features)",
+        "Pregnancy possibility and LMP in females of childbearing age",
+        "History of recurrent UTI, diabetes, immunosuppression, urinary instrumentation, indwelling catheter"
+      ],
+      "nursing": [
+        "Clean-catch midstream urine collection",
+        "Pain/comfort assessment; offer analgesia per protocol",
+        "Glucose check if diabetic*",
+        "Pregnancy test in childbearing-age females",
+        "Document allergies and current antibiotic/medication use"
+      ],
+      "keyOrders": [
+        "Point-of-care urine dipstick (leukocyte esterase, nitrites, blood)",
+        "Urine pregnancy test if indicated",
+        "Vital sign trend if febrile",
+        "POC glucose if diabetic*"
+      ],
+      "labs": [
+        "Urinalysis (dipstick + micro if available)",
+        "Urine culture if complicated, recurrent, pregnant, male, or treatment failure*",
+        "Defer renal function/CBC to ER or outpatient if systemic illness suspected"
+      ],
+      "imaging": [
+        "None routinely for uncomplicated cystitis",
+        "Defer renal ultrasound/CT to ER or outpatient urology if obstruction, stone, or pyelonephritis suspected*"
+      ],
+      "meds": [
+        "Nitrofurantoin 100 mg PO BID x5 days (uncomplicated, normal renal function)",
+        "TMP-SMX DS PO BID x3 days if local resistance low*",
+        "Cephalexin 500 mg PO BID x5-7 days as alternative*",
+        "Fosfomycin 3 g PO single dose alternative*",
+        "Phenazopyridine 200 mg PO TID x2 days for dysuria relief"
+      ],
+      "reassess": [
+        "Confirm no fever, flank pain, or systemic signs before discharge",
+        "Verify antibiotic selection matches renal function, allergies, pregnancy status",
+        "Re-screen for pyelonephritis if symptoms atypical",
+        "Counsel expected improvement within 48-72 hours"
+      ],
+      "disposition": [
+        "Discharge home for uncomplicated cystitis with oral antibiotics",
+        "Refer to PCP/urology for recurrent or male UTI follow-up",
+        "Transfer to ER or call 911 if high fever, rigors, intractable vomiting, sepsis signs, suspected obstruction, or pregnant with pyelonephritis"
+      ],
+      "discharge": [
+        "Increase fluid intake; complete full antibiotic course",
+        "Return precautions: fever, flank/back pain, vomiting, worsening despite 48-72h treatment",
+        "Note phenazopyridine turns urine orange and stains contacts/clothing",
+        "Avoid bladder irritants; voiding hygiene education"
+      ],
+      "followup": [
+        "PCP if symptoms persist or recur",
+        "Urine culture result follow-up if obtained",
+        "Urology referral for recurrent UTI or male patients"
+      ]
+    },
+    "redFlags": [
+      "Fever with rigors, flank pain, or costovertebral angle tenderness (pyelonephritis)",
+      "Sepsis signs: hypotension, tachycardia, altered mental status",
+      "Pregnancy with suspected upper-tract infection",
+      "Intractable vomiting preventing oral therapy",
+      "Known/suspected obstructing stone or urinary retention"
+    ],
+    "compliance": [
+      "Urgent care scope: uncomplicated lower UTI only; escalate complicated/upper-tract cases",
+      "EMTALA/ER transfer for septic or obstructed patients; urgent care is not a freestanding ER",
+      "Use guideline-concordant antibiotics; avoid fluoroquinolone overuse (antimicrobial stewardship)",
+      "Document return precautions and patient understanding",
+      "Confirm pregnancy status before prescribing; avoid contraindicated agents (e.g., nitrofurantoin near term)"
+    ]
+  },
+  {
+    "id": "sexually-transmitted-infection-concern",
+    "name": "Sexually Transmitted Infection Concern",
+    "category": "Genitourinary",
+    "synonyms": ["STI", "STD", "venereal disease concern", "STD exposure", "STD screening"],
+    "acuity": "Low-Moderate",
+    "summary": "Ambulatory assessment, testing, and empiric treatment for suspected STI exposure or symptoms; counseling, partner notification, and reporting.",
+    "stages": {
+      "triage": [
+        "Chief complaint: discharge, dysuria, genital lesions/sores, pelvic pain, exposure concern",
+        "Vitals; screen for fever or systemic illness",
+        "Sexual history: partners, practices, condom use, prior STIs",
+        "Females: pregnancy possibility, LMP, abdominal/pelvic pain",
+        "Assess for assault/abuse and consent issues"
+      ],
+      "nursing": [
+        "Provide private, nonjudgmental environment",
+        "Collect specimens: urine NAAT, genital/oral/rectal swabs as indicated",
+        "Pregnancy test in childbearing-age females",
+        "Pain assessment and comfort measures",
+        "Document allergies and last menstrual period"
+      ],
+      "keyOrders": [
+        "POC pregnancy test if indicated",
+        "Rapid HIV test if available*",
+        "Specimen collection for gonorrhea/chlamydia NAAT",
+        "Visual genital exam documentation"
+      ],
+      "labs": [
+        "Gonorrhea/chlamydia NAAT (urine or swab)",
+        "Rapid HIV and syphilis (RPR) if available; otherwise refer*",
+        "Wet mount/trichomonas testing if discharge present*",
+        "Defer confirmatory/serology and complex testing to outpatient or public health clinic"
+      ],
+      "imaging": [
+        "None routinely",
+        "Defer pelvic ultrasound to ER/outpatient if PID or abscess suspected*"
+      ],
+      "meds": [
+        "Ceftriaxone 500 mg IM single dose for gonorrhea (1 g if >=150 kg)",
+        "Doxycycline 100 mg PO BID x7 days for chlamydia (azithromycin 1 g PO if pregnant)",
+        "Metronidazole 500 mg PO BID x7 days for trichomonas",
+        "Empiric dual therapy if symptomatic and testing pending*",
+        "Acyclovir 400 mg PO TID x7-10 days for first-episode genital herpes*"
+      ],
+      "reassess": [
+        "Confirm no PID features (cervical motion/adnexal tenderness, fever) needing escalation",
+        "Verify empiric coverage and allergy check before IM dosing",
+        "Counsel abstinence until therapy complete and partners treated",
+        "Offer expedited partner therapy where permitted*"
+      ],
+      "disposition": [
+        "Discharge home with treatment and counseling for uncomplicated STI",
+        "Refer to PCP/public health for HIV/syphilis confirmation and ongoing care",
+        "Transfer to ER or call 911 if signs of disseminated infection, tubo-ovarian abscess, severe pelvic pain with sepsis, or pregnancy with systemic illness"
+      ],
+      "discharge": [
+        "Complete full medication course; abstain from sex until treated and asymptomatic 7 days",
+        "Advise partner testing/treatment and condom use",
+        "Return precautions: worsening pelvic pain, fever, vomiting, spreading rash/lesions",
+        "Provide test-result follow-up plan and rescreening guidance"
+      ],
+      "followup": [
+        "PCP or public health clinic for results and confirmatory testing",
+        "Test-of-cure or rescreen in 3 months per CDC guidance",
+        "Partner notification and treatment coordination"
+      ]
+    },
+    "redFlags": [
+      "Pelvic inflammatory disease with high fever, peritoneal signs, or sepsis",
+      "Suspected tubo-ovarian abscess",
+      "Disseminated gonococcal infection (arthritis, dermatitis, systemic illness)",
+      "Pregnancy with systemic infection or severe abdominal pain",
+      "Disclosure of sexual assault requiring forensic/specialized care"
+    ],
+    "compliance": [
+      "Texas mandatory reporting of gonorrhea, chlamydia, syphilis, HIV to public health (DSHS)",
+      "Suspected sexual assault/abuse of minors or vulnerable adults triggers mandatory reporting and ER referral for forensic exam",
+      "Urgent care scope: empiric treatment and testing; refer complex/PID/HIV care",
+      "EMTALA/ER transfer for systemically ill patients; urgent care is not a freestanding ER",
+      "Maintain confidentiality; offer expedited partner therapy consistent with Texas law"
+    ]
+  },
+  {
+    "id": "vaginal-discharge",
+    "name": "Vaginal Discharge",
+    "category": "Genitourinary",
+    "synonyms": ["abnormal discharge", "vaginitis", "yeast infection", "bacterial vaginosis", "vaginal irritation"],
+    "acuity": "Low",
+    "summary": "Evaluation of abnormal vaginal discharge in ambulatory adults to distinguish candidiasis, bacterial vaginosis, trichomoniasis, and STI; treat or refer.",
+    "stages": {
+      "triage": [
+        "Chief complaint: discharge color/odor/amount, itching, irritation, dyspareunia",
+        "Vitals; screen for fever or pelvic pain",
+        "Pregnancy possibility and LMP",
+        "Sexual history and STI exposure risk",
+        "Recent antibiotics, new products, or prior similar episodes"
+      ],
+      "nursing": [
+        "Collect specimen for wet mount and pH if available",
+        "Pregnancy test in childbearing-age females",
+        "Private exam setup with chaperone offered",
+        "Document allergies and medications",
+        "Comfort/pain assessment"
+      ],
+      "keyOrders": [
+        "POC pregnancy test if indicated",
+        "Vaginal pH and whiff test*",
+        "Wet mount microscopy if available*",
+        "Pelvic/speculum exam documentation"
+      ],
+      "labs": [
+        "Wet mount (clue cells, yeast, motile trichomonads)*",
+        "Gonorrhea/chlamydia NAAT if STI risk",
+        "Vaginal pH testing*",
+        "Defer culture/PCR panels to outpatient if diagnosis unclear"
+      ],
+      "imaging": [
+        "None routinely",
+        "Defer pelvic ultrasound to ER/outpatient if PID or mass suspected*"
+      ],
+      "meds": [
+        "Fluconazole 150 mg PO single dose for candidiasis (or topical azole)",
+        "Metronidazole 500 mg PO BID x7 days for bacterial vaginosis",
+        "Metronidazole 500 mg PO BID x7 days for trichomoniasis (treat partner)",
+        "Clotrimazole/miconazole intravaginal as alternative for yeast*",
+        "Avoid alcohol during and 72h after metronidazole"
+      ],
+      "reassess": [
+        "Confirm no fever, pelvic/adnexal tenderness, or PID features",
+        "Verify pregnancy-safe regimen if pregnant",
+        "Counsel on cause-specific treatment and partner therapy for trichomonas",
+        "Re-evaluate diagnosis if multiple recurrences"
+      ],
+      "disposition": [
+        "Discharge home with targeted therapy for uncomplicated vaginitis",
+        "Refer to PCP/gynecology for recurrent, persistent, or unclear cases",
+        "Transfer to ER or call 911 if high fever, severe pelvic pain with peritoneal signs, or sepsis"
+      ],
+      "discharge": [
+        "Complete medication course; avoid douching and irritants",
+        "Trichomonas: treat partner, abstain until both treated and asymptomatic",
+        "Return precautions: fever, worsening pelvic pain, no improvement in 3-7 days",
+        "Counsel cotton underwear, hygiene, and recurrence prevention"
+      ],
+      "followup": [
+        "PCP/gynecology for recurrent or persistent symptoms",
+        "STI test results follow-up if obtained",
+        "Rescreen for trichomonas/STI per CDC guidance"
+      ]
+    },
+    "redFlags": [
+      "Fever with pelvic pain or peritoneal signs (PID)",
+      "Foul purulent discharge with systemic illness",
+      "Pregnancy with bleeding, severe pain, or possible rupture of membranes",
+      "Retained foreign body with signs of toxic shock",
+      "Suspected sexual assault requiring specialized care"
+    ],
+    "compliance": [
+      "Urgent care scope: uncomplicated vaginitis; refer recurrent/unclear cases to gynecology",
+      "Report reportable STIs (e.g., trichomonas-associated coinfections, gonorrhea/chlamydia) per Texas DSHS rules",
+      "EMTALA/ER transfer for systemically ill or PID patients; urgent care is not a freestanding ER",
+      "Confirm pregnancy status before prescribing; use pregnancy-safe regimens",
+      "Document chaperone offer, exam findings, and return precautions"
+    ]
+  }
+]
