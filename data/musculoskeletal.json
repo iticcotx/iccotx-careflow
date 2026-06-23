@@ -1,0 +1,713 @@
+[
+  {
+    "id": "low-back-pain",
+    "name": "Low Back Pain",
+    "category": "Musculoskeletal",
+    "synonyms": ["lumbago", "lower back ache", "LBP", "sciatica", "back strain"],
+    "acuity": "3-4",
+    "summary": "Acute/subacute axial or radicular lumbar pain; screen for red-flag etiologies (cauda equina, infection, malignancy, AAA, fracture) vs benign mechanical strain.",
+    "stages": {
+      "triage": [
+        "Pain score, onset/duration, mechanism (atraumatic vs trauma)",
+        "Screen red flags: fever, IVDU, cancer hx, anticoagulation, incontinence, saddle anesthesia",
+        "Vital signs incl. temperature; assess for hemodynamic instability (AAA)",
+        "Ambulation/gait assessment"
+      ],
+      "nursing": [
+        "Position of comfort; assist transfers, fall precautions",
+        "Establish IV access only if parenteral meds or unstable*  if indicated",
+        "Bladder scan for retention if cauda equina suspected*  if indicated",
+        "Reassess pain after analgesia"
+      ],
+      "keyOrders": [
+        "Focused neuro exam: motor, sensory, reflexes, straight-leg raise",
+        "Digital rectal exam for tone/saddle sensation if cauda equina suspected*  if indicated",
+        "Post-void residual / bladder scan*  if indicated",
+        "Bedside AAA ultrasound if age >50 with risk factors*  if indicated"
+      ],
+      "labs": [
+        "Usually none for benign mechanical pain",
+        "CBC, ESR, CRP if infection/abscess suspected*  if indicated",
+        "Blood cultures if febrile/septic*  if indicated",
+        "UA if urinary symptoms or retention*  if indicated"
+      ],
+      "imaging": [
+        "No imaging for uncomplicated pain <6 weeks (ACEP/Choosing Wisely)",
+        "Plain lumbar films if trauma, osteoporosis, or suspected fracture*  if indicated",
+        "MRI lumbar spine STAT if cauda equina, epidural abscess, or cord compression*  if indicated",
+        "CT abdomen/aorta if AAA suspected*  if indicated"
+      ],
+      "meds": [
+        "Ibuprofen 600 mg PO q6h or ketorolac 15-30 mg IV",
+        "Acetaminophen 1000 mg PO q6h",
+        "Cyclobenzaprine 5-10 mg PO TID PRN spasm",
+        "Diazepam 5 mg PO PRN severe spasm*  if indicated",
+        "Avoid routine opioids; oxycodone 5 mg PO if severe refractory pain*  if indicated"
+      ],
+      "reassess": [
+        "Re-evaluate pain and ambulation after analgesia",
+        "Repeat neuro exam if symptoms progress",
+        "Confirm ability to ambulate and void before discharge"
+      ],
+      "disposition": [
+        "Discharge home for uncomplicated mechanical pain once ambulatory",
+        "Transfer for emergent spine surgery/MRI if cauda equina or cord compression",
+        "Admit/transfer for IV antibiotics if epidural abscess/discitis"
+      ],
+      "discharge": [
+        "Stay active; avoid prolonged bed rest",
+        "Scheduled NSAID + acetaminophen; heat/ice",
+        "Strict return precautions: weakness, numbness, incontinence, fever",
+        "Primary care or spine follow-up in 1-2 weeks"
+      ],
+      "followup": [
+        "PCP in 1-2 weeks if not improving",
+        "Physical therapy referral for subacute pain",
+        "Spine/ortho referral for persistent radiculopathy"
+      ]
+    },
+    "redFlags": [
+      "Saddle anesthesia, urinary retention/incontinence, bilateral leg weakness (cauda equina)",
+      "Fever + back pain, IVDU, immunosuppression (epidural abscess/discitis)",
+      "Pulsatile mass, hypotension, tearing pain (AAA)",
+      "History of cancer, unexplained weight loss, night pain (malignancy)",
+      "Progressive neuro deficit or new bowel/bladder dysfunction"
+    ],
+    "compliance": [
+      "Provide EMTALA medical screening exam to exclude emergency conditions before discharge",
+      "Cauda equina/epidural abscess/AAA require stabilization and appropriate transfer to facility with neurosurgery/vascular and MRI capability",
+      "Document transfer acceptance, mode, and risk/benefit for time-sensitive spinal emergencies",
+      "Observation acceptable for pain control; transfer if surgical intervention or advanced imaging unavailable on site"
+    ]
+  },
+  {
+    "id": "neck-pain",
+    "name": "Neck Pain",
+    "category": "Musculoskeletal",
+    "synonyms": ["cervicalgia", "stiff neck", "cervical strain", "whiplash", "neck ache"],
+    "acuity": "2-4",
+    "summary": "Cervical pain ranging from benign strain to life-threats (C-spine fracture, cord injury, meningitis, vascular dissection); risk-stratify by mechanism and red flags.",
+    "stages": {
+      "triage": [
+        "Mechanism: trauma vs atraumatic; high-risk MVC/fall/diving",
+        "Screen: fever/photophobia (meningitis), neuro deficit, dissection risk",
+        "Apply Canadian C-Spine Rule for trauma; maintain c-collar if indicated",
+        "Vital signs incl. temperature"
+      ],
+      "nursing": [
+        "Maintain spinal immobilization/c-collar until cleared if trauma",
+        "Position of comfort if atraumatic",
+        "IV access if parenteral meds or unstable*  if indicated",
+        "Reassess neuro status frequently"
+      ],
+      "keyOrders": [
+        "Detailed cervical and neuro exam (motor/sensory/reflexes)",
+        "Spinal precautions until clinically/radiographically cleared if trauma",
+        "Cardiac monitor if dissection/stroke concern*  if indicated",
+        "Apply Canadian C-Spine Rule to determine imaging need"
+      ],
+      "labs": [
+        "Usually none for mechanical pain",
+        "CBC, ESR, CRP, blood cultures if infection suspected*  if indicated",
+        "Coags/type & screen if traumatic and surgery possible*  if indicated"
+      ],
+      "imaging": [
+        "CT cervical spine if Canadian C-Spine Rule positive*  if indicated",
+        "CTA neck if dissection/vertebral injury suspected*  if indicated",
+        "MRI cervical spine if cord compression/myelopathy or epidural abscess*  if indicated",
+        "No imaging for low-risk atraumatic mechanical pain"
+      ],
+      "meds": [
+        "Ibuprofen 600 mg PO q6h or ketorolac 15-30 mg IV",
+        "Acetaminophen 1000 mg PO q6h",
+        "Cyclobenzaprine 5-10 mg PO TID PRN spasm",
+        "Antibiotics (e.g., ceftriaxone 2 g IV) if meningitis suspected per protocol*  if indicated"
+      ],
+      "reassess": [
+        "Repeat neuro exam to detect progression",
+        "Reassess pain after analgesia and ROM",
+        "Confirm C-spine cleared before collar removal in trauma"
+      ],
+      "disposition": [
+        "Discharge for uncomplicated cervical strain",
+        "Transfer for neurosurgery if C-spine fracture, cord injury, or dissection",
+        "Admit/transfer for meningitis or epidural abscess management"
+      ],
+      "discharge": [
+        "Analgesia, gentle ROM, heat; avoid prolonged collar use",
+        "Return for weakness, numbness, severe headache, fever, fainting",
+        "Soft collar only short-term for comfort if needed",
+        "PCP follow-up 1 week"
+      ],
+      "followup": [
+        "PCP or spine clinic in 1 week",
+        "Physical therapy for persistent mechanical pain",
+        "Neurology/vascular follow-up if dissection treated"
+      ]
+    },
+    "redFlags": [
+      "Midline tenderness, focal neuro deficit, paresthesias post-trauma (C-spine/cord injury)",
+      "Fever, neck stiffness, photophobia, altered mental status (meningitis)",
+      "Horner syndrome, focal deficit, severe sudden pain (carotid/vertebral dissection)",
+      "Progressive weakness or gait disturbance (myelopathy/cord compression)",
+      "High-risk mechanism with distracting injury or intoxication"
+    ],
+    "compliance": [
+      "EMTALA MSE must exclude C-spine injury, cord compression, dissection, and CNS infection prior to disposition",
+      "Stabilize and arrange appropriate transfer to trauma/neurosurgical center for unstable C-spine or cord injury",
+      "Suspected meningococcal disease is a reportable condition to Texas DSHS",
+      "Document spinal immobilization and clearance; transfer if CT/MRI or specialty unavailable on site"
+    ]
+  },
+  {
+    "id": "extremity-injury-fracture",
+    "name": "Extremity Injury / Fracture",
+    "category": "Musculoskeletal",
+    "synonyms": ["broken bone", "limb injury", "arm injury", "leg injury", "closed fracture"],
+    "acuity": "2-4",
+    "summary": "Closed extremity trauma with suspected fracture/dislocation; assess neurovascular status, identify open injury, compartment syndrome, and high-risk fractures.",
+    "stages": {
+      "triage": [
+        "Mechanism, time of injury, deformity, open wound check",
+        "Assess distal neurovascular status (pulses, cap refill, motor, sensation)",
+        "Pain score; immobilize and elevate affected limb",
+        "Remove rings/constricting jewelry early"
+      ],
+      "nursing": [
+        "Splint in position found; ice and elevate",
+        "IV access for analgesia if significant fracture*  if indicated",
+        "Document neurovascular exam pre- and post-splinting",
+        "NPO if reduction/sedation anticipated*  if indicated"
+      ],
+      "keyOrders": [
+        "Distal neurovascular assessment and documentation",
+        "Splint/immobilize affected extremity",
+        "Analgesia early; elevation and ice",
+        "Tetanus status review if any skin breach*  if indicated"
+      ],
+      "labs": [
+        "Usually none for isolated closed fracture",
+        "CBC, type & screen if operative or significant blood loss*  if indicated",
+        "Coags if anticoagulated or pre-op*  if indicated",
+        "CK if crush injury / compartment concern*  if indicated"
+      ],
+      "imaging": [
+        "Plain radiographs of injured area (include joint above and below)",
+        "Apply Ottawa Ankle/Knee/Foot Rules to guide imaging",
+        "CT for complex intra-articular, hip, or pelvic fractures*  if indicated",
+        "Vascular imaging/CTA if pulse deficit*  if indicated"
+      ],
+      "meds": [
+        "Ibuprofen 600 mg PO or ketorolac 15-30 mg IV",
+        "Acetaminophen 1000 mg PO",
+        "Morphine 0.1 mg/kg IV or fentanyl 1 mcg/kg IV for severe pain",
+        "Procedural sedation (ketamine/propofol) for reduction per protocol*  if indicated",
+        "Hematoma block / regional anesthesia for reduction*  if indicated"
+      ],
+      "reassess": [
+        "Repeat neurovascular exam after splinting/reduction",
+        "Post-reduction radiograph to confirm alignment",
+        "Reassess pain and perfusion before discharge"
+      ],
+      "disposition": [
+        "Discharge with splint/immobilization for stable, reduced fractures",
+        "Transfer to ortho/trauma for operative, open, or unstable fractures",
+        "Admit/transfer for hip fracture, multi-trauma, or NV compromise"
+      ],
+      "discharge": [
+        "Splint care, elevation, ice; non-weight-bearing as appropriate",
+        "Analgesia plan; crutches/sling and instruction",
+        "Return for increasing pain, numbness, pallor, or splint problems",
+        "Orthopedic follow-up within 3-7 days"
+      ],
+      "followup": [
+        "Orthopedics in 3-7 days for definitive casting/management",
+        "Sooner follow-up for fractures needing early operative planning",
+        "PCP for pain management coordination"
+      ]
+    },
+    "redFlags": [
+      "Absent or diminished distal pulses / cold pale limb (vascular injury)",
+      "Pain out of proportion, paresthesia, tense compartment (compartment syndrome)",
+      "Open wound over fracture (open fracture)",
+      "Gross deformity with neurologic deficit",
+      "Hip fracture in elderly or suspected pathologic fracture"
+    ],
+    "compliance": [
+      "EMTALA MSE includes neurovascular assessment and identification of open/limb-threatening injury before disposition",
+      "Stabilize (splint, analgesia, antibiotics if open) and arrange appropriate transfer to facility with orthopedic/operative capability",
+      "Document neurovascular status pre/post intervention and reason for transfer vs observation",
+      "Report suspected abuse if injury pattern inconsistent with history (Texas mandatory reporting)"
+    ]
+  },
+  {
+    "id": "joint-pain-swelling",
+    "name": "Joint Pain / Swelling",
+    "category": "Musculoskeletal",
+    "synonyms": ["arthralgia", "swollen joint", "monoarthritis", "joint inflammation", "effusion"],
+    "acuity": "2-4",
+    "summary": "Mono/polyarticular joint pain with effusion; differentiate septic arthritis, crystal arthropathy (gout/pseudogout), inflammatory, and reactive causes.",
+    "stages": {
+      "triage": [
+        "Number of joints, onset, fever, prior gout/RA history",
+        "Vital signs incl. temperature; SIRS screen",
+        "Assess joint for warmth, redness, effusion, ROM",
+        "Pain score and weight-bearing ability"
+      ],
+      "nursing": [
+        "Position of comfort, elevate affected joint, ice",
+        "IV access if febrile/septic or parenteral meds*  if indicated",
+        "Prepare for arthrocentesis (sterile tray)*  if indicated",
+        "Reassess after analgesia"
+      ],
+      "keyOrders": [
+        "Arthrocentesis for synovial fluid analysis if effusion present",
+        "Joint exam and documentation of effusion/warmth",
+        "Blood cultures if febrile before antibiotics*  if indicated",
+        "Mark/measure affected joint for serial exam"
+      ],
+      "labs": [
+        "Synovial fluid: cell count w/ diff, Gram stain, culture, crystals",
+        "CBC, ESR, CRP",
+        "Serum uric acid (limited acute value), BMP",
+        "Blood cultures if septic joint suspected*  if indicated"
+      ],
+      "imaging": [
+        "Plain radiograph of affected joint",
+        "Ultrasound to confirm/guide effusion aspiration*  if indicated",
+        "MRI if osteomyelitis or deep abscess suspected*  if indicated"
+      ],
+      "meds": [
+        "NSAID: indomethacin 50 mg PO TID or naproxen 500 mg PO BID (gout)",
+        "Colchicine 1.2 mg PO then 0.6 mg in 1h for gout*  if indicated",
+        "Prednisone 30-40 mg PO if NSAID contraindicated*  if indicated",
+        "Empiric vancomycin 15-20 mg/kg IV +/- ceftriaxone 2 g IV if septic joint*  if indicated",
+        "Acetaminophen 1000 mg PO for adjunct analgesia"
+      ],
+      "reassess": [
+        "Review synovial fluid results to guide therapy",
+        "Reassess pain, ROM, and weight-bearing",
+        "Monitor for systemic toxicity/sepsis"
+      ],
+      "disposition": [
+        "Discharge for confirmed crystal/inflammatory arthritis once controlled",
+        "Admit/transfer for septic arthritis requiring drainage and IV antibiotics",
+        "Transfer to facility with orthopedics if joint washout needed"
+      ],
+      "discharge": [
+        "Disease-specific meds (e.g., colchicine/NSAID taper for gout)",
+        "Rest, elevation, ice; activity as tolerated",
+        "Return for fever, spreading redness, inability to move joint",
+        "Rheumatology/PCP follow-up 1 week"
+      ],
+      "followup": [
+        "PCP/rheumatology in 1 week for chronic management",
+        "Urgent ortho follow-up if septic joint treated",
+        "Urate-lowering therapy discussion after acute gout resolves"
+      ]
+    },
+    "redFlags": [
+      "Fever + hot swollen joint with restricted motion (septic arthritis)",
+      "Synovial WBC >50,000 or positive Gram stain",
+      "Rapidly progressive joint destruction or systemic toxicity",
+      "Prosthetic joint involvement",
+      "Immunocompromised host with monoarthritis"
+    ],
+    "compliance": [
+      "EMTALA MSE must exclude septic arthritis (joint-threatening emergency) before disposition",
+      "Septic arthritis requires stabilization, empiric antibiotics, and appropriate transfer to facility with orthopedic surgery for washout",
+      "Document arthrocentesis findings and transfer rationale; observation acceptable for crystal arthropathy",
+      "Gonococcal arthritis: report reportable STI to Texas DSHS if confirmed"
+    ]
+  },
+  {
+    "id": "sprain-strain",
+    "name": "Sprain / Strain",
+    "category": "Musculoskeletal",
+    "synonyms": ["twisted ankle", "pulled muscle", "ligament injury", "soft tissue injury", "muscle tear"],
+    "acuity": "4-5",
+    "summary": "Soft-tissue ligament (sprain) or muscle/tendon (strain) injury; exclude fracture via decision rules and assess for severe/grade III injury.",
+    "stages": {
+      "triage": [
+        "Mechanism, time, ability to bear weight",
+        "Assess swelling, ecchymosis, deformity, point tenderness",
+        "Neurovascular check distal to injury",
+        "Pain score; apply RICE measures"
+      ],
+      "nursing": [
+        "Rest, ice, compression, elevation (RICE)",
+        "Apply elastic wrap or splint for comfort/stability",
+        "Reassess pain after analgesia",
+        "Provide crutches/sling as needed"
+      ],
+      "keyOrders": [
+        "Apply Ottawa Ankle/Foot/Knee Rules to determine imaging need",
+        "Distal neurovascular assessment",
+        "Immobilize/support injured area",
+        "Early analgesia and elevation"
+      ],
+      "labs": [
+        "None routinely required"
+      ],
+      "imaging": [
+        "Radiographs only if Ottawa rules positive or fracture suspected*  if indicated",
+        "No imaging for clear low-grade sprain meeting rule-out criteria",
+        "Ultrasound/MRI outpatient for suspected complete tendon rupture*  if indicated"
+      ],
+      "meds": [
+        "Ibuprofen 600 mg PO q6h or naproxen 500 mg PO BID",
+        "Acetaminophen 1000 mg PO q6h",
+        "Topical diclofenac gel for localized pain*  if indicated"
+      ],
+      "reassess": [
+        "Confirm ability to bear weight/ambulate before discharge",
+        "Reassess neurovascular status after splinting",
+        "Verify pain controlled"
+      ],
+      "disposition": [
+        "Discharge home in nearly all cases",
+        "Refer to ortho if complete rupture or grade III instability",
+        "Transfer rarely needed unless associated fracture/NV injury"
+      ],
+      "discharge": [
+        "RICE for 48-72h, then gradual mobilization",
+        "Supportive brace/wrap; weight-bear as tolerated",
+        "Return for inability to bear weight, numbness, increasing swelling",
+        "PCP/sports med follow-up if not improving in 5-7 days"
+      ],
+      "followup": [
+        "PCP or sports medicine in 1 week if persistent",
+        "Physical therapy for functional rehab",
+        "Orthopedics for suspected complete ligament/tendon rupture"
+      ]
+    },
+    "redFlags": [
+      "Inability to bear weight with bony tenderness (occult fracture)",
+      "Gross joint instability suggesting complete ligament rupture",
+      "Neurovascular compromise distal to injury",
+      "Significant hemarthrosis or rapidly expanding swelling",
+      "Achilles/quadriceps tendon rupture (palpable gap, positive Thompson)"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude fracture, NV injury, and complete tendon/ligament rupture before discharge",
+      "Most cases stabilized and discharged; transfer only if associated emergency injury identified",
+      "Document neurovascular exam and decision-rule application",
+      "Report suspected abuse if mechanism inconsistent with injury (Texas mandatory reporting)"
+    ]
+  },
+  {
+    "id": "joint-dislocation",
+    "name": "Joint Dislocation",
+    "category": "Musculoskeletal",
+    "synonyms": ["dislocated joint", "out of socket", "shoulder dislocation", "patellar dislocation", "luxation"],
+    "acuity": "2-3",
+    "summary": "Displaced joint articulation requiring prompt reduction; assess neurovascular status, associated fracture, and post-reduction stability.",
+    "stages": {
+      "triage": [
+        "Mechanism, joint involved, deformity, time since injury",
+        "Assess distal neurovascular status (critical, e.g., axillary nerve, popliteal artery)",
+        "Pain score; immobilize in position found",
+        "Identify high-risk dislocation (knee, hip) needing urgent action"
+      ],
+      "nursing": [
+        "Immobilize/support affected joint, ice",
+        "IV access for procedural sedation/analgesia",
+        "NPO and pre-sedation assessment if reduction planned",
+        "Continuous monitoring during sedation (SpO2, ETCO2, BP)"
+      ],
+      "keyOrders": [
+        "Pre- and post-reduction neurovascular documentation",
+        "Pre-reduction radiograph (unless emergent threat)",
+        "Procedural sedation setup and monitoring",
+        "Cardiac monitor and pulse oximetry during sedation"
+      ],
+      "labs": [
+        "Usually none for isolated dislocation",
+        "Pre-sedation labs/pregnancy test per protocol*  if indicated",
+        "Type & screen if operative or vascular injury*  if indicated"
+      ],
+      "imaging": [
+        "Pre-reduction plain radiographs (AP/lateral, joint-specific views)",
+        "Post-reduction radiographs to confirm relocation",
+        "CTA if knee dislocation or pulse deficit (popliteal artery)*  if indicated",
+        "CT for complex fracture-dislocation*  if indicated"
+      ],
+      "meds": [
+        "Procedural sedation: ketamine 1-2 mg/kg IV, propofol 0.5-1 mg/kg IV, or etomidate",
+        "Fentanyl 1 mcg/kg IV +/- midazolam 0.02 mg/kg IV",
+        "Intra-articular lidocaine as alternative for shoulder reduction*  if indicated",
+        "Post-reduction analgesia: ibuprofen 600 mg PO / acetaminophen 1000 mg PO"
+      ],
+      "reassess": [
+        "Immediate post-reduction neurovascular re-exam",
+        "Confirm reduction radiographically",
+        "Reassess sedation recovery before discharge"
+      ],
+      "disposition": [
+        "Discharge after successful reduction, immobilization, and stable NV exam",
+        "Transfer if irreducible, open, or vascular injury (esp. knee dislocation)",
+        "Admit/transfer for hip dislocation or fracture-dislocation needing OR"
+      ],
+      "discharge": [
+        "Immobilize (sling/splint/brace) per joint",
+        "Analgesia plan; activity restrictions",
+        "Return for recurrent dislocation, numbness, pallor, severe pain",
+        "Orthopedic follow-up within 3-7 days"
+      ],
+      "followup": [
+        "Orthopedics in 3-7 days for stability assessment/rehab",
+        "Vascular surgery follow-up if knee dislocation with vascular monitoring",
+        "Physical therapy for shoulder/patellar rehab"
+      ]
+    },
+    "redFlags": [
+      "Absent distal pulse / cold limb (vascular injury, esp. knee dislocation)",
+      "Neurologic deficit (axillary, peroneal, sciatic nerve)",
+      "Open dislocation or associated displaced fracture",
+      "Irreducible dislocation after attempts",
+      "Hip dislocation (risk of avascular necrosis - time-sensitive)"
+    ],
+    "compliance": [
+      "EMTALA MSE includes neurovascular assessment and reduction attempt within capability before transfer",
+      "Knee dislocation mandates vascular evaluation; stabilize and transfer to vascular/ortho center if compromise",
+      "Document pre/post-reduction NV exam, sedation monitoring, and transfer rationale",
+      "Procedural sedation must follow facility credentialing and monitoring standards"
+    ]
+  },
+  {
+    "id": "open-fracture",
+    "name": "Open Fracture",
+    "category": "Musculoskeletal",
+    "synonyms": ["compound fracture", "open break", "bone through skin", "exposed fracture"],
+    "acuity": "1-2",
+    "summary": "Fracture with overlying skin/soft-tissue breach communicating with bone; orthopedic emergency requiring early antibiotics, tetanus, and urgent surgical debridement.",
+    "stages": {
+      "triage": [
+        "Identify open wound over fracture; control hemorrhage",
+        "Assess distal neurovascular status",
+        "ATLS approach if high-energy/polytrauma; vital signs",
+        "Note time of injury and contamination level (Gustilo grade)"
+      ],
+      "nursing": [
+        "Apply sterile saline-moistened dressing; do NOT repeatedly probe",
+        "Establish 2 large-bore IVs; control bleeding with pressure",
+        "Photograph wound once, then cover (limit repeated exposure)",
+        "Splint/immobilize; tetanus and antibiotic administration"
+      ],
+      "keyOrders": [
+        "Early IV antibiotics within 1 hour (time-critical)",
+        "Tetanus prophylaxis update",
+        "Sterile dressing, splinting, gross contamination removal",
+        "IV access, analgesia, NPO for OR",
+        "Neurovascular documentation pre/post splinting"
+      ],
+      "labs": [
+        "CBC, BMP, coags, type & crossmatch",
+        "Lactate if significant blood loss/polytrauma*  if indicated",
+        "Wound/bone cultures per ortho (often intraop)*  if indicated"
+      ],
+      "imaging": [
+        "Plain radiographs of injured limb (joint above and below)",
+        "CT for complex/intra-articular or pelvic involvement*  if indicated",
+        "CTA if vascular injury suspected*  if indicated",
+        "Trauma imaging per ATLS if polytrauma*  if indicated"
+      ],
+      "meds": [
+        "Cefazolin 2 g IV (Gustilo I-II); add gentamicin/piperacillin-tazobactam for III",
+        "Add penicillin/metronidazole for farm/soil contamination",
+        "Tetanus toxoid (Tdap) +/- tetanus immune globulin per status",
+        "Analgesia: morphine 0.1 mg/kg IV or fentanyl 1 mcg/kg IV"
+      ],
+      "reassess": [
+        "Repeat neurovascular exam after splinting",
+        "Monitor hemodynamics and hemorrhage control",
+        "Confirm antibiotic and tetanus given and documented"
+      ],
+      "disposition": [
+        "Emergent transfer to facility with orthopedic surgery / OR for debridement",
+        "Do not delay transfer for non-essential workup",
+        "Activate trauma transfer protocol for polytrauma"
+      ],
+      "discharge": [
+        "Discharge not appropriate from FSED; requires operative care",
+        "Communicate antibiotics/tetanus given to receiving team",
+        "Ensure copies of imaging accompany transfer"
+      ],
+      "followup": [
+        "Definitive orthopedic surgical management at receiving facility",
+        "Trauma/ortho follow-up per accepting hospital",
+        "Infection surveillance post-debridement"
+      ]
+    },
+    "redFlags": [
+      "Active arterial bleeding or absent distal pulses",
+      "Gross contamination / Gustilo grade III injury",
+      "Neurologic deficit distal to fracture",
+      "Signs of shock or associated polytrauma",
+      "Delay >1 hour to antibiotics or >6-24h to debridement"
+    ],
+    "compliance": [
+      "EMTALA: provide MSE, stabilize (antibiotics, tetanus, hemorrhage control, splinting), then effect appropriate transfer to orthopedic/operative facility",
+      "FSED lacks OR capability for debridement - document medical necessity and risk/benefit of transfer",
+      "Use highest level of care during transfer; send records, imaging, and meds given",
+      "Report suspected abuse/assault if mechanism inconsistent (Texas mandatory reporting)"
+    ]
+  },
+  {
+    "id": "suspected-compartment-syndrome",
+    "name": "Suspected Compartment Syndrome",
+    "category": "Musculoskeletal",
+    "synonyms": ["acute compartment syndrome", "limb compartment pressure", "ACS", "muscle compartment swelling"],
+    "acuity": "1-2",
+    "summary": "Elevated intracompartmental pressure compromising perfusion (often post-fracture/crush/reperfusion); limb-threatening surgical emergency requiring urgent fasciotomy.",
+    "stages": {
+      "triage": [
+        "Identify mechanism: fracture, crush, reperfusion, tight cast, burn",
+        "Assess for pain out of proportion and pain with passive stretch",
+        "Check 5 P's: pain, paresthesia, pallor, pulselessness (late), paralysis",
+        "Remove constricting casts/dressings immediately"
+      ],
+      "nursing": [
+        "Place limb at heart level (NOT elevated)",
+        "Remove circumferential dressings/splints/casts",
+        "Establish IV access; aggressive fluids for rhabdomyolysis",
+        "Frequent serial neurovascular checks; NPO for OR"
+      ],
+      "keyOrders": [
+        "Bivalve/remove constricting cast or dressing STAT",
+        "Compartment pressure measurement (Stryker) if available*  if indicated",
+        "Serial neurovascular exams documented with times",
+        "IV access, analgesia, NPO; keep limb at heart level"
+      ],
+      "labs": [
+        "CK (rhabdomyolysis), BMP (potassium), creatinine",
+        "CBC, coags, type & screen",
+        "Urinalysis for myoglobinuria; lactate*  if indicated"
+      ],
+      "imaging": [
+        "Plain radiographs to identify associated fracture",
+        "Imaging should not delay surgical decompression",
+        "CTA if concurrent vascular injury suspected*  if indicated"
+      ],
+      "meds": [
+        "Analgesia: fentanyl 1 mcg/kg IV or morphine 0.1 mg/kg IV (note: may mask pain)",
+        "IV crystalloid (NS/LR) for rhabdomyolysis-targeted urine output",
+        "Avoid limb elevation and avoid vasoconstrictors",
+        "Treat hyperkalemia per protocol if rhabdomyolysis*  if indicated"
+      ],
+      "reassess": [
+        "Serial compartment/neurovascular checks every 30-60 min",
+        "Trend CK and renal function",
+        "Diagnosis is clinical - do not wait for pressure if exam compelling"
+      ],
+      "disposition": [
+        "Emergent transfer to facility with orthopedic/vascular surgery for fasciotomy",
+        "Time-critical: fasciotomy ideally within 6 hours",
+        "Do not delay transfer for confirmatory testing"
+      ],
+      "discharge": [
+        "Discharge inappropriate; requires emergent operative decompression",
+        "Communicate pressure readings, CK, and exam to receiving surgeon",
+        "Transfer with continuous monitoring and IV access"
+      ],
+      "followup": [
+        "Operative fasciotomy and wound management at receiving facility",
+        "Renal monitoring for rhabdomyolysis-induced AKI",
+        "Orthopedic follow-up post-decompression"
+      ]
+    },
+    "redFlags": [
+      "Pain out of proportion and pain with passive stretch (earliest signs)",
+      "Tense, firm compartment on palpation",
+      "Paresthesia / sensory deficit progressing to paralysis",
+      "Compartment pressure >30 mmHg or delta pressure <30 mmHg",
+      "Pulselessness/pallor (late, ominous findings)"
+    ],
+    "compliance": [
+      "EMTALA: stabilize (relieve constriction, fluids, analgesia) and emergent appropriate transfer to surgical facility - limb-threatening emergency",
+      "FSED lacks fasciotomy capability - document time-critical necessity and risk/benefit of transfer",
+      "Document serial exams, pressures, and times; use highest-level transport",
+      "Report suspected abuse if crush mechanism inconsistent with history (Texas mandatory reporting)"
+    ]
+  },
+  {
+    "id": "septic-joint",
+    "name": "Septic Joint",
+    "category": "Musculoskeletal",
+    "synonyms": ["septic arthritis", "infected joint", "pyogenic arthritis", "bacterial joint infection"],
+    "acuity": "2",
+    "summary": "Bacterial infection of a joint space (commonly S. aureus, gonococcal); joint-threatening emergency requiring urgent arthrocentesis, antibiotics, and surgical drainage.",
+    "stages": {
+      "triage": [
+        "Assess hot, swollen, painful joint with restricted ROM",
+        "Vital signs incl. temperature; SIRS/sepsis screen",
+        "Risk factors: prosthetic joint, IVDU, immunosuppression, recent procedure",
+        "Pain score; immobilize joint"
+      ],
+      "nursing": [
+        "IV access; draw blood cultures before antibiotics",
+        "Immobilize and support affected joint",
+        "Prepare sterile arthrocentesis tray",
+        "Sepsis bundle if septic physiology (fluids, monitoring)"
+      ],
+      "keyOrders": [
+        "Arthrocentesis for synovial fluid analysis (before antibiotics if no delay)",
+        "Blood cultures x2 before antibiotics",
+        "IV access, IV fluids; cardiac monitor if septic",
+        "Empiric IV antibiotics after cultures",
+        "Immobilize joint"
+      ],
+      "labs": [
+        "Synovial fluid: cell count w/ diff, Gram stain, culture, crystals",
+        "CBC, ESR, CRP, BMP, lactate",
+        "Blood cultures x2",
+        "Procalcitonin*  if indicated; GC/chlamydia NAAT if gonococcal suspected*  if indicated"
+      ],
+      "imaging": [
+        "Plain radiograph of affected joint",
+        "Ultrasound to confirm effusion and guide aspiration*  if indicated",
+        "MRI if osteomyelitis or prosthetic/deep joint involvement*  if indicated"
+      ],
+      "meds": [
+        "Vancomycin 15-20 mg/kg IV (MRSA coverage)",
+        "Plus ceftriaxone 2 g IV (or cefepime if GNR/immunocompromised)",
+        "Ceftriaxone 1 g IV if gonococcal arthritis suspected",
+        "IV crystalloid 30 mL/kg if septic per Surviving Sepsis",
+        "Analgesia: acetaminophen 1000 mg PO; opioids for severe pain*  if indicated"
+      ],
+      "reassess": [
+        "Trend vitals and lactate; sepsis reassessment",
+        "Review synovial fluid Gram stain/cell count",
+        "Reassess pain and perfusion before/while arranging transfer"
+      ],
+      "disposition": [
+        "Admit/transfer to facility with orthopedics for surgical drainage/washout",
+        "Initiate sepsis management and antibiotics before transfer",
+        "ICU-level transfer if septic shock"
+      ],
+      "discharge": [
+        "Discharge inappropriate; requires admission and operative drainage",
+        "Communicate cultures, synovial results, and antibiotics given to receiving team",
+        "Transfer with IV access and monitoring"
+      ],
+      "followup": [
+        "Inpatient orthopedic surgical drainage and IV antibiotics",
+        "Infectious disease consultation for tailored therapy",
+        "Source/STI partner follow-up if gonococcal"
+      ]
+    },
+    "redFlags": [
+      "Hot swollen joint with fever and inability to bear weight/move joint",
+      "Synovial WBC >50,000 or positive Gram stain",
+      "Prosthetic joint infection",
+      "Sepsis/septic shock physiology (hypotension, tachycardia, elevated lactate)",
+      "Rapidly progressive joint destruction"
+    ],
+    "compliance": [
+      "EMTALA: provide MSE, stabilize (antibiotics, fluids, sepsis bundle), then appropriate transfer to facility with orthopedic surgery",
+      "FSED lacks operative washout capability - document medical necessity and risk/benefit of transfer/admission",
+      "Initiate Surviving Sepsis bundle measures if septic; send cultures and meds-given with patient",
+      "Gonococcal arthritis is a reportable STI to Texas DSHS"
+    ]
+  }
+]

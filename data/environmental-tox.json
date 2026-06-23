@@ -1,0 +1,726 @@
+[
+  {
+    "id": "anaphylaxis-allergic-reaction",
+    "name": "Anaphylaxis / Allergic Reaction",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["allergic reaction", "anaphylactic shock", "hives", "angioedema", "severe allergy", "food/drug/sting reaction"],
+    "acuity": "1-2",
+    "summary": "IgE-mediated multisystem hypersensitivity ranging from urticaria to airway/cardiovascular collapse; distinguish from isolated urticaria and angioedema.",
+    "stages": {
+      "triage": [
+        "Rapid airway/breathing/circulation assessment; pull to high-acuity bed immediately",
+        "Identify trigger and time of exposure (food, sting, drug, latex)",
+        "Grade severity: skin-only vs respiratory/GI/CV involvement",
+        "Vitals with continuous SpO2; note stridor, wheeze, hypotension",
+        "Ask about prior anaphylaxis and current beta-blocker/ACE-I use"
+      ],
+      "nursing": [
+        "Place supine with legs elevated unless dyspneic; avoid sudden upright posture",
+        "Apply continuous cardiac monitor and pulse oximetry",
+        "Establish 2 large-bore IVs",
+        "Prepare epinephrine and airway/intubation equipment at bedside",
+        "Remove ongoing trigger (stinger, IV drug, food)"
+      ],
+      "keyOrders": [
+        "IM epinephrine FIRST-LINE without delay for systemic involvement",
+        "High-flow O2 to keep SpO2 >94%",
+        "Cardiac monitor, continuous SpO2, frequent BP",
+        "IV access x2 with crystalloid bolus ready",
+        "NPO; prepare for possible difficult airway",
+        "*Epinephrine infusion if indicated for refractory shock"
+      ],
+      "labs": [
+        "Usually clinical diagnosis; labs not required to treat",
+        "*Serum tryptase within 1-2 hr if indicated (diagnostic confirmation)",
+        "*Basic metabolic panel if indicated with prolonged shock",
+        "*ABG/VBG if indicated for respiratory failure"
+      ],
+      "imaging": [
+        "None routinely indicated",
+        "*CXR if indicated for persistent wheeze or aspiration concern",
+        "*Soft-tissue neck imaging deferred if airway unstable"
+      ],
+      "meds": [
+        "Epinephrine 0.3-0.5 mg IM (1 mg/mL) anterolateral thigh, repeat q5-15 min",
+        "Normal saline 1-2 L IV bolus for hypotension (repeat to 20-30 mL/kg)",
+        "Diphenhydramine 25-50 mg IV (adjunct, not primary)",
+        "Famotidine 20 mg IV (H2 adjunct)",
+        "Methylprednisolone 125 mg IV (prevent biphasic; adjunct)",
+        "Albuterol 2.5-5 mg nebulized for bronchospasm",
+        "Glucagon 1-5 mg IV for epinephrine-refractory patients on beta-blockers"
+      ],
+      "reassess": [
+        "Reassess airway, BP, and breathing q5-15 min after each epinephrine dose",
+        "Escalate to epinephrine infusion if no response to repeat IM doses",
+        "Watch for biphasic reaction over observation period",
+        "Reevaluate need for early intubation if progressive stridor/edema"
+      ],
+      "disposition": [
+        "Observe 4-6 hr minimum after symptom resolution (longer if severe/refractory)",
+        "Admit/transfer if required repeat epinephrine, infusion, or airway intervention",
+        "Discharge skin-only reactions after observation if stable",
+        "ICU-level transfer for refractory shock or airway compromise"
+      ],
+      "discharge": [
+        "Prescribe 2 epinephrine auto-injectors and demonstrate use",
+        "5-day course non-sedating antihistamine +/- short steroid taper",
+        "Strict trigger avoidance instructions",
+        "Return precautions for recurrent or biphasic symptoms"
+      ],
+      "followup": [
+        "Allergy/immunology referral for trigger testing",
+        "PCP follow-up within 1 week",
+        "Consider medical-alert bracelet",
+        "Reinforce auto-injector carry and expiration checks"
+      ]
+    },
+    "redFlags": [
+      "Stridor, hoarseness, or progressive tongue/lip swelling (airway)",
+      "Hypotension or shock refractory to IM epinephrine",
+      "Hypoxia or severe bronchospasm unresponsive to bronchodilators",
+      "Patient on beta-blocker with poor epinephrine response",
+      "Biphasic reaction during observation"
+    ],
+    "compliance": [
+      "EMTALA: complete medical screening exam and stabilize airway/hemodynamics before any transfer",
+      "Refractory anaphylaxis or need for ICU/airway management warrants appropriate transfer with physician-to-physician handoff and copies of records",
+      "Document observation period rationale (FSED observation vs transfer decision) given biphasic risk",
+      "If reaction is to a medication administered at the FSED, document and report per facility adverse-event policy",
+      "Provide auto-injector prescription before discharge; FSEDs must ensure outpatient access plan"
+    ]
+  },
+  {
+    "id": "heat-illness-hyperthermia",
+    "name": "Heat Illness / Hyperthermia",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["heat stroke", "heat exhaustion", "heat cramps", "hyperthermia", "overheating", "exertional heat illness"],
+    "acuity": "2-3",
+    "summary": "Spectrum from heat cramps/exhaustion to life-threatening heat stroke with CNS dysfunction and end-organ injury; distinguish from sepsis, thyroid storm, drug toxidromes.",
+    "stages": {
+      "triage": [
+        "Obtain core temperature (rectal preferred) immediately",
+        "Assess mental status; altered sensorium suggests heat stroke",
+        "History of exertion, environmental exposure, anticholinergic/stimulant drugs",
+        "Vitals including SpO2; note tachycardia and hypotension",
+        "Flag temp >40C with CNS changes as critical"
+      ],
+      "nursing": [
+        "Begin active cooling immediately; remove clothing",
+        "Cardiac monitor, continuous core temp probe, SpO2",
+        "Establish IV access x2",
+        "Apply evaporative cooling (mist + fans) and ice packs to groin/axilla/neck",
+        "Insert Foley to monitor output and assess rhabdo/AKI"
+      ],
+      "keyOrders": [
+        "Continuous rectal/core temperature monitoring",
+        "Active cooling to target core <39C, then stop to avoid overshoot",
+        "IV crystalloid resuscitation",
+        "Cardiac monitor + SpO2; 12-lead ECG",
+        "Accucheck to exclude hypoglycemia",
+        "*Cold-water immersion if indicated for exertional heat stroke"
+      ],
+      "labs": [
+        "CBC, CMP (Na, K, renal, glucose)",
+        "CK for rhabdomyolysis",
+        "Coagulation panel (assess DIC) and lactate",
+        "VBG; troponin if cardiac concern",
+        "*TSH and drug screen if indicated to exclude mimics",
+        "Urinalysis for myoglobin"
+      ],
+      "imaging": [
+        "12-lead ECG for arrhythmia/ischemia",
+        "*CXR if indicated for aspiration/ARDS",
+        "*CT head if indicated for unexplained altered mentation"
+      ],
+      "meds": [
+        "Normal saline or LR 1-2 L IV bolus, titrate to perfusion/output",
+        "Benzodiazepine (lorazepam 1-2 mg IV) to control shivering during cooling",
+        "Acetaminophen/antipyretics NOT effective for environmental hyperthermia",
+        "Sodium bicarbonate per protocol if significant rhabdomyolysis/acidosis",
+        "*Dantrolene only if indicated for malignant hyperthermia/NMS mimic"
+      ],
+      "reassess": [
+        "Recheck core temp q5-10 min during active cooling",
+        "Stop active cooling at ~38.5-39C to prevent overshoot hypothermia",
+        "Reassess mental status, urine output, and CK trend",
+        "Monitor for DIC, hepatic injury, and arrhythmia"
+      ],
+      "disposition": [
+        "Heat stroke (CNS dysfunction): ICU admission/transfer after cooling initiated",
+        "Heat exhaustion: observe, rehydrate, discharge if normalized",
+        "Heat cramps: oral rehydration, discharge",
+        "Transfer for ongoing organ failure, DIC, or AKI requiring critical care"
+      ],
+      "discharge": [
+        "Oral rehydration with electrolyte solutions",
+        "Avoid heat exposure and exertion 24-48 hr",
+        "Review medications that impair thermoregulation",
+        "Return precautions for confusion, dark urine, persistent symptoms"
+      ],
+      "followup": [
+        "PCP within 2-3 days; recheck renal function if rhabdo present",
+        "Counsel on acclimatization and hydration for at-risk workers/athletes",
+        "Review anticholinergic/stimulant/diuretic medication list",
+        "Occupational health referral for work-related exposure"
+      ]
+    },
+    "redFlags": [
+      "Core temp >40C with altered mental status (heat stroke)",
+      "Seizure, coma, or focal neuro deficit",
+      "Rising CK with AKI (rhabdomyolysis) or oliguria",
+      "Coagulopathy/DIC or hepatic failure",
+      "Hemodynamic instability despite resuscitation"
+    ],
+    "compliance": [
+      "EMTALA: initiate cooling and stabilization as part of the medical screening exam before transfer decisions",
+      "Heat stroke is a true emergency; cool first, then arrange appropriate ICU transfer with active cooling continued en route",
+      "Document observation-vs-transfer rationale for heat exhaustion vs heat stroke",
+      "Report suspected workplace/heat-exposure neglect or vulnerable-adult endangerment per Texas mandatory reporting",
+      "Coordinate occupational reporting for work-related heat illness"
+    ]
+  },
+  {
+    "id": "hypothermia",
+    "name": "Hypothermia",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["cold exposure", "low body temperature", "exposure", "accidental hypothermia", "frostbite with hypothermia"],
+    "acuity": "1-3",
+    "summary": "Core temp <35C graded mild/moderate/severe; risk of dysrhythmia and arrest; rule out sepsis, hypoglycemia, hypothyroidism, intoxication as contributors.",
+    "stages": {
+      "triage": [
+        "Measure core temperature (low-reading rectal/esophageal probe)",
+        "Handle patient gently to avoid precipitating VF",
+        "Classify: mild 32-35C, moderate 28-32C, severe <28C",
+        "Assess pulse for full 60 sec (bradycardia common)",
+        "Identify exposure history, intoxication, immersion, trauma"
+      ],
+      "nursing": [
+        "Remove wet clothing; insulate and minimize movement",
+        "Cardiac monitor, continuous core temp, SpO2",
+        "Warm IV access; avoid unnecessary stimulation",
+        "Begin passive + active external rewarming (warm blankets, forced-air)",
+        "Warm humidified O2 and warmed IV fluids"
+      ],
+      "keyOrders": [
+        "Continuous core temperature monitoring",
+        "Cardiac monitor (watch for Osborn J waves, VF risk)",
+        "Warmed IV crystalloid (40-42C)",
+        "Accucheck; treat hypoglycemia",
+        "Active rewarming targeted to severity",
+        "*Extracorporeal/cardiopulmonary rewarming if indicated for severe/arrest"
+      ],
+      "labs": [
+        "CBC, CMP, glucose, magnesium/phosate",
+        "VBG/ABG, lactate",
+        "Coagulation studies (cold coagulopathy)",
+        "TSH and cortisol if endocrine cause suspected",
+        "Ethanol/tox screen; CK for rhabdo",
+        "*Blood cultures if indicated for sepsis-related hypothermia"
+      ],
+      "imaging": [
+        "12-lead ECG",
+        "*CXR if indicated for aspiration/edema",
+        "*CT head if indicated for altered mentation or trauma",
+        "*FAST/trauma imaging if indicated with concurrent trauma"
+      ],
+      "meds": [
+        "Warmed normal saline IV boluses for hypotension",
+        "Dextrose 25 g IV (D50) for hypoglycemia",
+        "Thiamine 100 mg IV if alcohol use/malnutrition suspected",
+        "Limit cardiac drugs in severe hypothermia (reduced metabolism, may accumulate)",
+        "*Empiric antibiotics if indicated for suspected sepsis"
+      ],
+      "reassess": [
+        "Recheck core temp continuously; aim 1-2C rise per hour",
+        "Avoid rough handling and overzealous rewarming (afterdrop)",
+        "If in arrest, continue CPR and rewarm; 'not dead until warm and dead'",
+        "Reassess electrolytes and glucose during rewarming"
+      ],
+      "disposition": [
+        "Severe/moderate hypothermia or arrest: ICU admission/transfer with active rewarming",
+        "Mild hypothermia: rewarm, observe, discharge if normalized and safe environment",
+        "Transfer for ECMO/bypass rewarming capability if severe/refractory",
+        "Address social/housing factors before discharge"
+      ],
+      "discharge": [
+        "Ensure normothermia and stable vitals before discharge",
+        "Cold-exposure prevention and adequate shelter/clothing counseling",
+        "Treat associated frostbite and provide wound care instructions",
+        "Return precautions for recurrent cold injury or confusion"
+      ],
+      "followup": [
+        "PCP follow-up; endocrine workup if hypothyroid cause found",
+        "Social work for housing/exposure risk",
+        "Frostbite/wound clinic referral if tissue injury",
+        "Substance-use resources if intoxication contributed"
+      ]
+    },
+    "redFlags": [
+      "Core temp <28C or cardiac arrest/VF",
+      "Hemodynamic instability or malignant dysrhythmia",
+      "Afterdrop with deterioration during rewarming",
+      "Concurrent trauma or severe frostbite",
+      "Failure to rewarm without extracorporeal support"
+    ],
+    "compliance": [
+      "EMTALA: stabilize and begin rewarming as part of medical screening exam before transfer",
+      "Severe hypothermia requiring ECMO/bypass mandates appropriate transfer to a facility with that capability",
+      "Document observation-vs-transfer decision and capability limits of the FSED",
+      "Report suspected adult/elder neglect or self-neglect (vulnerable adult) and consider homelessness resources per Texas reporting",
+      "Continue active rewarming during interfacility transport and document handoff"
+    ]
+  },
+  {
+    "id": "carbon-monoxide-exposure",
+    "name": "Carbon Monoxide Exposure",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["CO poisoning", "carbon monoxide poisoning", "smoke inhalation", "fume exposure", "headache from heater"],
+    "acuity": "2-3",
+    "summary": "Tissue hypoxia from carboxyhemoglobin; nonspecific headache/nausea to syncope/seizure; pulse oximetry falsely normal; consider concurrent cyanide in fires.",
+    "stages": {
+      "triage": [
+        "Remove from source; ensure scene safety reported",
+        "High-flow O2 immediately on arrival",
+        "History: enclosed space, heater/generator, fire, multiple sick contacts",
+        "Note standard SpO2 is unreliable (cannot detect COHb)",
+        "Assess for neuro symptoms, chest pain, pregnancy status"
+      ],
+      "nursing": [
+        "Apply 100% O2 via non-rebreather immediately",
+        "Cardiac monitor, SpO2 (recognize limitation), CO-oximetry if available",
+        "IV access",
+        "12-lead ECG",
+        "Document time O2 started (affects COHb half-life)"
+      ],
+      "keyOrders": [
+        "100% high-flow O2 via non-rebreather (or intubation if needed)",
+        "CO-oximetry / carboxyhemoglobin level (venous or arterial)",
+        "Cardiac monitor + 12-lead ECG",
+        "IV access",
+        "Accucheck; assess for concurrent cyanide in fire victims",
+        "*Pregnancy test if indicated (fetal risk affects HBO decision)"
+      ],
+      "labs": [
+        "Carboxyhemoglobin level (co-oximetry) - key test",
+        "VBG/ABG with lactate (elevated lactate suggests cyanide)",
+        "CMP, CBC, troponin",
+        "CK if down/immobile (rhabdo)",
+        "*Cyanide level / empiric treatment if indicated in fire/smoke",
+        "Pregnancy test in people of childbearing potential"
+      ],
+      "imaging": [
+        "12-lead ECG for ischemia",
+        "*CXR if indicated for smoke inhalation/aspiration",
+        "*CT head if indicated for persistent neuro deficit"
+      ],
+      "meds": [
+        "Oxygen 100% non-rebreather (continue until COHb normal and asymptomatic)",
+        "IV crystalloid for hypotension",
+        "Hydroxocobalamin 5 g IV if concurrent cyanide suspected (fire victims)",
+        "*Mannitol/seizure management if indicated for cerebral edema/seizure",
+        "Continue O2 in pregnancy 5x longer than nonpregnant"
+      ],
+      "reassess": [
+        "Trend COHb and symptoms on 100% O2",
+        "Reassess neuro status and cardiac symptoms",
+        "Determine hyperbaric oxygen (HBO) candidacy",
+        "Monitor for delayed neuropsychiatric sequelae counseling"
+      ],
+      "disposition": [
+        "Consider HBO transfer for: LOC, neuro deficit, COHb >25% (>15-20% if pregnant), cardiac ischemia, metabolic acidosis",
+        "Admit/observe symptomatic patients on O2 until improved",
+        "Discharge asymptomatic with low COHb after normalization",
+        "Transfer to hyperbaric facility per criteria"
+      ],
+      "discharge": [
+        "Confirm safe environment; CO source remediated and detector installed",
+        "Counsel on delayed neurologic sequelae (weeks)",
+        "Return precautions for headache, confusion, chest pain",
+        "Verify no other household members affected"
+      ],
+      "followup": [
+        "PCP/neurology follow-up for delayed cognitive symptoms",
+        "Neuropsychiatric assessment if persistent deficits",
+        "OB follow-up if pregnant",
+        "Home CO detector and source repair confirmation"
+      ]
+    },
+    "redFlags": [
+      "Loss of consciousness, seizure, or focal neuro deficit",
+      "Myocardial ischemia / chest pain / elevated troponin",
+      "Metabolic acidosis or elevated lactate (consider cyanide)",
+      "Pregnancy with significant exposure",
+      "COHb markedly elevated or symptoms persist despite O2"
+    ],
+    "compliance": [
+      "EMTALA: initiate 100% O2 and screening before any transfer",
+      "If HBO indicated, arrange appropriate transfer to hyperbaric facility with physician handoff; FSED typically lacks HBO",
+      "Document observation-vs-transfer rationale based on HBO criteria",
+      "Report suspected intentional CO exposure (assault/suicide) and consider public-health notification for source/multiple victims",
+      "Coordinate with fire/EMS and notify others potentially exposed at the source"
+    ]
+  },
+  {
+    "id": "electrical-injury",
+    "name": "Electrical Injury",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["electrocution", "electric shock", "lightning strike", "high-voltage injury", "burn from electricity"],
+    "acuity": "1-3",
+    "summary": "Injury spectrum from minor burns to arrhythmia, deep tissue/myonecrosis, and cardiac arrest; low-voltage vs high-voltage vs lightning differ in management.",
+    "stages": {
+      "triage": [
+        "Confirm scene safe and source de-energized",
+        "Determine voltage (low <1000V vs high), AC/DC, lightning, contact duration",
+        "Assess ABCs; immediate 12-lead ECG and rhythm",
+        "Look for entry/exit wounds and associated trauma/fall",
+        "Spinal precautions if fall or tetanic contraction"
+      ],
+      "nursing": [
+        "Cardiac monitor, continuous SpO2",
+        "12-lead ECG on arrival",
+        "Establish IV access x2; aggressive fluids if deep burns",
+        "Insert Foley to monitor urine output/myoglobinuria",
+        "Wound care and burn assessment; spinal immobilization if indicated"
+      ],
+      "keyOrders": [
+        "Continuous cardiac monitoring (arrhythmia risk)",
+        "12-lead ECG immediately and repeat",
+        "IV crystalloid titrated to urine output (higher for deep tissue injury)",
+        "Accucheck; tetanus status",
+        "Trauma survey for associated injuries",
+        "*Compartment checks/escharotomy consult if indicated"
+      ],
+      "labs": [
+        "CK (rhabdomyolysis - often underestimated by surface burn)",
+        "CMP (potassium, renal), CBC",
+        "Urinalysis for myoglobin",
+        "Troponin and ECG for cardiac injury",
+        "VBG/lactate",
+        "*Coagulation/type & screen if indicated for major injury"
+      ],
+      "imaging": [
+        "12-lead ECG (repeat)",
+        "*C-spine/long-bone imaging if indicated for fall/tetany fractures",
+        "*CT head/trauma series if indicated with LOC or mechanism",
+        "*Imaging of affected limb if indicated for deep injury"
+      ],
+      "meds": [
+        "Normal saline/LR IV to target urine output 1-1.5 mL/kg/hr (more with rhabdo)",
+        "Analgesia: morphine 0.1 mg/kg IV or fentanyl 1 mcg/kg IV titrated",
+        "Tetanus prophylaxis (Tdap) if not up to date",
+        "Sodium bicarbonate per protocol for significant rhabdomyolysis",
+        "*ACLS antiarrhythmics if indicated for dysrhythmia"
+      ],
+      "reassess": [
+        "Reassess rhythm and repeat ECG; monitor for delayed arrhythmia",
+        "Trend CK, potassium, and urine output for rhabdo/AKI",
+        "Reassess perfusion/compartments of injured limbs",
+        "Reevaluate hidden deep-tissue injury beyond surface burn"
+      ],
+      "disposition": [
+        "High-voltage, abnormal ECG, arrhythmia, rhabdo, or LOC: admit/transfer with monitoring",
+        "Low-voltage, asymptomatic, normal ECG, no injury: may discharge after observation",
+        "Transfer to burn/trauma center for significant burns or deep injury",
+        "ICU for dysrhythmia or critical organ involvement"
+      ],
+      "discharge": [
+        "Burn wound care and dressing instructions",
+        "Return precautions for palpitations, dark urine, worsening pain/swelling",
+        "Confirm normal ECG and asymptomatic before low-voltage discharge",
+        "Activity limitations per injury"
+      ],
+      "followup": [
+        "Burn clinic / wound care follow-up",
+        "Cardiology if any ECG changes",
+        "PCP for renal recheck if rhabdo",
+        "Cataract/neuro follow-up for high-voltage/lightning (delayed sequelae)"
+      ]
+    },
+    "redFlags": [
+      "Cardiac arrest, ventricular arrhythmia, or abnormal ECG",
+      "High-voltage or lightning injury",
+      "Rhabdomyolysis with rising CK / AKI / hyperkalemia",
+      "Compartment syndrome or extensive deep-tissue burns",
+      "LOC, associated trauma, or spinal injury"
+    ],
+    "compliance": [
+      "EMTALA: complete medical screening exam, ECG, and stabilization before transfer",
+      "Significant burns/high-voltage injury require appropriate transfer to a burn/trauma center per transfer agreements",
+      "Document observation-vs-transfer decision for low-voltage asymptomatic patients",
+      "Report suspected assault, occupational injury, or child/elder abuse per Texas mandatory reporting",
+      "Coordinate occupational/workplace injury documentation"
+    ]
+  },
+  {
+    "id": "drowning-submersion",
+    "name": "Drowning / Submersion",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["near drowning", "submersion injury", "water inhalation", "secondary drowning", "aspiration in water"],
+    "acuity": "1-3",
+    "summary": "Respiratory impairment from submersion/immersion; hypoxia is primary insult; risk of ARDS, arrhythmia, and hypothermia; outdated terms 'wet/dry/near' discouraged.",
+    "stages": {
+      "triage": [
+        "Assess airway, breathing, oxygenation immediately",
+        "History: duration of submersion, water type/temp, witnessed, resuscitation given",
+        "Measure core temperature (associated hypothermia)",
+        "Spinal precautions if diving/trauma mechanism",
+        "Note any LOC, seizure, or arrhythmia"
+      ],
+      "nursing": [
+        "Apply high-flow O2; support ventilation as needed",
+        "Cardiac monitor, continuous SpO2, core temp",
+        "IV access",
+        "Position to protect airway; suction as needed",
+        "Begin rewarming if hypothermic"
+      ],
+      "keyOrders": [
+        "Supplemental/high-flow O2; CPAP or intubation for respiratory failure",
+        "Continuous cardiac monitor + SpO2",
+        "12-lead ECG",
+        "IV access; core temperature monitoring",
+        "Accucheck",
+        "*C-spine immobilization if indicated for dive/trauma"
+      ],
+      "labs": [
+        "VBG/ABG (oxygenation, acidosis)",
+        "CMP, CBC, lactate",
+        "*Ethanol/tox screen if indicated (common contributor)",
+        "*CK if indicated for prolonged immobilization",
+        "Troponin if arrhythmia/ischemia"
+      ],
+      "imaging": [
+        "CXR (may lag behind clinical picture; repeat as needed)",
+        "12-lead ECG",
+        "*CT head/C-spine if indicated for trauma or persistent AMS",
+        "*Repeat CXR if indicated for evolving ARDS"
+      ],
+      "meds": [
+        "Oxygen / positive-pressure ventilation as primary therapy",
+        "Albuterol 2.5-5 mg nebulized for bronchospasm",
+        "IV crystalloid for hypotension",
+        "Warmed fluids if hypothermic",
+        "*Vasopressors/ACLS if indicated for shock or arrest",
+        "Antibiotics only for documented infection (not prophylactic)"
+      ],
+      "reassess": [
+        "Serial respiratory assessment and SpO2 over observation window",
+        "Watch for delayed pulmonary edema/ARDS for 4-8 hr",
+        "Reassess mental status and oxygenation trends",
+        "Continue rewarming and reassess temperature"
+      ],
+      "disposition": [
+        "Symptomatic, hypoxic, or abnormal exam: admit/transfer (ICU if intubated)",
+        "Asymptomatic with normal exam, SpO2, and CXR: observe 4-8 hr then discharge",
+        "Transfer for mechanical ventilation/ICU or ECMO needs",
+        "Any cardiac arrest or persistent neuro deficit: critical-care transfer"
+      ],
+      "discharge": [
+        "Discharge only after observation period with normal oxygenation and exam",
+        "Return precautions for cough, dyspnea, fever within 24-48 hr",
+        "Water-safety counseling",
+        "Avoid driving/strenuous activity until cleared"
+      ],
+      "followup": [
+        "PCP follow-up 24-48 hr",
+        "Pulmonary referral if respiratory symptoms persisted",
+        "Counsel on supervision/barriers and CPR training",
+        "Address substance use if contributory"
+      ]
+    },
+    "redFlags": [
+      "Hypoxia or respiratory distress requiring ventilatory support",
+      "Cardiac arrest or malignant dysrhythmia",
+      "Altered mental status or seizure",
+      "Severe hypothermia",
+      "Evolving pulmonary edema/ARDS during observation"
+    ],
+    "compliance": [
+      "EMTALA: stabilize airway/oxygenation as part of medical screening exam before transfer",
+      "Patients needing ventilation/ICU require appropriate transfer with documented handoff and continued O2 en route",
+      "Document mandated observation window and observation-vs-transfer rationale given delayed ARDS risk",
+      "Report suspected child drowning neglect, abuse, or unsafe-pool conditions per Texas mandatory reporting; consider drowning as possible non-accidental in children",
+      "Coordinate with EMS/law enforcement for fatalities and possible medical examiner notification"
+    ]
+  },
+  {
+    "id": "envenomation-stings",
+    "name": "Envenomation / Stings",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["snakebite", "spider bite", "scorpion sting", "bee sting", "venomous bite", "rattlesnake bite", "marine sting"],
+    "acuity": "2-3",
+    "summary": "Local and systemic effects from snake (crotalid), arthropod, or marine venom; manage local tissue injury, coagulopathy, and anaphylaxis; antivenom for pit vipers.",
+    "stages": {
+      "triage": [
+        "Identify offending species/region if possible (do not bring live animal)",
+        "Mark and time the leading edge of swelling/erythema",
+        "Assess for systemic signs: hypotension, bleeding, neuro symptoms",
+        "Immobilize affected limb at heart level; remove constricting items",
+        "Screen for anaphylaxis to stings (see anaphylaxis pathway)"
+      ],
+      "nursing": [
+        "Cardiac monitor, SpO2, frequent vitals",
+        "IV access in unaffected limb",
+        "Serial limb circumference measurements with time stamps",
+        "Avoid tourniquets, incision, suction, or ice on snakebites",
+        "Prepare antivenom and epinephrine for reactions"
+      ],
+      "keyOrders": [
+        "Immobilize and elevate affected extremity",
+        "IV access; crystalloid for hypotension",
+        "Cardiac monitor + SpO2",
+        "Serial swelling margin marking q15-30 min",
+        "Tetanus status",
+        "*Crotalidae antivenom (CroFab/Anavip) if indicated for progressive envenomation"
+      ],
+      "labs": [
+        "CBC, fibrinogen, PT/INR, PTT (crotalid coagulopathy)",
+        "CMP, CK",
+        "Type & screen if bleeding risk",
+        "Repeat coagulation/platelets to monitor progression",
+        "*Urinalysis if indicated for hemolysis/myoglobin"
+      ],
+      "imaging": [
+        "Usually none for envenomation site",
+        "*Plain film if indicated for retained stinger/foreign body or marine spine",
+        "*Doppler/imaging if indicated to assess perfusion vs compartment"
+      ],
+      "meds": [
+        "Crotalidae antivenom (CroFab 4-6 vials initial, or Anavip) for progressive crotalid envenomation",
+        "Analgesia: fentanyl 1 mcg/kg IV or morphine, titrate",
+        "Tetanus prophylaxis (Tdap) if not current",
+        "Epinephrine 0.3-0.5 mg IM for anaphylaxis to stings",
+        "Antihistamines/antiemetics as adjuncts",
+        "*Antibiotics only if indicated for established wound infection"
+      ],
+      "reassess": [
+        "Serial limb exam, swelling progression, and coagulation studies",
+        "Reassess for antivenom indication (worsening local/systemic/labs)",
+        "Monitor for antivenom infusion reactions",
+        "Reevaluate compartment pressure if tense, painful swelling (true compartment syndrome rare)"
+      ],
+      "disposition": [
+        "Significant/progressive crotalid envenomation: admit/transfer for antivenom and serial labs",
+        "Dry bite or minor sting, stable, no progression after 8 hr observation: discharge",
+        "Transfer if antivenom unavailable or for ICU-level toxicity",
+        "Consult poison control / toxicology for all envenomations"
+      ],
+      "discharge": [
+        "Observe minimum 8 hr (dry bite) with normal labs before discharge",
+        "Return precautions for spreading swelling, bleeding, gum bleeding, bruising (delayed coagulopathy)",
+        "Wound care and tetanus documentation",
+        "Avoid NSAIDs/aspirin if coagulopathy risk"
+      ],
+      "followup": [
+        "Recheck coagulation labs in 2-3 days and ~1 week for crotalid (recurrent coagulopathy)",
+        "Wound check / hand specialist for severe local injury",
+        "Poison control follow-up guidance",
+        "PCP follow-up"
+      ]
+    },
+    "redFlags": [
+      "Progressive swelling beyond the bitten extremity or rapid spread",
+      "Coagulopathy: low fibrinogen, prolonged PT/PTT, active bleeding",
+      "Systemic toxicity: hypotension, neuro deficits, respiratory compromise",
+      "Anaphylaxis to sting",
+      "Antivenom infusion reaction"
+    ],
+    "compliance": [
+      "EMTALA: medical screening exam and stabilization before any transfer",
+      "If antivenom is unavailable or toxicity exceeds FSED capability, arrange appropriate transfer to an antivenom-stocked facility with toxicology support",
+      "Contact Texas Poison Center Network (1-800-222-1222) and document guidance",
+      "Document observation-vs-transfer decision and minimum observation window",
+      "Report animal bites (rabies-vector exposure) to local public health per Texas reporting requirements"
+    ]
+  },
+  {
+    "id": "chemical-exposure",
+    "name": "Chemical Exposure",
+    "category": "Environmental / Toxicologic",
+    "synonyms": ["chemical burn", "toxic inhalation", "acid/alkali exposure", "hazmat exposure", "industrial chemical contact", "caustic ingestion"],
+    "acuity": "2-3",
+    "summary": "Dermal/ocular/inhalational/ingestion exposure to caustics, irritants, or systemic toxins; decontamination and identifying the agent drive management.",
+    "stages": {
+      "triage": [
+        "Ensure decontamination BEFORE entry to protect staff (don PPE)",
+        "Identify agent, concentration, route, and time of exposure (SDS if available)",
+        "Assess airway for inhalational/caustic injury; ocular exposures need immediate irrigation",
+        "Vitals + SpO2; note respiratory distress or stridor",
+        "Contact poison control early for agent-specific guidance"
+      ],
+      "nursing": [
+        "Remove contaminated clothing; copious water irrigation of skin/eyes",
+        "Continuous eye irrigation (e.g., Morgan lens) for ocular caustics until pH neutral",
+        "Cardiac monitor, SpO2, IV access",
+        "Avoid neutralizing agents (exothermic); use water/saline",
+        "Isolate contaminated materials per hazmat protocol"
+      ],
+      "keyOrders": [
+        "Immediate decontamination/irrigation (skin and eyes)",
+        "High-flow O2 for inhalation; prepare airway equipment",
+        "Cardiac monitor + SpO2; IV access",
+        "Ocular pH testing before and after irrigation",
+        "Accucheck; 12-lead ECG for systemic toxins",
+        "*Agent-specific antidote per poison control if indicated"
+      ],
+      "labs": [
+        "VBG/ABG with lactate (metabolic acidosis, oxygenation)",
+        "CMP, CBC",
+        "*Co-oximetry / methemoglobin / cyanide if indicated by agent",
+        "*Acetaminophen and salicylate levels if indicated for ingestion",
+        "*Osmolar gap/anion gap if indicated for toxic alcohols"
+      ],
+      "imaging": [
+        "*CXR if indicated for inhalational injury or aspiration",
+        "*Upright chest/abdomen if indicated for caustic ingestion perforation",
+        "12-lead ECG for cardiotoxic agents",
+        "*Endoscopy referral if indicated for significant caustic ingestion"
+      ],
+      "meds": [
+        "Copious water/saline irrigation is primary therapy for dermal/ocular",
+        "Calcium gluconate gel/IV for hydrofluoric acid exposure",
+        "Albuterol 2.5-5 mg nebulized for bronchospasm",
+        "IV crystalloid for hypotension",
+        "Agent-specific antidotes per poison control (e.g., hydroxocobalamin, atropine/pralidoxime for organophosphates)",
+        "Analgesia and antiemetics as needed"
+      ],
+      "reassess": [
+        "Recheck ocular pH after irrigation until neutral (7.0-7.5)",
+        "Reassess airway/respiratory status for delayed inhalational injury",
+        "Reassess burn depth/extent after decontamination",
+        "Monitor for systemic toxicity per agent (delayed effects)"
+      ],
+      "disposition": [
+        "Caustic ingestion, airway involvement, or systemic toxicity: admit/transfer",
+        "Minor dermal/ocular exposure fully decontaminated and asymptomatic: discharge after observation",
+        "Transfer to burn center for significant chemical burns or to facility with endoscopy/toxicology",
+        "ICU/poison-center-guided disposition for systemic toxins"
+      ],
+      "discharge": [
+        "Confirm complete decontamination and symptom resolution",
+        "Wound/burn care and eye care instructions",
+        "Return precautions for delayed respiratory or visual symptoms",
+        "Provide agent name/SDS info for occupational records"
+      ],
+      "followup": [
+        "Ophthalmology within 24 hr for ocular caustic injury",
+        "Burn clinic / wound care for chemical burns",
+        "Occupational health and PCP follow-up",
+        "Poison control follow-up guidance"
+      ]
+    },
+    "redFlags": [
+      "Airway compromise, stridor, or inhalational injury",
+      "Caustic ingestion with drooling, vomiting, or chest/abdominal pain (perforation)",
+      "Ocular caustic (alkali) injury with persistent abnormal pH or vision loss",
+      "Systemic toxicity: arrhythmia, acidosis, altered mentation",
+      "Hydrofluoric acid exposure with hypocalcemia/arrhythmia"
+    ],
+    "compliance": [
+      "EMTALA: decontaminate and complete medical screening exam/stabilization before transfer",
+      "Caustic ingestion or major chemical burns require appropriate transfer to facilities with endoscopy/burn/toxicology capability",
+      "Contact Texas Poison Center Network (1-800-222-1222) and document agent and guidance",
+      "Document decontamination, observation-vs-transfer rationale, and staff PPE/hazmat protocol",
+      "Report occupational chemical exposures, hazmat releases, and suspected intentional poisoning/assault per Texas and OSHA requirements"
+    ]
+  }
+]

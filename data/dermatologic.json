@@ -1,0 +1,535 @@
+[
+  {
+    "id": "rash",
+    "name": "Rash",
+    "category": "Dermatologic",
+    "synonyms": ["skin eruption", "breaking out", "hives", "spots", "red bumps", "skin irritation"],
+    "acuity": "3-4",
+    "summary": "Undifferentiated cutaneous eruption; triage benign exanthems from life-threatening rashes (SJS/TEN, meningococcemia, RMSF, anaphylaxis, necrotizing infection).",
+    "stages": {
+      "triage": [
+        "Vital signs incl. temperature; flag fever + rash for rapid assessment",
+        "Screen for airway/mucosal involvement, hypotension, AMS (sepsis vs anaphylaxis)",
+        "Ask onset, spread pattern, new meds/foods, tick/travel exposure",
+        "Isolate immediately if petechial/purpuric rash + fever (possible meningococcemia)*"
+      ],
+      "nursing": [
+        "Photograph lesions for documentation per consent",
+        "Assess body surface area involved and mucous membranes (eyes, mouth, genitals)",
+        "Pain/itch scoring; place in private room if contagious concern",
+        "Establish IV access if systemic illness suspected* if indicated"
+      ],
+      "keyOrders": [
+        "Cardiac monitor & pulse oximetry if systemic signs* if indicated",
+        "IV access for ill-appearing or febrile patients* if indicated",
+        "Nikolsky sign and mucosal exam by physician",
+        "Strict isolation precautions for suspected meningococcemia* if indicated"
+      ],
+      "labs": [
+        "CBC with differential* if indicated",
+        "CMP, CRP for systemic/febrile presentations* if indicated",
+        "Blood cultures x2 if febrile/toxic* if indicated",
+        "Skin biopsy referral for unclear severe eruptions* if indicated"
+      ],
+      "imaging": [
+        "Generally none for uncomplicated rash",
+        "Soft-tissue US/CT if necrotizing infection suspected* if indicated"
+      ],
+      "meds": [
+        "Diphenhydramine 25-50 mg PO/IV for pruritus* if indicated",
+        "Triamcinolone 0.1% topical BID for localized inflammatory rash* if indicated",
+        "Acetaminophen 650-1000 mg PO for fever* if indicated",
+        "Empiric ceftriaxone 2 g IV STAT if meningococcemia suspected* if indicated"
+      ],
+      "reassess": [
+        "Recheck vitals and rash progression within 30-60 min if systemic",
+        "Reassess airway/mucosa if any swelling or mucosal lesions",
+        "Confirm response to antihistamine/steroid before discharge"
+      ],
+      "disposition": [
+        "Discharge most benign localized exanthems",
+        "Admit/transfer febrile toxic-appearing patients or suspected SJS/TEN",
+        "Transfer to facility with burn/ICU & dermatology for blistering mucosal disease"
+      ],
+      "discharge": [
+        "Topical/oral therapy instructions and trigger avoidance",
+        "Return for spreading, blistering, mouth/eye involvement, fever, or breathing trouble",
+        "Stop suspected culprit medication if drug etiology likely"
+      ],
+      "followup": [
+        "Primary care or dermatology within 3-7 days",
+        "Sooner follow-up if worsening or systemic symptoms",
+        "Document culprit drug in allergy list if suspected"
+      ]
+    },
+    "redFlags": [
+      "Fever + petechiae/purpura (meningococcemia, RMSF, DIC)",
+      "Mucosal involvement, skin pain, or positive Nikolsky (SJS/TEN)",
+      "Hypotension, wheeze, or facial/airway swelling (anaphylaxis)",
+      "Rapidly spreading erythema with pain out of proportion (necrotizing fasciitis)"
+    ],
+    "compliance": [
+      "EMTALA medical screening exam to exclude SJS/TEN, meningococcemia, anaphylaxis, necrotizing infection before discharge",
+      "If high-acuity dermatologic emergency exceeds FSED capability, stabilize and arrange appropriate transfer with physician-to-physician acceptance and records",
+      "Report suspected meningococcal disease and other reportable communicable conditions to Texas DSHS",
+      "Document observation-vs-transfer rationale; FSED has no inpatient admission"
+    ]
+  },
+  {
+    "id": "cellulitis",
+    "name": "Cellulitis",
+    "category": "Dermatologic",
+    "synonyms": ["skin infection", "red swollen leg", "spreading redness", "infected skin", "erysipelas"],
+    "acuity": "3",
+    "summary": "Acute bacterial skin/soft-tissue infection (Strep/Staph); distinguish purulent vs nonpurulent and exclude abscess, DVT, and necrotizing infection.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; flag SIRS criteria for sepsis pathway",
+        "Mark borders of erythema with skin marker and time",
+        "Screen risk factors: diabetes, immunosuppression, IVDU, lymphedema, PVD",
+        "Assess for pain out of proportion or crepitus (necrotizing concern)*"
+      ],
+      "nursing": [
+        "Elevate and immobilize affected limb",
+        "Measure and document area; photograph if consented",
+        "Pain assessment and analgesia per protocol",
+        "Obtain wound/purulent culture if drainage present* if indicated"
+      ],
+      "keyOrders": [
+        "IV access for systemic infection or IV antibiotics* if indicated",
+        "Mark erythema margins to track progression",
+        "Bedside US to evaluate for occult abscess or fluid collection",
+        "Blood glucose check in diabetics"
+      ],
+      "labs": [
+        "CBC with differential* if indicated",
+        "CMP and lactate if systemic/septic* if indicated",
+        "CRP/ESR for severity assessment* if indicated",
+        "Blood cultures x2 if febrile/toxic or immunocompromised* if indicated"
+      ],
+      "imaging": [
+        "Bedside soft-tissue ultrasound for abscess vs phlegmon",
+        "Venous duplex if DVT cannot be excluded* if indicated",
+        "CT/MRI if necrotizing infection or deep abscess suspected* if indicated"
+      ],
+      "meds": [
+        "Nonpurulent outpatient: cephalexin 500 mg PO QID or clindamycin 450 mg PO TID",
+        "Purulent/MRSA risk: TMP-SMX DS 1-2 tabs PO BID or doxycycline 100 mg PO BID",
+        "Severe/IV: cefazolin 1-2 g IV q8h or vancomycin 15-20 mg/kg IV for MRSA coverage",
+        "Acetaminophen 650-1000 mg PO and analgesia for pain/fever* if indicated"
+      ],
+      "reassess": [
+        "Recheck vitals and erythema borders after IV fluids/antibiotics",
+        "Confirm no progression beyond marked margins before discharge",
+        "Reassess pain control and ability to tolerate oral meds"
+      ],
+      "disposition": [
+        "Discharge mild-moderate nonseptic cellulitis on oral antibiotics",
+        "Observation/IV antibiotics for moderate cases failing oral or with comorbidities",
+        "Transfer septic, necrotizing, or immunocompromised patients needing admission"
+      ],
+      "discharge": [
+        "Complete full oral antibiotic course; elevate limb",
+        "Return if fever, spreading redness past marked line, blistering, or increasing pain",
+        "Strict return precautions for diabetics and immunosuppressed"
+      ],
+      "followup": [
+        "Primary care recheck in 48-72 hours to confirm improvement",
+        "Earlier follow-up if not improving on oral therapy",
+        "Address underlying lymphedema/tinea/venous insufficiency to prevent recurrence"
+      ]
+    },
+    "redFlags": [
+      "Pain out of proportion, crepitus, bullae, or skin necrosis (necrotizing fasciitis)",
+      "Sepsis: hypotension, tachycardia, altered mentation, elevated lactate",
+      "Rapid progression despite appropriate antibiotics",
+      "Periorbital/orbital or facial involvement near airway"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude necrotizing soft-tissue infection and sepsis before any disposition",
+      "Necrotizing infection requires emergent surgical consult; stabilize and transfer to facility with surgery/ICU via appropriate-transfer protocol",
+      "Document observation-vs-transfer decision; FSED cannot admit, so escalate septic patients",
+      "Provide stabilizing IV antibiotics and fluids prior to transfer of unstable patients"
+    ]
+  },
+  {
+    "id": "cutaneous-abscess",
+    "name": "Cutaneous Abscess",
+    "category": "Dermatologic",
+    "synonyms": ["skin abscess", "boil", "pus pocket", "furuncle", "carbuncle", "infected lump"],
+    "acuity": "3-4",
+    "summary": "Localized purulent collection requiring incision & drainage; consider MRSA, and evaluate special sites (perianal, facial, breast, hand).",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; flag fever/SIRS",
+        "Assess size, location, fluctuance, and surrounding cellulitis",
+        "Identify high-risk sites: face/central triangle, perianal, hand, genital",
+        "Screen diabetes/immunosuppression and IVDU"
+      ],
+      "nursing": [
+        "Position and expose lesion; prepare I&D tray and sterile field",
+        "Pain assessment; offer analgesia before procedure",
+        "Set up local anesthetic and wound culture swab",
+        "Document size and photograph if consented"
+      ],
+      "keyOrders": [
+        "Bedside ultrasound to confirm drainable collection vs phlegmon",
+        "Incision & drainage with loop or wick packing as indicated",
+        "Wound culture of purulent material (MRSA prevalence)",
+        "IV access if systemic signs* if indicated"
+      ],
+      "labs": [
+        "Usually none for simple abscess in healthy adult",
+        "CBC, CMP, lactate if febrile/toxic or immunocompromised* if indicated",
+        "Blood glucose in diabetics* if indicated",
+        "Blood cultures if systemic infection* if indicated"
+      ],
+      "imaging": [
+        "Bedside soft-tissue US to map collection and guide drainage",
+        "CT for deep, perirectal, or complex/recurrent abscess* if indicated"
+      ],
+      "meds": [
+        "Local anesthesia: lidocaine 1% with/without epinephrine for I&D",
+        "Adjunctive MRSA antibiotics if cellulitis/comorbidity: TMP-SMX DS BID or doxycycline 100 mg BID",
+        "Clindamycin 450 mg PO TID as alternative* if indicated",
+        "Acetaminophen/ibuprofen for post-procedure analgesia* if indicated"
+      ],
+      "reassess": [
+        "Confirm adequate drainage and hemostasis post-I&D",
+        "Reassess pain and surrounding erythema",
+        "Verify patient/caregiver can perform wound/packing care"
+      ],
+      "disposition": [
+        "Discharge most simple abscesses after I&D",
+        "Observation/IV antibiotics if extensive cellulitis or systemic illness",
+        "Transfer/surgery referral for perirectal, complex, or deep abscesses"
+      ],
+      "discharge": [
+        "Wound care, packing/wick management, and dressing changes",
+        "Take adjunctive antibiotics if prescribed; warm compresses",
+        "Return for fever, spreading redness, increasing pain, or re-accumulation"
+      ],
+      "followup": [
+        "Wound recheck/packing removal in 48 hours",
+        "Primary care or surgery follow-up for recurrent abscesses (consider hidradenitis)",
+        "MRSA decolonization counseling for recurrent cases* if indicated"
+      ]
+    },
+    "redFlags": [
+      "Systemic toxicity/sepsis with abscess",
+      "Facial central-triangle abscess (cavernous sinus risk)",
+      "Crepitus, dusky skin, or pain out of proportion (necrotizing process)",
+      "Perirectal/deep abscess requiring operative drainage"
+    ],
+    "compliance": [
+      "EMTALA MSE before procedure; exclude necrotizing infection and sepsis",
+      "Complex/deep abscesses beyond FSED scope require stabilization and appropriate transfer to surgical facility",
+      "Document consent for I&D and observation-vs-transfer rationale",
+      "Report cluster/recurrent MRSA per facility infection-control policy"
+    ]
+  },
+  {
+    "id": "urticaria-hives",
+    "name": "Urticaria / Hives",
+    "category": "Dermatologic",
+    "synonyms": ["hives", "wheals", "welts", "itchy bumps", "allergic rash", "urticaria"],
+    "acuity": "2-4",
+    "summary": "Pruritic transient wheals from mast-cell activation; critical to distinguish isolated urticaria from evolving anaphylaxis or angioedema.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2; immediate assessment for airway/breathing compromise",
+        "Screen for angioedema, throat tightness, wheeze, GI symptoms, hypotension (anaphylaxis)",
+        "Identify trigger: food, drug, insect sting, infection, contact",
+        "Escalate to ESI 1-2 if any systemic/respiratory involvement"
+      ],
+      "nursing": [
+        "Place on monitor if any systemic features",
+        "Establish IV access if anaphylaxis suspected* if indicated",
+        "Have epinephrine and airway equipment ready for moderate-severe cases",
+        "Document distribution and any mucosal/lip/tongue swelling"
+      ],
+      "keyOrders": [
+        "Cardiac monitor & pulse oximetry if systemic symptoms* if indicated",
+        "IV access and O2 for anaphylaxis* if indicated",
+        "Airway assessment for angioedema",
+        "Remove/stop suspected trigger (e.g., stop offending drug)"
+      ],
+      "labs": [
+        "None required for simple acute urticaria",
+        "Consider workup only for chronic (>6 wk) urticaria via outpatient",
+        "Tryptase if anaphylaxis/mastocytosis suspected* if indicated"
+      ],
+      "imaging": [
+        "Not indicated for urticaria",
+        "Soft-tissue imaging only if alternative diagnosis considered* if indicated"
+      ],
+      "meds": [
+        "Cetirizine 10 mg PO or diphenhydramine 25-50 mg PO/IV (H1 blocker)",
+        "Famotidine 20 mg IV/PO (H2 blocker) as adjunct",
+        "Prednisone 40-60 mg PO for moderate/refractory cases",
+        "Epinephrine 0.3-0.5 mg IM (1 mg/mL) STAT if anaphylaxis/angioedema with airway* if indicated"
+      ],
+      "reassess": [
+        "Recheck airway, vitals, and lesion response after antihistamine",
+        "Observe 1-2 hours; longer if epinephrine given (biphasic risk)",
+        "Confirm resolution of any respiratory/GI symptoms before discharge"
+      ],
+      "disposition": [
+        "Discharge isolated urticaria responsive to antihistamines",
+        "Observe post-epinephrine cases per biphasic monitoring",
+        "Transfer for ICU-level airway management if severe angioedema/anaphylaxis"
+      ],
+      "discharge": [
+        "Continue scheduled non-sedating antihistamine x several days; short steroid taper if prescribed",
+        "Strict trigger avoidance; prescribe epinephrine auto-injector if anaphylaxis* if indicated",
+        "Return immediately for throat tightness, swelling, wheeze, or dizziness"
+      ],
+      "followup": [
+        "Primary care follow-up; allergy referral for recurrent or anaphylactic episodes",
+        "Document trigger/allergy in chart and counsel on auto-injector use",
+        "Dermatology/allergy for chronic urticaria >6 weeks"
+      ]
+    },
+    "redFlags": [
+      "Lip/tongue/throat swelling or stridor (airway angioedema)",
+      "Wheeze, hypoxia, hypotension, or syncope (anaphylaxis)",
+      "GI symptoms (vomiting, cramping) with urticaria suggesting systemic reaction",
+      "ACE-inhibitor angioedema unresponsive to antihistamines"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude anaphylaxis/angioedema; treat airway as emergency before any transfer",
+      "Stabilize with epinephrine/airway support; transfer for ICU airway needs via appropriate-transfer protocol",
+      "Document biphasic observation period and disposition rationale",
+      "Report suspected drug reaction to allergy record; no mandatory state report for isolated urticaria"
+    ]
+  },
+  {
+    "id": "herpes-zoster",
+    "name": "Herpes Zoster",
+    "category": "Dermatologic",
+    "synonyms": ["shingles", "zoster", "nerve rash", "painful blisters", "reactivated chickenpox"],
+    "acuity": "3-4",
+    "summary": "Dermatomal vesicular eruption from VZV reactivation; identify ophthalmic involvement, disseminated disease, and immunocompromise.",
+    "stages": {
+      "triage": [
+        "Vitals; assess pain severity and dermatomal distribution",
+        "Screen for ophthalmic (V1) involvement and Hutchinson sign",
+        "Identify immunocompromised status and disseminated lesions",
+        "Place airborne/contact precautions if disseminated or immunocompromised*"
+      ],
+      "nursing": [
+        "Isolate from pregnant/immunocompromised staff and patients",
+        "Cover lesions with dry dressing; document dermatome and crusting",
+        "Pain assessment and early analgesia",
+        "Photograph rash if consented"
+      ],
+      "keyOrders": [
+        "Physician exam of eye if facial/V1 distribution (slit-lamp/fluorescein)",
+        "Contact precautions; airborne if disseminated or immunocompromised",
+        "IV access for IV antiviral if severe/disseminated* if indicated",
+        "Pain control orders"
+      ],
+      "labs": [
+        "Usually clinical diagnosis; no routine labs",
+        "VZV PCR of lesion if diagnosis unclear* if indicated",
+        "HIV testing if unexplained zoster in younger patient* if indicated",
+        "CBC/CMP if disseminated or systemically ill* if indicated"
+      ],
+      "imaging": [
+        "Not routinely indicated",
+        "Imaging only if CNS involvement or complications suspected* if indicated"
+      ],
+      "meds": [
+        "Valacyclovir 1000 mg PO TID x7 days (start within 72h or while new lesions forming)",
+        "Acyclovir 800 mg PO 5x/day as alternative",
+        "IV acyclovir 10 mg/kg q8h for ophthalmic, disseminated, or immunocompromised* if indicated",
+        "Analgesia: acetaminophen, NSAIDs, gabapentin 300 mg PO; opioids for severe pain* if indicated"
+      ],
+      "reassess": [
+        "Reassess pain control adequacy before discharge",
+        "Confirm eye involvement addressed/ophthalmology arranged if V1",
+        "Verify no signs of dissemination"
+      ],
+      "disposition": [
+        "Discharge uncomplicated localized zoster on oral antivirals",
+        "Transfer/admit for disseminated zoster or severe immunocompromise needing IV therapy",
+        "Urgent ophthalmology for herpes zoster ophthalmicus"
+      ],
+      "discharge": [
+        "Complete antiviral course; keep lesions covered until crusted",
+        "Avoid contact with pregnant women, newborns, and immunocompromised until crusted",
+        "Return for eye symptoms, spreading rash, confusion, or uncontrolled pain"
+      ],
+      "followup": [
+        "Primary care follow-up; ophthalmology within 24-48h if ophthalmic",
+        "Counsel on postherpetic neuralgia and recombinant zoster vaccine when recovered",
+        "Pain management referral if persistent neuralgia"
+      ]
+    },
+    "redFlags": [
+      "Ophthalmic involvement / Hutchinson sign (vision-threatening)",
+      "Disseminated zoster (>2 dermatomes or crossing midline)",
+      "Immunocompromised host with rapidly progressing lesions",
+      "Signs of CNS involvement: meningismus, encephalopathy, focal deficit"
+    ],
+    "compliance": [
+      "EMTALA MSE to identify ophthalmic/disseminated/CNS disease requiring higher level of care",
+      "Transfer immunocompromised or disseminated cases needing IV antivirals/admission via appropriate-transfer protocol",
+      "Implement airborne+contact precautions for disseminated or immunocompromised patients",
+      "No mandatory state reporting for routine zoster; document infection-control measures"
+    ]
+  },
+  {
+    "id": "drug-eruption",
+    "name": "Drug Eruption",
+    "category": "Dermatologic",
+    "synonyms": ["drug rash", "medication reaction", "allergic drug reaction", "drug allergy rash", "morbilliform rash"],
+    "acuity": "2-4",
+    "summary": "Cutaneous adverse drug reaction spanning benign morbilliform to severe SCARs (SJS/TEN, DRESS, AGEP); risk stratify and stop the culprit.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; flag fever + rash as severe-reaction warning",
+        "Detailed medication timeline (new drugs 1-8 weeks prior)",
+        "Assess mucosal involvement, skin pain, blistering, facial edema",
+        "Escalate ESI 1-2 if mucosal/blistering/systemic features"
+      ],
+      "nursing": [
+        "Stop all suspected culprit medications immediately",
+        "Examine and document mucous membranes, BSA, Nikolsky sign",
+        "IV access for ill/severe presentations* if indicated",
+        "Photograph rash and map extent if consented"
+      ],
+      "keyOrders": [
+        "Physician assessment for SCAR features (mucosal, Nikolsky, lymphadenopathy)",
+        "Discontinue offending agent and document in allergy record",
+        "IV access and monitor if systemic involvement* if indicated",
+        "Calculate SCORTEN if SJS/TEN suspected* if indicated"
+      ],
+      "labs": [
+        "CBC with differential (eosinophilia/atypical lymphocytes suggests DRESS)* if indicated",
+        "CMP and LFTs for organ involvement (DRESS)* if indicated",
+        "CRP/ESR; consider blood cultures if febrile/toxic* if indicated",
+        "Skin biopsy referral for severe/blistering eruptions* if indicated"
+      ],
+      "imaging": [
+        "Not routinely indicated",
+        "Chest imaging if DRESS with pulmonary symptoms* if indicated"
+      ],
+      "meds": [
+        "Stop culprit drug (primary intervention)",
+        "Diphenhydramine 25-50 mg PO/IV and cetirizine 10 mg PO for pruritus",
+        "Topical triamcinolone 0.1% for mild morbilliform rash* if indicated",
+        "Systemic corticosteroids only per specialist for DRESS/severe reactions* if indicated"
+      ],
+      "reassess": [
+        "Recheck vitals and rash progression; reassess mucosa",
+        "Confirm culprit drug stopped and documented",
+        "Evaluate for evolving SCAR features before discharge"
+      ],
+      "disposition": [
+        "Discharge benign morbilliform eruption after stopping culprit",
+        "Transfer SJS/TEN to burn/ICU center; admit/transfer DRESS for monitoring",
+        "Observation if borderline pending lab/specialist input"
+      ],
+      "discharge": [
+        "Permanently avoid culprit drug and chemically related agents",
+        "Antihistamines and topical steroid for symptom control",
+        "Return urgently for blistering, mouth/eye/genital sores, skin pain, or fever"
+      ],
+      "followup": [
+        "Primary care and dermatology/allergy follow-up",
+        "Document drug allergy prominently; provide written list to patient",
+        "Allergy referral for confirmatory evaluation if needed"
+      ]
+    },
+    "redFlags": [
+      "Mucosal erosions, skin pain, blistering, positive Nikolsky (SJS/TEN)",
+      "Fever, facial edema, lymphadenopathy, eosinophilia, organ involvement (DRESS)",
+      "Sterile pustules with fever (AGEP)",
+      "Rapidly progressive skin detachment or systemic instability"
+    ],
+    "compliance": [
+      "EMTALA MSE to identify SCARs (SJS/TEN, DRESS, AGEP) before disposition",
+      "SJS/TEN beyond FSED scope: stabilize fluids/skin/airway and transfer to burn/ICU center via appropriate-transfer protocol",
+      "Document culprit drug and report serious adverse drug reaction to FDA MedWatch",
+      "Record observation-vs-transfer rationale; FSED cannot admit for monitoring"
+    ]
+  },
+  {
+    "id": "wound-infection",
+    "name": "Wound Infection",
+    "category": "Dermatologic",
+    "synonyms": ["infected wound", "infected cut", "infected laceration", "surgical site infection", "pus from wound"],
+    "acuity": "3",
+    "summary": "Local/systemic infection of traumatic or surgical wound; assess for retained foreign body, abscess, necrotizing infection, tetanus risk, and sepsis.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; flag SIRS/sepsis",
+        "Mechanism, age of wound, contamination (bite, water, soil, retained object)",
+        "Tetanus immunization history",
+        "Assess for crepitus, necrosis, or pain out of proportion*"
+      ],
+      "nursing": [
+        "Remove dressing; irrigate and clean wound",
+        "Mark surrounding erythema; document drainage and odor",
+        "Obtain wound culture before antibiotics if purulent",
+        "Pain assessment and analgesia; IV access if systemic* if indicated"
+      ],
+      "keyOrders": [
+        "Wound exploration for foreign body, depth, and tendon/joint involvement",
+        "Bedside US for abscess or retained radiolucent foreign body",
+        "Wound culture of purulent drainage",
+        "IV access for IV antibiotics if systemic infection* if indicated"
+      ],
+      "labs": [
+        "CBC with differential* if indicated",
+        "CMP, CRP, lactate if systemic/septic* if indicated",
+        "Blood cultures x2 if febrile/toxic* if indicated",
+        "Glucose/HbA1c context in diabetics* if indicated"
+      ],
+      "imaging": [
+        "Plain film for radiopaque foreign body or osteomyelitis/gas* if indicated",
+        "Bedside US for abscess or radiolucent foreign body",
+        "CT/MRI if deep infection, osteomyelitis, or necrotizing concern* if indicated"
+      ],
+      "meds": [
+        "Cephalexin 500 mg PO QID or amoxicillin-clavulanate 875 mg PO BID (bite/contaminated)",
+        "MRSA risk: TMP-SMX DS BID or doxycycline 100 mg BID; add coverage as needed",
+        "Severe/IV: cefazolin 1-2 g IV q8h or vancomycin + piperacillin-tazobactam for broad coverage",
+        "Tetanus: Tdap +/- TIG per immunization status; analgesia for pain"
+      ],
+      "reassess": [
+        "Recheck vitals and erythema margins after intervention",
+        "Confirm adequate drainage/debridement and foreign body removal",
+        "Verify tetanus prophylaxis given and tolerated"
+      ],
+      "disposition": [
+        "Discharge localized wound infection on oral antibiotics and wound care",
+        "Observation/IV antibiotics for moderate infection or comorbidities",
+        "Transfer septic, necrotizing, deep, or osteomyelitis cases for surgery/admission"
+      ],
+      "discharge": [
+        "Wound care instructions, dressing changes, keep clean and dry",
+        "Complete antibiotic course; elevate if extremity",
+        "Return for fever, spreading redness, increasing pain, drainage, or red streaking"
+      ],
+      "followup": [
+        "Wound recheck in 48-72 hours",
+        "Surgical/specialty follow-up for surgical site infections",
+        "Primary care for suture/staple removal and healing assessment"
+      ]
+    },
+    "redFlags": [
+      "Crepitus, bullae, dusky skin, pain out of proportion (necrotizing fasciitis/gas gangrene)",
+      "Sepsis: hypotension, tachycardia, altered mentation, elevated lactate",
+      "Exposed bone/tendon/joint or deep space involvement",
+      "Failure to improve or rapid progression despite antibiotics"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude necrotizing infection, deep-space involvement, and sepsis before disposition",
+      "Necrotizing or deep infections require emergent surgery; stabilize and transfer to surgical facility via appropriate-transfer protocol",
+      "Provide tetanus prophylaxis per CDC/Texas standards and document",
+      "Report animal/human bite wounds per Texas rabies/animal-bite reporting requirements; report suspected abuse-related wounds"
+    ]
+  }
+]

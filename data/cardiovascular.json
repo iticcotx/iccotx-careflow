@@ -1,0 +1,916 @@
+[
+  {
+    "id": "chest-pain",
+    "name": "Chest Pain",
+    "category": "Cardiovascular",
+    "synonyms": ["chest pressure", "chest tightness", "angina", "chest discomfort", "rule out MI", "ACS"],
+    "acuity": "2 (1 if unstable/STEMI)",
+    "summary": "Undifferentiated chest pain; rule out ACS, PE, aortic dissection, pneumothorax, esophageal/musculoskeletal causes.",
+    "stages": {
+      "triage": [
+        "Immediate ECG within 10 min of arrival for any anginal-equivalent symptom",
+        "Vitals incl. bilateral BP and SpO2",
+        "Brief OPQRST + cardiac risk factors (HTN, DM, smoking, family hx, prior CAD)",
+        "Flag diaphoresis, radiation, dyspnea, or hemodynamic instability for ESI 1-2"
+      ],
+      "nursing": [
+        "Place on continuous cardiac monitor and pulse oximetry",
+        "Establish 2 large-bore IVs (18g)",
+        "Draw initial troponin and cardiac labs with IV placement",
+        "Reassess pain score and vitals q15-30 min",
+        "Have defibrillator/crash cart accessible"
+      ],
+      "keyOrders": [
+        "12-lead ECG STAT (repeat at 15-30 min if ongoing pain or initial nondiagnostic)",
+        "Cardiac monitor, continuous SpO2",
+        "IV access x2",
+        "O2 only if SpO2 <90% (avoid routine hyperoxia)",
+        "Place on NPO pending evaluation",
+        "Activate STEMI/transfer protocol if ST elevation*"
+      ],
+      "labs": [
+        "High-sensitivity troponin at 0 and 1-3 h (serial)",
+        "CBC, BMP, magnesium",
+        "Coagulation panel (PT/INR, PTT)",
+        "BNP if heart failure suspected*",
+        "D-dimer if low PE pretest probability*"
+      ],
+      "imaging": [
+        "Portable CXR",
+        "CT pulmonary angiogram if PE suspected*",
+        "CT aorta if dissection suspected*",
+        "Bedside echo for wall-motion/effusion if available*"
+      ],
+      "meds": [
+        "Aspirin 324 mg PO chewed (non-enteric) unless contraindicated",
+        "Nitroglycerin 0.4 mg SL q5 min x3 PRN (hold if SBP <90, RV infarct, or PDE5 inhibitor use)",
+        "Morphine 2-4 mg IV PRN refractory pain (use judiciously)",
+        "Heparin per ACS protocol if NSTEMI/STEMI and transfer accepted*",
+        "Ondansetron 4 mg IV PRN nausea*"
+      ],
+      "reassess": [
+        "Repeat ECG with any pain change or at 15-30 min intervals",
+        "Trend serial troponins and HEART score",
+        "Reassess response to nitroglycerin and hemodynamics",
+        "Escalate immediately for dynamic ECG changes or rising troponin"
+      ],
+      "disposition": [
+        "STEMI or unstable: emergent transfer to PCI-capable center",
+        "NSTEMI/high HEART: admit-equivalent transfer to cardiology",
+        "Low HEART (0-3) with negative serial troponin: discharge with follow-up",
+        "Observation for indeterminate risk pending serial markers"
+      ],
+      "discharge": [
+        "Return precautions for recurrent or worsening chest pain, dyspnea, syncope",
+        "Strict instruction to call 911 for recurrent symptoms",
+        "Provide copy of ECG and labs for follow-up provider",
+        "Address modifiable risk factors and smoking cessation"
+      ],
+      "followup": [
+        "Cardiology or PCP within 24-72 h for low-risk discharge",
+        "Outpatient stress test or CT coronary angiography if indicated*",
+        "Medication reconciliation and statin/antiplatelet review"
+      ]
+    },
+    "redFlags": [
+      "ST-segment elevation or new LBBB on ECG",
+      "Hemodynamic instability, hypotension, or cardiogenic shock",
+      "Rising or markedly elevated troponin",
+      "Tearing/radiating-to-back pain or BP differential suggesting dissection",
+      "Hypoxia, syncope, or signs of massive PE"
+    ],
+    "compliance": [
+      "EMTALA medical screening exam with documented serial ECGs/troponins before disposition",
+      "STEMI/high-risk ACS requires stabilization and appropriate transfer to PCI-capable facility with physician-to-physician acceptance and signed transfer form",
+      "Document risks/benefits and patient consent for transfer; transfer by ALS with monitor",
+      "Texas FSED must arrange transfer agreement and ensure stabilizing treatment per EMTALA before moving patient"
+    ]
+  },
+  {
+    "id": "palpitations",
+    "name": "Palpitations",
+    "category": "Cardiovascular",
+    "synonyms": ["heart racing", "skipped beats", "fluttering", "pounding heart", "irregular heartbeat"],
+    "acuity": "3 (2 if symptomatic arrhythmia/instability)",
+    "summary": "Sensation of irregular/rapid heartbeat; differentiate benign ectopy from sustained arrhythmia, electrolyte, thyroid, or structural cause.",
+    "stages": {
+      "triage": [
+        "12-lead ECG to capture rhythm during symptoms",
+        "Vitals incl. HR, BP, SpO2",
+        "Screen for associated syncope, chest pain, dyspnea (upgrade acuity)",
+        "Ask about caffeine, stimulants, drugs, thyroid history"
+      ],
+      "nursing": [
+        "Place on continuous cardiac monitor",
+        "Establish IV access",
+        "Print rhythm strip during palpitation episodes",
+        "Reassess vitals and symptoms q30 min"
+      ],
+      "keyOrders": [
+        "12-lead ECG STAT",
+        "Continuous cardiac monitor and telemetry",
+        "IV access",
+        "Rhythm strip capture during symptomatic episode",
+        "Orthostatic vitals if volume depletion suspected*"
+      ],
+      "labs": [
+        "BMP with magnesium and potassium",
+        "CBC",
+        "TSH",
+        "Troponin if chest pain or sustained tachyarrhythmia*",
+        "Urine/serum tox or beta-hCG if indicated*"
+      ],
+      "imaging": [
+        "CXR if cardiopulmonary symptoms*",
+        "Bedside echo if structural disease or HF suspected*"
+      ],
+      "meds": [
+        "Replete potassium (KCl 20-40 mEq PO/IV) and magnesium (2 g IV) for deficits",
+        "Metoprolol 25-50 mg PO or 5 mg IV for symptomatic rate control*",
+        "Treat underlying cause (anxiolytic, antipyretic, volume) as appropriate*",
+        "Refer arrhythmia-specific meds to relevant protocol (SVT/AF)*"
+      ],
+      "reassess": [
+        "Correlate symptoms with monitor/ECG findings",
+        "Recheck electrolytes after repletion",
+        "Reassess for sustained vs self-terminating arrhythmia"
+      ],
+      "disposition": [
+        "Sustained or unstable arrhythmia: transfer per Tachycardia/Bradycardia protocol",
+        "Benign ectopy with normal ECG/labs: discharge",
+        "Structural disease or recurrent syncope: cardiology referral/transfer",
+        "Observation if intermittent symptoms requiring monitoring"
+      ],
+      "discharge": [
+        "Return precautions for syncope, chest pain, sustained racing, dyspnea",
+        "Limit caffeine, stimulants, alcohol",
+        "Provide ECG copy for follow-up"
+      ],
+      "followup": [
+        "Cardiology for ambulatory monitor (Holter/event recorder)*",
+        "PCP for thyroid and electrolyte management",
+        "Echocardiogram outpatient if structural concern*"
+      ]
+    },
+    "redFlags": [
+      "Palpitations with syncope or near-syncope",
+      "Sustained wide-complex tachycardia on ECG",
+      "Hemodynamic instability or chest pain",
+      "Family history of sudden cardiac death or known structural disease",
+      "Markedly abnormal potassium or magnesium"
+    ],
+    "compliance": [
+      "EMTALA screening with rhythm documentation before discharge",
+      "Sustained dangerous arrhythmia requires stabilization and appropriate transfer with monitor and physician acceptance",
+      "Observation-vs-transfer based on rhythm stability and structural risk",
+      "Document captured rhythm strips in transfer packet when escalating"
+    ]
+  },
+  {
+    "id": "hypertensive-urgency-emergency",
+    "name": "Hypertensive Urgency/Emergency",
+    "category": "Cardiovascular",
+    "synonyms": ["high blood pressure", "severe hypertension", "BP crisis", "malignant hypertension", "elevated BP"],
+    "acuity": "2 (1 if emergency with end-organ failure)",
+    "summary": "Severe BP elevation (>=180/120); distinguish urgency (no end-organ damage) from emergency (acute target-organ injury).",
+    "stages": {
+      "triage": [
+        "Confirm BP in both arms with correct cuff size",
+        "Rapid screen for end-organ symptoms: chest pain, dyspnea, neuro deficit, vision change",
+        "12-lead ECG and vitals incl. SpO2",
+        "Upgrade to ESI 1-2 if any acute end-organ findings"
+      ],
+      "nursing": [
+        "Continuous cardiac monitor and frequent automated BP cycling",
+        "Establish IV access",
+        "Place in quiet setting and recheck BP after rest for urgency",
+        "Neuro checks if any CNS symptoms"
+      ],
+      "keyOrders": [
+        "12-lead ECG",
+        "Cardiac monitor and serial BP (manual confirmation)",
+        "IV access",
+        "Arterial line if titratable IV therapy needed*",
+        "STAT neuro imaging if stroke symptoms*"
+      ],
+      "labs": [
+        "BMP (renal function, electrolytes)",
+        "CBC with smear if MAHA suspected*",
+        "Troponin if chest pain/ECG changes*",
+        "Urinalysis for proteinuria/hematuria",
+        "Beta-hCG in reproductive-age females (preeclampsia)*"
+      ],
+      "imaging": [
+        "CXR if dyspnea/HF suspected",
+        "Non-contrast head CT for neuro symptoms*",
+        "CT aorta if dissection suspected*"
+      ],
+      "meds": [
+        "Emergency: labetalol 10-20 mg IV q10 min or infusion; or nicardipine 5 mg/h IV titrated",
+        "Aortic dissection: esmolol/labetalol to HR <60 then nicardipine (beta-block first)",
+        "Pulmonary edema: nitroglycerin IV infusion + furosemide 40 mg IV*",
+        "Urgency: resume/adjust home oral agents (e.g., amlodipine, lisinopril); avoid rapid drops",
+        "Target ~10-20% MAP reduction in first hour for emergencies (except stroke/dissection protocols)"
+      ],
+      "reassess": [
+        "Recheck BP q5-15 min during IV titration",
+        "Avoid overcorrection (>25% MAP drop in first hour)",
+        "Reassess end-organ symptoms continuously",
+        "Trend renal function and neuro status"
+      ],
+      "disposition": [
+        "Hypertensive emergency: transfer to ICU-capable facility for IV titration",
+        "Urgency without end-organ damage: discharge with oral therapy and close follow-up",
+        "Observation if borderline or awaiting BP response",
+        "Pregnancy-related severe HTN: emergent OB transfer"
+      ],
+      "discharge": [
+        "Return precautions for chest pain, neuro deficit, vision change, dyspnea",
+        "Provide adjusted oral antihypertensive plan",
+        "Avoid abrupt cessation of home meds",
+        "Home BP monitoring instructions"
+      ],
+      "followup": [
+        "PCP within 24-72 h for BP recheck and titration",
+        "Nephrology/cardiology if secondary or resistant HTN*",
+        "OB urgent follow-up for pregnancy-related HTN*"
+      ]
+    },
+    "redFlags": [
+      "Chest pain/ischemic ECG changes (ACS or dissection)",
+      "Focal neuro deficit, severe headache, or altered mental status",
+      "Acute pulmonary edema or dyspnea",
+      "Acute kidney injury, hematuria, or MAHA",
+      "Pregnancy >20 weeks with severe HTN (preeclampsia/eclampsia)"
+    ],
+    "compliance": [
+      "EMTALA screening to identify end-organ damage before disposition",
+      "Hypertensive emergency requires stabilization (initiate IV control) and appropriate ICU-level transfer with monitor",
+      "Document differentiation of urgency vs emergency to justify observation-vs-transfer",
+      "Preeclampsia/eclampsia mandates emergent OB-capable transfer; coordinate magnesium and acceptance"
+    ]
+  },
+  {
+    "id": "syncope-and-near-syncope",
+    "name": "Syncope & Near-Syncope",
+    "category": "Cardiovascular",
+    "synonyms": ["fainting", "passing out", "blacked out", "lightheaded", "loss of consciousness", "presyncope"],
+    "acuity": "3 (2 if cardiac/high-risk features)",
+    "summary": "Transient loss of consciousness; differentiate benign vasovagal/orthostatic from cardiac, neurologic, or hemorrhagic causes.",
+    "stages": {
+      "triage": [
+        "12-lead ECG immediately to screen for arrhythmia/ischemia",
+        "Vitals with orthostatic BP/HR",
+        "Identify high-risk features (exertional, no prodrome, palpitations, family SCD)",
+        "Check glucose and screen for trauma from fall"
+      ],
+      "nursing": [
+        "Continuous cardiac monitor",
+        "IV access",
+        "Orthostatic vital signs",
+        "Reassess mental status and recurrent symptoms"
+      ],
+      "keyOrders": [
+        "12-lead ECG STAT",
+        "Cardiac monitor/telemetry",
+        "IV access",
+        "Point-of-care glucose",
+        "Beta-hCG in reproductive-age females (ectopic)*"
+      ],
+      "labs": [
+        "CBC (anemia/hemorrhage)",
+        "BMP with magnesium",
+        "Troponin if cardiac syncope suspected*",
+        "Beta-hCG if applicable*",
+        "Hemoccult if GI bleed suspected*"
+      ],
+      "imaging": [
+        "CXR if cardiopulmonary cause suspected*",
+        "Non-contrast head CT if head trauma or neuro deficit*",
+        "CT/US aorta or abdomen if AAA/dissection suspected*",
+        "Bedside echo for structural disease*"
+      ],
+      "meds": [
+        "IV crystalloid bolus (NS 500-1000 mL) for orthostatic/volume depletion*",
+        "Treat underlying cause (rate/rhythm control, transfusion) per relevant protocol*",
+        "Generally no specific drug for vasovagal syncope",
+        "Antiemetic PRN nausea*"
+      ],
+      "reassess": [
+        "Apply risk score (Canadian Syncope Risk Score)",
+        "Recheck orthostatics after fluids",
+        "Monitor telemetry for arrhythmia during stay",
+        "Reassess for recurrent episodes or new symptoms"
+      ],
+      "disposition": [
+        "Cardiac/high-risk syncope: transfer for telemetry and cardiology workup",
+        "Low-risk vasovagal/orthostatic with normal ECG: discharge",
+        "Observation for intermediate-risk pending monitoring",
+        "Emergent transfer for suspected hemorrhage/dissection"
+      ],
+      "discharge": [
+        "Return precautions for recurrent syncope, chest pain, palpitations, exertional symptoms",
+        "Driving and activity precautions until cleared",
+        "Hydration and slow positional changes for vasovagal",
+        "Provide ECG copy"
+      ],
+      "followup": [
+        "Cardiology for high/intermediate risk (monitor, echo, EP)*",
+        "PCP for medication review and orthostatic management",
+        "Neurology if seizure suspected*"
+      ]
+    },
+    "redFlags": [
+      "Exertional syncope or syncope without prodrome",
+      "Abnormal ECG (arrhythmia, ischemia, long QT, Brugada, WPW)",
+      "Palpitations preceding event or family history of sudden death",
+      "Signs of GI bleed, AAA, ectopic pregnancy, or dissection",
+      "Persistent abnormal vitals or hypotension"
+    ],
+    "compliance": [
+      "EMTALA screening including ECG and risk stratification before disposition",
+      "High-risk cardiac syncope requires stabilization and appropriate transfer with telemetry",
+      "Document risk score to justify observation-vs-transfer decision",
+      "If syncope from elder abuse/neglect-related injury suspected, mandatory APS reporting in Texas"
+    ]
+  },
+  {
+    "id": "bradycardia",
+    "name": "Bradycardia",
+    "category": "Cardiovascular",
+    "synonyms": ["slow heart rate", "low pulse", "heart block", "slow heartbeat"],
+    "acuity": "2 (1 if unstable/symptomatic)",
+    "summary": "HR <50 with assessment for symptomatic high-grade block, ischemia, drug effect, or electrolyte/metabolic cause per AHA ACLS.",
+    "stages": {
+      "triage": [
+        "12-lead ECG immediately to define block degree",
+        "Vitals incl. BP, SpO2, mental status",
+        "Identify instability: hypotension, altered mental status, chest pain, shock",
+        "Medication review (beta-blocker, CCB, digoxin) and recent ingestions"
+      ],
+      "nursing": [
+        "Continuous cardiac monitor and transcutaneous pacing pads on patient",
+        "Establish IV access x2",
+        "Prepare atropine and pacing/pressor infusions",
+        "Frequent vital sign and perfusion checks"
+      ],
+      "keyOrders": [
+        "12-lead ECG STAT",
+        "Cardiac monitor with pacer pads applied",
+        "IV access x2",
+        "O2 if hypoxic",
+        "Prepare transcutaneous pacing for unstable patient"
+      ],
+      "labs": [
+        "BMP with potassium and calcium",
+        "Magnesium",
+        "Troponin if ischemia suspected*",
+        "Digoxin level if on digoxin*",
+        "TSH if hypothyroidism suspected*"
+      ],
+      "imaging": [
+        "CXR",
+        "Bedside echo if structural/ischemic cause suspected*"
+      ],
+      "meds": [
+        "Atropine 1 mg IV q3-5 min (max 3 mg) for unstable bradycardia",
+        "Dopamine infusion 5-20 mcg/kg/min or epinephrine 2-10 mcg/min if atropine fails",
+        "Transcutaneous pacing for refractory/high-grade block (sedate with care)",
+        "Calcium/glucagon/high-dose insulin for CCB or beta-blocker toxicity*",
+        "Treat hyperkalemia (calcium gluconate, insulin/dextrose) if present*"
+      ],
+      "reassess": [
+        "Continuous reassessment of perfusion and BP after each intervention",
+        "Confirm electrical and mechanical capture if pacing",
+        "Trend electrolytes and repeat ECG",
+        "Escalate to transvenous pacing planning if refractory"
+      ],
+      "disposition": [
+        "Unstable or high-grade AV block: emergent transfer for transvenous pacing/cardiology",
+        "Reversible cause corrected and asymptomatic: observation or discharge",
+        "Symptomatic stable: transfer for monitoring and pacemaker evaluation",
+        "Toxicologic causes: transfer to ICU with poison center consult"
+      ],
+      "discharge": [
+        "Only if benign, asymptomatic, reversible cause resolved",
+        "Return precautions for syncope, dizziness, chest pain, dyspnea",
+        "Medication adjustment instructions",
+        "Provide ECG copy"
+      ],
+      "followup": [
+        "Cardiology/EP for pacemaker evaluation*",
+        "PCP for medication and electrolyte management",
+        "Toxicology follow-up if ingestion*"
+      ]
+    },
+    "redFlags": [
+      "Hypotension, shock, or altered mental status with bradycardia",
+      "Mobitz II or third-degree (complete) heart block",
+      "Bradycardia with ischemic ECG changes",
+      "Failure to respond to atropine",
+      "Severe hyperkalemia or drug toxicity"
+    ],
+    "compliance": [
+      "EMTALA stabilization including atropine/pacing before transfer",
+      "Unstable bradycardia requires appropriate transfer to facility with transvenous pacing/EP capability and physician acceptance",
+      "Document stabilizing interventions and continuous monitoring during transfer",
+      "Suspected intentional overdose triggers behavioral health evaluation and applicable reporting"
+    ]
+  },
+  {
+    "id": "tachycardia-svt",
+    "name": "Tachycardia / SVT",
+    "category": "Cardiovascular",
+    "synonyms": ["fast heart rate", "racing heart", "SVT", "rapid heartbeat", "AFib RVR", "narrow complex tachycardia"],
+    "acuity": "2 (1 if unstable)",
+    "summary": "HR >100 narrow- or wide-complex tachycardia; classify per ACLS and treat per stability and rhythm (SVT, AF/flutter, VT).",
+    "stages": {
+      "triage": [
+        "12-lead ECG immediately to classify width/regularity",
+        "Vitals incl. BP, SpO2, mental status",
+        "Assess instability: hypotension, chest pain, dyspnea, altered mental status",
+        "Identify triggers (fever, dehydration, stimulants, hyperthyroid)"
+      ],
+      "nursing": [
+        "Continuous cardiac monitor with defibrillator/pads at bedside",
+        "IV access x2",
+        "Prepare adenosine and synchronized cardioversion setup",
+        "Continuous SpO2 and frequent BP"
+      ],
+      "keyOrders": [
+        "12-lead ECG STAT (and during vagal/adenosine for diagnosis)",
+        "Cardiac monitor with pads applied",
+        "IV access x2",
+        "O2 if hypoxic",
+        "Prepare synchronized cardioversion for unstable patient"
+      ],
+      "labs": [
+        "BMP with magnesium and potassium",
+        "CBC",
+        "TSH",
+        "Troponin if ischemia/sustained tachycardia*",
+        "Beta-hCG if reproductive-age female*"
+      ],
+      "imaging": [
+        "CXR if HF or pulmonary cause suspected*",
+        "Bedside echo for function/effusion if unstable*"
+      ],
+      "meds": [
+        "Stable SVT: vagal maneuvers, then adenosine 6 mg rapid IV, then 12 mg",
+        "Stable AF/flutter RVR: diltiazem 0.25 mg/kg IV (~20 mg) or metoprolol 5 mg IV",
+        "Stable monomorphic VT: amiodarone 150 mg IV over 10 min",
+        "Unstable any rhythm: synchronized cardioversion (50-200 J) with sedation",
+        "Torsades: magnesium 2 g IV; correct K/Mg deficits"
+      ],
+      "reassess": [
+        "Recheck rhythm and vitals after each intervention",
+        "Repeat 12-lead post-conversion",
+        "Trend electrolytes and reassess for recurrence",
+        "Escalate to cardioversion if deterioration"
+      ],
+      "disposition": [
+        "Unstable or VT: transfer for cardiology/ICU after stabilization",
+        "New AF/flutter or refractory SVT: transfer or cardiology evaluation",
+        "Resolved SVT with normal ECG and stable: discharge",
+        "Observation for rate control titration"
+      ],
+      "discharge": [
+        "Return precautions for recurrence, syncope, chest pain, dyspnea",
+        "Avoid stimulants/caffeine; teach vagal maneuvers for SVT",
+        "Anticoagulation counseling if new AF (per CHA2DS2-VASc)*",
+        "Provide ECG copy"
+      ],
+      "followup": [
+        "Cardiology/EP for ablation evaluation in recurrent SVT*",
+        "Cardiology for new AF rate/rhythm and anticoagulation*",
+        "PCP for thyroid/electrolyte management"
+      ]
+    },
+    "redFlags": [
+      "Hypotension, chest pain, dyspnea, or altered mental status with tachycardia",
+      "Wide-complex tachycardia (assume VT until proven otherwise)",
+      "Signs of heart failure or shock",
+      "New AF with rapid rate and instability",
+      "Failure to respond to first-line therapy"
+    ],
+    "compliance": [
+      "EMTALA stabilization (cardioversion/pharmacologic control) before transfer",
+      "Unstable arrhythmia requires appropriate transfer with monitor and physician acceptance",
+      "Document rhythm diagnosis and interventions in transfer packet",
+      "Observation-vs-transfer based on rhythm conversion and recurrence risk"
+    ]
+  },
+  {
+    "id": "cardiac-arrest",
+    "name": "Cardiac Arrest",
+    "category": "Cardiovascular",
+    "synonyms": ["code blue", "no pulse", "CPR", "asystole", "VFib arrest", "PEA arrest", "ROSC"],
+    "acuity": "1",
+    "summary": "Pulseless arrest requiring immediate ACLS; identify and treat reversible Hs and Ts; manage post-ROSC for transfer.",
+    "stages": {
+      "triage": [
+        "Confirm unresponsiveness, no pulse, no normal breathing",
+        "Activate code/ACLS team and call for defibrillator",
+        "Note time of arrest and witnessed vs unwitnessed",
+        "Highest acuity ESI 1"
+      ],
+      "nursing": [
+        "Begin high-quality CPR (100-120/min, minimize interruptions)",
+        "Apply defibrillator pads and rhythm-check q2 min",
+        "Establish IV/IO access x2",
+        "Assign roles: compressions, airway, meds, timekeeper/recorder",
+        "Prepare and document medications and shock times"
+      ],
+      "keyOrders": [
+        "Continuous CPR with rhythm checks q2 min",
+        "Defibrillation for VF/pVT (biphasic 120-200 J)",
+        "IV/IO access",
+        "Advanced airway (BVM then ETT/supraglottic) with capnography",
+        "Identify reversible causes (Hs and Ts)"
+      ],
+      "labs": [
+        "POC glucose, potassium, and iSTAT/VBG with electrolytes",
+        "ABG/VBG for acidosis and oxygenation",
+        "Troponin post-ROSC*",
+        "Lactate*",
+        "Tox screen if ingestion suspected*"
+      ],
+      "imaging": [
+        "Bedside echo during pulse checks for cardiac activity/tamponade/RV strain",
+        "CXR post-intubation to confirm tube placement",
+        "POCUS for pneumothorax/PE if suspected*"
+      ],
+      "meds": [
+        "Epinephrine 1 mg IV/IO q3-5 min",
+        "Amiodarone 300 mg IV/IO (then 150 mg) for refractory VF/pVT (or lidocaine)",
+        "Calcium gluconate + insulin/dextrose for hyperkalemia*",
+        "Sodium bicarbonate for hyperkalemia/TCA toxicity*",
+        "Post-ROSC: norepinephrine/epinephrine infusion for hypotension; targeted O2/ventilation"
+      ],
+      "reassess": [
+        "Rhythm and pulse check q2 min; reassess CPR quality and capnography",
+        "Systematically address Hs and Ts each cycle",
+        "On ROSC: 12-lead ECG, support BP, secure airway",
+        "Consider termination per protocol if prolonged asystole and no reversible cause"
+      ],
+      "disposition": [
+        "Post-ROSC: emergent transfer to PCI/ICU-capable facility with critical care transport",
+        "Activate cath lab transfer if STEMI on post-ROSC ECG",
+        "Targeted temperature management coordination at receiving facility",
+        "Pronounce per protocol if resuscitation unsuccessful and document"
+      ],
+      "discharge": [
+        "Not applicable; survivors require admission/transfer",
+        "Provide family updates and support",
+        "Coordinate organ donation discussion if applicable per protocol*"
+      ],
+      "followup": [
+        "Receiving cardiology/intensivist assumes care",
+        "Notify family/next of kin and document",
+        "Debrief code team"
+      ]
+    },
+    "redFlags": [
+      "Refractory VF/pVT despite defibrillation",
+      "PEA/asystole with unidentified reversible cause",
+      "Post-ROSC hypotension or recurrent arrest",
+      "STEMI on post-ROSC ECG",
+      "Signs of tamponade, tension pneumothorax, or massive PE"
+    ],
+    "compliance": [
+      "EMTALA requires full resuscitative stabilization regardless of payer status",
+      "Post-ROSC patients require appropriate transfer to PCI/ICU-capable center with critical-care transport and physician acceptance",
+      "Document code timeline, ROSC, and transfer paperwork thoroughly",
+      "Report to medical examiner for unexpected/unattended death; suspected homicide/overdose triggers mandatory reporting"
+    ]
+  },
+  {
+    "id": "peripheral-edema",
+    "name": "Peripheral Edema",
+    "category": "Cardiovascular",
+    "synonyms": ["leg swelling", "swollen legs", "ankle swelling", "fluid retention", "pedal edema"],
+    "acuity": "3 (2 if bilateral with dyspnea/HF)",
+    "summary": "Lower-extremity swelling; differentiate cardiac/renal/hepatic, venous insufficiency, DVT, lymphedema, and medication causes.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2 and weight",
+        "Determine unilateral vs bilateral and acuity of onset",
+        "Screen for dyspnea, orthopnea, chest pain (cardiac) and DVT features",
+        "Upgrade if respiratory distress or suspected DVT"
+      ],
+      "nursing": [
+        "IV access if systemic illness suspected",
+        "Elevate affected extremities",
+        "Cardiac monitor if cardiopulmonary symptoms",
+        "Measure calf circumference if unilateral"
+      ],
+      "keyOrders": [
+        "12-lead ECG if cardiac cause suspected*",
+        "Pulse oximetry and vitals",
+        "IV access if HF/sepsis suspected*",
+        "Venous duplex order if unilateral DVT concern*"
+      ],
+      "labs": [
+        "BMP (renal function)",
+        "BNP if HF suspected*",
+        "CBC",
+        "LFTs and albumin if hepatic/nephrotic cause suspected*",
+        "Urinalysis for proteinuria*"
+      ],
+      "imaging": [
+        "Venous duplex ultrasound for unilateral edema (rule out DVT)*",
+        "CXR if HF/dyspnea*",
+        "Bedside echo if cardiac dysfunction suspected*"
+      ],
+      "meds": [
+        "Furosemide 20-40 mg IV/PO for volume overload/HF*",
+        "Continue/optimize HF or renal regimen per cause*",
+        "Adjust offending meds (CCB, NSAID) when feasible*",
+        "Compression therapy for chronic venous insufficiency*"
+      ],
+      "reassess": [
+        "Reassess oxygenation and respiratory status",
+        "Monitor diuretic response and renal function",
+        "Reassess for unilateral findings warranting DVT workup",
+        "Reassess vitals for systemic decompensation"
+      ],
+      "disposition": [
+        "Acute HF/pulmonary edema or AKI: transfer for admission-level care",
+        "Suspected DVT: manage per DVT protocol",
+        "Chronic stable bilateral edema: discharge with outpatient workup",
+        "Observation for diuresis response if borderline"
+      ],
+      "discharge": [
+        "Return precautions for dyspnea, chest pain, sudden unilateral swelling/pain",
+        "Leg elevation, compression, and sodium/fluid guidance",
+        "Medication reconciliation for offending agents",
+        "Weight monitoring instructions for HF"
+      ],
+      "followup": [
+        "PCP/cardiology for HF management and echo*",
+        "Nephrology/hepatology for renal/hepatic causes*",
+        "Vascular/wound clinic for venous insufficiency*"
+      ]
+    },
+    "redFlags": [
+      "Bilateral edema with dyspnea, orthopnea, or hypoxia (decompensated HF)",
+      "Unilateral painful swelling suggesting DVT",
+      "Acute kidney injury or anasarca",
+      "Signs of cellulitis/infection with systemic toxicity",
+      "New severe edema with chest pain"
+    ],
+    "compliance": [
+      "EMTALA screening to exclude life threats (HF, DVT, AKI) before discharge",
+      "Decompensated HF requires stabilization and appropriate transfer for admission",
+      "Document workup distinguishing emergent vs chronic to justify observation-vs-transfer",
+      "If edema reflects neglect in dependent/elderly patient, consider APS reporting"
+    ]
+  },
+  {
+    "id": "suspected-dvt",
+    "name": "Suspected DVT",
+    "category": "Cardiovascular",
+    "synonyms": ["blood clot in leg", "deep vein thrombosis", "leg clot", "calf pain swelling", "DVT"],
+    "acuity": "3 (2 if concurrent PE concern)",
+    "summary": "Unilateral leg pain/swelling; risk-stratify (Wells), confirm with D-dimer/ultrasound, and assess for concurrent PE.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2 and HR",
+        "Assess unilateral swelling, pain, warmth, calf tenderness",
+        "Screen for PE symptoms (dyspnea, chest pain, tachycardia) and upgrade",
+        "Identify risk factors (recent surgery, immobility, malignancy, prior VTE)"
+      ],
+      "nursing": [
+        "Measure and compare bilateral calf circumference",
+        "IV access if anticoagulation likely",
+        "Elevate affected limb",
+        "Cardiac monitor/SpO2 if PE concern"
+      ],
+      "keyOrders": [
+        "Apply Wells DVT score",
+        "Venous duplex ultrasound of affected limb",
+        "IV access*",
+        "12-lead ECG and SpO2 if PE suspected*"
+      ],
+      "labs": [
+        "D-dimer (if low/moderate Wells to risk-stratify)",
+        "CBC and BMP (baseline renal function for anticoagulation)",
+        "Coagulation panel (PT/INR, PTT)",
+        "Beta-hCG if reproductive-age female*",
+        "Troponin/BNP if PE with strain suspected*"
+      ],
+      "imaging": [
+        "Compression venous duplex ultrasound (confirmatory)",
+        "CT pulmonary angiogram if concurrent PE suspected*",
+        "Repeat ultrasound in 5-7 days if initial negative but high suspicion*"
+      ],
+      "meds": [
+        "Anticoagulation if DVT confirmed: rivaroxaban 15 mg PO BID or apixaban 10 mg PO BID",
+        "Enoxaparin 1 mg/kg SC q12h as alternative/bridge*",
+        "Heparin IV infusion if renal impairment or possible intervention*",
+        "Analgesia (acetaminophen 1 g PO) for pain*"
+      ],
+      "reassess": [
+        "Reassess for PE symptoms and oxygenation",
+        "Confirm renal function before/while anticoagulating",
+        "Reassess bleeding risk and contraindications",
+        "Arrange repeat imaging if deferred and high suspicion"
+      ],
+      "disposition": [
+        "Uncomplicated DVT, low bleeding risk: discharge on DOAC with follow-up",
+        "Phlegmasia, extensive iliofemoral, or concurrent PE: transfer for admission/intervention",
+        "Inability to arrange outpatient anticoagulation: observation or transfer",
+        "Negative ultrasound with low risk: discharge with return precautions"
+      ],
+      "discharge": [
+        "Return precautions for dyspnea, chest pain, worsening swelling, bleeding",
+        "Anticoagulant adherence, dosing, and bleeding-precaution education",
+        "Avoid prolonged immobility; ambulation guidance",
+        "Provide anticoagulation duration plan"
+      ],
+      "followup": [
+        "PCP/anticoagulation clinic within 3-7 days",
+        "Hematology if recurrent/unprovoked VTE or thrombophilia*",
+        "Malignancy workup if unprovoked clot*"
+      ]
+    },
+    "redFlags": [
+      "Concurrent PE features: dyspnea, hypoxia, tachycardia, chest pain, syncope",
+      "Phlegmasia cerulea dolens (massive iliofemoral thrombosis, limb-threatening)",
+      "Hemodynamic instability",
+      "Signs of active bleeding precluding anticoagulation",
+      "Rapidly progressive swelling or pulselessness"
+    ],
+    "compliance": [
+      "EMTALA screening to exclude PE/limb-threatening thrombosis before discharge",
+      "Limb-threatening or PE-associated DVT requires stabilization and appropriate transfer for intervention",
+      "Document Wells score, imaging, and anticoagulation plan",
+      "Ensure reliable outpatient anticoagulation access before discharge from FSED"
+    ]
+  },
+  {
+    "id": "acute-limb-ischemia",
+    "name": "Acute Limb Ischemia",
+    "category": "Cardiovascular",
+    "synonyms": ["cold leg", "pulseless limb", "arterial occlusion", "leg ischemia", "ALI", "blue toe"],
+    "acuity": "1-2",
+    "summary": "Sudden arterial occlusion threatening limb viability; recognize 6 Ps, anticoagulate, and arrange emergent vascular intervention.",
+    "stages": {
+      "triage": [
+        "Immediate assessment of 6 Ps: pain, pallor, pulselessness, paresthesia, poikilothermia, paralysis",
+        "Vitals and contralateral limb comparison",
+        "Time of symptom onset (revascularization window critical)",
+        "Triage as ESI 1-2; this is a limb emergency"
+      ],
+      "nursing": [
+        "Establish IV access x2",
+        "Continuous cardiac monitor (assess for AF as embolic source)",
+        "Keep limb dependent, warm room, do NOT apply heat or cold/elevate",
+        "Mark pulse locations; frequent neurovascular checks"
+      ],
+      "keyOrders": [
+        "STAT vascular surgery consult/transfer activation",
+        "Doppler arterial exam of affected limb",
+        "12-lead ECG (identify AF/embolic source)",
+        "IV access x2",
+        "Initiate systemic anticoagulation promptly"
+      ],
+      "labs": [
+        "CBC, BMP (renal function for contrast/CK)",
+        "Coagulation panel (PT/INR, PTT) before/with heparin",
+        "CK and lactate (rhabdo/reperfusion)",
+        "Type and screen",
+        "Troponin if cardiac embolic source*"
+      ],
+      "imaging": [
+        "CT angiography of affected extremity (at receiving center if transferring)",
+        "Arterial duplex ultrasound if immediately available*",
+        "Do not delay anticoagulation/transfer for imaging"
+      ],
+      "meds": [
+        "Heparin IV bolus 80 units/kg then infusion 18 units/kg/h (unless contraindicated)",
+        "Analgesia: morphine 2-4 mg IV titrated for ischemic pain",
+        "IV fluids for hydration/renal protection",
+        "Antiemetic PRN*"
+      ],
+      "reassess": [
+        "Serial neurovascular and Doppler checks",
+        "Reassess limb viability category (Rutherford) and motor/sensory function",
+        "Monitor for compartment syndrome and reperfusion injury",
+        "Confirm therapeutic anticoagulation"
+      ],
+      "disposition": [
+        "Emergent transfer to vascular surgery-capable center for revascularization",
+        "Activate transfer immediately; time is limb",
+        "Coordinate possible thrombolysis/thrombectomy/embolectomy at receiving facility",
+        "No discharge from FSED for true ALI"
+      ],
+      "discharge": [
+        "Not applicable; ALI requires emergent vascular intervention",
+        "If symptoms fully resolve and ALI excluded, vascular follow-up with return precautions",
+        "Provide records and imaging to receiving team"
+      ],
+      "followup": [
+        "Vascular surgery assumes care post-revascularization",
+        "Cardiology for embolic source (AF) and anticoagulation*",
+        "Hematology if thrombophilia suspected*"
+      ]
+    },
+    "redFlags": [
+      "Absent pulses with sensory/motor deficit (advanced ischemia)",
+      "Paralysis, profound paresthesia, or muscle rigidity (nonviable limb)",
+      "Mottled, non-blanching skin",
+      "Signs of compartment syndrome or rhabdomyolysis",
+      "Delayed presentation beyond viability window"
+    ],
+    "compliance": [
+      "EMTALA requires stabilization (anticoagulation, analgesia) and emergent appropriate transfer to vascular-capable facility",
+      "Physician-to-physician acceptance and signed transfer documenting limb-threatening emergency",
+      "Do not delay transfer for FSED imaging that is unavailable; transfer is the stabilizing intervention",
+      "Document onset time, exam, and anticoagulation in transfer packet"
+    ]
+  },
+  {
+    "id": "suspected-aortic-dissection",
+    "name": "Suspected Aortic Dissection",
+    "category": "Cardiovascular",
+    "synonyms": ["tearing chest pain", "aortic tear", "ripping back pain", "aneurysm dissection", "AAS"],
+    "acuity": "1",
+    "summary": "Acute aortic syndrome with tearing pain; control HR/BP, confirm with CT angiography, and arrange emergent surgical transfer.",
+    "stages": {
+      "triage": [
+        "Immediate ECG and bilateral BP measurement (pulse/BP differential)",
+        "Identify abrupt tearing/ripping chest or back pain, migrating pain",
+        "Screen for neuro deficit, syncope, malperfusion signs",
+        "Highest acuity ESI 1"
+      ],
+      "nursing": [
+        "Continuous cardiac monitor and bilateral/arterial BP",
+        "Establish 2 large-bore IVs",
+        "Type and crossmatch; prepare for possible massive transfusion",
+        "Frequent neuro and pulse checks across extremities"
+      ],
+      "keyOrders": [
+        "12-lead ECG (assess for inferior MI from RCA involvement)",
+        "Cardiac monitor with bilateral BP",
+        "IV access x2 (large-bore)",
+        "CT angiography chest/abdomen/pelvis STAT (or at receiving facility if transfer faster)",
+        "Activate emergent cardiothoracic/vascular transfer"
+      ],
+      "labs": [
+        "Type and crossmatch (4+ units)",
+        "CBC, BMP, coagulation panel (PT/INR, PTT)",
+        "Troponin",
+        "Lactate",
+        "D-dimer (adjunct; do not rule out solely on D-dimer)*"
+      ],
+      "imaging": [
+        "CT angiography of aorta (definitive) if available without delaying transfer",
+        "Transesophageal/transthoracic echo if unstable and CT not feasible*",
+        "CXR (widened mediastinum is supportive, not exclusionary)"
+      ],
+      "meds": [
+        "Esmolol infusion or labetalol 20 mg IV to target HR <60 FIRST (impulse control)",
+        "Then nicardipine/nitroprusside infusion to target SBP 100-120 mmHg",
+        "Analgesia: morphine/fentanyl IV for pain (aids BP control)",
+        "Avoid vasodilators before beta-blockade (prevents reflex tachycardia/shear)",
+        "Blood products for hypotension/rupture (avoid over-resuscitation)"
+      ],
+      "reassess": [
+        "Continuous BP/HR with goal SBP 100-120 and HR <60",
+        "Reassess for malperfusion (neuro, limb, mesenteric, renal)",
+        "Monitor for tamponade/hypotension (Type A complication)",
+        "Reassess pain and hemodynamics frequently"
+      ],
+      "disposition": [
+        "Type A: emergent transfer to cardiothoracic surgery center",
+        "Type B: transfer for medical management and vascular monitoring (ICU)",
+        "Activate transfer in parallel with stabilization; time-critical",
+        "No discharge from FSED for confirmed/strongly suspected dissection"
+      ],
+      "discharge": [
+        "Not applicable; confirmed/suspected dissection requires emergent transfer",
+        "If dissection definitively excluded, treat alternative diagnosis with return precautions",
+        "Provide imaging and records to receiving team"
+      ],
+      "followup": [
+        "Cardiothoracic/vascular surgery assumes care",
+        "Cardiology for long-term BP control and surveillance imaging*",
+        "Genetics referral if connective tissue disorder suspected*"
+      ]
+    },
+    "redFlags": [
+      "Pulse or BP differential between extremities",
+      "Hypotension, syncope, or signs of tamponade (Type A)",
+      "New neurologic deficit or malperfusion (stroke, limb, mesenteric, renal)",
+      "New aortic regurgitation murmur",
+      "Hemodynamic collapse suggesting rupture"
+    ],
+    "compliance": [
+      "EMTALA requires stabilization (impulse/BP control) and emergent appropriate transfer to surgical-capable center",
+      "Physician-to-physician acceptance and signed transfer documenting time-critical emergency",
+      "Do not delay transfer for CT if it is unavailable or slower than transport; coordinate imaging at receiving center",
+      "Document bilateral BP, anti-impulse therapy, and ongoing monitoring during ALS transfer"
+    ]
+  }
+]

@@ -1,0 +1,630 @@
+[
+  {
+    "id": "suicidal-ideation",
+    "name": "Suicidal Ideation",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["wants to die", "suicidal thoughts", "SI", "self-harm", "wishes were dead", "thoughts of ending it"],
+    "acuity": "2-3",
+    "summary": "Suicidal thoughts with or without plan/intent/means; differentiate passive ideation from active plan with imminent risk.",
+    "stages": {
+      "triage": [
+        "Bring directly back; do not leave in open waiting room",
+        "Columbia-Suicide Severity Rating Scale (C-SSRS) or PHQ-9 screen",
+        "Ask directly about plan, intent, access to means, prior attempts",
+        "Assess for intoxication/coingestion as contributing factor",
+        "Flag for 1:1 continuous observation"
+      ],
+      "nursing": [
+        "Initiate 1:1 sitter / continuous line-of-sight observation",
+        "Search patient and belongings; remove sharps, cords, belts, medications, lighters",
+        "Place in safe room (ligature-resistant) in patient gown",
+        "Document mood, affect, and statements verbatim",
+        "Secure personal effects and any brought-in medications"
+      ],
+      "keyOrders": [
+        "Constant observation order",
+        "IV access* if indicated (suspected coingestion/medical workup)",
+        "Cardiac monitor* if indicated (suspected overdose)",
+        "Capture and lock up any weapons/medications brought by patient",
+        "Notify behavioral health / on-call psychiatry early"
+      ],
+      "labs": [
+        "Fingerstick glucose",
+        "BMP, CBC",
+        "Acetaminophen and salicylate levels",
+        "Ethanol level, urine drug screen",
+        "Beta-hCG in persons of childbearing potential",
+        "TSH* if indicated"
+      ],
+      "imaging": [
+        "Generally none for isolated SI",
+        "CT head* if indicated for trauma, altered mental status, or focal deficit"
+      ],
+      "meds": [
+        "Treat agitation only if needed: lorazepam 1-2 mg PO/IM/IV",
+        "Haloperidol 5 mg IM + lorazepam 2 mg IM* if indicated for severe agitation",
+        "Continue home psychiatric meds if clinically appropriate",
+        "Avoid PRN opioids/sedatives that may worsen disinhibition"
+      ],
+      "reassess": [
+        "Repeat suicide risk assessment after intoxication clears",
+        "Reassess intent, plan, protective factors, and support system",
+        "Document collateral from family/EMS/outpatient providers",
+        "Stratify risk: low (passive) vs high (active plan/intent/means)"
+      ],
+      "disposition": [
+        "Low risk with safety plan and support: discharge to outpatient follow-up",
+        "Moderate-high risk: psychiatric evaluation and inpatient admission",
+        "FSED has no psych beds: arrange appropriate transfer to psychiatric facility",
+        "Consider emergency detention (peace-officer or physician application) if refusing and high risk"
+      ],
+      "discharge": [
+        "Only if cleared by formal risk assessment and intoxication resolved",
+        "Provide written safety plan and crisis resources (988 Suicide & Crisis Lifeline)",
+        "Means restriction counseling with family/caregiver",
+        "Ensure responsible adult escort and lethal-means removal at home",
+        "Document capacity and shared decision-making"
+      ],
+      "followup": [
+        "Outpatient psychiatry / counseling within 7 days",
+        "Primary care or behavioral health warm handoff",
+        "Crisis line and local mental health authority contact info",
+        "Return precautions for worsening thoughts or new plan"
+      ]
+    },
+    "redFlags": [
+      "Active plan with intent and access to lethal means",
+      "Recent attempt or rehearsal behavior",
+      "Command hallucinations to self-harm",
+      "Refusal to engage with inability to contract for safety",
+      "Coingestion or unstable vitals requiring medical stabilization"
+    ],
+    "compliance": [
+      "EMTALA: perform medical screening exam to rule out organic cause before psych disposition; stabilize coingestion/medical emergency first",
+      "FSED with no psychiatric capability must arrange appropriate transfer with accepting facility, qualified personnel, and records per EMTALA",
+      "Document observation-vs-transfer decision and continuous monitoring",
+      "Texas emergency detention: physician may execute application for emergency detention or notify peace officer if patient is a danger and refuses voluntary care (Texas Health & Safety Code Ch. 573)",
+      "Report suspected abuse/neglect if disclosed during evaluation"
+    ]
+  },
+  {
+    "id": "homicidal-ideation",
+    "name": "Homicidal Ideation",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["wants to hurt someone", "HI", "threats to others", "violent thoughts", "thoughts of killing someone"],
+    "acuity": "2-3",
+    "summary": "Thoughts/threats of harming others; assess plan, intent, identifiable target, means, and underlying psychosis or intoxication.",
+    "stages": {
+      "triage": [
+        "Bring to secure area; alert staff and security immediately",
+        "Assess for plan, identifiable target, intent, and access to weapons",
+        "Screen for intoxication, psychosis, and prior violence",
+        "Limit access to objects usable as weapons",
+        "Flag for continuous observation and de-escalation"
+      ],
+      "nursing": [
+        "Initiate 1:1 observation with security present",
+        "Search and remove weapons, sharps, and dangerous items",
+        "Patient in gown in safe/ligature-resistant room",
+        "Document statements verbatim and named targets",
+        "Maintain de-escalating, low-stimulation environment"
+      ],
+      "keyOrders": [
+        "Continuous observation with security standby",
+        "IV access* if indicated for medical/sedation needs",
+        "Cardiac monitor* if indicated (suspected intoxication/overdose)",
+        "Notify behavioral health / psychiatry early",
+        "Notify facility risk management / legal re: duty to warn"
+      ],
+      "labs": [
+        "Fingerstick glucose",
+        "BMP, CBC",
+        "Ethanol level, urine drug screen",
+        "Acetaminophen/salicylate levels* if indicated",
+        "TSH* if indicated"
+      ],
+      "imaging": [
+        "Generally none for isolated HI",
+        "CT head* if indicated for trauma, AMS, or focal neuro findings"
+      ],
+      "meds": [
+        "Lorazepam 1-2 mg PO/IM/IV for agitation/anxiety",
+        "Haloperidol 5 mg IM + lorazepam 2 mg IM* if indicated for severe agitation",
+        "Olanzapine 10 mg IM or ziprasidone 10-20 mg IM as alternatives",
+        "Continue home antipsychotics if appropriate"
+      ],
+      "reassess": [
+        "Reassess after intoxication/psychosis treated",
+        "Re-evaluate intent, plan, and identifiability of target",
+        "Obtain collateral history",
+        "Stratify acute violence risk"
+      ],
+      "disposition": [
+        "Credible threat to identifiable victim: psychiatric admission and likely law-enforcement notification",
+        "FSED without psych beds: appropriate transfer to psychiatric/inpatient facility",
+        "Emergency detention if dangerous and refusing care",
+        "Low risk with no plan/intent: outpatient referral with documentation"
+      ],
+      "discharge": [
+        "Only after formal risk assessment clears patient",
+        "Document absence of plan, intent, and means",
+        "Provide crisis and behavioral health resources",
+        "Ensure safe environment and support; return precautions"
+      ],
+      "followup": [
+        "Outpatient psychiatry within 7 days",
+        "Local mental health authority / crisis services",
+        "Anger management or counseling referral as appropriate",
+        "Return precautions for escalating thoughts"
+      ]
+    },
+    "redFlags": [
+      "Specific plan with identifiable intended victim and means",
+      "Active psychosis with command hallucinations to harm others",
+      "History of violence with current intent",
+      "Access to firearms or weapons",
+      "Escalating agitation despite de-escalation"
+    ],
+    "compliance": [
+      "EMTALA: medical screening exam to exclude organic cause; stabilize before disposition",
+      "Texas Tarasoff-equivalent: limited duty to warn/protect — may disclose to medical/law enforcement and the identifiable potential victim when patient makes a serious threat of imminent physical harm (Texas Health & Safety Code 611.004)",
+      "Document notification of intended victim and/or law enforcement",
+      "FSED without psychiatric capability must arrange appropriate transfer with accepting facility per EMTALA",
+      "Texas emergency detention may apply if patient is dangerous and refuses voluntary admission (HSC Ch. 573)"
+    ]
+  },
+  {
+    "id": "acute-agitation-psychosis",
+    "name": "Acute Agitation / Psychosis",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["combative", "violent patient", "hallucinations", "delusional", "out of control", "excited delirium", "agitated"],
+    "acuity": "1-2",
+    "summary": "Severe behavioral disturbance; must exclude organic causes (hypoxia, hypoglycemia, sepsis, intoxication, head injury) before assuming primary psychiatric cause.",
+    "stages": {
+      "triage": [
+        "Rapid safety assessment; call security and additional staff",
+        "Vital signs including pulse oximetry and temperature",
+        "Fingerstick glucose immediately",
+        "Attempt verbal de-escalation first",
+        "Clear room of hazards; ensure staff exit path"
+      ],
+      "nursing": [
+        "1:1 observation; prepare physical restraints only if least-restrictive measures fail",
+        "Apply cardiac monitor and continuous pulse oximetry once safe",
+        "Establish IV access when feasible",
+        "Document restraint indication, type, and frequent neurovascular checks",
+        "Search for weapons and remove hazards"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2, frequent vitals",
+        "IV access",
+        "Supplemental O2 to keep SpO2 >=94%",
+        "Fingerstick glucose",
+        "12-lead ECG (QTc) before/after antipsychotics",
+        "Restraint order with time limits per protocol* if indicated"
+      ],
+      "labs": [
+        "Fingerstick glucose, BMP, CBC",
+        "VBG/ABG and lactate (rule out hypoxia/acidosis)",
+        "Ethanol level, urine drug screen",
+        "CK (rhabdomyolysis with prolonged struggle)",
+        "Acetaminophen/salicylate levels* if indicated",
+        "Beta-hCG in persons of childbearing potential"
+      ],
+      "imaging": [
+        "CT head* if indicated for trauma, focal deficit, new-onset psychosis, or persistent AMS",
+        "CXR* if indicated for hypoxia/aspiration"
+      ],
+      "meds": [
+        "Midazolam 5 mg IM or 2-5 mg IV for rapid control",
+        "Haloperidol 5-10 mg IM + lorazepam 2 mg IM (combo) for severe agitation",
+        "Olanzapine 10 mg IM (avoid combining IM with parenteral benzo) or ziprasidone 10-20 mg IM",
+        "Ketamine 4-5 mg/kg IM* if indicated for severe/excited-delirium agitation (monitor airway)",
+        "Diphenhydramine 25-50 mg + benztropine for EPS/dystonia* if indicated"
+      ],
+      "reassess": [
+        "Continuous monitoring of airway, sedation level, SpO2, vitals",
+        "Reassess every 15 min during restraint/sedation; release restraints as soon as safe",
+        "Recheck glucose and treat reversible causes",
+        "Repeat ECG/QTc after antipsychotics",
+        "Watch for over-sedation and respiratory depression"
+      ],
+      "disposition": [
+        "Identify and treat organic cause if found (medical admission/transfer)",
+        "Primary psychiatric cause stabilized: psychiatric evaluation/admission",
+        "FSED without capability: appropriate transfer once medically stabilized",
+        "ICU-level transfer if airway compromise or refractory agitation"
+      ],
+      "discharge": [
+        "Only if fully sober, organically cleared, and risk-assessed",
+        "Confirm return to baseline mental status",
+        "Responsible adult escort and follow-up arranged",
+        "Provide medication and return precautions"
+      ],
+      "followup": [
+        "Psychiatry follow-up and medication reconciliation",
+        "Outpatient or community mental health linkage",
+        "Substance use referral if applicable",
+        "Return precautions for recurrence"
+      ]
+    },
+    "redFlags": [
+      "Hypoxia, hypoglycemia, hyperthermia, or unstable vitals (organic emergency)",
+      "Excited delirium with extreme agitation, hyperthermia, and metabolic acidosis",
+      "New-onset psychosis with focal neurologic findings",
+      "Respiratory depression or over-sedation after chemical restraint",
+      "Rhabdomyolysis or QTc prolongation"
+    ],
+    "compliance": [
+      "EMTALA: agitation is a medical emergency — perform MSE and exclude/stabilize organic causes before psychiatric disposition",
+      "Restraint/seclusion documentation per CMS/Texas rules: least-restrictive means, physician order, time-limited, frequent monitoring",
+      "FSED must stabilize then arrange appropriate transfer (accepting facility, qualified personnel) if no inpatient/psych capability",
+      "Document chemical-restraint rationale and continuous monitoring",
+      "Report suspected abuse/neglect or assault if disclosed"
+    ]
+  },
+  {
+    "id": "anxiety-panic-attack",
+    "name": "Anxiety / Panic Attack",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["panic attack", "anxiety attack", "hyperventilating", "feeling of doom", "can't breathe", "racing heart"],
+    "acuity": "3",
+    "summary": "Acute anxiety/panic with somatic symptoms; must exclude ACS, PE, arrhythmia, hypoglycemia, hyperthyroidism, and intoxication/withdrawal.",
+    "stages": {
+      "triage": [
+        "Vital signs including SpO2 and temperature",
+        "Screen for chest pain, dyspnea, palpitations to risk-stratify cardiac/PE",
+        "Calm, low-stimulation environment; reassurance",
+        "Assess for substance use, caffeine, stimulants, or withdrawal",
+        "Screen for suicidal ideation"
+      ],
+      "nursing": [
+        "Place on monitor if cardiopulmonary symptoms",
+        "Coach paced breathing; avoid paper-bag rebreathing",
+        "Quiet room and supportive presence",
+        "Reassess vitals after de-escalation",
+        "Document mental status and triggers"
+      ],
+      "keyOrders": [
+        "12-lead ECG to exclude arrhythmia/ischemia",
+        "Continuous pulse oximetry",
+        "IV access* if indicated",
+        "Cardiac monitor* if indicated for tachyarrhythmia",
+        "Orthostatic vitals* if indicated"
+      ],
+      "labs": [
+        "Fingerstick glucose",
+        "BMP* if indicated",
+        "Troponin* if indicated for chest pain/cardiac risk",
+        "TSH* if indicated",
+        "D-dimer* if indicated when PE suspected (per Wells/PERC)",
+        "Urine drug screen* if indicated"
+      ],
+      "imaging": [
+        "Generally none",
+        "CXR* if indicated for dyspnea/abnormal exam",
+        "CT pulmonary angiogram* if indicated for PE risk after risk stratification"
+      ],
+      "meds": [
+        "Lorazepam 0.5-1 mg PO/IV for acute severe symptoms (limit/avoid in substance-use risk)",
+        "Hydroxyzine 25-50 mg PO as non-benzo option",
+        "Continue/start SSRI as outpatient bridge (not ED-initiated acutely)",
+        "Treat underlying cause if identified"
+      ],
+      "reassess": [
+        "Reassess symptoms and vitals after intervention",
+        "Confirm resolution of tachycardia/tachypnea",
+        "Re-screen for SI and capacity for outpatient care",
+        "Confirm no missed organic diagnosis"
+      ],
+      "disposition": [
+        "Most discharge home after symptom resolution and reassurance",
+        "Admit/transfer if cardiac, PE, or other organic emergency identified",
+        "Refer to behavioral health for recurrent panic disorder",
+        "Reassess disposition if comorbid SI present"
+      ],
+      "discharge": [
+        "Reassurance and education on panic/anxiety physiology",
+        "Breathing and grounding techniques handout",
+        "Limit caffeine/stimulants; avoid alcohol",
+        "Short-term anxiolytic only if appropriate; counsel dependence risk",
+        "Return precautions for chest pain, syncope, dyspnea"
+      ],
+      "followup": [
+        "Primary care within 1-2 weeks",
+        "Outpatient behavioral health / therapy (CBT)",
+        "Psychiatry referral for recurrent panic disorder",
+        "Reinforce safety-netting"
+      ]
+    },
+    "redFlags": [
+      "Chest pain, ECG changes, or elevated troponin (ACS)",
+      "Hypoxia or pleuritic pain suggesting PE",
+      "Syncope or sustained tachyarrhythmia",
+      "Signs of hyperthyroid storm or stimulant toxicity",
+      "Concurrent suicidal ideation"
+    ],
+    "compliance": [
+      "EMTALA: complete MSE to exclude life-threatening cardiopulmonary causes before attributing to anxiety",
+      "Document negative cardiac/PE workup or risk-stratification rationale",
+      "FSED should arrange appropriate transfer if organic emergency requires admission",
+      "Screen and document suicide risk before discharge",
+      "Counsel benzodiazepine dependence/diversion risk if prescribed"
+    ]
+  },
+  {
+    "id": "substance-intoxication",
+    "name": "Substance Intoxication",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["drunk", "high", "intoxicated", "on drugs", "altered from substances", "ETOH", "stimulant high"],
+    "acuity": "2-3",
+    "summary": "Acute intoxication from alcohol/stimulants/opioids/sedatives/hallucinogens; protect airway, exclude trauma and coingestion, and ensure safe sobering.",
+    "stages": {
+      "triage": [
+        "Vital signs, SpO2, temperature, fingerstick glucose",
+        "Assess airway, breathing, and level of consciousness",
+        "Identify substance(s), time, and route if possible",
+        "Evaluate for trauma and concurrent medical illness",
+        "Screen for SI/HI once able to participate"
+      ],
+      "nursing": [
+        "Continuous observation; position to protect airway (recovery position)",
+        "Cardiac monitor and continuous pulse oximetry",
+        "IV access and fall precautions",
+        "Frequent reorientation and reassessment",
+        "Search and secure belongings/substances"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2",
+        "Supplemental O2 to maintain SpO2 >=94%",
+        "IV access with isotonic fluids",
+        "Fingerstick glucose",
+        "12-lead ECG (QTc, ischemia with stimulants)",
+        "Naloxone at bedside* if indicated for opioid component"
+      ],
+      "labs": [
+        "Fingerstick glucose, BMP, CBC",
+        "Ethanol level, urine drug screen",
+        "Acetaminophen and salicylate levels (rule out coingestion)",
+        "VBG and lactate",
+        "Serum osmolality / osm gap* if indicated (toxic alcohols)",
+        "Beta-hCG in persons of childbearing potential"
+      ],
+      "imaging": [
+        "CT head* if indicated for trauma, AMS out of proportion, or focal deficit",
+        "CXR* if indicated for aspiration/hypoxia"
+      ],
+      "meds": [
+        "Naloxone 0.04-0.4 mg IV titrated (or 2-4 mg IN) for opioid intoxication/respiratory depression",
+        "Lorazepam 1-2 mg IV for stimulant-related agitation/seizure",
+        "IV isotonic fluids for dehydration",
+        "Thiamine 100 mg IV before glucose if alcohol/malnutrition suspected",
+        "Antiemetic (ondansetron 4 mg IV)* if indicated"
+      ],
+      "reassess": [
+        "Serial neuro and respiratory assessments until clinically sober",
+        "Trend mental status toward baseline",
+        "Re-screen for SI/HI and capacity when sober",
+        "Watch for sedative re-narcotization (e.g., long-acting opioids)"
+      ],
+      "disposition": [
+        "Observe until clinically sober, ambulatory, and tolerating PO",
+        "Admit/transfer if airway risk, persistent AMS, or serious coingestion",
+        "Psychiatric evaluation if SI/HI persists after sobering",
+        "Refer to substance use treatment"
+      ],
+      "discharge": [
+        "Only when clinically sober with stable vitals and intact gait/judgment",
+        "Confirm no SI/HI and decision-making capacity",
+        "Responsible adult escort; no driving",
+        "Provide substance use resources and naloxone kit if opioid-related",
+        "Return precautions for recurrence/decompensation"
+      ],
+      "followup": [
+        "Substance use disorder / addiction medicine referral",
+        "Primary care follow-up",
+        "Behavioral health if comorbid psychiatric illness",
+        "Harm-reduction and naloxone education"
+      ]
+    },
+    "redFlags": [
+      "Respiratory depression or airway compromise",
+      "Persistent or worsening altered mental status",
+      "Hyperthermia, seizures, or unstable arrhythmia (stimulants/serotonin syndrome)",
+      "Suspected toxic alcohol or large coingestion",
+      "Trauma with intoxication masking injury"
+    ],
+    "compliance": [
+      "EMTALA: MSE and stabilization; intoxicated patients lack capacity to refuse — cannot discharge until clinically sober and safe",
+      "Document capacity assessment and clinical sobriety prior to discharge",
+      "FSED must arrange appropriate transfer for ICU/medical admission needs (airway, severe toxicity)",
+      "Offer naloxone and harm reduction; report per public health requirements where applicable",
+      "Screen for SI/HI and abuse/trafficking indicators; report suspected abuse as mandated"
+    ]
+  },
+  {
+    "id": "overdose-poisoning",
+    "name": "Overdose / Poisoning",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["OD", "took too many pills", "poisoned", "ingestion", "tox", "intentional overdose"],
+    "acuity": "1-2",
+    "summary": "Intentional or accidental ingestion; identify agent and timing, support ABCs, give antidotes, and consult Poison Control early.",
+    "stages": {
+      "triage": [
+        "Immediate ABC assessment; vitals, SpO2, temperature, glucose",
+        "Identify substance(s), amount, time, and intent",
+        "Call Poison Control (1-800-222-1222) early",
+        "Continuous observation; assume worsening course",
+        "Bring pill bottles/containers for identification"
+      ],
+      "nursing": [
+        "Cardiac monitor, continuous pulse oximetry, frequent vitals",
+        "Two large-bore IVs",
+        "Prepare airway equipment and antidotes",
+        "1:1 observation (intentional ingestion = self-harm risk)",
+        "Document time of ingestion and interventions"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2, frequent neuro checks",
+        "Supplemental O2 / airway management as needed",
+        "IV access x2 with isotonic fluids",
+        "12-lead ECG (QRS/QTc) and repeat",
+        "Fingerstick glucose",
+        "Activated charcoal* if indicated within ~1 hr, airway protected"
+      ],
+      "labs": [
+        "Acetaminophen and salicylate levels (mandatory in all intentional ODs)",
+        "BMP, CBC, LFTs, lactate, VBG",
+        "Ethanol level, urine drug screen",
+        "Serum osmolality and osm gap (toxic alcohols)",
+        "Coags/INR, lipase* if indicated",
+        "Specific drug levels (digoxin, lithium, valproate, etc.)* if indicated",
+        "Beta-hCG in persons of childbearing potential"
+      ],
+      "imaging": [
+        "CXR* if indicated for aspiration/pulmonary edema",
+        "CT head* if indicated for AMS/trauma",
+        "Abdominal XR* if indicated for radiopaque tablets/body packing"
+      ],
+      "meds": [
+        "N-acetylcysteine per protocol for acetaminophen toxicity (150 mg/kg load)",
+        "Naloxone 0.04-2 mg IV titrated for opioid toxicity",
+        "Sodium bicarbonate 1-2 mEq/kg IV bolus for wide-QRS TCA toxicity",
+        "Flumazenil generally avoided (seizure risk); benzos for stimulant/sympathomimetic toxicity",
+        "Agent-specific antidotes per Poison Control (e.g., glucagon, calcium, fomepizole, lipid emulsion)"
+      ],
+      "reassess": [
+        "Serial vitals, mental status, ECG, and respiratory status",
+        "Trend repeat acetaminophen/salicylate levels and labs",
+        "Anticipate delayed toxicity (sustained-release, late-peaking agents)",
+        "Continuous re-evaluation per Poison Control guidance",
+        "Reassess psychiatric risk once medically stabilized"
+      ],
+      "disposition": [
+        "Most intentional ODs require admission/observation and psychiatric evaluation",
+        "ICU transfer for hemodynamic instability, airway, dysrhythmia, or antidote infusions",
+        "FSED: stabilize and arrange appropriate higher-level transfer",
+        "Discharge only for low-risk minimal ingestion after adequate observation and psych clearance"
+      ],
+      "discharge": [
+        "Rare; only after toxicologic and psychiatric clearance",
+        "Document Poison Control concurrence and observation window completed",
+        "Means restriction and safety planning",
+        "Responsible adult escort and follow-up",
+        "Detailed return precautions"
+      ],
+      "followup": [
+        "Psychiatry / behavioral health (intentional ingestion)",
+        "Toxicology / Poison Control as advised",
+        "Primary care for ongoing monitoring",
+        "Substance use treatment referral if applicable"
+      ]
+    },
+    "redFlags": [
+      "Airway compromise, respiratory depression, or hypoventilation",
+      "Wide-complex dysrhythmia or hemodynamic instability",
+      "Severe acidosis or rising acetaminophen/salicylate levels",
+      "Seizures or rapidly declining mental status",
+      "Co-ingestant or delayed-release agent with delayed toxicity"
+    ],
+    "compliance": [
+      "EMTALA: high-acuity MSE and aggressive stabilization before any transfer",
+      "FSED must arrange appropriate transfer to facility with ICU/toxicology/psychiatric capability when stabilization exceeds resources",
+      "Document Poison Control consultation and stabilizing care provided",
+      "Intentional overdose triggers continuous observation and suicide risk protocol; consider Texas emergency detention if high-risk and refusing",
+      "Mandatory reporting: suspected abuse/neglect, sexual assault, or child/elder endangerment if disclosed"
+    ]
+  },
+  {
+    "id": "alcohol-withdrawal",
+    "name": "Alcohol Withdrawal",
+    "category": "Psychiatric / Behavioral",
+    "synonyms": ["DTs", "delirium tremens", "the shakes", "ETOH withdrawal", "alcohol detox", "withdrawal seizures"],
+    "acuity": "2-3",
+    "summary": "Spectrum from tremor/anxiety to withdrawal seizures and delirium tremens; symptom-triggered benzodiazepines and risk stratification are key.",
+    "stages": {
+      "triage": [
+        "Vital signs, temperature, fingerstick glucose",
+        "Quantify last drink, intake pattern, prior withdrawal/DTs/seizures",
+        "Initiate CIWA-Ar scoring",
+        "Assess for tremor, diaphoresis, agitation, hallucinations",
+        "Screen for concurrent trauma/infection"
+      ],
+      "nursing": [
+        "Continuous monitoring; fall and seizure precautions",
+        "Serial CIWA-Ar assessments",
+        "Cardiac monitor and IV access",
+        "Quiet, low-stimulation environment; frequent reorientation",
+        "Strict intake/output and neuro checks"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2, frequent vitals",
+        "IV access with isotonic fluids",
+        "Fingerstick glucose",
+        "Symptom-triggered benzodiazepine protocol per CIWA-Ar",
+        "Seizure precautions",
+        "12-lead ECG* if indicated"
+      ],
+      "labs": [
+        "BMP, magnesium, phosphate, CBC",
+        "Fingerstick glucose; LFTs",
+        "Ethanol level",
+        "VBG and lactate* if indicated",
+        "Acetaminophen/salicylate levels* if indicated for co-ingestion",
+        "Lipase* if indicated for abdominal pain"
+      ],
+      "imaging": [
+        "CT head* if indicated for seizure, trauma, or focal deficit",
+        "CXR* if indicated for suspected pneumonia/aspiration"
+      ],
+      "meds": [
+        "Lorazepam 2-4 mg IV symptom-triggered (preferred in hepatic impairment) per CIWA",
+        "Diazepam 5-10 mg IV q5-10 min for severe symptoms (front-loading)",
+        "Phenobarbital* if indicated for benzo-refractory withdrawal",
+        "Thiamine 100-500 mg IV before glucose; folate and multivitamin",
+        "Replete magnesium 2 g IV and correct electrolytes",
+        "Dexmedetomidine/propofol* if indicated for refractory DTs (ICU)"
+      ],
+      "reassess": [
+        "Repeat CIWA-Ar and titrate benzodiazepines to symptom control",
+        "Monitor for escalating agitation, hallucinations, or autonomic instability",
+        "Watch for over-sedation/respiratory depression",
+        "Reassess electrolytes and hydration",
+        "Identify progression toward delirium tremens"
+      ],
+      "disposition": [
+        "Mild (CIWA <8-10) with good support: discharge with outpatient detox referral",
+        "Moderate-severe or escalating CIWA: admission for symptom-triggered therapy",
+        "Delirium tremens / refractory withdrawal: ICU-level care — transfer from FSED",
+        "Withdrawal seizure or comorbid illness: admit/transfer"
+      ],
+      "discharge": [
+        "Only for mild, controlled symptoms with reliable follow-up and support",
+        "Thiamine and multivitamin prescription",
+        "Counsel relapse and withdrawal-recurrence risks",
+        "Provide outpatient detox/addiction resources",
+        "Return precautions for seizures, confusion, fever, worsening tremor"
+      ],
+      "followup": [
+        "Addiction medicine / outpatient detox program",
+        "Primary care within days for electrolyte and clinical recheck",
+        "Behavioral health for alcohol use disorder",
+        "Consider naltrexone/acamprosate referral"
+      ]
+    },
+    "redFlags": [
+      "Delirium tremens: confusion, severe autonomic instability, hallucinations",
+      "Withdrawal seizures (especially repeated or status)",
+      "Benzodiazepine-refractory agitation",
+      "Hyperthermia, severe tachycardia, or hemodynamic instability",
+      "Concurrent infection, pancreatitis, GI bleed, or head injury"
+    ],
+    "compliance": [
+      "EMTALA: MSE and stabilization; exclude concurrent emergencies (trauma, sepsis, GI bleed)",
+      "FSED must arrange appropriate transfer to ICU-capable facility for DTs or refractory withdrawal",
+      "Document CIWA-driven treatment, observation-vs-transfer decision, and capacity",
+      "Administer thiamine before glucose to prevent Wernicke encephalopathy and document",
+      "Mandatory reporting: suspected abuse/neglect or impaired-driving concerns where applicable; offer SUD resources"
+    ]
+  }
+]

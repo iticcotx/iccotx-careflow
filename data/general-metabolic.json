@@ -1,0 +1,981 @@
+[
+  {
+    "id": "fever",
+    "name": "Fever",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["pyrexia", "high temperature", "febrile", "running a temp", "chills"],
+    "acuity": "2-4",
+    "summary": "Elevated core temperature; identify source vs occult/serious bacterial infection and rule out sepsis.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature (oral/temporal/rectal) and SpO2",
+        "Screen for sepsis (qSOFA/SIRS), neutropenia history, immunosuppression",
+        "Ask onset, travel, sick contacts, localizing symptoms",
+        "Assign ESI 2 if hemodynamically unstable or toxic-appearing"
+      ],
+      "nursing": [
+        "Continuous vitals if febrile + tachycardic/hypotensive",
+        "Antipyretic per protocol once ordered",
+        "Cooling measures for hyperthermia >40C",
+        "Strict I/O; isolation precautions if infectious source suspected*"
+      ],
+      "keyOrders": [
+        "IV access if ill-appearing or needs fluids/antibiotics",
+        "Cardiac monitor + continuous SpO2 if unstable*",
+        "Capillary glucose",
+        "Sepsis bundle activation if SIRS + suspected infection* if indicated"
+      ],
+      "labs": [
+        "CBC with differential, BMP",
+        "Blood cultures x2 before antibiotics if sepsis/toxic*",
+        "Urinalysis with reflex culture",
+        "Lactate, CRP/procalcitonin* if indicated",
+        "Respiratory viral panel / influenza / COVID PCR* if indicated"
+      ],
+      "imaging": [
+        "Chest X-ray if respiratory symptoms or no clear source",
+        "Targeted imaging to suspected source (CT abdomen/pelvis, soft tissue US)* if indicated",
+        "Lumbar puncture if meningismus/altered* if indicated"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg PO/IV q6h (max 3-4 g/day)",
+        "Ibuprofen 400-600 mg PO q6h if no contraindication*",
+        "Empiric antibiotics targeted to source if bacterial suspected*",
+        "IV crystalloid bolus 30 mL/kg if hypotensive/septic*"
+      ],
+      "reassess": [
+        "Recheck temperature and vitals after antipyretic in 30-60 min",
+        "Reassess for evolving sepsis / hemodynamic instability",
+        "Trend lactate if elevated*",
+        "Reassess mental status and source localization"
+      ],
+      "disposition": [
+        "Discharge if source identified, stable, low-risk",
+        "Observe for borderline vitals or pending cultures*",
+        "Admit/transfer for sepsis, neutropenic fever, or unclear serious source",
+        "Transfer to higher level if ICU-level care needed"
+      ],
+      "discharge": [
+        "Antipyretic instructions and hydration",
+        "Specific return precautions for worsening fever or new symptoms",
+        "Course of antibiotics if prescribed with adherence counseling*",
+        "Culture follow-up plan and contact info"
+      ],
+      "followup": [
+        "PCP within 24-48 h if not improving",
+        "Pending culture callback protocol",
+        "Specialist referral based on identified source*"
+      ]
+    },
+    "redFlags": [
+      "Hypotension, altered mental status, or qSOFA >=2 (sepsis)",
+      "Neutropenic fever (ANC <500)",
+      "Meningismus, petechial/purpuric rash, or new focal neuro deficit",
+      "Fever in immunocompromised, post-transplant, or recent chemotherapy",
+      "Temp >41C (hyperthermia) or rapid clinical deterioration"
+    ],
+    "compliance": [
+      "EMTALA medical screening exam to exclude emergency condition before disposition",
+      "Initiate stabilization (fluids/antibiotics) prior to any appropriate transfer for sepsis",
+      "Observation vs transfer: transfer if neutropenic fever or sepsis requiring ICU/admission FSED cannot provide",
+      "Texas mandatory reportable conditions (e.g., suspected meningococcal, certain notifiable infections) reported to DSHS/local health authority"
+    ]
+  },
+  {
+    "id": "sepsis-sirs",
+    "name": "Sepsis / SIRS",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["septic", "blood infection", "septicemia", "systemic infection", "septic shock"],
+    "acuity": "1-2",
+    "summary": "Life-threatening organ dysfunction from dysregulated host response to infection; time-critical resuscitation.",
+    "stages": {
+      "triage": [
+        "Immediate vitals; flag SIRS criteria and qSOFA",
+        "Identify suspected infection source",
+        "ESI 1-2; activate sepsis alert / bundle",
+        "Note immunosuppression, indwelling devices, recent procedures"
+      ],
+      "nursing": [
+        "Continuous cardiac, BP, SpO2 monitoring",
+        "Two large-bore IVs; draw cultures before antibiotics",
+        "Strict hourly I/O and urine output",
+        "Begin Surviving Sepsis 1-hour bundle timing"
+      ],
+      "keyOrders": [
+        "Activate sepsis bundle; start clock at recognition",
+        "IV crystalloid 30 mL/kg bolus for hypotension or lactate >=4",
+        "12-lead ECG; cardiac monitor; O2 to keep SpO2 >=94%",
+        "Foley for accurate urine output if shock*"
+      ],
+      "labs": [
+        "Lactate (repeat in 2-4 h if elevated)",
+        "Blood cultures x2 before antibiotics",
+        "CBC with diff, CMP, coags, procalcitonin",
+        "VBG, source-specific cultures (urine, sputum, wound)*",
+        "Type and screen if surgical source possible*"
+      ],
+      "imaging": [
+        "Chest X-ray",
+        "CT or US directed at suspected source (abdomen, soft tissue)* if indicated",
+        "POCUS for volume status / IVC and cardiac function*"
+      ],
+      "meds": [
+        "Broad-spectrum antibiotics within 1 h (e.g., piperacillin-tazobactam 4.5 g IV; add vancomycin 15-20 mg/kg IV if MRSA risk)",
+        "Norepinephrine 0.05-0.1 mcg/kg/min IV titrated for MAP >=65 after fluids",
+        "Source-specific coverage (e.g., add metronidazole 500 mg IV for intra-abdominal)*",
+        "Stress-dose hydrocortisone 50 mg IV q6h in refractory shock*"
+      ],
+      "reassess": [
+        "Reassess perfusion: MAP, lactate clearance, urine output, mental status",
+        "Dynamic fluid responsiveness assessment after boluses",
+        "Escalate to vasopressors if MAP <65 despite fluids",
+        "Reassess airway and ventilatory needs"
+      ],
+      "disposition": [
+        "Admit to ICU or transfer to facility with critical care/ICU",
+        "Arrange ALS transport with monitoring and pressor capability",
+        "FSED rarely an endpoint; expedite stabilization then transfer",
+        "Continuous physician-to-physician handoff"
+      ],
+      "discharge": [
+        "Discharge not appropriate for true sepsis",
+        "If SIRS from non-infectious benign cause resolved, discharge with precautions*",
+        "Document rationale clearly if not transferred*"
+      ],
+      "followup": [
+        "Receiving ICU/admitting team for ongoing care",
+        "Culture and sensitivity follow-up by accepting facility",
+        "PCP after hospitalization for recovery and source clearance"
+      ]
+    },
+    "redFlags": [
+      "Hypotension refractory to fluids (septic shock) / pressor requirement",
+      "Lactate >=4 mmol/L or worsening lactate clearance",
+      "Altered mental status, new oliguria, or hypoxemic respiratory failure",
+      "DIC, thrombocytopenia, or coagulopathy",
+      "Rapidly progressing soft-tissue infection (necrotizing) requiring emergent surgery"
+    ],
+    "compliance": [
+      "EMTALA: perform MSE and begin stabilization (antibiotics, fluids, pressors) before transfer",
+      "Appropriate-transfer criteria: stabilize within FSED capability, secure accepting ICU bed and physician, send records",
+      "Observation vs transfer: sepsis requires admission/ICU not available at FSED, so transfer is standard",
+      "Report notifiable infectious causes (e.g., meningococcemia) to Texas DSHS as required"
+    ]
+  },
+  {
+    "id": "dehydration",
+    "name": "Dehydration",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["volume depletion", "fluid loss", "dried out", "low fluids", "hypovolemia"],
+    "acuity": "2-4",
+    "summary": "Intravascular/total body water deficit from GI losses, poor intake, or hyperglycemia; assess severity and cause.",
+    "stages": {
+      "triage": [
+        "Vitals incl. orthostatics; assess mucous membranes, skin turgor",
+        "Ask vomiting/diarrhea, intake, urine output, medications (diuretics)",
+        "Flag tachycardia/hypotension as moderate-severe",
+        "Capillary glucose to screen hyperglycemia"
+      ],
+      "nursing": [
+        "IV access for moderate/severe dehydration",
+        "Strict I/O monitoring",
+        "Trial oral rehydration if mild and tolerating*",
+        "Continuous vitals if unstable*"
+      ],
+      "keyOrders": [
+        "Capillary glucose",
+        "IV crystalloid bolus for moderate-severe deficit",
+        "Cardiac monitor if electrolyte abnormality suspected*",
+        "Antiemetic prior to oral challenge*"
+      ],
+      "labs": [
+        "BMP (Na, K, BUN/Cr, glucose, bicarb)",
+        "CBC",
+        "Urinalysis (specific gravity, ketones)",
+        "Lactate if ill-appearing*",
+        "VBG if severe or acidosis suspected*"
+      ],
+      "imaging": [
+        "Usually none",
+        "Abdominal imaging if surgical/obstructive cause suspected* if indicated",
+        "POCUS IVC for volume assessment*"
+      ],
+      "meds": [
+        "Normal saline or LR 1-2 L IV bolus, reassess",
+        "Ondansetron 4 mg IV/ODT for vomiting",
+        "Oral rehydration solution if mild and tolerating PO",
+        "Replace potassium if hypokalemic (KCl 10-20 mEq IV or PO)*"
+      ],
+      "reassess": [
+        "Recheck HR/BP and orthostatics after fluids",
+        "Reassess urine output and mental status",
+        "Trend electrolytes if abnormal*",
+        "Assess tolerance of oral intake before discharge"
+      ],
+      "disposition": [
+        "Discharge if rehydrated, tolerating PO, stable vitals",
+        "Observe for ongoing losses or borderline labs*",
+        "Admit/transfer if severe electrolyte derangement or shock",
+        "Transfer if requires inpatient correction beyond FSED capability"
+      ],
+      "discharge": [
+        "Oral hydration plan and small frequent sips",
+        "Antiemetic prescription if needed*",
+        "Return if unable to keep fluids down, dizziness, decreased urination",
+        "Treat underlying cause (BRAT diet for gastroenteritis)*"
+      ],
+      "followup": [
+        "PCP in 24-48 h if symptoms persist",
+        "Recheck electrolytes with PCP if corrected borderline values*",
+        "GI referral for chronic/recurrent losses*"
+      ]
+    },
+    "redFlags": [
+      "Hypotension/shock not responsive to initial fluids",
+      "Severe hyponatremia/hypernatremia or hyperkalemia",
+      "Altered mental status or syncope",
+      "Acute kidney injury with rising creatinine",
+      "Signs of underlying surgical abdomen or bowel obstruction"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude emergency cause (GI bleed, DKA, obstruction) before disposition",
+      "Stabilize hemodynamics before any transfer",
+      "Observation vs transfer: severe electrolyte correction or AKI needing admission warrants transfer",
+      "Report suspected abuse/neglect if dehydration from inadequate care in vulnerable adult to Texas APS"
+    ]
+  },
+  {
+    "id": "fatigue-generalized-weakness",
+    "name": "Fatigue / Generalized Weakness",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["tired", "exhaustion", "no energy", "weak all over", "malaise", "lethargy"],
+    "acuity": "2-4",
+    "summary": "Nonspecific complaint; broad differential from benign deconditioning to ACS, sepsis, metabolic, or neuro emergency.",
+    "stages": {
+      "triage": [
+        "Full vitals incl. glucose and SpO2",
+        "Distinguish true neuromuscular weakness from generalized fatigue",
+        "Screen for chest pain, dyspnea, focal deficits, bleeding",
+        "ESI 2 if abnormal vitals, elderly, or red-flag symptoms"
+      ],
+      "nursing": [
+        "IV access if ill-appearing or labs needed",
+        "Cardiac monitor if cardiac/electrolyte concern*",
+        "Fall precautions",
+        "Continuous SpO2 if hypoxic*"
+      ],
+      "keyOrders": [
+        "12-lead ECG (screen ACS, arrhythmia, electrolyte)",
+        "Capillary glucose",
+        "IV access for blood draw",
+        "Cardiac monitor* if indicated"
+      ],
+      "labs": [
+        "CBC, CMP, magnesium, phosphorus",
+        "TSH",
+        "Troponin if cardiac concern*",
+        "Urinalysis; consider lactate if septic appearance*",
+        "B12/folate, cortisol if chronic/suspected endocrine* if indicated"
+      ],
+      "imaging": [
+        "Chest X-ray if dyspnea or infection concern*",
+        "CT head if focal deficit or altered mentation* if indicated",
+        "Targeted imaging by suspected etiology*"
+      ],
+      "meds": [
+        "IV crystalloid if dehydrated/hypotensive*",
+        "Electrolyte repletion as indicated (K, Mg)*",
+        "Glucose correction (D50 25 g IV if hypoglycemic)*",
+        "Treat identified underlying cause specifically*"
+      ],
+      "reassess": [
+        "Reassess vitals and mental status after interventions",
+        "Review labs for treatable causes (anemia, electrolytes, glucose)",
+        "Reassess for evolving focal neurologic findings",
+        "Confirm safe ambulation before discharge"
+      ],
+      "disposition": [
+        "Discharge if workup reassuring and ambulating safely",
+        "Observe pending labs or borderline findings*",
+        "Admit/transfer for ACS, significant anemia, sepsis, or new neuro deficit",
+        "Transfer if etiology requires inpatient workup unavailable at FSED"
+      ],
+      "discharge": [
+        "Explain reassuring workup and likely benign cause",
+        "Activity and hydration guidance",
+        "Return for new chest pain, focal weakness, fainting, or worsening",
+        "Medication review for offending agents*"
+      ],
+      "followup": [
+        "PCP for comprehensive evaluation and labs",
+        "Cardiology/neurology referral if indicated*",
+        "Reassess chronic conditions and medications*"
+      ]
+    },
+    "redFlags": [
+      "Focal neurologic deficit suggesting stroke",
+      "Chest pain, dyspnea, or ECG changes suggesting ACS",
+      "Hemodynamic instability or signs of occult bleeding/anemia",
+      "Severe electrolyte abnormality or profound hypoglycemia",
+      "Ascending/symmetric weakness suggesting Guillain-Barre or myasthenic crisis"
+    ],
+    "compliance": [
+      "EMTALA MSE to rule out emergency conditions masquerading as fatigue (ACS, stroke, sepsis)",
+      "Stabilize and arrange appropriate transfer if time-sensitive diagnosis found",
+      "Observation vs transfer: nonspecific cases needing inpatient workup should transfer to acute-care hospital",
+      "Report suspected elder neglect/abuse contributing to debility to Texas APS"
+    ]
+  },
+  {
+    "id": "hyperglycemia-dka",
+    "name": "Hyperglycemia / DKA",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["high blood sugar", "diabetic ketoacidosis", "sugar high", "HHS", "diabetic emergency"],
+    "acuity": "1-2",
+    "summary": "Severe hyperglycemia with ketoacidosis (DKA) or hyperosmolar state (HHS); fluid, electrolyte, and insulin management.",
+    "stages": {
+      "triage": [
+        "Capillary glucose and vitals immediately",
+        "Assess hydration, mentation, Kussmaul respirations, fruity breath",
+        "Identify trigger (infection, missed insulin, MI)",
+        "ESI 1-2 if altered, hypotensive, or glucose critically high"
+      ],
+      "nursing": [
+        "Two IV lines; begin fluid resuscitation",
+        "Continuous cardiac monitor (potassium shifts)",
+        "Strict hourly I/O and serial glucose checks",
+        "Foley if obtunded or shock for output monitoring*"
+      ],
+      "keyOrders": [
+        "IV access x2; cardiac monitor; O2 if hypoxic",
+        "Capillary glucose + serum glucose",
+        "12-lead ECG (hyperkalemia/MI trigger)",
+        "Hold insulin until K >=3.3 mEq/L confirmed"
+      ],
+      "labs": [
+        "VBG (pH, bicarb), BMP, serum/urine ketones (beta-hydroxybutyrate)",
+        "Serum potassium, magnesium, phosphorus",
+        "CBC, serum osmolality, anion gap calculation",
+        "Lactate, troponin, urinalysis* if indicated",
+        "HbA1c, infection workup (cultures) for trigger*"
+      ],
+      "imaging": [
+        "Chest X-ray if infection suspected as trigger*",
+        "ECG counts as key cardiac evaluation",
+        "Imaging directed at precipitating source* if indicated"
+      ],
+      "meds": [
+        "Isotonic crystalloid: NS 15-20 mL/kg (~1-1.5 L) first hour, then adjust to corrected Na",
+        "Regular insulin infusion 0.1 units/kg/h IV (start after K >=3.3); avoid bolus or use 0.1 u/kg bolus per protocol",
+        "Potassium replacement 20-30 mEq/L IV when K 3.3-5.2 mEq/L",
+        "Add dextrose (D5) to fluids when glucose ~200 mg/dL; treat precipitant"
+      ],
+      "reassess": [
+        "Recheck glucose hourly; electrolytes/VBG q2-4h",
+        "Monitor for hypokalemia as insulin drives K intracellular",
+        "Track anion gap closure and mental status",
+        "Reassess fluid status and urine output"
+      ],
+      "disposition": [
+        "DKA/HHS require admission to ICU/step-down or transfer",
+        "Arrange monitored ALS transfer with insulin infusion if FSED",
+        "Stabilize gap and hemodynamics before transport",
+        "Isolated mild hyperglycemia without acidosis may discharge after correction*"
+      ],
+      "discharge": [
+        "Only for mild hyperglycemia without ketoacidosis once stable*",
+        "Insulin/oral hypoglycemic adjustment and adherence counseling",
+        "Sick-day rules and glucose monitoring instructions",
+        "Return for vomiting, ketones, AMS, or persistent high sugars"
+      ],
+      "followup": [
+        "Endocrinology/PCP within 1-3 days for diabetes management",
+        "Diabetes education referral*",
+        "Admitting team continues DKA/HHS resolution if transferred"
+      ]
+    },
+    "redFlags": [
+      "Altered mental status or coma (severe DKA/HHS)",
+      "Hemodynamic instability or shock",
+      "Severe hypokalemia (<3.3) or hyperkalemia with ECG changes",
+      "pH <7.0, severe anion-gap acidosis, or refractory acidosis",
+      "Cerebral edema (esp. pediatric) or precipitating MI/sepsis"
+    ],
+    "compliance": [
+      "EMTALA MSE; begin fluids/insulin/electrolyte stabilization before transfer",
+      "Appropriate transfer: secure ICU/admitting bed, accepting physician, monitored transport for insulin drip",
+      "Observation vs transfer: true DKA/HHS exceeds FSED capability and warrants transfer to hospital with ICU",
+      "Document stabilization and risk/benefit of transfer per EMTALA"
+    ]
+  },
+  {
+    "id": "hypoglycemia",
+    "name": "Hypoglycemia",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["low blood sugar", "sugar crash", "insulin reaction", "hypoglycemic", "low sugar"],
+    "acuity": "2-3",
+    "summary": "Low serum glucose causing neuroglycopenic/adrenergic symptoms; rapid correction and identify cause.",
+    "stages": {
+      "triage": [
+        "Immediate capillary glucose and vitals",
+        "Assess mental status and ability to protect airway",
+        "Ask insulin/sulfonylurea use, intake, alcohol",
+        "ESI 2 if altered or unable to take PO"
+      ],
+      "nursing": [
+        "IV access if AMS or unable to take oral glucose",
+        "Continuous monitoring until glucose normalized",
+        "Serial glucose checks q15-30 min after treatment",
+        "Provide complex carb meal once alert*"
+      ],
+      "keyOrders": [
+        "Capillary glucose immediately and serial rechecks",
+        "IV access",
+        "Cardiac monitor if AMS or comorbid cardiac disease*",
+        "12-lead ECG if cardiac symptoms*"
+      ],
+      "labs": [
+        "Serum glucose to confirm",
+        "BMP",
+        "CBC if infection suspected*",
+        "Consider C-peptide, insulin, sulfonylurea screen if unexplained*",
+        "Ethanol level / tox if relevant*"
+      ],
+      "imaging": [
+        "Usually none",
+        "CT head if persistent AMS after glucose correction* if indicated"
+      ],
+      "meds": [
+        "Oral glucose 15-20 g if alert and able to swallow",
+        "Dextrose 50% (D50) 25 g IV if unable to take PO/AMS",
+        "Glucagon 1 mg IM/SC if no IV access",
+        "Octreotide 50-100 mcg SC for refractory sulfonylurea-induced hypoglycemia*"
+      ],
+      "reassess": [
+        "Recheck glucose 15 min after treatment; repeat dextrose if still low",
+        "Reassess mental status returns to baseline",
+        "Ensure sustained euglycemia with a meal before discharge",
+        "Watch for rebound, especially long-acting agents"
+      ],
+      "disposition": [
+        "Discharge if short-acting cause corrected, baseline mentation, tolerating PO",
+        "Observe/admit for sulfonylurea or long-acting insulin (recurrence risk)",
+        "Transfer if requires prolonged dextrose infusion/admission",
+        "Admit if no clear reversible cause or recurrent episodes"
+      ],
+      "discharge": [
+        "Identify and correct trigger (missed meal, dose error)",
+        "Counsel on recognizing/treating lows; prescribe glucagon kit*",
+        "Eat a meal before leaving; adjust diabetes regimen with provider",
+        "Return for recurrence, confusion, or inability to eat"
+      ],
+      "followup": [
+        "PCP/endocrinology for regimen adjustment within days",
+        "Diabetes education referral*",
+        "Sulfonylurea/long-acting cases need admission, not outpatient follow-up alone"
+      ]
+    },
+    "redFlags": [
+      "Persistent altered mental status despite glucose normalization",
+      "Sulfonylurea or long-acting insulin overdose (prolonged/recurrent hypoglycemia)",
+      "Seizure or focal deficit",
+      "Hypoglycemia without diabetes (occult sepsis, adrenal insufficiency, insulinoma)",
+      "Intentional overdose / suicidal ideation"
+    ],
+    "compliance": [
+      "EMTALA MSE; correct glucose and confirm stability before disposition",
+      "Observation vs transfer: sulfonylurea/long-acting insulin require admission for monitored observation, transfer if FSED cannot admit",
+      "Stabilize before transfer with dextrose infusion as needed",
+      "Report suspected intentional overdose for psychiatric evaluation; mandatory safety/abuse reporting if applicable"
+    ]
+  },
+  {
+    "id": "electrolyte-abnormality",
+    "name": "Electrolyte Abnormality",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["high potassium", "low sodium", "hyponatremia", "hyperkalemia", "electrolyte imbalance"],
+    "acuity": "1-3",
+    "summary": "Derangement of Na, K, Ca, or Mg; acuity driven by severity, rate of change, and cardiac/neuro effects.",
+    "stages": {
+      "triage": [
+        "Vitals and capillary glucose",
+        "Identify symptoms: weakness, palpitations, confusion, seizures",
+        "Ask diuretics, renal disease, recent fluids, GI losses",
+        "ESI 1-2 if arrhythmia, severe hyperkalemia, or seizure risk"
+      ],
+      "nursing": [
+        "Cardiac monitor for potassium/calcium abnormalities",
+        "IV access",
+        "Strict I/O; seizure precautions for severe hyponatremia*",
+        "Serial neuro checks for sodium disorders*"
+      ],
+      "keyOrders": [
+        "12-lead ECG (hyperkalemia/hypokalemia/hypocalcemia changes)",
+        "Cardiac monitor",
+        "IV access",
+        "Stat repeat/confirmatory electrolyte panel"
+      ],
+      "labs": [
+        "BMP/CMP with Ca, Mg, phosphorus",
+        "VBG for rapid K confirmation*",
+        "Serum and urine osmolality + urine Na for hyponatremia workup*",
+        "Renal function, CBC",
+        "Digoxin level if on digoxin with hyperkalemia*"
+      ],
+      "imaging": [
+        "Usually none",
+        "Chest X-ray or POCUS for volume status in hyponatremia*",
+        "Imaging for underlying cause as indicated*"
+      ],
+      "meds": [
+        "Hyperkalemia: calcium gluconate 1-2 g IV (membrane stabilization), insulin 10 u IV + D50 25 g, albuterol 10-20 mg neb, +/- furosemide",
+        "Hypokalemia: KCl 10-20 mEq/h IV (monitored) or 40-60 mEq PO; replace Mg",
+        "Symptomatic severe hyponatremia: 3% hypertonic saline 100-150 mL IV bolus, correct <8-10 mEq/L/24h",
+        "Hypocalcemia: calcium gluconate IV; hypomagnesemia: magnesium sulfate 1-2 g IV*"
+      ],
+      "reassess": [
+        "Repeat ECG and electrolytes after treatment",
+        "Monitor sodium correction rate to avoid osmotic demyelination",
+        "Reassess cardiac rhythm and neuro status",
+        "Trend potassium for rebound"
+      ],
+      "disposition": [
+        "Discharge only for mild, asymptomatic, corrected abnormalities with clear cause",
+        "Admit/transfer for severe or symptomatic derangements",
+        "Transfer for hyperkalemia needing dialysis or ICU monitoring",
+        "Observe with serial labs if borderline*"
+      ],
+      "discharge": [
+        "Address cause (diet, medication adjustment)",
+        "Oral repletion instructions if mild*",
+        "Return for palpitations, weakness, confusion, or seizures",
+        "Recheck labs with provider per plan"
+      ],
+      "followup": [
+        "PCP/nephrology with repeat labs in 1-3 days",
+        "Medication reconciliation (diuretics, ACE/ARB, K supplements)",
+        "Endocrine referral for recurrent calcium/sodium disorders*"
+      ]
+    },
+    "redFlags": [
+      "ECG changes of hyperkalemia (peaked T, widened QRS, sine wave)",
+      "Severe symptomatic hyponatremia (seizure, coma)",
+      "Hyperkalemia requiring emergent dialysis",
+      "Hypocalcemia with tetany, laryngospasm, or QT prolongation",
+      "Any electrolyte-induced arrhythmia or hemodynamic instability"
+    ],
+    "compliance": [
+      "EMTALA MSE; stabilize cardiac-threatening abnormalities before transfer",
+      "Appropriate transfer for dialysis-requiring hyperkalemia or ICU-level monitoring",
+      "Observation vs transfer: severe/symptomatic cases transfer to acute hospital; document stabilizing treatment",
+      "Avoid over-rapid sodium correction; document neuro monitoring per standard of care"
+    ]
+  },
+  {
+    "id": "influenza-like-illness",
+    "name": "Influenza-like Illness",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["flu", "flu-like symptoms", "ILI", "viral syndrome", "the flu"],
+    "acuity": "3-4",
+    "summary": "Acute febrile respiratory illness (fever, cough, myalgias); identify influenza vs other viral/bacterial cause and complications.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2 and temperature",
+        "Symptom onset, exposures, vaccination status, comorbidities",
+        "Mask/respiratory isolation per protocol",
+        "ESI 2 if hypoxic, dyspneic, or high-risk decompensation"
+      ],
+      "nursing": [
+        "Place in respiratory isolation/droplet precautions",
+        "Antipyretic per protocol",
+        "Encourage oral hydration; IV if dehydrated*",
+        "Continuous SpO2 if hypoxic*"
+      ],
+      "keyOrders": [
+        "SpO2 / pulse oximetry",
+        "Influenza and COVID-19 PCR/antigen testing",
+        "IV access if dehydrated or ill-appearing*",
+        "Respiratory viral panel* if indicated"
+      ],
+      "labs": [
+        "Often none for low-risk well-appearing patients",
+        "CBC, BMP if dehydrated or high-risk*",
+        "Chest imaging-driven labs if pneumonia suspected*",
+        "Procalcitonin if bacterial superinfection considered*"
+      ],
+      "imaging": [
+        "Chest X-ray if hypoxia, focal exam, or pneumonia concern*",
+        "Generally not needed for uncomplicated ILI",
+        "Further imaging only for complications* if indicated"
+      ],
+      "meds": [
+        "Oseltamivir 75 mg PO BID x5 days if influenza + within 48 h or high-risk/severe",
+        "Acetaminophen 650-1000 mg PO/IV q6h for fever/myalgia",
+        "Ibuprofen 400-600 mg PO q6h if no contraindication*",
+        "IV fluids and antiemetic if dehydrated*"
+      ],
+      "reassess": [
+        "Recheck SpO2 and work of breathing",
+        "Reassess hydration and ability to take PO",
+        "Confirm no signs of pneumonia/secondary bacterial infection",
+        "Reassess high-risk patients for deterioration"
+      ],
+      "disposition": [
+        "Discharge if well-appearing, normoxic, tolerating PO",
+        "Admit/transfer for hypoxia, pneumonia, or decompensated comorbidity",
+        "Observe high-risk borderline patients*",
+        "Transfer if requires oxygen/inpatient respiratory support"
+      ],
+      "discharge": [
+        "Supportive care: rest, fluids, antipyretics",
+        "Antiviral course instructions if prescribed*",
+        "Return for dyspnea, chest pain, persistent high fever, or dehydration",
+        "Isolation/return-to-work guidance and droplet precautions at home"
+      ],
+      "followup": [
+        "PCP if not improving in 3-5 days or symptoms worsen",
+        "Public health reporting of influenza per surveillance*",
+        "High-risk patients close follow-up*"
+      ]
+    },
+    "redFlags": [
+      "Hypoxia (SpO2 <94%) or respiratory distress",
+      "Signs of pneumonia or secondary bacterial infection",
+      "Dehydration with inability to tolerate oral intake",
+      "Altered mental status or hemodynamic instability",
+      "High-risk host (pregnancy, immunocompromised, severe COPD/CHF) decompensating"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude pneumonia/sepsis/hypoxia before discharge",
+      "Maintain droplet/respiratory isolation per Texas FSED infection control",
+      "Observation vs transfer: hypoxic or complicated cases transfer to facility with inpatient/oxygen capability",
+      "Report influenza outbreaks/novel strains to Texas DSHS per public health rules"
+    ]
+  },
+  {
+    "id": "covid-19",
+    "name": "COVID-19",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["coronavirus", "SARS-CoV-2", "covid", "covid infection", "positive covid test"],
+    "acuity": "2-4",
+    "summary": "SARS-CoV-2 infection ranging from mild URI to hypoxemic respiratory failure and thromboembolic complications.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2 (resting and ambulatory if borderline)",
+        "Symptom onset, vaccination, risk factors, comorbidities",
+        "Place in isolation with appropriate PPE",
+        "ESI 2 if hypoxic, dyspneic, or high-risk"
+      ],
+      "nursing": [
+        "Airborne/droplet isolation per protocol",
+        "Continuous SpO2; supplemental O2 to keep SpO2 >=94%",
+        "Antipyretics per protocol",
+        "IV access if ill-appearing or needs fluids*"
+      ],
+      "keyOrders": [
+        "SpO2 and ambulatory desaturation check",
+        "COVID-19 PCR/antigen and influenza testing",
+        "Supplemental O2 if hypoxic; cardiac monitor if unstable*",
+        "IV access* if indicated"
+      ],
+      "labs": [
+        "Often none if mild/normoxic",
+        "CBC, CMP, CRP, D-dimer if moderate-severe*",
+        "Troponin, ferritin, LDH if severe*",
+        "VBG if respiratory failure*",
+        "Procalcitonin if bacterial coinfection suspected*"
+      ],
+      "imaging": [
+        "Chest X-ray if hypoxic, dyspneic, or moderate-severe*",
+        "CT pulmonary angiogram if PE suspected (elevated D-dimer, sudden hypoxia)* if indicated",
+        "Generally none for mild disease"
+      ],
+      "meds": [
+        "Supportive: acetaminophen 650-1000 mg PO/IV q6h for fever",
+        "Supplemental oxygen titrated to SpO2 >=94%",
+        "Nirmatrelvir-ritonavir (Paxlovid) 300/100 mg PO BID x5d if high-risk, early, eligible*",
+        "Dexamethasone 6 mg IV/PO daily if hypoxic requiring oxygen; consider remdesivir/anticoagulation per severity*"
+      ],
+      "reassess": [
+        "Recheck resting and ambulatory SpO2 and work of breathing",
+        "Reassess for clinical deterioration / silent hypoxia",
+        "Reassess hydration and PO tolerance",
+        "Evaluate for thromboembolic signs if sudden change"
+      ],
+      "disposition": [
+        "Discharge if normoxic, well-appearing, reliable",
+        "Admit/transfer for hypoxia, respiratory distress, or PE",
+        "Observe borderline ambulatory desaturation*",
+        "Transfer to facility with oxygen/inpatient/ICU capacity if needed"
+      ],
+      "discharge": [
+        "Home isolation guidance and symptom monitoring",
+        "Pulse oximeter use and return-if-desaturating instructions",
+        "Antiviral course adherence if prescribed*",
+        "Return for dyspnea, chest pain, SpO2 <94%, confusion, or dehydration"
+      ],
+      "followup": [
+        "PCP follow-up; telehealth monitoring for high-risk*",
+        "Public health reporting of COVID-19 per Texas DSHS",
+        "Pulmonary follow-up for severe/post-COVID symptoms*"
+      ]
+    },
+    "redFlags": [
+      "Hypoxia or silent desaturation (resting/ambulatory SpO2 <94%)",
+      "Respiratory distress or progressive dyspnea",
+      "Suspected pulmonary embolism (sudden hypoxia, pleuritic chest pain)",
+      "Hemodynamic instability or signs of MIS/cytokine storm",
+      "High-risk host with rapid clinical deterioration"
+    ],
+    "compliance": [
+      "EMTALA MSE; assess oxygenation before discharge",
+      "Maintain airborne/droplet isolation and PPE per FSED infection control",
+      "Observation vs transfer: hypoxic/severe cases transfer to hospital with oxygen and inpatient/ICU capability",
+      "Mandatory COVID-19 case reporting to Texas DSHS"
+    ]
+  },
+  {
+    "id": "foreign-body-ingestion",
+    "name": "Foreign Body Ingestion",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["swallowed object", "swallowed foreign body", "ingested object", "swallowed battery", "swallowed coin"],
+    "acuity": "2-4",
+    "summary": "Ingested object; risk stratify by type (button battery, magnets, sharp, food bolus), location, and airway compromise.",
+    "stages": {
+      "triage": [
+        "Vitals and airway assessment; assess drooling/inability to handle secretions",
+        "Identify object type, size, time, and symptoms",
+        "Flag button battery, magnets, sharp objects, or airway compromise as high acuity",
+        "ESI 1-2 if airway compromise or high-risk object"
+      ],
+      "nursing": [
+        "NPO",
+        "Upright positioning; suction available for drooling",
+        "Continuous SpO2; IV access if intervention likely*",
+        "Monitor secretions and respiratory status"
+      ],
+      "keyOrders": [
+        "NPO",
+        "IV access if endoscopy/sedation anticipated*",
+        "12-lead ECG/cardiac monitor if procedural sedation planned*",
+        "Emergent GI/ENT consult for high-risk objects or obstruction"
+      ],
+      "labs": [
+        "Usually none for simple ingestion",
+        "CBC, BMP, type and screen if surgical/perforation concern*",
+        "Coags if anticoagulated and procedure likely*"
+      ],
+      "imaging": [
+        "X-rays (neck/chest/abdomen) to localize radiopaque object",
+        "Identify button battery 'double-ring' / magnet number on imaging",
+        "CT if perforation, migration, or non-radiopaque object suspected* if indicated"
+      ],
+      "meds": [
+        "Honey 10 mL PO for button battery if <12 h and >=12 mo old, en route to emergent endoscopy*",
+        "Glucagon 1-2 mg IV for esophageal food bolus (limited evidence)*",
+        "Analgesia/antiemetic as needed (e.g., ondansetron 4 mg IV)*",
+        "Avoid blind catheter/bougie; avoid inducing vomiting"
+      ],
+      "reassess": [
+        "Reassess airway, drooling, and respiratory status frequently",
+        "Reassess pain and any signs of perforation",
+        "Confirm imaging localization guides urgency",
+        "Reassess after spontaneous passage of low-risk object*"
+      ],
+      "disposition": [
+        "Discharge low-risk blunt distal-esophageal/gastric object that is asymptomatic",
+        "Emergent transfer for button battery in esophagus, magnets, sharp object, or obstruction",
+        "Transfer if GI/ENT endoscopy or surgery unavailable at FSED",
+        "Observe pending passage of low-risk objects*"
+      ],
+      "discharge": [
+        "Diet advancement once tolerating; stool watch for object passage",
+        "Return for chest/abdominal pain, vomiting, fever, melena, or dysphagia",
+        "Strict return for any new symptoms suggesting impaction/perforation",
+        "Avoid additional ingestions; pediatric safe-storage counseling*"
+      ],
+      "followup": [
+        "GI follow-up for retained or high-risk objects",
+        "Repeat imaging to confirm passage if indicated*",
+        "PCP follow-up for symptom resolution"
+      ]
+    },
+    "redFlags": [
+      "Button battery lodged in esophagus (caustic injury - emergent removal)",
+      "Multiple magnets (bowel necrosis/perforation risk)",
+      "Sharp or long object, or signs of perforation (fever, chest/abdominal pain, crepitus)",
+      "Airway compromise, drooling, inability to handle secretions",
+      "Signs of obstruction, mediastinitis, or GI bleeding"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude airway/esophageal emergency before disposition",
+      "Emergent appropriate transfer to facility with GI/ENT/surgical endoscopy for high-risk objects",
+      "Observation vs transfer: low-risk passable objects may be observed/discharged; high-risk requires transfer",
+      "Report suspected child abuse/neglect or intentional ingestion (self-harm) per Texas mandatory reporting"
+    ]
+  },
+  {
+    "id": "lymphadenopathy",
+    "name": "Lymphadenopathy",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["swollen glands", "swollen lymph nodes", "enlarged nodes", "lump in neck", "swollen lymph"],
+    "acuity": "3-4",
+    "summary": "Enlarged lymph nodes; differentiate benign reactive/infectious from suppurative, malignant, or systemic causes.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature",
+        "Localized vs generalized; assess for airway compromise from neck mass",
+        "Ask duration, B symptoms (fever, night sweats, weight loss), exposures",
+        "ESI 2 if airway compromise, sepsis, or toxic appearance"
+      ],
+      "nursing": [
+        "IV access if systemic illness or abscess drainage planned*",
+        "Antipyretic/analgesia per protocol",
+        "Monitor airway if large neck mass*",
+        "Warm compresses for suppurative node*"
+      ],
+      "keyOrders": [
+        "Focused exam documentation (size, mobility, tenderness, location)",
+        "IV access if ill-appearing or procedure planned*",
+        "Cardiac monitor if septic*",
+        "Consult ENT/surgery for fluctuant abscess or airway threat*"
+      ],
+      "labs": [
+        "CBC with differential",
+        "CMP, LDH if malignancy concern*",
+        "Monospot/EBV, CMV, HIV, RPR per exposure history*",
+        "Bartonella, TB testing if indicated*",
+        "Blood cultures if febrile/septic*"
+      ],
+      "imaging": [
+        "Soft-tissue ultrasound of node/region (abscess vs solid)",
+        "CT neck/chest with contrast for deep/large mass or airway concern* if indicated",
+        "Chest X-ray for hilar adenopathy/systemic concern*"
+      ],
+      "meds": [
+        "Antibiotics for suppurative lymphadenitis (e.g., cephalexin 500 mg PO QID or clindamycin 300-450 mg PO QID covering MRSA if abscess)*",
+        "Acetaminophen 650-1000 mg PO q6h / ibuprofen 400-600 mg PO q6h for pain",
+        "IV antibiotics (e.g., vancomycin + ceftriaxone) if systemic/deep infection*",
+        "Incision and drainage analgesia/local anesthetic if abscess*"
+      ],
+      "reassess": [
+        "Reassess airway if neck mass and any compromise",
+        "Reassess for systemic toxicity / sepsis",
+        "Review labs/imaging for abscess vs malignancy red flags",
+        "Confirm follow-up plan for persistent nodes"
+      ],
+      "disposition": [
+        "Discharge benign reactive or drained simple abscess if stable",
+        "Admit/transfer for deep space infection, sepsis, or airway threat",
+        "Transfer if surgical drainage/ENT unavailable at FSED",
+        "Expedited outpatient workup for suspected malignancy*"
+      ],
+      "discharge": [
+        "Antibiotic course and wound care if drained*",
+        "Return for enlarging mass, fever, difficulty breathing/swallowing",
+        "Counsel that persistent/hard/fixed nodes need workup",
+        "Avoid manipulation; warm compresses if reactive*"
+      ],
+      "followup": [
+        "PCP in 2-4 weeks to reassess persistent nodes",
+        "Hematology-oncology referral if B symptoms or suspicious features*",
+        "ENT/surgery follow-up for excisional biopsy if persistent*"
+      ]
+    },
+    "redFlags": [
+      "Airway compromise from enlarging neck mass",
+      "Signs of deep neck space infection or sepsis",
+      "Hard, fixed, matted, or rapidly enlarging nodes (malignancy)",
+      "B symptoms (fever, drenching night sweats, weight loss)",
+      "Supraclavicular adenopathy (high malignancy risk)"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude airway/deep-space infection emergency",
+      "Stabilize airway and begin antibiotics before transfer for deep neck infection",
+      "Observation vs transfer: suppurative deep infections or airway threats transfer to facility with ENT/surgery",
+      "Report reportable infectious causes (e.g., TB) to Texas DSHS per public health rules"
+    ]
+  },
+  {
+    "id": "generalized-body-pain-myalgia",
+    "name": "Generalized Body Pain / Myalgia",
+    "category": "General / Metabolic / Infectious",
+    "synonyms": ["body aches", "muscle pain", "aching all over", "myalgia", "whole body pain"],
+    "acuity": "3-4",
+    "summary": "Diffuse muscle/body pain; differentiate benign viral myalgia from rhabdomyolysis, sepsis, or serious systemic disease.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature and SpO2",
+        "Ask fever, recent exertion, dark urine, statin use, trauma, toxins",
+        "Screen for infectious/sepsis features and focal neuro signs",
+        "ESI 2 if toxic, hypotensive, or rhabdomyolysis suspected"
+      ],
+      "nursing": [
+        "IV access if dehydrated or rhabdomyolysis suspected*",
+        "Antipyretic/analgesia per protocol",
+        "Strict I/O if rhabdo concern*",
+        "Continuous vitals if ill-appearing*"
+      ],
+      "keyOrders": [
+        "Capillary glucose and vitals review",
+        "IV access if labs/fluids needed*",
+        "Cardiac monitor if electrolyte/rhabdo concern*",
+        "Urinalysis to screen for myoglobinuria"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "CK (creatine kinase) if rhabdomyolysis suspected",
+        "Urinalysis (blood positive, no RBCs suggests myoglobin)",
+        "Lactate, blood cultures if septic appearance*",
+        "TSH, ESR/CRP for systemic/inflammatory causes* if indicated"
+      ],
+      "imaging": [
+        "Usually none",
+        "Chest X-ray if respiratory infection suspected*",
+        "Targeted imaging if focal pathology (e.g., necrotizing infection) suspected* if indicated"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg PO/IV q6h",
+        "Ibuprofen 400-600 mg PO q6h if no renal/GI contraindication*",
+        "IV crystalloid for dehydration or rhabdomyolysis (aggressive NS for myoglobinuria)*",
+        "Treat underlying infection/cause specifically*"
+      ],
+      "reassess": [
+        "Reassess vitals and pain control",
+        "Review CK/renal function if rhabdomyolysis suspected",
+        "Reassess for evolving sepsis or neuro findings",
+        "Confirm hydration and ability to ambulate"
+      ],
+      "disposition": [
+        "Discharge if benign viral/musculoskeletal cause and stable",
+        "Admit/transfer for significant rhabdomyolysis, AKI, or sepsis",
+        "Transfer if requires IV hydration/monitoring beyond FSED capability",
+        "Observe borderline CK or hydration cases*"
+      ],
+      "discharge": [
+        "Supportive care: rest, hydration, analgesics",
+        "Return for dark urine, decreased urination, weakness, fever, or worsening pain",
+        "Activity modification and follow-up guidance",
+        "Stop offending agent (e.g., statin) pending evaluation*"
+      ],
+      "followup": [
+        "PCP if persistent or unexplained pain",
+        "Rheumatology referral for suspected inflammatory myopathy*",
+        "Recheck CK/renal function if borderline rhabdomyolysis*"
+      ]
+    },
+    "redFlags": [
+      "Rhabdomyolysis with markedly elevated CK or acute kidney injury",
+      "Dark/tea-colored urine (myoglobinuria)",
+      "Fever with toxic appearance or sepsis features",
+      "Focal weakness or progressive neuromuscular deficit",
+      "Severe localized pain out of proportion (necrotizing infection/compartment syndrome)"
+    ],
+    "compliance": [
+      "EMTALA MSE to exclude rhabdomyolysis, sepsis, or serious systemic cause before discharge",
+      "Stabilize with IV hydration and begin treatment before any transfer",
+      "Observation vs transfer: significant rhabdomyolysis or AKI requires transfer to facility with admission/dialysis capability",
+      "Report suspected abuse or assault if injury-related myalgia points to interpersonal violence per Texas reporting"
+    ]
+  }
+]

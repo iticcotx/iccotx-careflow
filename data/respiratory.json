@@ -1,0 +1,801 @@
+[
+  {
+    "id": "shortness-of-breath-dyspnea",
+    "name": "Shortness of Breath / Dyspnea",
+    "category": "Respiratory",
+    "synonyms": ["dyspnea", "short of breath", "trouble breathing", "breathless", "air hunger", "SOB"],
+    "acuity": "2-3",
+    "summary": "Undifferentiated dyspnea spanning cardiac (ACS, CHF), pulmonary (COPD, asthma, PE, pneumonia, pneumothorax), metabolic, and anxiety etiologies.",
+    "stages": {
+      "triage": [
+        "Immediate vitals + continuous SpO2; ESI 2 if hypoxic, distressed, or unstable",
+        "Rapid look-test: accessory muscle use, tripoding, cyanosis, speaking in fragments",
+        "Brief AMPLE history: onset, exertional vs rest, orthopnea, cardiac/pulmonary risk factors",
+        "Apply O2 to keep SpO2 >=94% (>=88-92% if COPD risk)"
+      ],
+      "nursing": [
+        "Position upright; reassure",
+        "Continuous cardiac + pulse ox monitoring",
+        "Establish IV access; draw labs",
+        "Capture vitals q15min until stabilized",
+        "Strict I/O if CHF suspected"
+      ],
+      "keyOrders": [
+        "Cardiac monitor + continuous pulse oximetry",
+        "12-lead ECG within 10 min",
+        "IV access x1-2 (18g)",
+        "Supplemental O2 titrated to target SpO2",
+        "Portable CXR",
+        "NPO pending workup* if indicated"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "BNP or NT-proBNP",
+        "Troponin (serial)",
+        "VBG/ABG if respiratory failure suspected",
+        "D-dimer* if indicated (low/intermediate PE probability)",
+        "Lactate if sepsis suspected"
+      ],
+      "imaging": [
+        "Portable chest x-ray (initial)",
+        "Bedside POCUS lung/cardiac/IVC (B-lines, effusion, EF, RV strain)",
+        "CT pulmonary angiogram* if indicated (suspected PE)",
+        "CT chest* if indicated"
+      ],
+      "meds": [
+        "Albuterol 2.5 mg + ipratropium 0.5 mg nebulized* if indicated (bronchospasm)",
+        "Furosemide 40 mg IV* if indicated (acute CHF; double home dose)",
+        "Nitroglycerin 0.4 mg SL or IV drip* if indicated (CHF/HTN, SBP >100)",
+        "Aspirin 324 mg PO chewed* if indicated (suspected ACS)",
+        "Empiric antibiotics* if indicated (pneumonia/sepsis)"
+      ],
+      "reassess": [
+        "Reassess work of breathing + SpO2 after each intervention",
+        "Trend serial ECG and troponin if ACS plausible",
+        "Escalate to BiPAP if worsening hypercarbia/hypoxia",
+        "Reframe differential as data returns"
+      ],
+      "disposition": [
+        "Admit/transfer if hypoxic, ACS, decompensated CHF, or new O2 requirement",
+        "Observation for borderline responders",
+        "Discharge only if etiology benign, ambulatory SpO2 normal, reliable follow-up"
+      ],
+      "discharge": [
+        "Clear etiology-specific instructions and inhaler/med teaching",
+        "Strict return precautions for worsening dyspnea, chest pain, syncope",
+        "Confirm home O2 not needed (ambulatory SpO2 check)"
+      ],
+      "followup": [
+        "PCP or cardiology/pulmonology within 24-72h",
+        "Echo or PFTs as outpatient if indicated"
+      ]
+    },
+    "redFlags": [
+      "SpO2 <90% despite O2 or rising CO2 / impending respiratory failure",
+      "Hypotension, altered mental status, or silent chest",
+      "Ischemic ECG changes or positive troponin",
+      "Stridor, unilateral absent breath sounds (tension pneumothorax)"
+    ],
+    "compliance": [
+      "EMTALA medical screening exam before any inquiry into payment; stabilize hypoxia/airway first",
+      "FSED must stabilize then arrange appropriate transfer (accepting facility, report, qualified personnel/equipment) for ICU-level or interventional needs",
+      "Document observation-vs-transfer rationale and ambulatory SpO2 if discharging",
+      "Texas FSEDs must post mandatory consumer/insurance disclosures and provide them at presentation"
+    ]
+  },
+  {
+    "id": "cough",
+    "name": "Cough",
+    "category": "Respiratory",
+    "synonyms": ["coughing", "hacking cough", "chronic cough", "productive cough", "dry cough"],
+    "acuity": "3-4",
+    "summary": "Acute vs chronic cough; differentiate benign viral/post-nasal/GERD from pneumonia, TB, PE, CHF, or malignancy.",
+    "stages": {
+      "triage": [
+        "Vitals incl SpO2 and temperature",
+        "Duration (acute <3wk vs chronic), fever, hemoptysis, weight loss, TB risk/travel",
+        "Mask patient if febrile cough or TB concern; place in respiratory isolation if indicated",
+        "ESI 4 if well-appearing/afebrile; escalate if hypoxic or toxic"
+      ],
+      "nursing": [
+        "Pulse oximetry",
+        "Offer mask and tissues; hand hygiene",
+        "IV/labs only if systemic illness suspected",
+        "Reassess if febrile or distressed"
+      ],
+      "keyOrders": [
+        "Pulse oximetry",
+        "Respiratory droplet/airborne isolation* if indicated (TB/COVID/flu)",
+        "CXR* if indicated (focal findings, fever, hemoptysis, smoker, >3wk)",
+        "12-lead ECG* if indicated (cough with cardiac features)"
+      ],
+      "labs": [
+        "Usually none for simple acute cough",
+        "Respiratory viral / influenza / COVID PCR* if indicated",
+        "CBC, CMP* if indicated (toxic appearance)",
+        "Sputum AFB x3* if indicated (TB suspicion)"
+      ],
+      "imaging": [
+        "Chest x-ray* if indicated (abnormal exam, hemoptysis, chronic, immunocompromised)",
+        "CT chest* if indicated (suspected malignancy/persistent infiltrate)"
+      ],
+      "meds": [
+        "Dextromethorphan 10-20 mg PO q4h prn (symptomatic)",
+        "Guaifenesin 200-400 mg PO q4h prn (expectorant)",
+        "Albuterol inhaler 2 puffs q4-6h prn* if indicated (bronchospastic/post-viral)",
+        "Intranasal fluticasone* if indicated (post-nasal drip)",
+        "Antibiotics only if bacterial pneumonia/pertussis confirmed* if indicated"
+      ],
+      "reassess": [
+        "Reassess SpO2 and work of breathing",
+        "Confirm no red-flag features before discharge",
+        "Review CXR if obtained"
+      ],
+      "disposition": [
+        "Discharge most simple acute cough",
+        "Admit/transfer if pneumonia with hypoxia, hemoptysis, or systemic toxicity",
+        "Isolation/public-health pathway if active TB suspected"
+      ],
+      "discharge": [
+        "Antibiotic stewardship counseling (most acute cough is viral)",
+        "Smoking cessation resources if smoker",
+        "Return for hemoptysis, dyspnea, high fever, or cough >3 weeks"
+      ],
+      "followup": [
+        "PCP within 1-2 weeks for chronic/persistent cough",
+        "Pulmonology referral if chronic or abnormal imaging"
+      ]
+    },
+    "redFlags": [
+      "Hemoptysis, unintentional weight loss, or night sweats",
+      "Hypoxia or focal consolidation",
+      "Cough with syncope or chest pain suggesting cardiac/PE cause",
+      "Immunocompromised host with new infiltrate"
+    ],
+    "compliance": [
+      "EMTALA MSE for all; assess and stabilize hypoxia before discharge",
+      "Suspected active tuberculosis is a reportable condition to Texas DSHS / local health authority; initiate airborne precautions and report",
+      "Report reportable communicable diseases (e.g., pertussis, novel influenza) per Texas notifiable conditions list",
+      "Document stewardship rationale; arrange appropriate transfer if isolation-level admission cannot be provided at FSED"
+    ]
+  },
+  {
+    "id": "hemoptysis",
+    "name": "Hemoptysis",
+    "category": "Respiratory",
+    "synonyms": ["coughing up blood", "blood in sputum", "bloody phlegm", "spitting blood"],
+    "acuity": "2-3",
+    "summary": "Coughing blood ranging from blood-streaked sputum to massive hemoptysis; etiologies include infection, malignancy, PE, bronchiectasis, and coagulopathy.",
+    "stages": {
+      "triage": [
+        "Estimate volume; massive (>=100-200 mL/24h or hemodynamic compromise) = ESI 1-2",
+        "Vitals + SpO2; assess airway patency",
+        "Position bleeding-side down if lateralizing source known",
+        "Mask/isolate if TB risk"
+      ],
+      "nursing": [
+        "Continuous cardiac + pulse ox monitoring",
+        "Two large-bore IVs; type & screen",
+        "Suction at bedside; airway cart available",
+        "Strict quantification of expectorated blood",
+        "Prepare for possible intubation"
+      ],
+      "keyOrders": [
+        "Cardiac monitor + continuous pulse oximetry",
+        "Two large-bore IVs (16-18g)",
+        "Type & crossmatch* if indicated (significant bleed)",
+        "Supplemental O2",
+        "NPO",
+        "Airway / difficult-airway equipment at bedside"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "PT/INR, PTT, fibrinogen",
+        "Type & screen/cross",
+        "Sputum AFB/culture* if indicated (TB/infection)",
+        "D-dimer / PE workup* if indicated"
+      ],
+      "imaging": [
+        "Chest x-ray (initial localization)",
+        "CT chest with contrast / CT angiography (source and cause)",
+        "CTPA* if indicated (suspected PE)"
+      ],
+      "meds": [
+        "Reverse anticoagulation* if indicated (vitamin K 10 mg IV, PCC, FFP per agent)",
+        "Tranexamic acid 1 g IV or 500 mg-1 g nebulized* if indicated",
+        "Antibiotics* if indicated (infectious source)",
+        "Cough suppressant (codeine 10-20 mg PO)* if indicated (minor hemoptysis)",
+        "Blood products to transfusion targets* if indicated"
+      ],
+      "reassess": [
+        "Continuously reassess airway and bleeding rate",
+        "Trend Hgb and vitals",
+        "Early consult IR/bronchoscopy/thoracic surgery for massive bleed",
+        "Low threshold to intubate to protect airway"
+      ],
+      "disposition": [
+        "Massive or ongoing hemoptysis: stabilize and transfer to facility with IR/bronchoscopy/thoracic surgery",
+        "Admit moderate hemoptysis or concerning imaging",
+        "Discharge only minor blood-streaking with benign cause and reliable follow-up"
+      ],
+      "discharge": [
+        "Strict return precautions for increasing blood volume or dyspnea",
+        "Smoking cessation counseling",
+        "Ensure outpatient imaging/scope is scheduled"
+      ],
+      "followup": [
+        "Pulmonology within 1-2 weeks (bronchoscopy/CT correlation)",
+        "Oncology referral if malignancy suspected"
+      ]
+    },
+    "redFlags": [
+      "Massive hemoptysis (>=100-200 mL/24h) or hemodynamic instability",
+      "Hypoxia or inability to clear airway",
+      "Anticoagulated or coagulopathic patient",
+      "Suspected active TB or malignancy"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; FSED lacks bronchoscopy/IR/OR so massive hemoptysis requires emergent appropriate transfer after airway/hemodynamic stabilization",
+      "Document transfer acceptance, mode, and risk-benefit; send copies of imaging/labs",
+      "Suspected active TB is reportable to Texas DSHS; institute airborne isolation",
+      "Capacity assessment: FSED is freestanding (no on-site OR/ICU); arrange higher level of care proactively"
+    ]
+  },
+  {
+    "id": "asthma-exacerbation",
+    "name": "Asthma Exacerbation",
+    "category": "Respiratory",
+    "synonyms": ["asthma attack", "reactive airway flare", "wheezing", "bronchospasm", "asthma flare"],
+    "acuity": "2-3",
+    "summary": "Acute reversible bronchospasm; severity-stratified treatment per GINA/NAEPP with early bronchodilators and systemic steroids.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; assess severity (speech, accessory muscles, RR)",
+        "ESI 2 if severe distress, SpO2 <90%, or silent chest (ESI 1 if peri-arrest)",
+        "Peak flow if able (% predicted/personal best)",
+        "Begin O2 to keep SpO2 >=94%"
+      ],
+      "nursing": [
+        "Continuous pulse oximetry +/- cardiac monitor",
+        "Position upright; coach breathing",
+        "Establish IV access for moderate-severe",
+        "Reassess after each bronchodilator treatment"
+      ],
+      "keyOrders": [
+        "Continuous pulse oximetry",
+        "Supplemental O2 titrated to SpO2 >=94%",
+        "Immediate nebulized bronchodilators",
+        "IV access* if indicated (moderate-severe)",
+        "Cardiac monitor* if indicated (severe/IV beta-agonist)"
+      ],
+      "labs": [
+        "Usually none for mild-moderate",
+        "VBG/ABG* if indicated (severe, fatigue, rising CO2)",
+        "CBC/CMP* if indicated",
+        "CXR* if indicated (focal findings, fever, first presentation)"
+      ],
+      "imaging": [
+        "Chest x-ray* if indicated (suspected pneumonia, pneumothorax, or atypical)"
+      ],
+      "meds": [
+        "Albuterol 2.5-5 mg + ipratropium 0.5 mg nebulized; continuous neb if severe",
+        "Prednisone 40-60 mg PO or methylprednisolone 125 mg IV",
+        "Magnesium sulfate 2 g IV over 20 min* if indicated (severe)",
+        "Epinephrine 0.3-0.5 mg IM* if indicated (near-fatal/no air movement)",
+        "Terbutaline or IV/SC beta-agonist* if indicated (refractory)"
+      ],
+      "reassess": [
+        "Reassess RR, SpO2, peak flow, work of breathing after each treatment",
+        "Watch for fatigue/rising CO2 signaling failure",
+        "Trial BiPAP* if indicated; prepare for intubation if deteriorating",
+        "Determine response category (good/incomplete/poor)"
+      ],
+      "disposition": [
+        "Discharge if sustained good response, SpO2 >=94% RA, peak flow >=70% predicted",
+        "Observe incomplete responders 1-3h post-steroid",
+        "Admit/transfer poor responders, hypercarbia, or need for ICU/BiPAP"
+      ],
+      "discharge": [
+        "Prednisone 40-60 mg daily x5 days (or burst)",
+        "Resume/initiate inhaled corticosteroid + reliever; review technique",
+        "Written asthma action plan and return precautions"
+      ],
+      "followup": [
+        "PCP/asthma follow-up within 2-7 days",
+        "Pulmonology if frequent/severe exacerbations"
+      ]
+    },
+    "redFlags": [
+      "Silent chest, exhaustion, or altered mental status",
+      "SpO2 <90% or rising/normalizing PaCO2 with fatigue",
+      "Inability to speak, cyanosis, or bradycardia",
+      "Poor response to maximal therapy"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization regardless of payment",
+      "FSED can fully treat most exacerbations; status asthmaticus needing ICU/intubation/BiPAP-not-available requires stabilization and appropriate transfer",
+      "Document response, ambulatory SpO2, and action plan if discharging",
+      "Provide Texas-required FSED billing/insurance disclosures"
+    ]
+  },
+  {
+    "id": "copd-exacerbation",
+    "name": "COPD Exacerbation",
+    "category": "Respiratory",
+    "synonyms": ["AECOPD", "emphysema flare", "chronic bronchitis exacerbation", "COPD flare"],
+    "acuity": "2-3",
+    "summary": "Acute worsening of dyspnea/sputum in COPD; GOLD-guided bronchodilators, steroids, antibiotics, and controlled oxygen with NIV for hypercapnic failure.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; titrate O2 to target 88-92% to avoid CO2 narcosis",
+        "ESI 2 if severe distress/hypercarbia signs; ESI 1 if obtunded",
+        "Assess sputum change, fever, cardiac comorbidity",
+        "Look for accessory muscle use, pursed-lip breathing"
+      ],
+      "nursing": [
+        "Continuous cardiac + pulse ox monitoring",
+        "Controlled O2 (Venturi/NC) to SpO2 88-92%",
+        "IV access; draw labs",
+        "Prepare NIV (BiPAP) setup"
+      ],
+      "keyOrders": [
+        "Cardiac monitor + continuous pulse oximetry",
+        "Controlled supplemental O2 (target SpO2 88-92%)",
+        "12-lead ECG",
+        "IV access",
+        "Portable CXR",
+        "BiPAP at bedside* if indicated (hypercapnic failure)"
+      ],
+      "labs": [
+        "VBG/ABG (assess CO2/pH)",
+        "CBC, CMP",
+        "BNP* if indicated (differentiate CHF)",
+        "Troponin* if indicated",
+        "Respiratory viral panel* if indicated"
+      ],
+      "imaging": [
+        "Chest x-ray (rule out pneumonia, pneumothorax, CHF)",
+        "Bedside POCUS* if indicated (cardiac/lung)",
+        "CTPA* if indicated (suspected PE)"
+      ],
+      "meds": [
+        "Albuterol 2.5 mg + ipratropium 0.5 mg nebulized, repeat q20min prn",
+        "Prednisone 40 mg PO daily x5 days (or methylprednisolone 125 mg IV)",
+        "Antibiotic (azithromycin 500 mg or doxycycline 100 mg BID, or amox-clav) for increased/purulent sputum",
+        "Magnesium sulfate 2 g IV* if indicated (severe bronchospasm)",
+        "BiPAP for respiratory acidosis (pH <7.35, rising CO2)* if indicated"
+      ],
+      "reassess": [
+        "Reassess work of breathing, SpO2, mental status",
+        "Repeat VBG after NIV initiation",
+        "Watch for CO2 narcosis with over-oxygenation",
+        "Escalate to intubation if NIV fails or patient obtunded"
+      ],
+      "disposition": [
+        "Discharge mild exacerbation with good response and baseline O2 status",
+        "Admit/transfer for hypercarbia, NIV need, hypoxia, or comorbid decompensation",
+        "Observe borderline responders"
+      ],
+      "discharge": [
+        "Steroid course + antibiotics as prescribed; inhaler technique review",
+        "Smoking cessation counseling and resources",
+        "Confirm home O2 plan; strict return precautions for worsening dyspnea/confusion"
+      ],
+      "followup": [
+        "PCP/pulmonology within 1-2 weeks",
+        "Pulmonary rehab and vaccination (influenza, pneumococcal) referral"
+      ]
+    },
+    "redFlags": [
+      "Worsening hypercapnia, respiratory acidosis, or altered mental status",
+      "Failure of/intolerance to NIV",
+      "Hemodynamic instability or new arrhythmia",
+      "SpO2 persistently below patient baseline despite controlled O2"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; controlled oxygenation begun before transfer discussion",
+      "FSED must arrange appropriate transfer for ICU-level/prolonged NIV or intubated patients (accepting MD, qualified transport)",
+      "Document O2 titration rationale and observation-vs-transfer decision",
+      "Report reportable respiratory infections (e.g., influenza outbreaks, TB) per Texas DSHS"
+    ]
+  },
+  {
+    "id": "pneumonia",
+    "name": "Pneumonia",
+    "category": "Respiratory",
+    "synonyms": ["lung infection", "chest infection", "CAP", "community-acquired pneumonia", "lower respiratory infection"],
+    "acuity": "2-3",
+    "summary": "Lower respiratory tract infection; risk-stratify with CURB-65/PSI and screen for sepsis to guide antibiotics and disposition.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; screen for sepsis (qSOFA/SIRS)",
+        "ESI 2 if hypoxic/septic; ESI 3 if stable",
+        "Mask if febrile cough; isolate if TB/COVID risk",
+        "Calculate CURB-65 risk"
+      ],
+      "nursing": [
+        "Continuous pulse oximetry +/- cardiac monitor",
+        "IV access; draw labs incl lactate if septic",
+        "Supplemental O2 to SpO2 >=94% (88-92% if COPD)",
+        "Obtain cultures before antibiotics if feasible"
+      ],
+      "keyOrders": [
+        "Pulse oximetry +/- cardiac monitor",
+        "IV access",
+        "Supplemental O2 titrated to target",
+        "Portable CXR",
+        "Blood cultures x2 before antibiotics* if indicated (severe/septic)",
+        "Sepsis bundle activation* if indicated"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "Lactate (if sepsis criteria)",
+        "Blood cultures x2* if indicated",
+        "Respiratory viral / COVID / influenza PCR* if indicated",
+        "Sputum gram stain & culture* if indicated",
+        "Procalcitonin* if indicated"
+      ],
+      "imaging": [
+        "Chest x-ray (PA/lateral or portable)",
+        "Bedside lung POCUS* if indicated",
+        "CT chest* if indicated (complication, equivocal, immunocompromised)"
+      ],
+      "meds": [
+        "Outpatient CAP: amoxicillin 1 g TID or doxycycline 100 mg BID (+/- macrolide per risk)",
+        "Inpatient CAP: ceftriaxone 1-2 g IV + azithromycin 500 mg IV (or respiratory fluoroquinolone)",
+        "30 mL/kg balanced crystalloid for sepsis-induced hypoperfusion* if indicated",
+        "Antipyretics: acetaminophen 1 g PO/IV",
+        "Antivirals (oseltamivir 75 mg BID)* if indicated (influenza)"
+      ],
+      "reassess": [
+        "Reassess vitals and lactate after fluids/antibiotics",
+        "Confirm timely antibiotic administration",
+        "Reassess O2 requirement and work of breathing",
+        "Re-stratify disposition with CURB-65/clinical course"
+      ],
+      "disposition": [
+        "Discharge low-risk (CURB-65 0-1) with reliable follow-up and normal SpO2",
+        "Admit/transfer CURB-65 >=2, hypoxia, sepsis, or comorbidity",
+        "ICU-level (septic shock, respiratory failure): stabilize and transfer"
+      ],
+      "discharge": [
+        "Complete oral antibiotic course; antipyretics; hydration",
+        "Return precautions for worsening dyspnea, persistent fever, confusion",
+        "Confirm ambulatory SpO2 acceptable before discharge"
+      ],
+      "followup": [
+        "PCP within 48-72h to confirm improvement",
+        "Repeat CXR in 6-8 weeks for smokers/>50 to ensure resolution"
+      ]
+    },
+    "redFlags": [
+      "Septic shock, hypotension, or lactate >2-4",
+      "SpO2 <90% / respiratory failure",
+      "Altered mental status or multilobar involvement",
+      "Immunocompromise or failure to respond to therapy"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; begin sepsis bundle and antibiotics before transfer when indicated",
+      "FSED stabilizes and arranges appropriate transfer for admission/ICU (accepting facility, antibiotics started, records sent)",
+      "Report reportable pneumonias/pathogens (TB, Legionella, novel influenza, COVID per current rules) to Texas DSHS",
+      "Document CURB-65, O2 status, first-dose antibiotic time, and disposition rationale"
+    ]
+  },
+  {
+    "id": "upper-respiratory-infection",
+    "name": "Upper Respiratory Infection",
+    "category": "Respiratory",
+    "synonyms": ["URI", "common cold", "head cold", "viral URI", "sinus congestion", "sore throat with congestion"],
+    "acuity": "4-5",
+    "summary": "Self-limited viral infection of nose/throat/sinuses; goal is symptom relief, stewardship, and excluding bacterial or serious mimics.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; usually ESI 4-5 if well-appearing",
+        "Screen for red flags: dyspnea, drooling, stridor, neck stiffness",
+        "Mask patient; hand hygiene",
+        "Brief symptom and duration history"
+      ],
+      "nursing": [
+        "Pulse oximetry if any respiratory complaint",
+        "Comfort measures (fluids, lozenges)",
+        "No routine IV/labs",
+        "Reassess if febrile/toxic"
+      ],
+      "keyOrders": [
+        "Pulse oximetry (single)",
+        "Rapid strep / influenza / COVID test* if indicated",
+        "No imaging routinely",
+        "Throat exam to exclude peritonsillar abscess/epiglottitis"
+      ],
+      "labs": [
+        "Generally none",
+        "Rapid strep + reflex culture* if indicated (Centor criteria)",
+        "Influenza / COVID PCR* if indicated",
+        "Monospot* if indicated (suspected mononucleosis)"
+      ],
+      "imaging": [
+        "None routinely",
+        "Soft-tissue neck x-ray or CT* if indicated (suspected abscess/epiglottitis)"
+      ],
+      "meds": [
+        "Acetaminophen 650-1000 mg PO q6h or ibuprofen 400-600 mg PO q6h prn",
+        "Saline nasal spray and oral hydration",
+        "Pseudoephedrine 30-60 mg PO q4-6h or intranasal oxymetazoline (<=3 days)* if indicated",
+        "Throat lozenges / benzocaine spray for sore throat",
+        "Oseltamivir 75 mg PO BID x5d* if indicated (early influenza, high risk)"
+      ],
+      "reassess": [
+        "Confirm no airway/red-flag features before discharge",
+        "Reassess hydration and ability to tolerate PO",
+        "Review any rapid test results"
+      ],
+      "disposition": [
+        "Discharge nearly all uncomplicated URIs",
+        "Reconsider/admit if bacterial complication, dehydration, or airway concern",
+        "Transfer if deep-space neck infection or epiglottitis suspected"
+      ],
+      "discharge": [
+        "Antibiotic stewardship counseling (viral, no antibiotics)",
+        "Symptom timeline (typically 7-10 days) and supportive care",
+        "Return for difficulty breathing/swallowing, high or prolonged fever, neck swelling"
+      ],
+      "followup": [
+        "PCP if symptoms persist >10 days or worsen",
+        "ENT referral for recurrent/complicated cases"
+      ]
+    },
+    "redFlags": [
+      "Stridor, drooling, muffled voice, or tripoding (epiglottitis)",
+      "Trismus or unilateral severe sore throat (peritonsillar abscess)",
+      "Neck stiffness, severe headache, or rash (meningitis)",
+      "Hypoxia or significant dyspnea"
+    ],
+    "compliance": [
+      "EMTALA MSE for every patient even for minor complaints before any payment discussion",
+      "Document stewardship counseling; avoid unnecessary antibiotics",
+      "Report notifiable infections (influenza of public-health concern, COVID per current rules) to Texas DSHS",
+      "Airway emergencies (epiglottitis) require stabilization and appropriate transfer to facility with airway/ENT/OR capability"
+    ]
+  },
+  {
+    "id": "pleuritic-chest-pain",
+    "name": "Pleuritic Chest Pain",
+    "category": "Respiratory",
+    "synonyms": ["chest pain worse with breathing", "stabbing chest pain", "pleurisy", "sharp chest pain", "breathing chest pain"],
+    "acuity": "2-3",
+    "summary": "Sharp, respirophasic chest pain; must exclude PE, pneumothorax, ACS, pericarditis, and pneumonia before attributing to musculoskeletal/pleuritic cause.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; ESI 2 if abnormal vitals/hypoxia, ESI 3 if stable",
+        "Screen PE risk (Wells/PERC), trauma, dyspnea, fever",
+        "12-lead ECG within 10 min",
+        "Apply O2 if hypoxic"
+      ],
+      "nursing": [
+        "Cardiac monitor + continuous pulse oximetry",
+        "IV access; draw labs",
+        "Position of comfort",
+        "Reassess pain and vitals"
+      ],
+      "keyOrders": [
+        "12-lead ECG within 10 min",
+        "Cardiac monitor + continuous pulse oximetry",
+        "IV access",
+        "Portable CXR",
+        "Supplemental O2* if indicated"
+      ],
+      "labs": [
+        "Troponin (serial)* if indicated (cardiac concern)",
+        "D-dimer* if indicated (low/intermediate PE probability, PERC-positive)",
+        "CBC, CMP",
+        "VBG* if indicated",
+        "Inflammatory markers* if indicated (pericarditis)"
+      ],
+      "imaging": [
+        "Chest x-ray (pneumothorax, infiltrate, effusion)",
+        "Bedside POCUS lung/cardiac* if indicated",
+        "CTPA* if indicated (suspected PE)",
+        "Echocardiogram* if indicated (pericarditis/effusion)"
+      ],
+      "meds": [
+        "Ibuprofen 400-600 mg PO q6h or naproxen 500 mg PO BID (musculoskeletal/pleuritic)",
+        "Acetaminophen 1 g PO* if indicated",
+        "Colchicine 0.6 mg PO BID + NSAID* if indicated (pericarditis)",
+        "Anticoagulation* if indicated (confirmed PE - enoxaparin 1 mg/kg SC or heparin)",
+        "Aspirin 324 mg* if indicated (suspected ACS)"
+      ],
+      "reassess": [
+        "Reassess ECG/troponin if cardiac concern persists",
+        "Reassess SpO2 and hemodynamics",
+        "Confirm life-threats excluded before benign label",
+        "Document PE risk-stratification reasoning"
+      ],
+      "disposition": [
+        "Discharge benign musculoskeletal/viral pleuritic pain with workup negative",
+        "Admit/transfer for PE, pneumothorax, ACS, or large effusion",
+        "Observe for serial troponins if intermediate cardiac risk"
+      ],
+      "discharge": [
+        "NSAID schedule and activity guidance",
+        "Strict return precautions for dyspnea, syncope, worsening or radiating pain",
+        "Document negative life-threat workup"
+      ],
+      "followup": [
+        "PCP within 3-5 days",
+        "Cardiology/pulmonology if indicated"
+      ]
+    },
+    "redFlags": [
+      "Hypoxia, tachycardia, or hypotension (PE/tension pneumothorax)",
+      "Ischemic ECG changes or positive troponin",
+      "Sudden severe pain with unilateral absent breath sounds",
+      "Syncope or signs of tamponade (muffled tones, JVD, hypotension)"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; exclude emergent cardiopulmonary causes before discharge",
+      "FSED arranges appropriate transfer for PE requiring thrombolysis/IR, large pneumothorax needing chest tube/surgery, or ACS needing cath",
+      "Document risk-stratification (Wells/PERC/HEART) and shared decision-making",
+      "Provide required Texas FSED disclosures"
+    ]
+  },
+  {
+    "id": "suspected-pulmonary-embolism",
+    "name": "Suspected Pulmonary Embolism",
+    "category": "Respiratory",
+    "synonyms": ["PE", "blood clot in lung", "pulmonary embolus", "suspected clot", "VTE"],
+    "acuity": "2",
+    "summary": "Suspected venous thromboembolism to the pulmonary arteries; risk-stratify with Wells/PERC, confirm with CTPA, and assess hemodynamic stability for thrombolysis.",
+    "stages": {
+      "triage": [
+        "Vitals + SpO2; ESI 2 (ESI 1 if hypotensive/arrest)",
+        "Apply continuous monitoring and O2 to SpO2 >=94%",
+        "Calculate Wells score; apply PERC if low-risk",
+        "Screen for hemodynamic instability"
+      ],
+      "nursing": [
+        "Continuous cardiac + pulse ox monitoring",
+        "Two IVs; draw labs",
+        "Frequent BP/vitals (watch for obstructive shock)",
+        "Prepare for possible thrombolysis/code"
+      ],
+      "keyOrders": [
+        "Cardiac monitor + continuous pulse oximetry",
+        "12-lead ECG (S1Q3T3, RV strain, sinus tach)",
+        "Two IV lines",
+        "Supplemental O2 titrated to target",
+        "CTPA (or V/Q if contrast contraindicated)"
+      ],
+      "labs": [
+        "D-dimer (if Wells low/intermediate and not PERC-negative)",
+        "Troponin + BNP (RV strain/risk stratification)",
+        "CBC, CMP",
+        "PT/INR, PTT (baseline before anticoagulation)",
+        "VBG/lactate* if indicated"
+      ],
+      "imaging": [
+        "CT pulmonary angiogram (confirmatory)",
+        "V/Q scan* if indicated (contrast allergy/renal failure)",
+        "Bedside echo/POCUS for RV strain (massive PE)",
+        "Lower-extremity venous duplex* if indicated"
+      ],
+      "meds": [
+        "Therapeutic anticoagulation: enoxaparin 1 mg/kg SC q12h or UFH bolus 80 U/kg then 18 U/kg/h",
+        "Apixaban 10 mg PO BID* if indicated (confirmed low-risk PE)",
+        "Thrombolytic (alteplase 100 mg IV over 2h)* if indicated (massive PE / arrest)",
+        "Norepinephrine for obstructive shock* if indicated",
+        "Cautious fluid bolus 250-500 mL* if indicated (avoid RV overload)"
+      ],
+      "reassess": [
+        "Reassess hemodynamics frequently; escalate for shock",
+        "Risk-stratify (sPESI, RV strain, troponin) to guide disposition",
+        "Initiate empiric anticoagulation if high pretest probability and no contraindication while awaiting CTPA",
+        "Reassess oxygenation and perfusion"
+      ],
+      "disposition": [
+        "Admit confirmed PE; ICU/transfer for massive/submassive PE",
+        "Stabilize and transfer if thrombolysis/embolectomy/ECMO needed and unavailable",
+        "Outpatient anticoagulation* if indicated (low-risk sPESI 0, shared decision, reliable follow-up)"
+      ],
+      "discharge": [
+        "Anticoagulant teaching, dosing, adherence, bleeding precautions",
+        "Strict return for worsening dyspnea, chest pain, syncope, bleeding",
+        "Confirm low-risk criteria and prompt follow-up before any discharge"
+      ],
+      "followup": [
+        "Anticoagulation clinic / PCP within 24-72h",
+        "Hematology if unprovoked/recurrent VTE"
+      ]
+    },
+    "redFlags": [
+      "Hypotension/obstructive shock (massive PE)",
+      "Hypoxia refractory to O2 or syncope",
+      "RV strain on echo/ECG with elevated troponin (submassive)",
+      "Cardiac arrest or peri-arrest state"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; begin anticoagulation/resuscitation before transfer when indicated",
+      "FSED must stabilize and arrange appropriate transfer for massive/submassive PE needing thrombolysis, IR, embolectomy, or ICU (accepting MD, qualified transport)",
+      "Document Wells/PERC/sPESI, contraindications to anticoagulation, and shared decision-making",
+      "Observation-vs-transfer: low-risk confirmed PE may be candidate for transfer to admitting facility vs outpatient pathway per protocol"
+    ]
+  },
+  {
+    "id": "airway-foreign-body",
+    "name": "Airway Foreign Body",
+    "category": "Respiratory",
+    "synonyms": ["choking", "aspirated object", "foreign body aspiration", "object stuck in throat", "FB airway"],
+    "acuity": "1-2",
+    "summary": "Aspirated or impacted airway foreign body; ranges from complete obstruction (true emergency) to partial obstruction or distal lodgment requiring bronchoscopy.",
+    "stages": {
+      "triage": [
+        "Immediate airway assessment; complete obstruction = ESI 1",
+        "Assess air movement, stridor, phonation, cyanosis, SpO2",
+        "If complete obstruction and conscious: abdominal thrusts immediately",
+        "If unconscious: begin CPR, inspect airway on ventilations"
+      ],
+      "nursing": [
+        "Continuous cardiac + pulse ox monitoring",
+        "Bring difficult-airway/code cart and suction to bedside",
+        "Establish IV access",
+        "Position of comfort for partial obstruction; do not agitate",
+        "Have Magill forceps and laryngoscope ready"
+      ],
+      "keyOrders": [
+        "Continuous pulse oximetry + cardiac monitor",
+        "Supplemental O2 / prepare bag-valve-mask",
+        "IV access",
+        "Difficult-airway equipment + Magill forceps at bedside",
+        "Direct laryngoscopy for visualized FB removal* if indicated",
+        "NPO"
+      ],
+      "labs": [
+        "Generally deferred during active obstruction",
+        "VBG/ABG* if indicated (post-stabilization)",
+        "CBC, CMP* if indicated (pre-procedure)"
+      ],
+      "imaging": [
+        "Soft-tissue neck and chest x-ray (inspiratory/expiratory) once stable",
+        "CT neck/chest* if indicated (radiolucent FB, localization)",
+        "Bedside laryngoscopy for direct visualization* if indicated"
+      ],
+      "meds": [
+        "Nebulized racemic epinephrine* if indicated (laryngeal edema post-manipulation)",
+        "Dexamethasone 10 mg IV* if indicated (airway edema)",
+        "Procedural sedation/RSI agents (etomidate, ketamine, succinylcholine/rocuronium)* if indicated (definitive airway)",
+        "Heliox* if indicated (partial upper airway obstruction, temporizing)"
+      ],
+      "reassess": [
+        "Continuously reassess air movement, SpO2, and phonation",
+        "Confirm FB removal vs distal migration",
+        "Anticipate post-obstructive edema and complications",
+        "Early ENT/pulmonary/anesthesia consultation for bronchoscopy"
+      ],
+      "disposition": [
+        "Stabilize airway then transfer for rigid/flexible bronchoscopy or OR removal if FB distal/not retrievable",
+        "Admit/observe for airway edema after removal",
+        "Discharge only if FB cleared, airway normal, and observation uneventful"
+      ],
+      "discharge": [
+        "Counsel on aspiration prevention",
+        "Return immediately for dyspnea, stridor, fever, or recurrent symptoms",
+        "Document complete resolution and normal post-removal exam"
+      ],
+      "followup": [
+        "ENT/pulmonology follow-up if bronchoscopy performed or suspected retained FB",
+        "PCP for post-obstructive pneumonia monitoring"
+      ]
+    },
+    "redFlags": [
+      "Complete obstruction: no air movement, aphonia, cyanosis (immediate intervention)",
+      "Stridor, drooling, or progressive respiratory distress",
+      "Hypoxia or altered mental status",
+      "Distal FB not removable at bedside (needs bronchoscopy/OR)"
+    ],
+    "compliance": [
+      "EMTALA MSE and immediate stabilization of airway before any payment inquiry",
+      "FSED lacks bronchoscopy/OR/ENT on-site; secure airway and arrange emergent appropriate transfer (accepting facility, qualified airway-capable transport)",
+      "Document airway management, removal attempts, and transfer risk-benefit",
+      "Suspected abuse/neglect (e.g., intentional or supervision-related in vulnerable adult) is reportable to Texas DFPS/APS; report if indicated"
+    ]
+  }
+]

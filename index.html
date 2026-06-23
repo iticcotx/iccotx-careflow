@@ -4,1294 +4,302 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#eef2fc" />
-<title>ICCOTX CareFlow — FSED Clinical Protocols</title>
-<script src="config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<title>ICCOTX CareFlow — Texas ER Clinical Workflows</title>
 <style>
-/* ============ THEME TOKENS ============ */
 :root{
-  --bg:#eef2fc;
-  --bg-2:#e6ecf9;
-  --grid:rgba(70,110,220,.07);
-  --panel:rgba(255,255,255,.72);
-  --panel-2:rgba(255,255,255,.55);
-  --stroke:rgba(70,110,200,.18);
-  --stroke-strong:rgba(70,110,200,.36);
-  --txt:#162038;
-  --txt-dim:#46577d;
-  --txt-mute:#8190ad;
-  --cyan:#0a9fc2;
-  --cyan-deep:#0488a8;
-  --danger:#e63858;
-  --danger-glow:rgba(230,56,88,.4);
-  --warn:#d98613;
-  --ok:#0fa873;
-  --radius:18px;
-  --shadow:0 18px 45px -24px rgba(40,70,140,.5);
-  --speed:.32s cubic-bezier(.22,.7,.25,1);
+  --bg:#eef2fc;--bg-2:#e6ecf9;--grid:rgba(70,110,220,.06);
+  --panel:rgba(255,255,255,.78);--panel-2:rgba(255,255,255,.6);
+  --stroke:rgba(70,110,200,.18);--stroke-strong:rgba(70,110,200,.36);
+  --txt:#162038;--txt-dim:#46577d;--txt-mute:#8190ad;
+  --cyan:#0a9fc2;--cyan-deep:#0488a8;--danger:#e63858;--danger-glow:rgba(230,56,88,.4);
+  --warn:#d98613;--ok:#0fa873;--radius:18px;
+  --shadow:0 18px 45px -24px rgba(40,70,140,.5);--speed:.28s cubic-bezier(.22,.7,.25,1);
   --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-
-  /* protocol accents (deepened for contrast on light) */
-  --p1:#e63858; /* chest */
-  --p2:#8a3fe0; /* migraine */
-  --p3:#1492d6; /* SOB */
-  --p4:#0fa873; /* GI */
-  --p5:#dd9015; /* UTI */
-  --p6:#e8702f; /* kidney */
-  --p7:#5566e6; /* general */
-  --p8:#d6479e; /* stroke */
-  --p9:#10ad95; /* ortho */
 }
-
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
-body{
-  font-family:var(--font);
-  color:var(--txt);
-  background:
-    radial-gradient(900px 600px at 85% -5%, rgba(10,159,194,.16), transparent 60%),
-    radial-gradient(800px 700px at 5% 10%, rgba(138,63,224,.13), transparent 55%),
-    linear-gradient(180deg,#f4f7ff,#e6ecf9);
-  background-attachment:fixed;
-  min-height:100vh;
-  overflow-x:hidden;
-  letter-spacing:.1px;
-}
-/* animated grid backdrop */
-body::before{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+body{font-family:var(--font);color:var(--txt);min-height:100vh;overflow-x:hidden;letter-spacing:.1px;font-size:16px;
+  background:radial-gradient(900px 600px at 85% -5%,rgba(10,159,194,.14),transparent 60%),
+    radial-gradient(800px 700px at 5% 10%,rgba(138,63,224,.11),transparent 55%),
+    linear-gradient(180deg,#f4f7ff,#e6ecf9);background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:46px 46px;
-  mask-image:radial-gradient(circle at 50% 0%,#000 35%,transparent 85%);
-}
-
-a{color:inherit}
+  background-size:48px 48px;mask-image:radial-gradient(circle at 50% 0%,#000 35%,transparent 85%)}
 ::selection{background:rgba(10,159,194,.22)}
+.wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:22px 18px 80px}
 
-.wrap{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:22px 18px 90px}
-
-/* ============ HEADER ============ */
-header.top{
-  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
-  padding:20px 22px;border-radius:var(--radius);
-  background:linear-gradient(120deg,rgba(255,255,255,.88),rgba(235,241,255,.72));
-  border:1px solid var(--stroke);
-  box-shadow:var(--shadow);
-  backdrop-filter:blur(14px);
-  position:relative;overflow:hidden;
-}
-header.top::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(10,159,194,.14),transparent);
-  transform:translateX(-100%);animation:sheen 7s ease-in-out infinite;
-}
-@keyframes sheen{0%,72%{transform:translateX(-110%)}100%{transform:translateX(110%)}}
-.brand{display:flex;align-items:center;gap:14px;min-width:0}
-.mark{
-  width:54px;height:54px;border-radius:14px;flex:none;
-  display:grid;place-items:center;font-weight:800;font-size:13px;letter-spacing:.5px;
-  background:radial-gradient(circle at 30% 25%,#e2f4f9,#eaf0ff);
-  border:1px solid var(--stroke-strong);
-  color:var(--cyan-deep);
-  box-shadow:0 0 0 1px rgba(10,159,194,.18),0 0 24px -8px rgba(10,159,194,.5) inset;
-  position:relative;
-}
+/* header */
+header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 22px;border-radius:var(--radius);
+  background:linear-gradient(120deg,rgba(255,255,255,.9),rgba(235,241,255,.74));border:1px solid var(--stroke);
+  box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+.mark{width:54px;height:54px;border-radius:14px;flex:none;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 25%,#e2f4f9,#eaf0ff);border:1px solid var(--stroke-strong);color:var(--cyan-deep);
+  box-shadow:0 0 0 1px rgba(10,159,194,.18),0 0 24px -8px rgba(10,159,194,.5) inset}
 .mark svg{width:30px;height:30px}
-.title h1{margin:0;font-size:21px;font-weight:800;line-height:1.1}
-.title h1 b{color:var(--cyan)}
-.title p{margin:3px 0 0;font-size:12.5px;color:var(--txt-dim);font-weight:500}
-.badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
-.badge{
-  font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
-  padding:6px 11px;border-radius:999px;color:var(--cyan-deep);
-  background:rgba(10,159,194,.10);border:1px solid rgba(10,159,194,.28);
-}
+.title h1{margin:0;font-size:22px;font-weight:800;line-height:1.1}.title h1 b{color:var(--cyan-deep)}
+.title p{margin:3px 0 0;font-size:13.5px;color:var(--txt-dim);font-weight:500}
+.hbadges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.hbadge{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:6px 11px;border-radius:999px;
+  color:var(--cyan-deep);background:rgba(10,159,194,.1);border:1px solid rgba(10,159,194,.28)}
 
-/* ============ CONTROL BAR ============ */
-.controls{
-  display:flex;gap:12px;flex-wrap:wrap;align-items:center;
-  margin:18px 0;position:sticky;top:10px;z-index:30;
-}
-.search{
-  flex:1;min-width:240px;position:relative;
-}
-.search input{
-  width:100%;padding:15px 16px 15px 48px;border-radius:14px;
-  background:var(--panel);border:1px solid var(--stroke);
-  color:var(--txt);font-size:16px;font-family:inherit;outline:none;
-  backdrop-filter:blur(14px);transition:border var(--speed),box-shadow var(--speed);
-}
-.search input::placeholder{color:var(--txt-mute)}
-.search input:focus{border-color:var(--cyan-deep);box-shadow:0 0 0 3px rgba(10,159,194,.16),0 0 30px -12px rgba(10,159,194,.55)}
-.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--txt-mute)}
-.search .clearx{
-  position:absolute;right:10px;top:50%;transform:translateY(-50%);
-  width:26px;height:26px;border:none;border-radius:8px;cursor:pointer;display:none;
-  background:rgba(255,255,255,.06);color:var(--txt-dim);font-size:16px;line-height:1;
-}
-.search .clearx:hover{background:rgba(230,56,88,.16);color:var(--danger)}
-.btn{
-  padding:14px 16px;border-radius:14px;cursor:pointer;font-family:inherit;
-  font-size:13.5px;font-weight:700;color:var(--txt);
-  background:var(--panel);border:1px solid var(--stroke);
-  backdrop-filter:blur(14px);transition:all var(--speed);display:flex;align-items:center;gap:8px;
-}
-.btn:hover{border-color:var(--stroke-strong);transform:translateY(-1px);color:var(--txt)}
-.btn svg{width:17px;height:17px}
-.btn.active{background:rgba(10,159,194,.12);border-color:var(--cyan-deep);color:var(--cyan-deep)}
+/* search */
+.searchbar{position:sticky;top:10px;z-index:30;margin:18px 0}
+.searchbar .box{position:relative}
+.searchbar input{width:100%;padding:17px 18px 17px 52px;border-radius:15px;border:1px solid var(--stroke-strong);
+  background:rgba(255,255,255,.92);color:var(--txt);font-family:inherit;font-size:17px;outline:none;backdrop-filter:blur(14px);
+  transition:box-shadow var(--speed),border var(--speed)}
+.searchbar input:focus{border-color:var(--cyan-deep);box-shadow:0 0 0 3px rgba(10,159,194,.16),0 0 36px -12px rgba(10,159,194,.5)}
+.searchbar input::placeholder{color:var(--txt-mute)}
+.searchbar svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:21px;height:21px;color:var(--txt-mute)}
+.searchbar .clearx{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:none;border-radius:8px;
+  cursor:pointer;display:none;background:rgba(20,40,90,.06);color:var(--txt-dim);font-size:17px}
+.searchbar .clearx:hover{background:rgba(230,56,88,.16);color:var(--danger)}
+.meta-line{font-size:13.5px;color:var(--txt-mute);margin:10px 2px 0}.meta-line b{color:var(--cyan-deep)}
 
-.hint{font-size:13.5px;color:var(--txt-mute);margin:-6px 2px 14px}
-.hint b{color:var(--cyan)}
+/* category chips */
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
+.cchip{font-size:13px;font-weight:650;padding:8px 14px;border-radius:999px;cursor:pointer;color:var(--txt-dim);
+  background:var(--panel);border:1px solid var(--stroke);transition:all var(--speed);backdrop-filter:blur(10px)}
+.cchip:hover{border-color:var(--cyan-deep);color:var(--cyan-deep)}
+.cchip.active{background:rgba(10,159,194,.13);border-color:var(--cyan-deep);color:var(--cyan-deep)}
+.cchip .dotc{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:middle;background:var(--accent,var(--cyan))}
 
-/* ============ GRID ============ */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;align-items:start}
-.card.wide{grid-column:1/-1}
+/* directory */
+.catblock{margin-top:26px}
+.catblock h2{display:flex;align-items:center;gap:11px;margin:0 0 14px;font-size:15px;font-weight:800;letter-spacing:1.1px;
+  text-transform:uppercase;color:var(--txt-dim)}
+.catblock h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--stroke-strong),transparent)}
+.catblock h2 .cdot{width:11px;height:11px;border-radius:50%;background:var(--accent,var(--cyan));box-shadow:0 0 10px -1px var(--accent,var(--cyan))}
+.catblock h2 small{font-weight:600;letter-spacing:0;text-transform:none;color:var(--txt-mute);font-size:12.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:12px}
+.ccard{--accent:var(--cyan);display:flex;align-items:center;gap:12px;padding:15px 16px;border-radius:14px;cursor:pointer;
+  background:var(--panel);border:1px solid var(--stroke);border-left:4px solid var(--accent);box-shadow:var(--shadow);
+  backdrop-filter:blur(12px);transition:transform var(--speed),border-color var(--speed)}
+.ccard:hover{transform:translateY(-3px);border-color:var(--accent)}
+.ccard .nm{flex:1;min-width:0}
+.ccard .nm b{display:block;font-size:15px;font-weight:700;line-height:1.25}
+.ccard .nm span{font-size:12px;color:var(--txt-mute)}
+.ccard .esi{font-size:11px;font-weight:800;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);
+  padding:4px 9px;border-radius:999px;white-space:nowrap}
+.ccard .arrow{width:18px;height:18px;color:var(--txt-mute);flex:none}
 
-/* ============ CARD ============ */
-.card{
-  --accent:var(--cyan);
-  background:var(--panel);
-  border:1px solid var(--stroke);
-  border-radius:var(--radius);
-  backdrop-filter:blur(16px);
-  box-shadow:var(--shadow);
-  overflow:hidden;position:relative;
-  transition:transform var(--speed),border-color var(--speed),box-shadow var(--speed),opacity .25s;
-}
-.card::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
-  background:linear-gradient(var(--accent),transparent);
-  box-shadow:0 0 18px -2px var(--accent);
-}
-.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
-.card.open{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 22px 60px -26px var(--accent)}
-.card.hidden{display:none}
-
-.chead{
-  display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none;
-}
-.cnum{
-  width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;
-  font-weight:800;font-size:17px;color:#fff;
-  background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 72%,#0a1020));
-  box-shadow:0 0 20px -6px var(--accent);
-}
-.cttl{flex:1;min-width:0}
-.cttl h3{margin:0;font-size:17.5px;font-weight:750;line-height:1.22}
-.cttl span{font-size:13px;color:var(--txt-dim);font-weight:500}
-.chev{width:22px;height:22px;flex:none;color:var(--txt-mute);transition:transform var(--speed),color var(--speed)}
-.card.open .chev{transform:rotate(180deg);color:var(--accent)}
-
-.cbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--speed)}
-.card.open .cbody{grid-template-rows:1fr}
-.cbody-inner{overflow:hidden}
-.cpad{padding:2px 18px 18px}
-.card.wide .cpad,.card.open .cpad{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:8px 32px}
-
-/* sections inside card */
-.sec{margin-top:14px}
-.sec:first-child{margin-top:6px}
-.sec h4{
-  margin:0 0 9px;font-size:12.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
-  color:var(--accent);display:flex;align-items:center;gap:7px;
-}
-.sec h4 .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
-.sec ul{margin:0;padding:0;list-style:none}
-.sec li{
-  position:relative;padding:5px 0 5px 19px;font-size:14.6px;color:var(--txt-dim);line-height:1.5;
-}
-.sec li::before{content:"";position:absolute;left:3px;top:11px;width:5px;height:5px;border-radius:50%;
-  background:var(--accent);opacity:.7}
-.sec li b{color:var(--txt);font-weight:650}
-
-/* red flag box */
-.redflag{
-  margin-top:14px;border-radius:13px;padding:13px 14px;
-  background:linear-gradient(135deg,rgba(230,56,88,.12),rgba(230,56,88,.04));
-  border:1px solid rgba(230,56,88,.35);
-  box-shadow:0 0 26px -12px var(--danger-glow), inset 0 0 0 1px rgba(230,56,88,.05);
-  animation:pulseflag 3.2s ease-in-out infinite;
-}
-@keyframes pulseflag{0%,100%{box-shadow:0 0 24px -14px var(--danger-glow)}50%{box-shadow:0 0 34px -8px var(--danger-glow)}}
-.redflag h4{color:#c62a4a;display:flex;align-items:center;gap:7px}
-.redflag li::before{background:var(--danger)}
-.redflag li{color:#9a3b53}
-.redflag li b{color:#6e1228}
-
-/* tag for disposition */
-.dispo{margin-top:14px;display:flex;align-items:flex-start;gap:9px;
-  font-size:14px;color:var(--txt-dim);background:rgba(10,159,194,.06);
-  border:1px dashed var(--stroke-strong);border-radius:11px;padding:11px 12px}
-.dispo svg{width:16px;height:16px;flex:none;color:var(--accent);margin-top:1px}
-.dispo b{color:var(--txt)}
-
-/* ============ no results ============ */
-.noresult{
-  grid-column:1/-1;text-align:center;padding:54px 20px;color:var(--txt-mute);
-  border:1px dashed var(--stroke);border-radius:var(--radius);background:var(--panel-2);display:none;
-}
-.noresult.show{display:block}
-.noresult svg{width:42px;height:42px;opacity:.5;margin-bottom:10px}
-
-/* ============ SECTION TITLES ============ */
-.section-title{
-  display:flex;align-items:center;gap:12px;margin:38px 4px 16px;font-size:14.5px;
-  font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--txt-dim);
-}
-.section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--stroke-strong),transparent)}
-.section-title .ic{width:22px;height:22px;color:var(--cyan)}
-
-/* ============ WORKFLOW STRIP ============ */
-.workflow{
-  margin-top:14px;border-radius:var(--radius);border:1px solid var(--stroke);
-  background:linear-gradient(120deg,rgba(255,255,255,.78),rgba(235,241,255,.62));
-  backdrop-filter:blur(14px);box-shadow:var(--shadow);padding:20px 18px;
-}
-.flow-track{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
-.flow-step{
-  flex:1;min-width:118px;text-align:center;position:relative;padding:6px 6px 4px;
-}
-.flow-step:not(:last-child)::after{
-  content:"";position:absolute;right:-4px;top:30px;width:14px;height:2px;
-  background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;
-}
-.flow-ic{
-  width:48px;height:48px;margin:0 auto 9px;border-radius:14px;display:grid;place-items:center;
-  background:radial-gradient(circle at 30% 25%,rgba(10,159,194,.18),rgba(255,255,255,.85));
-  border:1px solid var(--stroke-strong);color:var(--cyan-deep);
-  box-shadow:0 0 22px -12px rgba(10,159,194,.6);transition:transform var(--speed);
-}
-.flow-step:hover .flow-ic{transform:translateY(-3px) scale(1.05)}
-.flow-ic svg{width:23px;height:23px}
-.flow-step b{display:block;font-size:13.5px;font-weight:700;color:var(--txt)}
-.flow-step span{font-size:12px;color:var(--txt-mute)}
-
-/* ============ SEPSIS PANEL ============ */
-.sepsis{
-  margin-top:14px;border-radius:var(--radius);overflow:hidden;
-  border:1px solid rgba(230,56,88,.28);background:linear-gradient(135deg,rgba(255,240,243,.85),rgba(244,247,255,.8));
-  backdrop-filter:blur(14px);box-shadow:var(--shadow);
-}
-.sepsis-head{display:flex;align-items:center;gap:13px;padding:18px;border-bottom:1px solid rgba(230,56,88,.16)}
-.sepsis-head .fire{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;flex:none;
-  background:radial-gradient(circle at 30% 25%,rgba(230,56,88,.22),rgba(255,255,255,.85));
-  border:1px solid rgba(230,56,88,.38);color:var(--danger);box-shadow:0 0 24px -10px var(--danger-glow)}
-.sepsis-head h3{margin:0;font-size:16px;font-weight:800}
-.sepsis-head p{margin:2px 0 0;font-size:12px;color:var(--txt-dim)}
-.sepsis-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
-@media(max-width:720px){.sepsis-grid{grid-template-columns:1fr}}
-.sirs-calc{padding:18px;border-right:1px solid rgba(230,56,88,.12)}
-.sirs-calc h4,.sepsis-info h4{margin:0 0 12px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#c62a4a}
-.crit{display:flex;align-items:center;gap:12px;padding:11px 13px;margin-bottom:9px;border-radius:12px;
-  background:rgba(20,40,90,.03);border:1px solid var(--stroke);cursor:pointer;transition:all var(--speed)}
-.crit:hover{border-color:rgba(230,56,88,.4)}
-.crit.on{background:rgba(230,56,88,.10);border-color:rgba(230,56,88,.45)}
-.chk{width:22px;height:22px;border-radius:7px;flex:none;border:2px solid var(--txt-mute);display:grid;place-items:center;transition:all var(--speed)}
-.crit.on .chk{background:var(--danger);border-color:var(--danger);box-shadow:0 0 14px -2px var(--danger-glow)}
-.chk svg{width:13px;height:13px;color:#fff;opacity:0;transition:opacity var(--speed)}
-.crit.on .chk svg{opacity:1}
-.crit .lbl b{display:block;font-size:13.5px;color:var(--txt);font-weight:650}
-.crit .lbl span{font-size:11.5px;color:var(--txt-mute)}
-.sirs-score{margin-top:14px;display:flex;align-items:center;gap:14px;padding:14px;border-radius:13px;
-  background:rgba(255,255,255,.6);border:1px solid var(--stroke)}
-.score-num{font-size:34px;font-weight:800;line-height:1;color:var(--txt);transition:color var(--speed)}
-.score-num small{font-size:15px;color:var(--txt-mute);font-weight:600}
-.score-msg{font-size:13px;font-weight:650;line-height:1.35}
-.score-msg.safe{color:var(--ok)}
-.score-msg.alert{color:var(--danger)}
-.sepsis-info{padding:18px}
-.sepsis-info ul{margin:0;padding:0;list-style:none}
-.sepsis-info li{position:relative;padding:6px 0 6px 20px;font-size:13px;color:var(--txt-dim);line-height:1.45}
-.sepsis-info li::before{content:"→";position:absolute;left:0;color:var(--danger);font-weight:800}
-.sepsis-info li b{color:#6e1228}
-.tist{margin-top:14px;text-align:center;font-size:12.5px;font-weight:800;letter-spacing:1.5px;
-  color:var(--danger);text-transform:uppercase;animation:blink 1.8s ease-in-out infinite}
-@keyframes blink{50%{opacity:.45}}
-
-/* ============ FAST TIMER (modal) ============ */
-.fab-row{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}
-.fab{
-  width:auto;padding:0 18px;height:54px;border-radius:16px;border:none;cursor:pointer;
-  background:linear-gradient(135deg,#e052aa,#b53486);
-  color:#fff;font-family:inherit;font-weight:750;font-size:13px;display:flex;align-items:center;gap:9px;
-  box-shadow:0 16px 38px -14px rgba(214,71,158,.7);transition:transform var(--speed)}
-.fab:hover{transform:translateY(-2px)}
-.fab svg{width:19px;height:19px}
-.fab.dose{background:linear-gradient(135deg,#0db0d4,#0488a8);box-shadow:0 16px 38px -14px rgba(10,159,194,.7)}
-
-.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;
-  background:rgba(28,40,75,.42);backdrop-filter:blur(8px)}
-.modal.show{display:flex;animation:fade .25s}
-@keyframes fade{from{opacity:0}}
-.sheet{
-  width:100%;max-width:520px;max-height:88vh;overflow:auto;border-radius:22px;
-  background:linear-gradient(160deg,rgba(255,255,255,.98),rgba(240,244,255,.98));
-  border:1px solid var(--stroke-strong);box-shadow:0 30px 80px -24px rgba(30,50,110,.6);padding:22px;animation:rise .3s cubic-bezier(.2,.7,.2,1)}
-@keyframes rise{from{transform:translateY(24px);opacity:0}}
-.sheet-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
-.sheet-head h2{margin:0;font-size:19px;font-weight:800;flex:1}
-.sheet-head .x{width:34px;height:34px;border:none;border-radius:10px;cursor:pointer;font-size:20px;
-  background:rgba(20,40,90,.06);color:var(--txt-dim)}
-.sheet-head .x:hover{background:rgba(230,56,88,.16);color:var(--danger)}
-
-/* timer */
-.timer-display{text-align:center;margin:18px 0}
-.tclock{font-size:64px;font-weight:800;letter-spacing:2px;line-height:1;font-variant-numeric:tabular-nums;
-  background:linear-gradient(180deg,#16203c,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tlabel{font-size:12px;color:var(--txt-dim);margin-top:8px;letter-spacing:1px;text-transform:uppercase}
-.tgoal{margin-top:6px;font-size:13px;font-weight:700;color:var(--ok)}
-.tgoal.over{color:var(--danger)}
-.timer-btns{display:flex;gap:10px;justify-content:center;margin:18px 0}
-.tbtn{padding:13px 24px;border-radius:13px;border:1px solid var(--stroke);cursor:pointer;font-family:inherit;
-  font-weight:750;font-size:14px;color:var(--txt);background:var(--panel);transition:all var(--speed)}
-.tbtn.go{background:linear-gradient(135deg,var(--ok),#1fae84);border:none;color:#04130d}
-.tbtn.stop{background:linear-gradient(135deg,var(--danger),#d6324f);border:none;color:#fff}
-.tbtn:hover{transform:translateY(-1px)}
-.milestones{margin-top:6px}
-.ms{display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:12px;margin-bottom:8px;
-  background:rgba(20,40,90,.03);border:1px solid var(--stroke);transition:all var(--speed)}
-.ms.hit{background:rgba(15,168,115,.12);border-color:rgba(15,168,115,.4)}
-.ms .mt{font-variant-numeric:tabular-nums;font-weight:800;font-size:15px;color:var(--cyan);min-width:52px}
-.ms.hit .mt{color:var(--ok)}
-.ms .md{flex:1}
-.ms .md b{display:block;font-size:13px;color:var(--txt)}
-.ms .md span{font-size:11.5px;color:var(--txt-mute)}
-.ms .mcheck{width:20px;height:20px;color:var(--ok);opacity:0;transition:opacity var(--speed)}
-.ms.hit .mcheck{opacity:1}
-
-/* dosing */
-.dose-search{width:100%;padding:12px 14px;border-radius:12px;background:var(--bg-2);border:1px solid var(--stroke);
-  color:var(--txt);font-family:inherit;font-size:14px;outline:none;margin-bottom:14px}
-.dose-search:focus{border-color:var(--cyan-deep)}
-.dtable{width:100%;border-collapse:collapse}
-.dtable th{text-align:left;font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--txt-mute);
-  padding:8px 8px;border-bottom:1px solid var(--stroke)}
-.dtable td{padding:11px 8px;font-size:13px;border-bottom:1px solid rgba(120,160,255,.07);vertical-align:top}
-.dtable tr.drow:hover{background:rgba(10,159,194,.06)}
-.dtable .dname{font-weight:700;color:var(--txt)}
-.dtable .dname small{display:block;font-weight:500;color:var(--txt-mute);font-size:11px}
-.dtable .ddose{color:var(--cyan);font-weight:600}
-.dtable .dnote{color:var(--txt-dim);font-size:12px}
-.dtable tr.dhide{display:none}
-
-/* footer */
-footer{margin-top:40px;text-align:center;font-size:11.5px;color:var(--txt-mute);line-height:1.7}
-footer b{color:var(--txt-dim)}
-.disclaimer{margin-top:14px;padding:14px 16px;border-radius:13px;background:rgba(221,144,21,.10);
-  border:1px solid rgba(221,144,21,.3);color:#7a5410;font-size:12px;display:flex;gap:10px;align-items:flex-start;text-align:left}
-.disclaimer svg{width:18px;height:18px;flex:none;color:var(--warn);margin-top:1px}
-
-/* ============ PANELS (operational sections) ============ */
-.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.panel{
-  background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);
-  backdrop-filter:blur(16px);box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden;
-}
-.panel::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--cyan),transparent);box-shadow:0 0 16px -2px var(--cyan)}
-.panel h4{margin:0 0 12px;font-size:13.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
-  color:var(--cyan);display:flex;align-items:center;gap:9px}
-.panel h4 .pic{width:18px;height:18px}
-.panel ul{margin:0;padding:0;list-style:none}
-.panel li{position:relative;padding:6px 0 6px 23px;font-size:14.6px;color:var(--txt-dim);line-height:1.5}
-.panel li b{color:var(--txt);font-weight:650}
-.panel li .tick{position:absolute;left:0;top:7px;width:14px;height:14px;color:var(--ok)}
-.panel li .arr{position:absolute;left:2px;top:6px;color:var(--cyan);font-weight:800}
-
-/* 9-tab order set strip — reuses flow look */
-.tabstrip .flow-ic{border-radius:12px;font-weight:800;font-size:15px;color:var(--cyan)}
-.tabstrip .flow-step:not(:last-child)::after{top:30px}
-
-/* ============ LIVE FLOOR BOARD ============ */
-.board-bar{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
-.conn{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--txt-dim);
-  padding:7px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--stroke);backdrop-filter:blur(10px)}
-.conn .cdot{width:9px;height:9px;border-radius:50%;background:var(--txt-mute)}
-.conn.live{color:#0b7a54}.conn.live .cdot{background:var(--ok);animation:livepulse 2s infinite}
-.conn.local{color:var(--warn)}.conn.local .cdot{background:var(--warn)}
-@keyframes livepulse{0%,100%{box-shadow:0 0 0 0 rgba(15,168,115,.5)}50%{box-shadow:0 0 0 7px rgba(15,168,115,0)}}
-.btn.primary{background:linear-gradient(135deg,#0db0d4,#0488a8);color:#fff;border:none;
-  box-shadow:0 12px 30px -14px rgba(10,159,194,.8)}
-.btn.primary:hover{color:#fff;filter:brightness(1.06)}
-
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(146px,1fr));gap:12px;margin-bottom:16px}
-.kpi{background:var(--panel);border:1px solid var(--stroke);border-radius:16px;padding:15px 16px;
-  backdrop-filter:blur(14px);box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform var(--speed)}
-.kpi:hover{transform:translateY(-2px)}
-.kpi::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--accent,var(--cyan)),transparent);box-shadow:0 0 14px -2px var(--accent,var(--cyan))}
-.kpi .kval{font-size:30px;font-weight:800;color:var(--txt);line-height:1;font-variant-numeric:tabular-nums}
-.kpi .kval small{font-size:14px;color:var(--txt-mute);font-weight:600}
-.kpi .klbl{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--txt-dim);margin-top:8px;font-weight:700}
-.kpi.flag .kval{color:var(--danger)}
-
-.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:12px}
-.casecard{--accent:var(--cyan);background:var(--panel);border:1px solid var(--stroke);border-left:4px solid var(--accent);
-  border-radius:15px;padding:14px;backdrop-filter:blur(14px);box-shadow:var(--shadow);animation:popin .3s cubic-bezier(.2,.7,.2,1)}
-@keyframes popin{from{opacity:0;transform:translateY(10px) scale(.98)}}
-.casecard .ctop{display:flex;align-items:center;gap:9px;margin-bottom:11px}
-.casecard .room{font-weight:800;font-size:15px;color:var(--txt)}
-.casecard .ptag{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:999px;
-  background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
-.casecard .etime{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:800;font-size:17px;color:var(--txt)}
-.casecard .etime.warn{color:var(--warn)}.casecard .etime.crit{color:var(--danger)}
-.stages{display:flex;gap:6px;margin-bottom:9px}
-.stage{flex:1;font-size:11px;font-weight:700;padding:9px 6px;border-radius:10px;border:1px solid var(--stroke);
-  background:rgba(20,40,90,.03);color:var(--txt-dim);cursor:pointer;text-align:center;transition:all var(--speed);line-height:1.2}
-.stage:hover{border-color:var(--cyan-deep);color:var(--cyan-deep)}
-.stage.done{background:rgba(15,168,115,.13);border-color:rgba(15,168,115,.4);color:#0b7a54;cursor:default}
-.stage small{display:block;font-size:10px;font-weight:600;margin-top:2px;opacity:.85}
-.dispo-row{display:flex;gap:5px}
-.dbtn{flex:1;font-size:10.5px;font-weight:700;padding:8px 4px;border-radius:9px;border:1px solid var(--stroke);
-  background:transparent;color:var(--txt-mute);cursor:pointer;transition:all var(--speed)}
-.dbtn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
-.dbtn.lwbs:hover{border-color:var(--danger);color:var(--danger)}
-.cases-empty{grid-column:1/-1;text-align:center;padding:36px 20px;color:var(--txt-mute);font-size:13.5px;
-  border:1px dashed var(--stroke);border-radius:var(--radius);background:var(--panel-2)}
-
-/* chief-complaint picker (new case modal) */
-.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 16px}
-.cc-opt{--accent:var(--cyan);display:flex;align-items:center;gap:9px;padding:11px 12px;border-radius:12px;
-  border:1px solid var(--stroke);background:rgba(20,40,90,.025);cursor:pointer;transition:all var(--speed);text-align:left}
-.cc-opt:hover{border-color:var(--accent)}
-.cc-opt.sel{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);box-shadow:0 0 0 1px var(--accent) inset}
-.cc-opt .ccn{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;font-weight:800;font-size:13px;
-  color:#fff;background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 72%,#0a1020))}
-.cc-opt span{font-size:12px;font-weight:650;color:var(--txt);line-height:1.2}
-.field{margin-bottom:14px}
-.field label{display:block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--txt-dim);margin-bottom:6px}
-.field input,.field select{width:100%;padding:12px 14px;border-radius:12px;background:var(--bg-2);border:1px solid var(--stroke);
-  color:var(--txt);font-family:inherit;font-size:14px;outline:none}
-.field input:focus,.field select:focus{border-color:var(--cyan-deep)}
-.tbtn.full{width:100%}
-
-/* ============ COMMAND HERO ============ */
-.hero{margin:18px 0 4px;padding:26px 22px;border-radius:var(--radius);position:relative;
-  background:linear-gradient(120deg,rgba(255,255,255,.9),rgba(232,240,255,.78));
-  border:1px solid var(--stroke-strong);box-shadow:var(--shadow);backdrop-filter:blur(14px)}
-.hero::after{content:"";position:absolute;inset:0;border-radius:inherit;background:
-  radial-gradient(420px 200px at 90% 0%,rgba(10,159,194,.14),transparent 70%),
-  radial-gradient(420px 220px at 0% 100%,rgba(138,63,224,.12),transparent 70%);pointer-events:none}
-.hero h2{margin:0 0 4px;font-size:23px;font-weight:800;letter-spacing:-.2px}
-.hero h2 b{color:var(--cyan-deep)}
-.hero p{margin:0 0 16px;font-size:14px;color:var(--txt-dim)}
-.cmdwrap{position:relative;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
-.cmdwrap input{flex:1;min-width:240px;padding:17px 18px;border-radius:14px;border:1px solid var(--stroke-strong);
-  background:rgba(255,255,255,.92);color:var(--txt);font-family:inherit;font-size:17px;outline:none;transition:box-shadow var(--speed),border var(--speed)}
-.cmdwrap input:focus{border-color:var(--cyan-deep);box-shadow:0 0 0 3px rgba(10,159,194,.16),0 0 36px -12px rgba(10,159,194,.5)}
-.cmdwrap input::placeholder{color:var(--txt-mute)}
-.cmdgo{padding:0 26px;border-radius:14px;border:none;cursor:pointer;font-family:inherit;font-weight:800;font-size:15px;
-  color:#fff;background:linear-gradient(135deg,#0db0d4,#0488a8);box-shadow:0 14px 32px -14px rgba(10,159,194,.85);
-  display:flex;align-items:center;gap:9px;white-space:nowrap;transition:transform var(--speed)}
-.cmdgo:hover{transform:translateY(-2px)}
-.cmdgo svg{width:19px;height:19px}
-.ac{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;background:#fff;
-  border:1px solid var(--stroke-strong);border-radius:14px;box-shadow:0 22px 50px -18px rgba(30,50,110,.5);
-  overflow:hidden;display:none}
-.ac.show{display:block}
-.ac-item{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;border-bottom:1px solid rgba(70,110,200,.08)}
-.ac-item:last-child{border-bottom:none}
-.ac-item:hover,.ac-item.act{background:rgba(10,159,194,.08)}
-.ac-item .acn{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;
-  background:linear-gradient(135deg,var(--accent,var(--cyan)),color-mix(in srgb,var(--accent,var(--cyan)) 72%,#0a1020))}
-.ac-item b{font-size:14.5px;font-weight:650}
-.ac-item .acmeta{margin-left:auto;font-size:11px;color:var(--txt-mute)}
-.ac-item.gen .acn{background:linear-gradient(135deg,#8a3fe0,#6322b3)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;position:relative;z-index:1}
-.chip{font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px;cursor:pointer;color:var(--cyan-deep);
-  background:rgba(10,159,194,.09);border:1px solid rgba(10,159,194,.25);transition:all var(--speed)}
-.chip:hover{background:rgba(10,159,194,.18);transform:translateY(-1px)}
-
-/* ============ WORKFLOW VIEW (overlay) ============ */
-.wfview{position:fixed;inset:0;z-index:120;display:none;background:rgba(20,30,60,.5);backdrop-filter:blur(8px);padding:18px}
-.wfview.show{display:flex;align-items:flex-start;justify-content:center;animation:fade .25s}
-.wfpanel{width:100%;max-width:1120px;max-height:94vh;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;
-  background:linear-gradient(160deg,rgba(255,255,255,.99),rgba(240,244,255,.99));border:1px solid var(--stroke-strong);
-  box-shadow:0 36px 90px -22px rgba(20,40,90,.65);animation:rise .3s cubic-bezier(.2,.7,.2,1)}
-.wfhead{display:flex;align-items:center;gap:14px;padding:18px 22px;border-bottom:1px solid var(--stroke);flex-wrap:wrap}
-.wfhead .wftitle{flex:1;min-width:180px}
-.wfhead h2{margin:0;font-size:21px;font-weight:800;line-height:1.15}
-.wfhead .wfsub{font-size:13px;color:var(--txt-dim);margin-top:2px}
-.wfsrc{font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
-.wfsrc.curated{color:#0b7a54;background:rgba(15,168,115,.13);border:1px solid rgba(15,168,115,.4)}
-.wfsrc.ai{color:#6322b3;background:rgba(138,63,224,.12);border:1px solid rgba(138,63,224,.4)}
-.wfsrc.library{color:var(--cyan-deep);background:rgba(10,159,194,.12);border:1px solid rgba(10,159,194,.4)}
-.wfacuity{font-size:12px;font-weight:700;color:var(--txt-dim)}
-.wfstart{padding:11px 18px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;font-weight:750;font-size:13.5px;color:#fff;
-  background:linear-gradient(135deg,#0db0d4,#0488a8);box-shadow:0 12px 28px -14px rgba(10,159,194,.85);display:flex;align-items:center;gap:8px}
-.wfstart svg{width:16px;height:16px}
-.wfx{width:38px;height:38px;border:none;border-radius:11px;cursor:pointer;font-size:22px;background:rgba(20,40,90,.06);color:var(--txt-dim)}
-.wfx:hover{background:rgba(230,56,88,.16);color:var(--danger)}
-.wftabs{display:flex;gap:6px;overflow-x:auto;padding:12px 18px;border-bottom:1px solid var(--stroke);scrollbar-width:thin}
-.wftab{flex:none;display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:11px;border:1px solid var(--stroke);
-  background:rgba(20,40,90,.025);cursor:pointer;font-size:12.5px;font-weight:700;color:var(--txt-dim);transition:all var(--speed);white-space:nowrap}
-.wftab:hover{border-color:var(--cyan-deep);color:var(--cyan-deep)}
-.wftab.active{background:rgba(10,159,194,.12);border-color:var(--cyan-deep);color:var(--cyan-deep)}
-.wftab .wtn{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff;background:var(--cyan-deep)}
-.wftab .wtdone{display:none}
-.wftab.complete .wtn{background:var(--ok)}
-.wfprog{height:5px;background:rgba(20,40,90,.07)}
-.wfprog #wfbar{height:100%;width:0;background:linear-gradient(90deg,#0db0d4,var(--ok));transition:width .3s}
-.wfbody{overflow-y:auto;padding:18px 22px 26px}
-.wfstage{margin-bottom:18px;scroll-margin-top:10px}
-.wfstage h3{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:16px;font-weight:800}
-.wfstage h3 .wsn{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:14px;font-weight:800;color:#fff;
-  background:linear-gradient(135deg,#0db0d4,#0488a8)}
-.wfstage h3 .wscount{margin-left:auto;font-size:12px;font-weight:600;color:var(--txt-mute)}
-.witem{display:flex;align-items:flex-start;gap:12px;padding:11px 13px;border-radius:11px;border:1px solid var(--stroke);
-  background:rgba(255,255,255,.6);margin-bottom:7px;cursor:pointer;transition:all var(--speed)}
-.witem:hover{border-color:var(--cyan-deep)}
-.witem.checked{background:rgba(15,168,115,.09);border-color:rgba(15,168,115,.35)}
-.witem .wck{width:22px;height:22px;border-radius:7px;flex:none;border:2px solid var(--txt-mute);display:grid;place-items:center;margin-top:1px;transition:all var(--speed)}
-.witem.checked .wck{background:var(--ok);border-color:var(--ok)}
-.witem .wck svg{width:13px;height:13px;color:#fff;opacity:0}
-.witem.checked .wck svg{opacity:1}
-.witem .wtext{font-size:14.5px;color:var(--txt);line-height:1.45}
-.witem.checked .wtext{color:var(--txt-mute);text-decoration:line-through}
-.wfredflag{border-radius:13px;padding:14px 16px;margin:6px 0 18px;
-  background:linear-gradient(135deg,rgba(230,56,88,.12),rgba(230,56,88,.04));border:1px solid rgba(230,56,88,.4);
-  box-shadow:0 0 26px -12px var(--danger-glow);animation:pulseflag 3.2s ease-in-out infinite}
-.wfredflag h3{color:#c62a4a;font-size:15px;margin:0 0 8px}
-.wfredflag ul{margin:0;padding-left:20px}.wfredflag li{color:#9a3b53;font-size:14px;padding:3px 0}.wfredflag li b{color:#6e1228}
-.wfloading{text-align:center;padding:50px 20px;color:var(--txt-dim)}
-.wfspin{width:42px;height:42px;margin:0 auto 16px;border:3px solid rgba(10,159,194,.25);border-top-color:var(--cyan-deep);border-radius:50%;animation:spin 1s linear infinite}
+.empty{text-align:center;padding:60px 20px;color:var(--txt-mute)}
+.empty .spin{width:44px;height:44px;margin:0 auto 16px;border:3px solid rgba(10,159,194,.25);border-top-color:var(--cyan-deep);
+  border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.wfdisc{font-size:11px;color:var(--txt-mute);padding:12px 22px;border-top:1px solid var(--stroke);background:rgba(221,144,21,.06)}
+.empty h3{font-size:18px;color:var(--txt-dim);margin:0 0 6px}
 
-/* ============ PRINT ============ */
+/* detail overlay */
+.detail{position:fixed;inset:0;z-index:120;display:none;background:rgba(20,30,60,.5);backdrop-filter:blur(8px);padding:18px}
+.detail.show{display:flex;align-items:flex-start;justify-content:center;animation:fade .22s}
+@keyframes fade{from{opacity:0}}
+.dpanel{width:100%;max-width:1080px;max-height:94vh;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.99),rgba(240,244,255,.99));border:1px solid var(--stroke-strong);
+  box-shadow:0 36px 90px -22px rgba(20,40,90,.65);animation:rise .28s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{transform:translateY(16px);opacity:0}}
+.dhead{display:flex;align-items:center;gap:14px;padding:20px 24px;border-bottom:1px solid var(--stroke);
+  border-top:5px solid var(--accent,var(--cyan));flex-wrap:wrap}
+.dhead .dt{flex:1;min-width:160px}
+.dhead h2{margin:0;font-size:23px;font-weight:800;line-height:1.15}
+.dhead .dcat{font-size:13px;color:var(--txt-dim);margin-top:3px}
+.dhead .desi{font-size:13px;font-weight:800;color:var(--accent,var(--cyan));background:color-mix(in srgb,var(--accent,var(--cyan)) 13%,transparent);
+  padding:7px 13px;border-radius:999px}
+.dprint{padding:10px 15px;border-radius:11px;border:1px solid var(--stroke);background:var(--panel);cursor:pointer;
+  font-family:inherit;font-weight:700;font-size:13px;color:var(--txt-dim);display:flex;align-items:center;gap:7px}
+.dprint:hover{border-color:var(--cyan-deep);color:var(--cyan-deep)}.dprint svg{width:16px;height:16px}
+.dx{width:40px;height:40px;border:none;border-radius:11px;cursor:pointer;font-size:23px;background:rgba(20,40,90,.06);color:var(--txt-dim)}
+.dx:hover{background:rgba(230,56,88,.16);color:var(--danger)}
+.dbody{overflow-y:auto;padding:20px 24px 28px}
+.dsummary{font-size:15px;color:var(--txt-dim);margin:0 0 18px;line-height:1.5}
+.dsections{column-count:2;column-gap:28px}
+@media(max-width:760px){.dsections{column-count:1}.dhead h2{font-size:20px}}
+.sec{break-inside:avoid;margin-bottom:18px;border:1px solid var(--stroke);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.6)}
+.sec h3{display:flex;align-items:center;gap:9px;margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--cyan-deep)}
+.sec h3 .si{width:18px;height:18px}
+.sec ul{margin:0;padding:0;list-style:none}
+.sec li{position:relative;padding:5px 0 5px 19px;font-size:14.6px;color:var(--txt-dim);line-height:1.5}
+.sec li::before{content:"";position:absolute;left:3px;top:12px;width:5px;height:5px;border-radius:50%;background:var(--cyan)}
+.sec li b{color:var(--txt);font-weight:650}
+.sec.flag{background:linear-gradient(135deg,rgba(230,56,88,.1),rgba(230,56,88,.03));border-color:rgba(230,56,88,.4);
+  box-shadow:0 0 24px -14px var(--danger-glow)}
+.sec.flag h3{color:#c62a4a}.sec.flag li{color:#9a3b53}.sec.flag li b{color:#6e1228}.sec.flag li::before{background:var(--danger)}
+.sec.comp{background:rgba(221,144,21,.07);border-color:rgba(221,144,21,.3)}
+.sec.comp h3{color:#a5660a}.sec.comp li{color:#7a5410}.sec.comp li::before{background:var(--warn)}
+.ddisc{font-size:11.5px;color:var(--txt-mute);padding:13px 24px;border-top:1px solid var(--stroke);background:rgba(221,144,21,.06)}
+
+footer{margin-top:46px;text-align:center;font-size:12px;color:var(--txt-mute);line-height:1.7}
+footer b{color:var(--txt-dim)}
+
 @media print{
-  body{background:#fff;color:#000}
-  body::before,.controls,.fab-row,.modal,.badges,header.top::after{display:none!important}
-  .wrap{max-width:none;padding:0}
-  .card,.workflow,.sepsis{break-inside:avoid;border:1px solid #ccc!important;box-shadow:none!important;background:#fff!important;backdrop-filter:none!important}
-  .card .cbody{grid-template-rows:1fr!important}
-  .card::before{display:none}
-  .sec li,.sec h4,.cttl h3,.dispo,.redflag li{color:#000!important}
-  .redflag{background:#fff5f6!important}
-  .grid{display:block}
-  .card{margin-bottom:12px}
+  body{background:#fff}body::before,.searchbar,.cats,.wrap>header,footer{display:none!important}
+  .detail{position:static;background:none;backdrop-filter:none;padding:0;display:block!important}
+  .dpanel{max-width:none;max-height:none;box-shadow:none;border:none}
+  .dbody{overflow:visible}.dsections{column-count:2}.dx,.dprint{display:none!important}
 }
-@media(max-width:640px){
-  .title h1{font-size:18px}
-  .tclock{font-size:52px}
-  .controls{position:static}
-  .badges{display:none}
-}
+@media(max-width:560px){.title h1{font-size:19px}.hbadges{display:none}.searchbar{position:static}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <!-- HEADER -->
   <header class="top">
-    <div class="brand">
-      <div class="mark" title="ICCOTX CareFlow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-      </div>
-      <div class="title">
-        <h1><b>ICCOTX</b> CareFlow</h1>
-        <p>Freestanding ER — Standardized Clinical Protocols · Point-of-Care Reference</p>
-      </div>
+    <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+    <div class="title">
+      <h1><b>ICCOTX</b> CareFlow</h1>
+      <p>Texas Freestanding ER — Chief-Complaint Clinical Workflows &amp; Compliance</p>
     </div>
-    <div class="badges">
-      <span class="badge">Evidence-Based</span>
-      <span class="badge">Patient-Centered</span>
-      <span class="badge">Consistent Care</span>
+    <div class="hbadges">
+      <span class="hbadge">EMTALA-aware</span>
+      <span class="hbadge">Evidence-Based</span>
+      <span class="hbadge">Point-of-Care</span>
     </div>
   </header>
 
-  <!-- COMMAND HERO -->
-  <div class="hero">
-    <h2>What's the <b>chief complaint?</b></h2>
-    <p>Type any presentation — get the complete order-set workflow across all 9 stages, ready to action.</p>
-    <div class="cmdwrap">
-      <input id="cmd" type="search" placeholder="e.g. chest pain, sepsis, dog bite, DKA, allergic reaction…" autocomplete="off" />
-      <button class="cmdgo" id="cmdGo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Build workflow</button>
-      <div class="ac" id="ac"></div>
-    </div>
-    <div class="chips" id="cmdChips"></div>
-  </div>
-
-  <!-- CONTROLS -->
-  <div class="controls">
-    <div class="search">
+  <div class="searchbar">
+    <div class="box">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="search" type="search" placeholder="Search protocols, meds, labs… (e.g. troponin, ketorolac, tPA, sepsis)" autocomplete="off" />
+      <input id="search" type="search" placeholder="Search any chief complaint — e.g. chest pain, sepsis, dog bite, DKA, vaginal bleeding…" autocomplete="off" />
       <button class="clearx" id="clearx" aria-label="clear">×</button>
     </div>
-    <button class="btn" id="expandAll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8V5a2 2 0 0 1 2-2h3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/></svg>Expand all</button>
-    <button class="btn" id="printBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Print</button>
-  </div>
-  <p class="hint">Tap any protocol to expand · <b id="count">7</b> chief-complaint order sets · Red-flag alerts always shown first</p>
-
-  <!-- PROTOCOL GRID -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-    Standardized Order Sets — Common Chief Complaints
-  </div>
-  <div class="grid" id="grid"></div>
-
-  <!-- SMART ORDER SET STRUCTURE -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-    Smart Order Set Structure — Suggested EMR Tabs
-  </div>
-  <div class="workflow tabstrip">
-    <div class="flow-track" id="orderset"></div>
+    <div class="meta-line"><b id="count">…</b> chief complaints across <b id="catcount">…</b> body systems · tap any to open its full workflow</div>
   </div>
 
-  <!-- UNIVERSAL PROTOCOL ELEMENTS -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12h6M9 16h6M9 8h6"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
-    Universal Protocol Elements — Required Documentation
-  </div>
-  <div class="panels" id="universal"></div>
+  <div class="cats" id="cats"></div>
+  <div id="directory"></div>
 
-  <!-- WORKFLOW -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-    Patient Care Workflow
-  </div>
-  <div class="workflow">
-    <div class="flow-track" id="flow"></div>
-  </div>
-
-  <!-- CDS / AUTOMATION / KPIs -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg>
-    Clinical Decision Support · Automation · Quality Metrics
-  </div>
-  <div class="panels" id="ops"></div>
-
-  <!-- SEPSIS -->
-  <div class="section-title">
-    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11Z"/></svg>
-    Sepsis Screening — All Patients
-  </div>
-  <div class="sepsis">
-    <div class="sepsis-head">
-      <div class="fire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11Z"/><path d="M12 18a3 3 0 0 0 3-3c0-2-1.5-3-3-5-1.5 2-3 3-3 5a3 3 0 0 0 3 3Z"/></svg></div>
-      <div><h3>SIRS Screen — Check Every Patient</h3><p>Tap each criterion the patient meets. ≥2 positive → obtain lactate & escalate.</p></div>
-    </div>
-    <div class="sepsis-grid">
-      <div class="sirs-calc">
-        <h4>SIRS Criteria</h4>
-        <div id="sirs"></div>
-        <div class="sirs-score">
-          <div class="score-num" id="sirsNum">0<small>/4</small></div>
-          <div class="score-msg safe" id="sirsMsg">No SIRS criteria met — continue routine assessment.</div>
-        </div>
-      </div>
-      <div class="sepsis-info">
-        <h4>If ≥2 SIRS → Sepsis Bundle</h4>
-        <ul>
-          <li><b>Get lactate.</b> If lactate ≥2 or suspicion high → initiate sepsis bundle.</li>
-          <li><b>Blood cultures</b> before antibiotics.</li>
-          <li><b>Broad-spectrum antibiotics</b> within 1 hour.</li>
-          <li><b>30 mL/kg crystalloid</b> for hypotension or lactate ≥4.</li>
-          <li><b>Reassess</b> perfusion & repeat lactate.</li>
-        </ul>
-        <div class="tist">⏱ Time Is Tissue!</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
-    <div><b>ICCOTX CareFlow</b> — Evidence-Based · Patient-Centered · Consistent · Compliant</div>
-    <div>Designed for Texas FSEDs · Aligned with CMS, TJC & Texas regulations · Based on ACEP, AHA/ASA, IDSA, Surviving Sepsis, NICE, UpToDate guidelines.</div>
-    <div class="disclaimer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
-      <div><b style="color:#7a5410">Clinical decision support only.</b> These protocols support clinical decision-making and do <b style="color:#7a5410">not</b> replace physician judgment. All protocols subject to Medical Director approval and periodic review. Trust your clinical judgment — when in doubt, escalate or transfer. <code>*</code> = use clinically indicated.</div>
-    </div>
+    <div><b>ICCOTX CareFlow</b> — Evidence-based clinical decision support for Texas freestanding ERs.</div>
+    <div>Clinical decision support only — does not replace physician judgment. All workflows subject to Medical Director approval &amp; periodic review.</div>
   </footer>
 </div>
 
-<!-- FLOATING ACTIONS -->
-<div class="fab-row">
-  <button class="fab dose" id="openDose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>Dosing</button>
-</div>
-
-<!-- WORKFLOW VIEW -->
-<div class="wfview" id="wfview">
-  <div class="wfpanel">
-    <div class="wfhead">
-      <div class="wftitle"><h2 id="wfTitle">—</h2><div class="wfsub" id="wfSub"></div></div>
-      <span class="wfacuity" id="wfAcuity"></span>
-      <span class="wfsrc" id="wfSrc"></span>
-      <button class="wfx" id="wfClose">×</button>
+<!-- DETAIL OVERLAY -->
+<div class="detail" id="detail">
+  <div class="dpanel">
+    <div class="dhead" id="dhead">
+      <div class="dt"><h2 id="dTitle">—</h2><div class="dcat" id="dCat"></div></div>
+      <span class="desi" id="dEsi"></span>
+      <button class="dprint" id="dPrint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Print</button>
+      <button class="dx" id="dClose">×</button>
     </div>
-    <div class="wftabs" id="wfTabs"></div>
-    <div class="wfprog"><div id="wfbar"></div></div>
-    <div class="wfbody" id="wfBody"></div>
-    <div class="wfdisc">⚠ Clinical decision support only — verify against patient context, allergies, and current guidelines. Does not replace physician judgment. AI-generated workflows are unreviewed drafts.</div>
-  </div>
-</div>
-
-<!-- DOSING MODAL -->
-<div class="modal" id="doseModal">
-  <div class="sheet">
-    <div class="sheet-head">
-      <h2 style="color:var(--cyan)">💊 Medication Quick Reference</h2>
-      <button class="x" data-close>×</button>
+    <div class="dbody">
+      <p class="dsummary" id="dSummary"></p>
+      <div class="dsections" id="dSections"></div>
     </div>
-    <input class="dose-search" id="doseSearch" placeholder="Filter medications… (e.g. ketorolac, aspirin)" autocomplete="off"/>
-    <table class="dtable">
-      <thead><tr><th>Medication</th><th>Typical Dose</th><th>Notes</th></tr></thead>
-      <tbody id="doseBody"></tbody>
-    </table>
-    <p style="font-size:11px;color:var(--txt-mute);margin:14px 0 0;line-height:1.5">Adult dosing for reference only — verify against pharmacy, allergies, renal/hepatic function & current weight. Confirm pediatric dosing separately.</p>
+    <div class="ddisc">⚠ Clinical decision support only — verify against patient context, allergies, weight, renal/hepatic function and current guidelines. Does not replace physician judgment.</div>
   </div>
 </div>
 
 <script>
-/* ====================== DATA ====================== */
-const PROTOCOLS = [
-  {n:1,key:"chest",accent:"--p1",title:"Chest Pain / Chest Discomfort",sub:"Cardiac · PE · dissection workup",
-   sections:[
-    {h:"Key Chest Pain Features",items:["Crushing pain, radiation","Diaphoresis, syncope","Abnormal vitals / ECG","Known CAD / stents"]},
-    {h:"Key Orders",items:["<b>Cardiac monitor</b>","12-lead ECG ≤10 min","IV access ×1–2","Repeat vitals q15–30 min","O₂ if SpO₂ <94%"]},
-    {h:"Labs",items:["CBC, CMP, <b>Troponin ×2</b> (0 & 2–3 hr)","BNP, PT/INR/PTT, D-Dimer*, Lipase*"]},
-    {h:"Imaging",items:["Chest X-ray","CTA Chest (if PE / dissection concern)"]},
-    {h:"Medications",items:["Aspirin 324 mg chewable","Nitroglycerin SL (if appropriate)","GI cocktail (reflux suspicion)","Morphine / Fentanyl PRN"]},
-    {h:"Risk Tools",items:["HEART Score","Wells Criteria / PERC"]}],
-   redflag:["STEMI on ECG","Hemodynamic instability","Suspected aortic dissection"],
-   dispo:"Discharge with cards follow-up · Observation / transfer if ACS · STEMI activation if indicated"},
-
-  {n:2,key:"migraine",accent:"--p2",title:"Migraine / Headache",sub:"Migraine cocktail · neuro screen",
-   sections:[
-    {h:"Includes",items:["Worst headache of life","Neuro deficits, AMS","Fever / meningismus","Trauma, anticoagulation"]},
-    {h:"Key Orders",items:["<b>Dark / quiet room</b>","IV access","Neuro checks","Fall precautions (if sedating meds)"]},
-    {h:"Labs",items:["CBC, CMP, pregnancy test (if applicable)"]},
-    {h:"Imaging",items:["CT Head w/o contrast (if red flags)","CTA / MRI selectively"]},
-    {h:"Migraine Cocktail",items:["IV Fluids","Metoclopramide","Diphenhydramine","Ketorolac","Magnesium Sulfate PRN","Dexamethasone"]}],
-   redflag:["Worst headache of life / thunderclap","Focal neuro deficit or AMS","Fever + meningismus"],
-   dispo:"Home with instructions · Neurology referral if recurrent · Return precautions for neuro symptoms"},
-
-  {n:3,key:"sob",accent:"--p3",title:"URI / Shortness of Breath",sub:"Respiratory assessment",
-   sections:[
-    {h:"Includes",items:["Viral URI, Influenza, COVID","Asthma, Bronchitis","COPD exacerbation","Pneumonia"]},
-    {h:"Key Orders",items:["<b>Pulse oximetry</b>","Cardiac monitor (if severe)","Respiratory assessment","Nebulizer readiness"]},
-    {h:"Labs",items:["CBC, CMP, COVID/Flu/RSV PCR","BNP/Troponin*, Lactate*","Blood cultures*"]},
-    {h:"Imaging",items:["Chest X-ray","CTA Chest (if PE concern)"]},
-    {h:"Treatments",items:["DuoNebs / Albuterol","Steroids, Magnesium","Oxygen therapy"]}],
-   redflag:["SpO₂ <90% / respiratory distress","Silent chest / accessory muscle use","Altered mental status"],
-   dispo:"Home with instructions · Admit / transfer if severe · Asthma action plan"},
-
-  {n:4,key:"gi",accent:"--p4",title:"GI / Stomach Issues",sub:"Abdominal pain workup",
-   sections:[
-    {h:"Includes",items:["Nausea / vomiting, gastritis","Gastroenteritis","Appendicitis, diverticulitis","Gallbladder disease","Pancreatitis"]},
-    {h:"Key Orders",items:["<b>NPO</b>","IV fluids","Pain / nausea control"]},
-    {h:"Labs",items:["CBC, CMP, Lipase, UA","Pregnancy test, Lactate*"]},
-    {h:"Imaging",items:["CT Abd/Pelvis","RUQ Ultrasound","Pelvic Ultrasound*"]},
-    {h:"Medications",items:["Ondansetron","Ketorolac","GI cocktail","Antibiotics* (if indicated)"]}],
-   redflag:["Peritonitis / rigid abdomen","GI bleed / hematemesis","Surgical abdomen"],
-   dispo:"Transfer if surgical concern · Clear return precautions"},
-
-  {n:5,key:"uti",accent:"--p5",title:"UTI",sub:"Urinary tract infection",
-   sections:[
-    {h:"Includes",items:["Cystitis","Pyelonephritis","Complicated UTI"]},
-    {h:"Key Orders",items:["<b>Urine specimen</b>","Hydration assessment"]},
-    {h:"Labs",items:["UA w/ reflex culture","CBC, CMP, Lactate*","Blood cultures* (if febrile)"]},
-    {h:"Imaging",items:["CT (if obstruction / stone concern)","Renal Ultrasound*"]},
-    {h:"Medications",items:["Oral antibiotics (simple UTI)","IV Ceftriaxone (complicated / pyelo)","Pyridium PRN","IV Fluids"]}],
-   redflag:["Sepsis / SIRS positive","Obstructing stone + infection","Pregnancy"],
-   dispo:"PCP follow-up · Culture callback workflow · Return if worsening"},
-
-  {n:6,key:"kidney",accent:"--p6",title:"Kidney Stones / Flank Pain",sub:"Renal colic · stone protocol",
-   sections:[
-    {h:"Key Orders",items:["<b>IV access</b>","Pain score assessment","Urine strainer"]},
-    {h:"Labs",items:["UA, CBC, CMP, Creatinine"]},
-    {h:"Imaging",items:["CT Stone Protocol","Ultrasound*"]},
-    {h:"Medications",items:["Ketorolac","IV Fluids","Tamsulosin","Antiemetics","Opioids sparingly"]}],
-   redflag:["Obstructed + infected stone","AKI, solitary kidney","Fever / sepsis","Uncontrolled pain"],
-   dispo:"Urology referral · Stone passage instructions · Return if worse / fever"},
-
-  {n:7,key:"general",accent:"--p7",title:"General Body Pain / Fatigue & Dehydration",sub:"Viral syndrome · hydration",
-   sections:[
-    {h:"Includes",items:["Viral syndrome","Dehydration","Electrolyte imbalance","Weakness, fatigue"]},
-    {h:"Key Orders",items:["Orthostatic vitals","IV hydration assessment"]},
-    {h:"Labs",items:["CBC, CMP, Magnesium","CK*, COVID/Flu PCR, TSH*, UA"]},
-    {h:"Treatments",items:["IV Fluids (NS/LR)","Ketorolac / Acetaminophen","Electrolyte replacement","Antipyretics"]}],
-   redflag:["Sepsis","Rhabdomyolysis","AKI, cardiac symptoms","Neuro deficits"],
-   dispo:"Hydration education · PCP follow-up · Return if worse"},
-
-  {n:8,key:"stroke",accent:"--p8",title:"Stroke / Suspected Stroke",sub:"FAST · time-critical · tPA window",
-   sections:[
-    {h:"FAST",items:["<b>F</b> — Face drooping","<b>A</b> — Arm weakness","<b>S</b> — Speech difficulty","<b>T</b> — Time to call 911"]},
-    {h:"Key Orders",items:["Activate Stroke Protocol","Last Known Well (LKW)","Point-of-care glucose","Neuro checks","NPO until swallow screen"]},
-    {h:"Imaging",items:["CT Head w/o contrast STAT","CTA Head / Neck*","CT Perfusion* (if available)"]},
-    {h:"Labs",items:["CBC, CMP, PT/INR, PTT","Troponin, Type & Screen","Pregnancy test (if applicable)"]},
-    {h:"Eligibility Check",items:["Ischemic vs. hemorrhagic","tPA window ≤4.5 hr","Mechanical thrombectomy ≤24 hr (LVO)"]},
-    {h:"Medications",items:["tPA eligibility: door-to-needle ≤60 min (if eligible)","Blood pressure management"]}],
-   redflag:["LKW unknown — confirm window","Hemorrhage on CT — hold tPA","Rapidly declining GCS"],
-   dispo:"Transfer to Comprehensive Stroke Center · Admit if post-tPA · Neurology consult"},
-
-  {n:9,key:"ortho",accent:"--p9",title:"Orthopedic Injury / Musculoskeletal",sub:"Fractures · sprains · neurovascular",
-   sections:[
-    {h:"Includes",items:["Fractures","Dislocations","Sprains / strains","Joint pain","Back / neck pain","Overuse injuries"]},
-    {h:"Key Orders",items:["Pain score","Neurovascular check","Immobilize as needed","Ice / elevation","NPO if sedation likely"]},
-    {h:"Imaging",items:["X-ray (appropriate area)","CT / MRI* (if needed)","Ultrasound* (soft tissue)"]},
-    {h:"Medications",items:["Acetaminophen","NSAIDs","Opioids (severe pain only)","Muscle relaxants*"]}],
-   redflag:["Open fracture","Neurovascular compromise","Compartment syndrome","Spine injury","Severe deformity"],
-   dispo:"Splint / immobilization · Ortho referral · Crutches / instructions · Return precautions"}
+const CAT_COLORS=['#e63858','#1492d6','#8a3fe0','#0fa873','#dd9015','#e8702f','#5566e6','#d6479e','#10ad95','#c6498f','#0a9fc2','#7d54e0','#2f9e6b'];
+const SECTIONS=[
+  {k:'redFlags',label:'Red Flags',cls:'flag',icon:'<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>'},
+  {k:'triage',label:'Triage',icon:'<path d="M3 12h4l3 8 4-16 3 8h4"/>'},
+  {k:'nursing',label:'Nursing',icon:'<path d="M9 2h6v4l3 3v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9l3-3z"/>'},
+  {k:'keyOrders',label:'Key Orders',icon:'<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'},
+  {k:'labs',label:'Labs',icon:'<path d="M9 2v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V2"/><path d="M7 2h10"/>'},
+  {k:'imaging',label:'Imaging',icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>'},
+  {k:'meds',label:'Medications',icon:'<path d="m10.5 20.5 10-10a5 5 0 1 0-7-7l-10 10a5 5 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/>'},
+  {k:'reassess',label:'Reassessment',icon:'<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>'},
+  {k:'disposition',label:'Disposition',icon:'<path d="M3 12h18M14 7l5 5-5 5"/>'},
+  {k:'discharge',label:'Discharge',icon:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/>'},
+  {k:'followup',label:'Follow-Up',icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/>'},
+  {k:'compliance',label:'Texas FSED Compliance',cls:'comp',icon:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'}
 ];
-
-const WORKFLOW = [
-  {t:"Patient Arrives",s:"Registration · Triage",ic:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>'},
-  {t:"Chief Complaint",s:"Select protocol",ic:'<path d="M9 11H3v10h6zM21 3h-6v18h6zM15 7H9v14h6z"/>'},
-  {t:"Nurse Initiation",s:"Standing orders · labs",ic:'<path d="M9 2h6v4l3 3v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9l3-3z"/><path d="M9 14h6M12 11v6" stroke-width="1.6"/>'},
-  {t:"Physician Eval",s:"Assessment · Dx · plan",ic:'<path d="M11 2a2 2 0 0 0-2 2v.5a6 6 0 0 0 0 11V18a3 3 0 0 0 6 0v-2.5a6 6 0 0 0 0-11V4a2 2 0 0 0-2-2z"/><circle cx="18" cy="18" r="3"/>'},
-  {t:"Reassessment",s:"Response to treatment",ic:'<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>'},
-  {t:"Disposition",s:"Discharge · admit · transfer",ic:'<path d="M3 12h18M3 12l4-4M3 12l4 4M21 6v12"/>'},
-  {t:"Discharge Edu",s:"Instructions · follow-up",ic:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/>'},
-  {t:"Follow-Up",s:"Quality · outcomes",ic:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/>'}
-];
-
-const SIRS = [
-  {b:"Temperature",s:">38°C or <36°C"},
-  {b:"Heart Rate",s:">90 bpm"},
-  {b:"Respiratory Rate",s:">20 / min"},
-  {b:"WBC",s:">12K or <4K"}
-];
-
-const DOSES = [
-  {n:"Aspirin",sub:"ASA",d:"324 mg PO chewable",note:"ACS — give early if no contraindication"},
-  {n:"Nitroglycerin",sub:"SL",d:"0.4 mg SL q5min ×3",note:"Hold if SBP <90 / RV infarct / PDE-5 use"},
-  {n:"Ketorolac",sub:"Toradol",d:"15–30 mg IV / 30–60 mg IM",note:"Avoid in AKI, GI bleed, age >65 use 15 mg"},
-  {n:"Metoclopramide",sub:"Reglan",d:"10 mg IV",note:"Migraine cocktail; watch dystonia"},
-  {n:"Diphenhydramine",sub:"Benadryl",d:"25–50 mg IV",note:"Prevents akathisia w/ metoclopramide"},
-  {n:"Magnesium Sulfate",sub:"",d:"1–2 g IV over 15–30 min",note:"Migraine, asthma, eclampsia"},
-  {n:"Dexamethasone",sub:"Decadron",d:"10 mg IV / PO",note:"Reduces migraine recurrence; croup; asthma"},
-  {n:"Ondansetron",sub:"Zofran",d:"4 mg IV / ODT",note:"Nausea; QT caution"},
-  {n:"Albuterol",sub:"DuoNeb w/ ipratropium",d:"2.5 mg neb, repeat / continuous",note:"Bronchospasm"},
-  {n:"Ceftriaxone",sub:"Rocephin",d:"1–2 g IV",note:"Complicated UTI / pyelonephritis / sepsis"},
-  {n:"Tamsulosin",sub:"Flomax",d:"0.4 mg PO daily",note:"Medical expulsive therapy for stones"},
-  {n:"Phenazopyridine",sub:"Pyridium",d:"100–200 mg PO TID",note:"UTI dysuria; turns urine orange"},
-  {n:"Acetaminophen",sub:"Tylenol",d:"650–1000 mg PO / 1 g IV",note:"Max 3–4 g/day; hepatic caution"},
-  {n:"Morphine",sub:"",d:"2–4 mg IV q5–15min",note:"Titrate; monitor resp / BP"},
-  {n:"Fentanyl",sub:"",d:"25–50 mcg IV",note:"Fast onset; renal-safe analgesia"},
-  {n:"Alteplase (tPA)",sub:"Activase",d:"0.9 mg/kg IV (max 90 mg), 10% bolus",note:"Ischemic stroke ≤4.5 hr; strict criteria; door-to-needle ≤60 min"},
-  {n:"IV Fluids",sub:"NS / LR",d:"500 mL–1 L bolus; 30 mL/kg sepsis",note:"Reassess perfusion / lung exam"},
-  {n:"Lactate",sub:"reference",d:"Draw if ≥2 SIRS",note:"≥2 mmol/L → bundle; ≥4 → aggressive resus"}
-];
-
-const ORDERSET=[
-  {n:1,t:"Triage",s:"Triage orders"},
-  {n:2,t:"Nursing",s:"Nursing orders"},
-  {n:3,t:"Labs",s:"Lab orders"},
-  {n:4,t:"Imaging",s:"Imaging orders"},
-  {n:5,t:"Medications",s:"Med orders"},
-  {n:6,t:"Reassessment",s:"Reassess"},
-  {n:7,t:"Disposition",s:"Disposition"},
-  {n:8,t:"Discharge",s:"Instructions"},
-  {n:9,t:"Follow-Up",s:"Follow-up"}
-];
-
-const UNIVERSAL=[
-  {h:"Required Nursing Documentation",ic:'<path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',
-   items:["Pain scale","Allergy verification","Medication reconciliation","Fall risk","Sepsis screen","Repeat vitals"]},
-  {h:"Required Physician Documentation",ic:'<path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>',
-   items:["History & physical","Differential diagnosis","Medical decision making","Reassessment note","Disposition rationale","Patient education"]}
-];
-
-const OPS=[
-  {h:"Clinical Decision Support (CDS)",style:"arr",
-   intro:"Embed decision tools in EMR:",
-   items:["HEART Score","Wells Score / PERC","NIH Stroke Scale","CURB-65","SIRS / qSOFA","Sepsis alerts"]},
-  {h:"Automation & Safety",style:"tick",
-   items:["Auto-trigger protocols","Sepsis alerts","Duplicate test warnings","Antibiotic stewardship prompts","Transfer checklist automation","Clinical alerts & reminders"]},
-  {h:"Quality Metrics (KPIs)",style:"arr",
-   items:["Door-to-provider time","Door-to-ECG","Door-to-medication","LWBS rate","Transfer rate","Bounce-back rate","Antibiotic timing","Protocol compliance %"]},
-  {h:"Nurse-Initiated Standing Orders",style:"tick",
-   intro:"Texas-compliant protocols approved by Medical Director & Nursing Leadership:",
-   items:["Improve door-to-ECG","Improve treatment times","Reduce LWBS rates","Improve patient safety","Increase throughput"]}
-];
-
-/* ====================== RENDER ====================== */
-const grid=document.getElementById('grid');
-const dispoIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M14 7l5 5-5 5"/></svg>';
-
-PROTOCOLS.forEach(p=>{
-  const sections=p.sections.map(s=>`
-    <div class="sec"><h4><span class="dot"></span>${s.h}</h4>
-    <ul>${s.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('');
-  const rf=`<div class="redflag"><h4>🚩 Red Flags — Escalate / Transfer</h4>
-    <ul>${p.redflag.map(i=>`<li>${i}</li>`).join('')}</ul></div>`;
-  const dispo=`<div class="dispo">${dispoIcon}<div><b>Disposition:</b> ${p.dispo}</div></div>`;
-  const card=document.createElement('div');
-  card.className='card'+(p.wide?' wide':'');
-  card.style.setProperty('--accent',`var(${p.accent})`);
-  card.dataset.search=(p.title+' '+p.sub+' '+p.sections.map(s=>s.h+' '+s.items.join(' ')).join(' ')+' '+p.redflag.join(' ')+' '+p.dispo).toLowerCase().replace(/<[^>]+>/g,'');
-  card.innerHTML=`
-    <div class="chead">
-      <div class="cnum">${p.n}</div>
-      <div class="cttl"><h3>${p.title}</h3><span>${p.sub}</span></div>
-      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
-    </div>
-    <div class="cbody"><div class="cbody-inner"><div class="cpad">
-      <div style="display:contents">${sections}</div>
-      <div style="grid-column:1/-1">${rf}${dispo}</div>
-    </div></div></div>`;
-  card.querySelector('.chead').addEventListener('click',()=>card.classList.toggle('open'));
-  grid.appendChild(card);
-});
-
-// no-result element
-const noRes=document.createElement('div');
-noRes.className='noresult';
-noRes.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><div>No protocols match your search.</div>';
-grid.appendChild(noRes);
-
-// workflow
-const flow=document.getElementById('flow');
-WORKFLOW.forEach((w,i)=>{
-  const el=document.createElement('div');el.className='flow-step';
-  el.innerHTML=`<div class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${w.ic}</svg></div><b>${w.t}</b><span>${w.s}</span>`;
-  flow.appendChild(el);
-});
-
-// order set tabs
-const orderset=document.getElementById('orderset');
-ORDERSET.forEach(o=>{
-  const el=document.createElement('div');el.className='flow-step';
-  el.innerHTML=`<div class="flow-ic">${o.n}</div><b>${o.t}</b><span>${o.s}</span>`;
-  orderset.appendChild(el);
-});
-
-// universal documentation panels
-const universal=document.getElementById('universal');
-UNIVERSAL.forEach(p=>{
-  const el=document.createElement('div');el.className='panel';
-  el.innerHTML=`<h4><svg class="pic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">${p.ic}</svg>${p.h}</h4>
-  <ul>${p.items.map(i=>`<li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>${i}</li>`).join('')}</ul>`;
-  universal.appendChild(el);
-});
-
-// ops panels (CDS / automation / KPIs / standing orders)
-const opsBox=document.getElementById('ops');
-OPS.forEach(p=>{
-  const el=document.createElement('div');el.className='panel';
-  const mark=p.style==='tick'
-    ? '<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>'
-    : '<span class="arr">›</span>';
-  el.innerHTML=`<h4><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)"></span>${p.h}</h4>
-  ${p.intro?`<p style="margin:0 0 10px;font-size:12px;color:var(--txt-mute);line-height:1.5">${p.intro}</p>`:''}
-  <ul>${p.items.map(i=>`<li>${mark}${i}</li>`).join('')}</ul>`;
-  opsBox.appendChild(el);
-});
-
-// sirs
-const sirsBox=document.getElementById('sirs');
-SIRS.forEach((c,i)=>{
-  const el=document.createElement('div');el.className='crit';el.dataset.i=i;
-  el.innerHTML=`<div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-    <div class="lbl"><b>${c.b}</b><span>${c.s}</span></div>`;
-  el.addEventListener('click',()=>{el.classList.toggle('on');scoreSirs();});
-  sirsBox.appendChild(el);
-});
-function scoreSirs(){
-  const n=sirsBox.querySelectorAll('.crit.on').length;
-  document.getElementById('sirsNum').innerHTML=n+'<small>/4</small>';
-  const msg=document.getElementById('sirsMsg');const num=document.getElementById('sirsNum');
-  if(n>=2){msg.className='score-msg alert';msg.innerHTML='⚠ ≥2 SIRS criteria — <b>obtain lactate & initiate sepsis screen.</b>';num.style.color='var(--danger)';}
-  else{msg.className='score-msg safe';msg.textContent=n===0?'No SIRS criteria met — continue routine assessment.':'1 criterion — monitor & reassess.';num.style.color='var(--txt)';}
-}
-
-/* ====================== SEARCH ====================== */
-const search=document.getElementById('search'),clearx=document.getElementById('clearx'),countEl=document.getElementById('count');
-function runSearch(){
-  const q=search.value.trim().toLowerCase();
-  clearx.style.display=q?'block':'none';
-  let shown=0;
-  document.querySelectorAll('.card').forEach(c=>{
-    const match=!q||c.dataset.search.includes(q);
-    c.classList.toggle('hidden',!match);
-    if(match){shown++;if(q)c.classList.add('open');}
-    if(!q)c.classList.remove('open');
-  });
-  countEl.textContent=shown;
-  noRes.classList.toggle('show',shown===0);
-}
-search.addEventListener('input',runSearch);
-clearx.addEventListener('click',()=>{search.value='';runSearch();search.focus();});
-
-// expand all toggle
-const expandBtn=document.getElementById('expandAll');
-expandBtn.addEventListener('click',()=>{
-  const anyClosed=[...document.querySelectorAll('.card:not(.hidden)')].some(c=>!c.classList.contains('open'));
-  document.querySelectorAll('.card:not(.hidden)').forEach(c=>c.classList.toggle('open',anyClosed));
-  expandBtn.classList.toggle('active',anyClosed);
-});
-document.getElementById('printBtn').addEventListener('click',()=>{
-  document.querySelectorAll('.card').forEach(c=>c.classList.add('open'));window.print();
-});
-
-/* ====================== MODALS ====================== */
-function openModal(id){document.getElementById(id).classList.add('show');}
-function closeModal(el){el.classList.remove('show');}
-document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',e=>closeModal(e.target.closest('.modal'))));
-document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m);}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal.show').forEach(closeModal);});
-document.getElementById('openDose').addEventListener('click',()=>{openModal('doseModal');document.getElementById('doseSearch').focus();});
-
-/* ====================== DOSING ====================== */
-const doseBody=document.getElementById('doseBody');
-DOSES.forEach(d=>{
-  const tr=document.createElement('tr');tr.className='drow';
-  tr.dataset.s=(d.n+' '+d.sub+' '+d.note).toLowerCase();
-  tr.innerHTML=`<td class="dname">${d.n}${d.sub?`<small>${d.sub}</small>`:''}</td><td class="ddose">${d.d}</td><td class="dnote">${d.note}</td>`;
-  doseBody.appendChild(tr);
-});
-document.getElementById('doseSearch').addEventListener('input',e=>{
-  const q=e.target.value.trim().toLowerCase();
-  document.querySelectorAll('.drow').forEach(r=>r.classList.toggle('dhide',q&&!r.dataset.s.includes(q)));
-});
-
-/* ====================== SUPABASE (AI workflow caching) ====================== */
-const CFG=window.ICCOTX_CONFIG||{};
-let db=null, liveMode=false;
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-if(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY&&window.supabase){
-  try{ db=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY); liveMode=true; }catch(e){ liveMode=false; }
+
+let DATA=[], CATS=[], catColor={}, activeCat='all', query='';
+
+function getList(wf,key){
+  if(key==='redFlags') return wf.redFlags||[];
+  if(key==='compliance') return wf.compliance||[];
+  return (wf.stages&&wf.stages[key])||[];
 }
 
-/* ====================== WORKFLOW ENGINE ====================== */
-const STAGES=[
-  {k:'triage',t:'Triage',n:1},{k:'nursing',t:'Nursing',n:2},{k:'labs',t:'Labs',n:3},
-  {k:'imaging',t:'Imaging',n:4},{k:'meds',t:'Medications',n:5},{k:'reassess',t:'Reassessment',n:6},
-  {k:'dispo',t:'Disposition',n:7},{k:'discharge',t:'Discharge',n:8},{k:'followup',t:'Follow-Up',n:9}
-];
-const ACUITY={chest:'2',migraine:'3',sob:'2-3',gi:'3',uti:'3-4',kidney:'3',general:'3-4',stroke:'1-2',ortho:'3-4'};
-const stripT=s=>String(s).replace(/<[^>]+>/g,'');
-
-function deriveWorkflow(p){
-  const st={triage:[],nursing:[],labs:[],imaging:[],meds:[],reassess:[],dispo:[],discharge:[],followup:[]};
-  st.triage.push('Vitals + pain score','Assign ESI acuity','SIRS / sepsis screen','Allergy & medication reconciliation');
-  let includes=[];
-  p.sections.forEach(sec=>{
-    const h=sec.h.toLowerCase(), items=sec.items.map(stripT);
-    let tgt='nursing';
-    if(h.includes('lab')) tgt='labs';
-    else if(h.includes('imag')) tgt='imaging';
-    else if(h.includes('medicat')||h.includes('treatment')||h.includes('cocktail')) tgt='meds';
-    else if(h.includes('risk')||h.includes('eligib')) tgt='reassess';
-    else if(h.includes('fast')) tgt='triage';
-    else if(h.includes('disposition')) tgt='dispo';
-    else if(h.includes('include')||h.includes('feature')){ includes=includes.concat(items); tgt=null; }
-    else if(h.includes('order')) tgt='nursing';
-    if(tgt) st[tgt]=st[tgt].concat(items);
-  });
-  st.reassess.push('Reassess response to treatment','Repeat vitals / trend','Document medical decision-making');
-  st.dispo=st.dispo.concat(p.dispo.split('·').map(s=>s.trim()).filter(Boolean));
-  st.discharge.push('Patient education & written instructions','Return precautions reviewed','Prescriptions / work note as needed');
-  st.followup.push('PCP / specialist follow-up as indicated','Results callback (cultures/imaging)','Log quality metrics');
-  STAGES.forEach(s=>{ if(!st[s.k].length) st[s.k].push('Per clinical judgment'); });
-  return {title:p.title,summary:includes.length?('Includes: '+includes.join(', ')):p.sub,acuity:ACUITY[p.key]||'3',stages:st,redflags:p.redflag.slice()};
-}
-
-const EXTRA_WF=[
-  {key:'sepsis',accent:'--p1',acuity:'1-2',title:'Sepsis / Septic Shock',summary:'Time-critical — bundle within 1 hour',
-   syn:['sepsis','septic','septic shock','sirs infection','severe infection'],
-   stages:{triage:['Vitals + pain score','ESI 1-2','SIRS / qSOFA screen','Allergy & med rec'],
-    nursing:['Two large-bore IVs','Continuous monitor + SpO₂','Foley for hourly UOP if indicated','Notify physician STAT'],
-    labs:['CBC, CMP, lactate','Blood cultures ×2 before antibiotics','UA + urine culture','VBG, coags, procalcitonin*'],
-    imaging:['Chest X-ray','CT for source* (if indicated)','POCUS for source / volume*'],
-    meds:['Broad-spectrum antibiotics within 1 hr','30 mL/kg crystalloid bolus','Vasopressors if MAP <65 after fluids','Antipyretics'],
-    reassess:['Repeat lactate at 2–4 hr','Reassess perfusion / MAP','Assess fluid responsiveness'],
-    dispo:['Admit — ICU / step-down per severity','Transfer if higher level of care needed'],
-    discharge:['Usually admitted','Education if low-risk source discharged'],
-    followup:['Culture callback workflow','Source-control follow-up']},
-   redflags:['Hypotension / MAP <65','Lactate ≥4','AMS or end-organ dysfunction']},
-  {key:'anaphylaxis',accent:'--p5',acuity:'1-2',title:'Anaphylaxis / Allergic Reaction',summary:'Airway-threatening allergic reaction',
-   syn:['anaphylaxis','allergic reaction','allergy','hives','angioedema','epipen','bee sting'],
-   stages:{triage:['Vitals + airway check','ESI 1-2','Identify trigger','Allergy history'],
-    nursing:['IM epinephrine immediately','High-flow O₂','IV access ×2','Continuous monitor'],
-    labs:['Largely clinical','Serum tryptase* if diagnosis unclear'],
-    imaging:['Not routinely indicated'],
-    meds:['Epinephrine 0.3–0.5 mg IM q5–15 min','IV fluids for hypotension','H1 (diphenhydramine) + H2 blocker','Steroids (methylprednisolone)','Albuterol for bronchospasm'],
-    reassess:['Monitor 4–6 hr for biphasic reaction','Reassess airway','Repeat epinephrine if needed'],
-    dispo:['Observe 4–6 hr','Admit if refractory / airway involvement'],
-    discharge:['Epinephrine auto-injector Rx + teaching','Trigger avoidance','Allergy / immunology referral'],
-    followup:['Allergy referral','PCP follow-up']},
-   redflags:['Airway compromise / stridor','Hypotension','Refractory or biphasic symptoms']},
-  {key:'laceration',accent:'--p9',acuity:'4',title:'Laceration / Wound',summary:'Cuts, bites, soft-tissue wounds',
-   syn:['laceration','cut','wound','dog bite','animal bite','suture','gash','stitches'],
-   stages:{triage:['Vitals + pain score','ESI 4-5','Wound + neurovascular check','Tetanus history'],
-    nursing:['Control bleeding / direct pressure','Irrigate & clean wound','Pain control','Position & expose'],
-    labs:['Usually none'],
-    imaging:['X-ray for radiopaque foreign body / fracture*'],
-    meds:['Local anesthetic (lidocaine ± epi)','Tetanus prophylaxis if due','Antibiotics for bite / high-risk*'],
-    reassess:['Neurovascular recheck post-repair','Tendon / function exam'],
-    dispo:['Discharge after repair','Refer if tendon / joint / complex'],
-    discharge:['Wound care instructions','Suture / staple removal timing','Return for signs of infection'],
-    followup:['Suture removal','PCP / specialist if complex']},
-   redflags:['Arterial bleeding','Tendon or nerve injury','Deep / contaminated bite']},
-  {key:'syncope',accent:'--p7',acuity:'2-3',title:'Syncope / Fainting',summary:'Transient loss of consciousness',
-   syn:['syncope','fainting','passed out','loss of consciousness','blackout','fainted'],
-   stages:{triage:['Vitals + orthostatics','ESI 2-3','ECG immediately','Point-of-care glucose'],
-    nursing:['Continuous cardiac monitor','IV access','Fall precautions'],
-    labs:['CBC, CMP, troponin','BNP*, pregnancy test*'],
-    imaging:['CT head if trauma / focal neuro*','CXR*'],
-    meds:['IV fluids for volume depletion','Treat underlying cause'],
-    reassess:['Risk-stratify (Canadian Syncope Rule)','Continuous rhythm monitoring'],
-    dispo:['Discharge if low-risk','Admit / observe if cardiac concern'],
-    discharge:['Driving precautions until cleared','Hydration','Return precautions'],
-    followup:['Cardiology if cardiac cause','PCP follow-up']},
-   redflags:['Exertional syncope','Abnormal ECG','Family history sudden death','Known cardiac disease']},
-  {key:'dka',accent:'--p3',acuity:'2',title:'DKA / Hyperglycemia',summary:'Diabetic ketoacidosis / severe hyperglycemia',
-   syn:['dka','diabetic ketoacidosis','hyperglycemia','high blood sugar','hhs','high sugar'],
-   stages:{triage:['Vitals + glucose + ketones','ESI 2','Mental status','Hydration assessment'],
-    nursing:['IV access ×2','Continuous monitor','Strict I/O, hourly glucose'],
-    labs:['VBG, BMP, anion gap','Serum / urine ketones','CBC, lactate, HbA1c, Mg / phosphate'],
-    imaging:['CXR / search for precipitant*'],
-    meds:['IV fluids (NS) resuscitation','Insulin infusion after K⁺ verified','Potassium replacement per K⁺','Treat precipitant'],
-    reassess:['Hourly glucose, q2–4h electrolytes','Track anion-gap closure','Avoid hypoglycemia / hypokalemia'],
-    dispo:['Admit (often ICU / step-down)','Transfer if no ICU capability'],
-    discharge:['Usually admitted','Diabetes education if mild'],
-    followup:['Endocrine / PCP','Diabetes education']},
-   redflags:['AMS / cerebral edema','Severe acidosis','Hypokalemia','Hemodynamic instability']},
-  {key:'backpain',accent:'--p6',acuity:'3-4',title:'Back Pain',summary:'Atraumatic & traumatic low back pain',
-   syn:['back pain','low back pain','lumbago','sciatica','spine pain','lower back'],
-   stages:{triage:['Vitals + pain score','ESI 3-4','Focused neuro exam','Red-flag screen (cauda equina)'],
-    nursing:['Pain control','Mobility assessment','Comfortable positioning'],
-    labs:['Usually none','ESR / CRP if infection suspected*','UA if renal cause*'],
-    imaging:['No imaging if uncomplicated','MRI if neuro deficit / infection*','X-ray for trauma*'],
-    meds:['NSAIDs / acetaminophen','Short muscle-relaxant course*','Opioids sparingly if severe'],
-    reassess:['Reassess neuro status','Ambulation / function check'],
-    dispo:['Discharge with conservative care','Refer / admit if red flags'],
-    discharge:['Stay active, activity modification','Return for weakness / incontinence','PT referral'],
-    followup:['PCP follow-up','PT / spine clinic if persistent']},
-   redflags:['Saddle anesthesia / incontinence (cauda equina)','Fever + IVDU (epidural abscess)','Progressive neuro deficit','Significant trauma']}
-];
-
-const SYN={
-  chest:['chest pain','chest discomfort','angina','acs','heart attack','mi','chest pressure'],
-  migraine:['migraine','headache','head pain','cephalgia','worst headache'],
-  sob:['shortness of breath','sob','dyspnea','difficulty breathing','cough','uri','asthma','copd','pneumonia','cant breathe','breathing'],
-  gi:['abdominal pain','stomach pain','belly pain','nausea','vomiting','diarrhea','gi','stomach'],
-  uti:['uti','dysuria','urinary','burning urination','pyelonephritis','bladder infection'],
-  kidney:['kidney stone','flank pain','renal colic','stone','kidney'],
-  general:['fatigue','weakness','dehydration','body pain','malaise','viral syndrome'],
-  stroke:['stroke','facial droop','slurred speech','one-sided weakness','tpa','cva','fast'],
-  ortho:['fracture','sprain','injury','broken bone','dislocation','joint pain']
-};
-
-function buildIndex(){
-  const idx=[];
-  PROTOCOLS.forEach(p=>idx.push({key:p.key,title:p.title,accent:p.accent,n:p.n,syn:(SYN[p.key]||[]).concat([p.title.toLowerCase()]),wf:deriveWorkflow(p)}));
-  EXTRA_WF.forEach(w=>idx.push({key:w.key,title:w.title,accent:w.accent,n:'＋',syn:w.syn.concat([w.title.toLowerCase()]),wf:{title:w.title,summary:w.summary,acuity:w.acuity,stages:w.stages,redflags:w.redflags}}));
-  return idx;
-}
-const WF_INDEX=buildIndex();
-function scoreEntry(e,q){
-  let b=0;
-  e.syn.forEach(s=>{ if(s===q)b=Math.max(b,4); else if(s.startsWith(q)||q.startsWith(s))b=Math.max(b,3); else if(s.includes(q)||q.includes(s))b=Math.max(b,2); });
-  if(e.title.toLowerCase().includes(q)) b=Math.max(b,2);
-  return b;
-}
-function matchComplaint(q){ q=(q||'').toLowerCase().trim(); if(!q)return null; let best=null,bs=0; WF_INDEX.forEach(e=>{const s=scoreEntry(e,q); if(s>bs){bs=s;best=e;}}); return bs>=2?best:null; }
-function topMatches(q,n){ q=(q||'').toLowerCase().trim(); if(!q)return []; return WF_INDEX.map(e=>({e,s:scoreEntry(e,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,n).map(x=>x.e); }
-
-let CURWF=null;
-function openWorkflow(wf,source){
-  CURWF=wf;
-  document.getElementById('wfTitle').textContent=wf.title||'Workflow';
-  document.getElementById('wfSub').textContent=wf.summary||'';
-  document.getElementById('wfAcuity').textContent=wf.acuity?('ESI '+wf.acuity):'';
-  const src=document.getElementById('wfSrc');
-  src.className='wfsrc '+source; src.textContent=source==='ai'?'AI-generated':source==='library'?'Saved library':'Curated';
-  document.getElementById('wfTabs').innerHTML=STAGES.map(s=>`<button class="wftab${s.k==='triage'?' active':''}" data-k="${s.k}"><span class="wtn">${s.n}</span>${s.t}</button>`).join('');
+function render(){
+  const dir=document.getElementById('directory');
+  const q=query.toLowerCase().trim();
+  const match=wf=>{
+    if(activeCat!=='all'&&wf.category!==activeCat) return false;
+    if(!q) return true;
+    const hay=(wf.name+' '+wf.category+' '+(wf.synonyms||[]).join(' ')+' '+(wf.summary||'')).toLowerCase();
+    return hay.includes(q);
+  };
+  const shown=DATA.filter(match);
+  document.getElementById('count').textContent=shown.length;
+  if(!shown.length){ dir.innerHTML='<div class="empty"><h3>No matching complaint</h3><div>Try another term, or clear the search.</div></div>'; return; }
   let html='';
-  if(wf.redflags&&wf.redflags.length) html+=`<div class="wfredflag"><h3>🚩 Red Flags — Escalate / Transfer</h3><ul>${wf.redflags.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></div>`;
-  STAGES.forEach(s=>{
-    const items=(wf.stages&&wf.stages[s.k])||[];
-    html+=`<div class="wfstage" data-stage="${s.k}"><h3><span class="wsn">${s.n}</span>${s.t}<span class="wscount" data-c="${s.k}">0/${items.length}</span></h3>
-      ${items.map(it=>`<div class="witem"><div class="wck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div><div class="wtext">${esc(it)}</div></div>`).join('')}</div>`;
+  CATS.forEach(cat=>{
+    const items=shown.filter(w=>w.category===cat);
+    if(!items.length) return;
+    const col=catColor[cat];
+    html+=`<div class="catblock" style="--accent:${col}"><h2><span class="cdot"></span>${esc(cat)} <small>${items.length}</small></h2><div class="grid">`;
+    html+=items.map(w=>`<div class="ccard" style="--accent:${col}" data-id="${esc(w.id)}">
+      <div class="nm"><b>${esc(w.name)}</b>${w.summary?`<span>${esc(w.summary)}</span>`:''}</div>
+      ${w.acuity?`<span class="esi">ESI ${esc(w.acuity)}</span>`:''}
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+    </div>`).join('');
+    html+='</div></div>';
   });
-  const body=document.getElementById('wfBody'); body.innerHTML=html; body.scrollTop=0;
-  updateWfProgress();
-  document.getElementById('wfview').classList.add('show');
+  dir.innerHTML=html;
 }
-function updateWfProgress(){
-  const items=[...document.querySelectorAll('#wfBody .witem')];
-  const done=items.filter(i=>i.classList.contains('checked')).length;
-  document.getElementById('wfbar').style.width=(items.length?100*done/items.length:0)+'%';
-  STAGES.forEach(s=>{
-    const stg=document.querySelector(`.wfstage[data-stage="${s.k}"]`); if(!stg)return;
-    const its=[...stg.querySelectorAll('.witem')], d=its.filter(i=>i.classList.contains('checked')).length;
-    const c=stg.querySelector('.wscount'); if(c)c.textContent=d+'/'+its.length;
-    const tab=document.querySelector(`.wftab[data-k="${s.k}"]`); if(tab)tab.classList.toggle('complete',its.length&&d===its.length);
-  });
-}
-document.getElementById('wfTabs').addEventListener('click',e=>{
-  const t=e.target.closest('.wftab'); if(!t)return;
-  document.querySelectorAll('.wftab').forEach(x=>x.classList.toggle('active',x===t));
-  const stg=document.querySelector(`.wfstage[data-stage="${t.dataset.k}"]`); if(stg)stg.scrollIntoView({behavior:'smooth',block:'start'});
-});
-document.getElementById('wfBody').addEventListener('click',e=>{ const it=e.target.closest('.witem'); if(!it)return; it.classList.toggle('checked'); updateWfProgress(); });
-document.getElementById('wfClose').addEventListener('click',()=>document.getElementById('wfview').classList.remove('show'));
-document.getElementById('wfview').addEventListener('click',e=>{ if(e.target.id==='wfview')document.getElementById('wfview').classList.remove('show'); });
-document.addEventListener('keydown',e=>{ if(e.key==='Escape')document.getElementById('wfview').classList.remove('show'); });
-// command bar
-const cmd=document.getElementById('cmd'), ac=document.getElementById('ac');
-function renderAC(){
-  const q=cmd.value.trim();
-  if(!q){ac.classList.remove('show');ac.innerHTML='';return;}
-  let html=topMatches(q,5).map(e=>`<div class="ac-item" data-key="${e.key}"><span class="acn" style="--accent:var(${e.accent})">${e.n}</span><b>${esc(e.title)}</b><span class="acmeta">Curated</span></div>`).join('');
-  html+=`<div class="ac-item gen" data-gen="1"><span class="acn">✦</span><b>Generate workflow for "${esc(q)}"</b><span class="acmeta">AI</span></div>`;
-  ac.innerHTML=html; ac.classList.add('show');
-}
-cmd.addEventListener('input',renderAC);
-cmd.addEventListener('focus',renderAC);
-ac.addEventListener('click',e=>{
-  const it=e.target.closest('.ac-item'); if(!it)return; ac.classList.remove('show');
-  if(it.dataset.gen) generateWorkflow(cmd.value);
-  else { const ent=WF_INDEX.find(x=>x.key===it.dataset.key); if(ent)openWorkflow(ent.wf,'curated'); }
-});
-document.addEventListener('click',e=>{ if(!e.target.closest('.cmdwrap'))ac.classList.remove('show'); });
-function resolveCommand(q){ q=(q||'').trim(); if(!q)return; ac.classList.remove('show'); const m=matchComplaint(q); if(m){openWorkflow(m.wf,'curated');return;} generateWorkflow(q); }
-document.getElementById('cmdGo').addEventListener('click',()=>resolveCommand(cmd.value));
-cmd.addEventListener('keydown',e=>{ if(e.key==='Enter'){e.preventDefault();resolveCommand(cmd.value);} });
 
-function showLoading(q){
-  document.getElementById('wfTitle').textContent='Generating workflow…';
-  document.getElementById('wfSub').textContent='“'+q+'”';
-  document.getElementById('wfAcuity').textContent='';
-  const src=document.getElementById('wfSrc'); src.className='wfsrc ai'; src.textContent='AI';
-  document.getElementById('wfTabs').innerHTML='';
-  document.getElementById('wfbar').style.width='0%';
-  document.getElementById('wfBody').innerHTML='<div class="wfloading"><div class="wfspin"></div>Building the full 9-stage workflow with Claude…</div>';
-  document.getElementById('wfview').classList.add('show');
+function openDetail(id){
+  const wf=DATA.find(w=>w.id===id); if(!wf) return;
+  const col=catColor[wf.category]||'var(--cyan)';
+  document.getElementById('dhead').style.setProperty('--accent',col);
+  document.getElementById('dTitle').textContent=wf.name;
+  document.getElementById('dCat').textContent=wf.category;
+  document.getElementById('dEsi').textContent=wf.acuity?('ESI '+wf.acuity):'';
+  document.getElementById('dEsi').style.setProperty('--accent',col);
+  document.getElementById('dSummary').textContent=wf.summary||'';
+  let html='';
+  SECTIONS.forEach(s=>{
+    const list=getList(wf,s.k); if(!list||!list.length) return;
+    html+=`<div class="sec ${s.cls||''}"><h3><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${s.icon}</svg>${s.label}</h3>
+      <ul>${list.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`;
+  });
+  document.getElementById('dSections').innerHTML=html;
+  document.getElementById('dbody')&&(document.querySelector('.dbody').scrollTop=0);
+  document.getElementById('detail').classList.add('show');
 }
-function showWfError(msg){
-  document.getElementById('wfBody').innerHTML='<div class="wfloading"><div style="font-size:34px">⚠</div><p style="max-width:480px;margin:10px auto;color:var(--txt-dim)">'+esc(msg)+'</p><p style="font-size:12px;color:var(--txt-mute)">AI generation runs on the deployed site once the Anthropic API key is configured. Curated complaints work everywhere.</p></div>';
+function closeDetail(){document.getElementById('detail').classList.remove('show');}
+
+document.getElementById('directory').addEventListener('click',e=>{const c=e.target.closest('.ccard');if(c)openDetail(c.dataset.id);});
+document.getElementById('dClose').addEventListener('click',closeDetail);
+document.getElementById('detail').addEventListener('click',e=>{if(e.target.id==='detail')closeDetail();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail();});
+document.getElementById('dPrint').addEventListener('click',()=>window.print());
+
+const search=document.getElementById('search'),clearx=document.getElementById('clearx');
+search.addEventListener('input',()=>{query=search.value;clearx.style.display=query?'block':'none';render();});
+clearx.addEventListener('click',()=>{search.value='';query='';clearx.style.display='none';render();search.focus();});
+
+function buildCats(){
+  const catbox=document.getElementById('cats');
+  CATS.forEach((c,i)=>{ catColor[c]=CAT_COLORS[i%CAT_COLORS.length]; });
+  let html=`<button class="cchip active" data-cat="all">All systems</button>`;
+  html+=CATS.map(c=>`<button class="cchip" data-cat="${esc(c)}" style="--accent:${catColor[c]}"><span class="dotc"></span>${esc(c)}</button>`).join('');
+  catbox.innerHTML=html;
+  catbox.addEventListener('click',e=>{const b=e.target.closest('.cchip');if(!b)return;
+    activeCat=b.dataset.cat;[...catbox.children].forEach(x=>x.classList.toggle('active',x===b));render();});
+  document.getElementById('catcount').textContent=CATS.length;
 }
-async function generateWorkflow(q){
-  q=(q||'').trim(); if(!q)return;
-  showLoading(q);
-  const norm=q.toLowerCase();
-  if(liveMode){ try{ const {data}=await db.from('workflows').select('data').eq('complaint',norm).maybeSingle(); if(data&&data.data){openWorkflow(data.data,'library');return;} }catch(e){} }
+
+async function load(){
   try{
-    const r=await fetch('/api/workflow',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({complaint:q})});
-    const txt=await r.text(); let wf=null; try{wf=JSON.parse(txt);}catch(e){}
-    if(!r.ok||!wf||!wf.stages){ showWfError((wf&&wf.error)?wf.error:('Could not generate (HTTP '+r.status+').')); return; }
-    openWorkflow(wf,'ai');
-    if(liveMode){ try{ await db.from('workflows').insert({complaint:norm,title:wf.title,summary:wf.summary||'',acuity:wf.acuity||'',data:wf,source:'ai'}); }catch(e){} }
-  }catch(e){ showWfError('AI endpoint not reachable here ('+e+').'); }
+    const r=await fetch('catalog.json?cb='+Date.now());
+    if(!r.ok) throw new Error('no catalog');
+    DATA=await r.json();
+    DATA.sort((a,b)=>a.name.localeCompare(b.name));
+    CATS=[...new Set(DATA.map(w=>w.category))];
+    buildCats();
+    render();
+  }catch(e){
+    document.getElementById('directory').innerHTML='<div class="empty"><div class="spin"></div><h3>Building the workflow catalog…</h3><div>The clinical workflows are being generated. This page will show them once ready — refresh in a moment.</div></div>';
+    document.getElementById('count').textContent='0';
+  }
 }
-
-// chips
-['Chest pain','Sepsis','Stroke','Shortness of breath','Abdominal pain','Headache','Allergic reaction','Laceration','Syncope','DKA'].forEach(c=>{
-  const b=document.createElement('button'); b.className='chip'; b.textContent=c;
-  b.addEventListener('click',()=>{cmd.value=c;resolveCommand(c);}); document.getElementById('cmdChips').appendChild(b);
-});
-
-// make the EMR-tab strip and workflow strip actionable
-[...document.querySelectorAll('#orderset .flow-step,#flow .flow-step')].forEach(el=>{
-  el.style.cursor='pointer'; el.title='Type a chief complaint above to build its full workflow';
-  el.addEventListener('click',()=>{ document.querySelector('.hero').scrollIntoView({behavior:'smooth',block:'center'}); cmd.focus(); });
-});
+load();
 </script>
 </body>
 </html>

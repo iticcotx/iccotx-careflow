@@ -1,0 +1,778 @@
+[
+  {
+    "id": "epistaxis",
+    "name": "Epistaxis",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["nosebleed", "bleeding nose", "anterior bleed", "posterior bleed"],
+    "acuity": "3 (2 if hemorrhagic/anticoagulated)",
+    "summary": "Anterior (Kiesselbach) vs posterior bleed; assess volume, anticoagulation, and airway/hemodynamic risk.",
+    "stages": {
+      "triage": [
+        "Have patient sit upright, lean forward, pinch soft nares x10-15 min",
+        "Quantify blood loss, duration, recurrence, trauma",
+        "Screen anticoagulant/antiplatelet use and bleeding disorders",
+        "Vitals; assess for hypovolemia/orthostasis"
+      ],
+      "nursing": [
+        "Apply continuous firm nasal compression; provide emesis basin",
+        "Oximetry; recheck BP",
+        "Prepare nasal speculum, headlamp, suction, cautery/packing kit",
+        "*IV access if active or high-volume bleed if indicated"
+      ],
+      "keyOrders": [
+        "Topical vasoconstrictor + anesthetic soaked pledgets",
+        "*IV access and fluids if hemodynamically unstable if indicated",
+        "*Type & screen if significant blood loss if indicated",
+        "Treat hypertension only after bleeding controlled"
+      ],
+      "labs": [
+        "*CBC if heavy/recurrent bleeding if indicated",
+        "*PT/INR/PTT if on anticoagulant or liver disease if indicated",
+        "*Type & screen if transfusion possible if indicated"
+      ],
+      "imaging": [
+        "Usually none for atraumatic epistaxis",
+        "*CT face/sinus if trauma or suspected mass if indicated"
+      ],
+      "meds": [
+        "Oxymetazoline 0.05% 2 sprays/pledgets topical",
+        "Lidocaine 1-2% with epinephrine topical for anesthesia",
+        "Silver nitrate cautery to visualized anterior source",
+        "*Tranexamic acid 500 mg topical (soaked pledget) if indicated",
+        "*Reverse warfarin with vitamin K/PCC if life-threatening bleed if indicated"
+      ],
+      "reassess": [
+        "Inspect for cessation after vasoconstriction/compression",
+        "If continues anteriorly: cautery then anterior packing",
+        "If posterior/uncontrolled: posterior balloon pack + monitor",
+        "Recheck vitals and Hgb trend if significant loss"
+      ],
+      "disposition": [
+        "Discharge most controlled anterior bleeds after observation",
+        "Admit/observe posterior packs (risk of hypoxia/dysrhythmia)",
+        "Transfer to ENT/higher level for uncontrolled or posterior bleed needing intervention"
+      ],
+      "discharge": [
+        "Nasal saline gel, humidification, avoid nose-picking/blowing",
+        "Resume anticoagulation per shared decision once stable",
+        "Return for rebleed, lightheadedness, or pack dislodgement"
+      ],
+      "followup": [
+        "ENT follow-up in 24-72 h if packed",
+        "PCP for BP and anticoagulation management",
+        "*Hematology if recurrent unexplained bleeding if indicated"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability or large-volume blood loss",
+      "Posterior bleed not controlled with anterior measures",
+      "Airway compromise or recurrent bleeding on anticoagulation",
+      "Suspected nasal mass/juvenile angiofibroma"
+    ],
+    "compliance": [
+      "EMTALA MSE on all comers; stabilize bleeding before any transfer",
+      "Posterior packs and unstable bleeds typically require appropriate transfer to ENT-capable facility with provider-to-provider report",
+      "Document anticoagulation reversal decisions and observation-vs-transfer rationale",
+      "FSED must arrange qualified transport (ALS) for actively bleeding/hypotensive patients"
+    ]
+  },
+  {
+    "id": "ear-pain-otitis",
+    "name": "Ear Pain / Otitis",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["earache", "otalgia", "otitis media", "otitis externa", "swimmer's ear"],
+    "acuity": "4 (3 if systemic illness)",
+    "summary": "Differentiate AOM, otitis externa, and referred otalgia; exclude mastoiditis and malignant otitis externa.",
+    "stages": {
+      "triage": [
+        "Onset, fever, discharge, water exposure, hearing change",
+        "Diabetes/immunocompromise (malignant OE risk)",
+        "Vitals including temperature",
+        "Assess for trismus or dental source of referred pain"
+      ],
+      "nursing": [
+        "Position for comfort; pain assessment",
+        "Prepare otoscope; gentle external canal cleaning if discharge",
+        "*Obtain temperature trend if febrile if indicated"
+      ],
+      "keyOrders": [
+        "Otoscopic exam of both ears with pneumatic insufflation if available",
+        "Inspect/palpate mastoid and TMJ",
+        "*Wick placement for swollen canal in OE if indicated"
+      ],
+      "labs": [
+        "Usually none",
+        "*CBC/CRP if toxic or suspected mastoiditis if indicated",
+        "*Glucose/HbA1c if suspected malignant otitis externa if indicated"
+      ],
+      "imaging": [
+        "None routinely",
+        "*CT temporal bone if mastoiditis or malignant OE suspected if indicated"
+      ],
+      "meds": [
+        "AOM: amoxicillin 875-1000 mg PO BID (or high-dose 80-90 mg/kg/day basis)",
+        "PCN allergy: cefdinir 300 mg PO BID or azithromycin",
+        "Otitis externa: ofloxacin 0.3% or ciprofloxacin-dexamethasone otic drops",
+        "Analgesia: ibuprofen 400-600 mg PO and acetaminophen 1000 mg PO",
+        "*Topical antipyrine-benzocaine otic for analgesia if TM intact if indicated"
+      ],
+      "reassess": [
+        "Confirm pain control and ability to tolerate PO",
+        "Reassess canal patency after wick if OE",
+        "Watchful-waiting option for mild AOM in reliable adults"
+      ],
+      "disposition": [
+        "Discharge nearly all uncomplicated cases",
+        "Admit/transfer mastoiditis, malignant OE, or toxic appearance",
+        "ENT consult for complicated/refractory disease"
+      ],
+      "discharge": [
+        "Keep ear dry; complete antibiotic course",
+        "Analgesia schedule and expected 48-72 h improvement",
+        "Return for high fever, postauricular swelling, vertigo, facial weakness"
+      ],
+      "followup": [
+        "PCP in 1-2 weeks; recheck TM if symptoms persist",
+        "ENT for recurrent AOM or persistent effusion/hearing loss"
+      ]
+    },
+    "redFlags": [
+      "Postauricular erythema/swelling with protruding ear (mastoiditis)",
+      "Severe pain with granulation tissue in diabetic/immunocompromised (malignant OE)",
+      "Facial nerve palsy, vertigo, or meningeal signs",
+      "Toxic appearance or failure of outpatient therapy"
+    ],
+    "compliance": [
+      "EMTALA MSE required even for low-acuity complaints",
+      "Transfer mastoiditis/malignant OE to facility with ENT/IV antibiotic capability via appropriate transfer",
+      "Document antibiotic stewardship rationale (treat vs observe)"
+    ]
+  },
+  {
+    "id": "pharyngitis-sore-throat",
+    "name": "Pharyngitis / Sore Throat",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["sore throat", "strep throat", "tonsillitis", "throat infection"],
+    "acuity": "4 (2 if airway concern)",
+    "summary": "Mostly viral; risk-stratify GAS with Centor; exclude epiglottitis, peritonsillar abscess, and deep-space infection.",
+    "stages": {
+      "triage": [
+        "Fever, exudate, cough, duration; Centor/McIsaac score",
+        "Drooling, muffled voice, stridor, trismus (airway red flags)",
+        "Vitals; assess hydration and ability to swallow"
+      ],
+      "nursing": [
+        "Position upright if any airway concern; do NOT force exam if stridor",
+        "Pain/hydration assessment",
+        "*IV access if dehydrated or toxic if indicated"
+      ],
+      "keyOrders": [
+        "Oropharyngeal exam (defer aggressive exam if epiglottitis suspected)",
+        "*Rapid strep antigen +/- throat culture if Centor >=2 if indicated",
+        "*IV fluids for poor PO intake if indicated"
+      ],
+      "labs": [
+        "*Rapid GAS antigen test if indicated",
+        "*Monospot/heterophile if mononucleosis suspected if indicated",
+        "*CBC if toxic/atypical if indicated"
+      ],
+      "imaging": [
+        "None routinely",
+        "*Lateral neck soft-tissue X-ray if epiglottitis suspected if indicated",
+        "*CT neck for deep-space infection if indicated"
+      ],
+      "meds": [
+        "GAS: penicillin V 500 mg PO BID-TID x10 days or amoxicillin 500 mg PO BID",
+        "PCN allergy: azithromycin 500 mg day1 then 250 mg or cephalexin",
+        "Analgesia: ibuprofen 600 mg PO and acetaminophen 1000 mg PO",
+        "*Single dose dexamethasone 10 mg PO/IM for severe odynophagia if indicated",
+        "*IV fluids (NS 1 L) for dehydration if indicated"
+      ],
+      "reassess": [
+        "Confirm tolerating PO and adequate analgesia",
+        "Reassess airway if any stridor/drooling developed",
+        "Avoid antibiotics for low-probability viral pharyngitis"
+      ],
+      "disposition": [
+        "Discharge uncomplicated cases",
+        "Admit/transfer suspected epiglottitis or deep-space infection",
+        "Urgent ENT/anesthesia for airway threat"
+      ],
+      "discharge": [
+        "Hydration, salt-water gargle, lozenges, analgesia schedule",
+        "Complete antibiotics if prescribed; no return to work/school 24 h after abx if GAS",
+        "Return for drooling, voice change, neck swelling, difficulty breathing"
+      ],
+      "followup": [
+        "PCP if no improvement in 3-5 days",
+        "*ENT if recurrent tonsillitis if indicated"
+      ]
+    },
+    "redFlags": [
+      "Stridor, drooling, tripod posture, or muffled 'hot potato' voice",
+      "Trismus or unilateral swelling (peritonsillar/deep-space abscess)",
+      "Rapidly progressive neck swelling/crepitus",
+      "Toxic appearance or inability to manage secretions"
+    ],
+    "compliance": [
+      "EMTALA MSE on all; never delay screening for low-acuity triage assumptions",
+      "Suspected epiglottitis/deep-space infection require stabilization and appropriate transfer with airway-capable team",
+      "Document antibiotic stewardship and Centor-based decision"
+    ]
+  },
+  {
+    "id": "dental-pain-abscess",
+    "name": "Dental Pain / Abscess",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["toothache", "tooth infection", "dental abscess", "odontogenic infection"],
+    "acuity": "4 (2-3 if facial cellulitis/airway)",
+    "summary": "Odontogenic pain vs localized abscess vs spreading facial/deep-space infection (Ludwig angina).",
+    "stages": {
+      "triage": [
+        "Onset, swelling, trismus, fever, dysphagia",
+        "Floor-of-mouth elevation or tongue swelling (Ludwig)",
+        "Vitals; assess airway and hydration"
+      ],
+      "nursing": [
+        "Position upright if facial swelling/airway concern",
+        "Pain assessment; prepare for I&D if fluctuant",
+        "*IV access if systemic infection/dehydration if indicated"
+      ],
+      "keyOrders": [
+        "Intraoral/extraoral exam; assess for fluctuance and floor of mouth",
+        "*Bedside I&D of fluctuant intraoral abscess if indicated",
+        "*IV fluids/antibiotics if spreading infection if indicated"
+      ],
+      "labs": [
+        "Usually none for isolated pain",
+        "*CBC/lactate if systemic infection if indicated",
+        "*Glucose if diabetic with severe infection if indicated"
+      ],
+      "imaging": [
+        "*Panorex/bedside if available for localization if indicated",
+        "*CT face/neck with contrast for deep-space/Ludwig if indicated"
+      ],
+      "meds": [
+        "Analgesia: ibuprofen 600 mg PO + acetaminophen 1000 mg PO scheduled",
+        "Dental block: bupivacaine 0.5% supraperiosteal/inferior alveolar",
+        "Abscess: amoxicillin 875 mg PO BID or amoxicillin-clavulanate 875 mg BID",
+        "PCN allergy: clindamycin 300-450 mg PO QID",
+        "*IV ampicillin-sulbactam 3 g for severe/spreading infection if indicated"
+      ],
+      "reassess": [
+        "Confirm analgesia and drainage if I&D performed",
+        "Reassess airway and swelling progression",
+        "Avoid antibiotics for simple pulpitis without swelling (stewardship)"
+      ],
+      "disposition": [
+        "Discharge localized infection/pain with dental follow-up",
+        "Admit/transfer Ludwig angina, deep-space infection, airway threat",
+        "OMFS/ENT for operative drainage as needed"
+      ],
+      "discharge": [
+        "Warm salt-water rinses, soft diet, scheduled analgesia",
+        "Complete antibiotics if prescribed; urgent dental referral",
+        "Return for facial swelling, trismus, difficulty swallowing/breathing"
+      ],
+      "followup": [
+        "Dentist/OMFS within 24-72 h for definitive care (extraction/root canal)",
+        "PCP if diabetic with infection"
+      ]
+    },
+    "redFlags": [
+      "Floor-of-mouth swelling, tongue elevation, drooling (Ludwig angina)",
+      "Trismus, periorbital swelling, or rapidly spreading cellulitis",
+      "Airway compromise or toxic appearance",
+      "Crepitus or signs of necrotizing infection"
+    ],
+    "compliance": [
+      "EMTALA MSE required; dental pain is a valid ED presentation",
+      "Ludwig angina/deep-space infection require stabilization and appropriate transfer to OMFS/airway-capable facility",
+      "Document opioid stewardship and antibiotic indication clearly"
+    ]
+  },
+  {
+    "id": "eye-pain",
+    "name": "Eye Pain",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["painful eye", "ocular pain", "eye ache", "orbital pain"],
+    "acuity": "3 (2 if acute glaucoma/vision threat)",
+    "summary": "Differentiate surface (abrasion/keratitis) from sight-threatening causes (acute angle-closure glaucoma, optic neuritis, orbital cellulitis).",
+    "stages": {
+      "triage": [
+        "Visual acuity each eye early; photophobia, halos, trauma, contact lens use",
+        "Associated headache, nausea, vision loss",
+        "Vitals; check for proptosis/limited movement"
+      ],
+      "nursing": [
+        "Obtain and document visual acuity both eyes (with correction)",
+        "Prepare slit lamp, fluorescein, tonometer",
+        "*Topical anesthetic for exam (not for discharge) if indicated"
+      ],
+      "keyOrders": [
+        "Visual acuity, pupils, EOM, slit-lamp with fluorescein",
+        "Intraocular pressure measurement (tonometry)",
+        "*Topical proparacaine 0.5% for exam if indicated"
+      ],
+      "labs": [
+        "Usually none",
+        "*ESR/CRP if giant cell arteritis suspected if indicated"
+      ],
+      "imaging": [
+        "*CT orbits if trauma, foreign body, or orbital cellulitis if indicated",
+        "*MRI if optic neuritis suspected if indicated"
+      ],
+      "meds": [
+        "Corneal abrasion: erythromycin ophthalmic ointment QID; ciprofloxacin drops if contact-lens related",
+        "Analgesia: oral ibuprofen/acetaminophen; *cycloplegic (cyclopentolate 1%) for ciliary spasm if indicated",
+        "Acute angle-closure: timolol 0.5%, apraclonidine, pilocarpine 1-2%, + acetazolamide 500 mg IV/PO",
+        "*IV antibiotics (vancomycin + ceftriaxone) for orbital cellulitis if indicated"
+      ],
+      "reassess": [
+        "Recheck IOP after glaucoma treatment",
+        "Confirm acuity stable/improving",
+        "Never prescribe topical anesthetics for home use"
+      ],
+      "disposition": [
+        "Discharge simple abrasion/conjunctival causes",
+        "Emergent ophthalmology for angle-closure, orbital cellulitis, optic neuritis",
+        "Transfer if no ophthalmology coverage and vision threatened"
+      ],
+      "discharge": [
+        "No contact lens until cleared; analgesia plan",
+        "Strict return for worsening vision, severe pain, halos",
+        "Antibiotic ointment instructions"
+      ],
+      "followup": [
+        "Ophthalmology 24-48 h for abrasions (especially contact-lens wearers)",
+        "Urgent ophthalmology for any vision-threatening diagnosis"
+      ]
+    },
+    "redFlags": [
+      "Acute vision loss, halos around lights, fixed mid-dilated pupil, hard eye (angle-closure)",
+      "Proptosis, painful/limited EOM, fever (orbital cellulitis)",
+      "Hyphema, hypopyon, or penetrating injury",
+      "New afferent pupillary defect"
+    ],
+    "compliance": [
+      "EMTALA MSE with documented visual acuity as a vital sign",
+      "Sight-threatening conditions without on-site ophthalmology require expedited appropriate transfer",
+      "Document IOP and time-sensitive interventions; FSED should pre-arrange ophthalmology transfer pathway"
+    ]
+  },
+  {
+    "id": "red-eye",
+    "name": "Red Eye",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["pink eye", "conjunctivitis", "bloodshot eye", "ocular redness"],
+    "acuity": "4 (2-3 if vision loss/pain/photophobia)",
+    "summary": "Distinguish benign conjunctivitis/subconjunctival hemorrhage from keratitis, iritis, glaucoma, or scleritis.",
+    "stages": {
+      "triage": [
+        "Visual acuity; pain, photophobia, discharge, contact lens use",
+        "Unilateral vs bilateral; trauma or chemical exposure",
+        "Vitals; identify danger signs (pain, vision loss, photophobia)"
+      ],
+      "nursing": [
+        "Document visual acuity both eyes",
+        "Prepare slit lamp, fluorescein, tonometer",
+        "Contact precautions for suspected viral conjunctivitis"
+      ],
+      "keyOrders": [
+        "Slit-lamp with fluorescein; evaluate cornea and anterior chamber",
+        "Check pupils and IOP if pain/photophobia present",
+        "*Evert lids to inspect for foreign body if indicated"
+      ],
+      "labs": [
+        "Usually none",
+        "*Conjunctival culture if hyperacute/gonococcal suspected if indicated"
+      ],
+      "imaging": ["None routinely"],
+      "meds": [
+        "Bacterial conjunctivitis: erythromycin ointment or polymyxin-trimethoprim drops; ciprofloxacin if contact lens",
+        "Viral/allergic: artificial tears, cool compresses; *olopatadine 0.1% for allergic if indicated",
+        "Iritis: cycloplegic + topical steroid only with ophthalmology guidance",
+        "*Ceftriaxone 1 g IM + topical for gonococcal conjunctivitis if indicated"
+      ],
+      "reassess": [
+        "Confirm no corneal uptake/anterior chamber inflammation",
+        "Reassess if pain or vision worsens",
+        "Avoid topical steroids without slit-lamp/ophthalmology input"
+      ],
+      "disposition": [
+        "Discharge benign conjunctivitis/subconjunctival hemorrhage",
+        "Ophthalmology referral for keratitis, iritis, scleritis, or vision loss",
+        "Transfer vision-threatening cases without ophthalmology coverage"
+      ],
+      "discharge": [
+        "Hand hygiene, avoid sharing towels; no contacts until resolved",
+        "Antibiotic drop instructions if prescribed",
+        "Return for pain, vision change, photophobia, or no improvement in 48-72 h"
+      ],
+      "followup": [
+        "PCP/ophthalmology in 1 week if not resolving",
+        "Urgent ophthalmology for any danger-sign red eye"
+      ]
+    },
+    "redFlags": [
+      "Decreased visual acuity or severe pain",
+      "Photophobia, ciliary flush, or fixed pupil (iritis/glaucoma)",
+      "Corneal infiltrate/ulcer (especially contact lens wearer)",
+      "Hyperacute purulent discharge (gonococcal, corneal perforation risk)"
+    ],
+    "compliance": [
+      "EMTALA MSE with documented acuity; differentiate benign vs emergent",
+      "Suspected gonococcal/chlamydial conjunctivitis is a reportable STI in Texas; report per DSHS and treat partners",
+      "Vision-threatening red eye without coverage warrants appropriate transfer"
+    ]
+  },
+  {
+    "id": "acute-vision-loss",
+    "name": "Acute Vision Loss",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["sudden blindness", "loss of vision", "blurred vision", "amaurosis"],
+    "acuity": "2 (1 if associated stroke symptoms)",
+    "summary": "Time-critical: CRAO, retinal detachment, GCA, optic neuritis, or vision loss as stroke/TIA presentation.",
+    "stages": {
+      "triage": [
+        "Immediate visual acuity each eye; onset, painless vs painful, monocular vs binocular",
+        "Associated neuro deficits, headache, jaw claudication (GCA)",
+        "Vitals; treat as stroke equivalent if binocular field loss",
+        "Note time of onset (thrombolytic/intervention window)"
+      ],
+      "nursing": [
+        "Document acuity, confrontation fields, pupils (APD)",
+        "Cardiac monitor and IV access",
+        "Activate stroke pathway if neuro signs present",
+        "Prepare for emergent ophthalmology contact"
+      ],
+      "keyOrders": [
+        "Visual acuity, pupils for APD, fundoscopy, IOP",
+        "12-lead ECG and POC glucose",
+        "*Stroke alert/neuro consult if binocular or neuro deficits if indicated",
+        "*Digital ocular massage for suspected CRAO if indicated"
+      ],
+      "labs": [
+        "*ESR, CRP, platelets STAT if GCA suspected if indicated",
+        "POC glucose",
+        "*CBC, coags if stroke pathway if indicated"
+      ],
+      "imaging": [
+        "*CT/CTA head & neck (or MRI) if stroke/neuro cause if indicated",
+        "*Bedside ocular ultrasound for detachment/CRAO if indicated"
+      ],
+      "meds": [
+        "GCA suspected: methylprednisolone 1 g IV (or prednisone 60-80 mg) to preserve vision",
+        "Optic neuritis: methylprednisolone 1 g IV per ophthalmology/neurology",
+        "Stroke presentation: manage per stroke protocol (tPA/thrombectomy eligibility)",
+        "*CRAO measures: ocular massage, acetazolamide 500 mg IV, anterior chamber paracentesis by ophthalmology if indicated"
+      ],
+      "reassess": [
+        "Serial acuity and neuro checks",
+        "Confirm time-critical consult contact made",
+        "Reassess after any acute intervention"
+      ],
+      "disposition": [
+        "Emergent ophthalmology/neurology involvement for all",
+        "Transfer to stroke/ophthalmology-capable center as indicated",
+        "Admit per underlying diagnosis"
+      ],
+      "discharge": [
+        "Rarely discharged from FSED; only after specialist clearance",
+        "If discharged: strict return precautions and confirmed urgent follow-up"
+      ],
+      "followup": [
+        "Same-day/next-day ophthalmology",
+        "Neurology/stroke clinic if vascular etiology",
+        "Rheumatology if GCA confirmed"
+      ]
+    },
+    "redFlags": [
+      "Painless monocular loss (CRAO/retinal detachment) - time-critical",
+      "Headache/jaw claudication/scalp tenderness with vision loss (GCA)",
+      "Binocular field loss or other neuro deficits (stroke)",
+      "Afferent pupillary defect, curtain/flashes/floaters"
+    ],
+    "compliance": [
+      "EMTALA MSE prioritized; acute vision loss is high-acuity and stabilization-first",
+      "FSED almost always requires appropriate transfer to ophthalmology/stroke-capable hospital; arrange ALS transport without delay",
+      "Document onset time, acuity, and consult/transfer timeline carefully"
+    ]
+  },
+  {
+    "id": "ocular-foreign-body",
+    "name": "Ocular Foreign Body",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["something in eye", "metal in eye", "corneal foreign body", "eye debris"],
+    "acuity": "3 (2 if high-velocity/globe rupture)",
+    "summary": "Surface foreign body vs intraocular/penetrating injury; exclude globe rupture, especially after high-velocity mechanism.",
+    "stages": {
+      "triage": [
+        "Mechanism (grinding/hammering = high velocity), material, time",
+        "Visual acuity each eye; pain, tearing",
+        "Vitals; suspect globe rupture if high-velocity metal-on-metal"
+      ],
+      "nursing": [
+        "Document visual acuity",
+        "Do NOT manipulate or apply pressure if rupture suspected; apply rigid shield",
+        "Prepare slit lamp, fluorescein, irrigation supplies"
+      ],
+      "keyOrders": [
+        "Slit-lamp exam with fluorescein; check Seidel sign",
+        "Evert upper lid to inspect for retained FB",
+        "*Place protective eye shield if globe rupture suspected if indicated",
+        "*Topical anesthetic for exam/removal if indicated"
+      ],
+      "labs": ["Usually none"],
+      "imaging": [
+        "*CT orbit (thin-cut) if intraocular FB or rupture suspected if indicated",
+        "Avoid MRI if metallic FB possible"
+      ],
+      "meds": [
+        "Topical proparacaine 0.5% for exam/removal",
+        "After removal: erythromycin ointment QID or fluoroquinolone drops (contact lens wearers)",
+        "*Cycloplegic (cyclopentolate 1%) for photophobia/ciliary spasm if indicated",
+        "*Tetanus prophylaxis (Tdap) if indicated; *IV antibiotics + antiemetic, NPO for open globe if indicated"
+      ],
+      "reassess": [
+        "Recheck acuity after removal; assess for residual rust ring",
+        "Confirm no Seidel sign / globe integrity",
+        "Avoid removal attempts if penetrating injury"
+      ],
+      "disposition": [
+        "Discharge uncomplicated surface FB after removal",
+        "Emergent ophthalmology and transfer for suspected open globe/intraocular FB",
+        "Ophthalmology referral for rust ring or central FB"
+      ],
+      "discharge": [
+        "Antibiotic ointment, no eye rubbing, eye protection at work",
+        "Return for worsening pain, vision change, discharge",
+        "Counsel on protective eyewear"
+      ],
+      "followup": [
+        "Ophthalmology 24-48 h for rust ring removal or central/deep FB",
+        "PCP/occupational health as appropriate"
+      ]
+    },
+    "redFlags": [
+      "Positive Seidel sign or teardrop/peaked pupil (globe rupture)",
+      "High-velocity mechanism (grinding/hammering) with possible intraocular FB",
+      "Marked vision loss, hyphema, or shallow anterior chamber",
+      "Severe pain disproportionate to exam"
+    ],
+    "compliance": [
+      "EMTALA MSE with documented acuity before any procedure",
+      "Suspected open globe: shield, NPO, IV antibiotics, antiemetics, and appropriate transfer to ophthalmology-capable facility",
+      "Document mechanism, tetanus status, and protective-eyewear counseling; consider workplace injury reporting"
+    ]
+  },
+  {
+    "id": "ear-nose-foreign-body",
+    "name": "Ear / Nose Foreign Body",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["object in ear", "object in nose", "bead in nose", "insect in ear", "button battery"],
+    "acuity": "4 (2 if button battery/disk magnet)",
+    "summary": "Usually benign; urgent for button battery, paired magnets, or organic FB with infection risk.",
+    "stages": {
+      "triage": [
+        "Object type, side, duration, prior removal attempts",
+        "Identify button battery or paired magnets (time-critical)",
+        "Assess for unilateral nasal discharge (chronic FB) or bleeding"
+      ],
+      "nursing": [
+        "Position and immobilize patient (especially peds)",
+        "Prepare otoscope/nasal speculum, alligator forceps, suction, balloon catheter",
+        "Reassure to reduce movement during removal"
+      ],
+      "keyOrders": [
+        "Direct visualization (otoscope/nasal speculum)",
+        "*Positive-pressure ('mother's kiss') for nasal FB if indicated",
+        "*Mineral oil/lidocaine to kill live insect before ear removal if indicated",
+        "Expedite removal/transfer if button battery or magnets"
+      ],
+      "labs": ["None"],
+      "imaging": [
+        "*Plain X-ray to confirm/locate radiopaque FB or battery if indicated"
+      ],
+      "meds": [
+        "*Topical lidocaine or mineral oil to immobilize insect in ear if indicated",
+        "*Topical anesthetic/vasoconstrictor (oxymetazoline + lidocaine) for nasal FB if indicated",
+        "*Antibiotic otic drops if canal trauma/otitis after removal if indicated",
+        "*Anxiolysis/procedural sedation in select agitated patients if indicated"
+      ],
+      "reassess": [
+        "Confirm complete removal and inspect for trauma/second FB",
+        "Reassess canal/nasal mucosa for injury",
+        "Limit attempts to avoid pushing FB deeper - know when to refer"
+      ],
+      "disposition": [
+        "Discharge after successful uncomplicated removal",
+        "Urgent ENT/transfer for button battery, magnets, or failed removal",
+        "ENT for deeply impacted or TM-adjacent objects"
+      ],
+      "discharge": [
+        "Watch for discharge, pain, or bleeding",
+        "Tissue-care instructions if mucosal trauma",
+        "Return if symptoms recur (possible retained FB)"
+      ],
+      "followup": [
+        "ENT follow-up for incomplete removal or tissue injury",
+        "PCP as needed"
+      ]
+    },
+    "redFlags": [
+      "Button battery in ear or nose (liquefaction necrosis - emergent removal)",
+      "Paired magnets (septal/mucosal pressure necrosis)",
+      "Uncontrolled bleeding or signs of perforation",
+      "Posterior/deep impaction risking aspiration or canal injury"
+    ],
+    "compliance": [
+      "EMTALA MSE prior to removal attempts",
+      "Button battery/magnets require emergent ENT - stabilize and arrange appropriate transfer if no ENT on site",
+      "Consider non-accidental injury/neglect screening in vulnerable patients and report suspected abuse per Texas law"
+    ]
+  },
+  {
+    "id": "peritonsillar-abscess",
+    "name": "Peritonsillar Abscess",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["quinsy", "PTA", "tonsillar abscess", "peritonsillar cellulitis"],
+    "acuity": "2-3",
+    "summary": "Unilateral tonsillar swelling with uvular deviation and trismus; assess airway and distinguish from deep-space infection.",
+    "stages": {
+      "triage": [
+        "Severe unilateral sore throat, trismus, muffled voice, drooling",
+        "Assess airway patency and ability to handle secretions",
+        "Vitals; fever and dehydration assessment"
+      ],
+      "nursing": [
+        "Upright positioning; airway monitoring",
+        "IV access; pain and hydration assessment",
+        "Prepare drainage tray (needle aspiration/I&D), headlamp, suction"
+      ],
+      "keyOrders": [
+        "Oropharyngeal exam: uvular deviation, peritonsillar fullness, trismus",
+        "IV access and IV fluids",
+        "*Needle aspiration or I&D of fluctuant abscess if indicated",
+        "*Bedside intraoral ultrasound to confirm/guide drainage if indicated"
+      ],
+      "labs": [
+        "*CBC if toxic if indicated",
+        "*Monospot if EBV suspected if indicated",
+        "*Blood cultures if septic if indicated"
+      ],
+      "imaging": [
+        "*Intraoral or transcutaneous ultrasound to differentiate abscess vs cellulitis if indicated",
+        "*CT neck with contrast if deep-space extension or diagnosis unclear if indicated"
+      ],
+      "meds": [
+        "Ampicillin-sulbactam 3 g IV (or clindamycin 600-900 mg IV if PCN allergy)",
+        "Dexamethasone 10 mg IV for swelling/pain",
+        "Analgesia: IV ketorolac 15-30 mg and/or opioids; acetaminophen",
+        "Local anesthesia: lidocaine 1% + topical for drainage",
+        "*IV fluids (NS 1-2 L) for dehydration if indicated"
+      ],
+      "reassess": [
+        "Reassess airway and trismus after drainage/steroids",
+        "Confirm tolerating secretions/PO before any discharge",
+        "Recheck pain and swelling response"
+      ],
+      "disposition": [
+        "Discharge after successful drainage if tolerating PO and stable airway",
+        "Admit/transfer if airway concern, failed drainage, deep-space extension, or unable to tolerate PO",
+        "ENT consult/transfer for drainage if not performed on site"
+      ],
+      "discharge": [
+        "Complete oral antibiotics (amoxicillin-clavulanate 875 mg BID) and analgesia",
+        "Hydration and soft diet; warm salt-water rinses",
+        "Return immediately for difficulty breathing, increasing swelling, or inability to swallow"
+      ],
+      "followup": [
+        "ENT within 24-48 h",
+        "PCP as needed; discuss tonsillectomy if recurrent"
+      ]
+    },
+    "redFlags": [
+      "Stridor, drooling, or respiratory distress (airway compromise)",
+      "Inability to handle secretions or tolerate PO",
+      "Extension to parapharyngeal/retropharyngeal space",
+      "Crepitus or signs of necrotizing/spreading infection"
+    ],
+    "compliance": [
+      "EMTALA MSE and airway stabilization before any transfer",
+      "If no ENT/drainage capability or airway risk, perform appropriate transfer with airway-capable transport",
+      "Document drainage procedure, airway assessment, and observation-vs-transfer decision"
+    ]
+  },
+  {
+    "id": "sinusitis",
+    "name": "Sinusitis",
+    "category": "ENT / Eye / Dental",
+    "synonyms": ["sinus infection", "rhinosinusitis", "sinus congestion", "acute bacterial sinusitis"],
+    "acuity": "4 (2-3 if orbital/intracranial complication)",
+    "summary": "Mostly viral; identify bacterial sinusitis criteria and exclude orbital/intracranial complications.",
+    "stages": {
+      "triage": [
+        "Duration, purulent discharge, facial pain/pressure, fever",
+        "Double-sickening pattern; >10 days without improvement",
+        "Screen for orbital (vision/eye swelling) and CNS red flags",
+        "Vitals including temperature"
+      ],
+      "nursing": [
+        "Comfort positioning; pain assessment",
+        "*Temperature trend if febrile if indicated",
+        "*Eye exam/acuity if periorbital involvement if indicated"
+      ],
+      "keyOrders": [
+        "HEENT exam including sinus palpation, nasal mucosa, eyes",
+        "Cranial nerve and visual acuity check if any orbital signs",
+        "*IV access if toxic or complication suspected if indicated"
+      ],
+      "labs": [
+        "Usually none for uncomplicated cases",
+        "*CBC/CRP if complication suspected if indicated"
+      ],
+      "imaging": [
+        "Not indicated for uncomplicated acute sinusitis",
+        "*CT sinus/orbits/brain with contrast if orbital or intracranial complication suspected if indicated"
+      ],
+      "meds": [
+        "Symptomatic: intranasal saline, intranasal fluticasone, oxymetazoline (<=3 days)",
+        "Analgesia/antipyretic: ibuprofen 600 mg PO, acetaminophen 1000 mg PO",
+        "Bacterial criteria: amoxicillin-clavulanate 875 mg PO BID x5-7 days",
+        "PCN allergy: doxycycline 100 mg PO BID or levofloxacin",
+        "*IV ceftriaxone + vancomycin if orbital/intracranial complication if indicated"
+      ],
+      "reassess": [
+        "Confirm no orbital/neuro findings",
+        "Reassess pain control and hydration",
+        "Apply watchful-waiting for likely viral cases (stewardship)"
+      ],
+      "disposition": [
+        "Discharge nearly all uncomplicated cases",
+        "Admit/transfer orbital cellulitis, abscess, or intracranial extension",
+        "ENT/ophthalmology/neurosurgery for complications"
+      ],
+      "discharge": [
+        "Saline irrigation, nasal steroids, hydration, analgesia",
+        "Antibiotics only if bacterial criteria met; complete course",
+        "Return for vision change, eye swelling, severe headache, neck stiffness, confusion"
+      ],
+      "followup": [
+        "PCP in 7-10 days if not improving",
+        "*ENT for recurrent/chronic sinusitis if indicated"
+      ]
+    },
+    "redFlags": [
+      "Periorbital/orbital swelling, proptosis, painful or limited EOM, vision change (orbital cellulitis)",
+      "Severe headache, altered mental status, neck stiffness, seizure (intracranial spread)",
+      "High fever/toxic appearance",
+      "Frontal swelling (Pott puffy tumor)"
+    ],
+    "compliance": [
+      "EMTALA MSE on all; differentiate uncomplicated from complicated sinusitis",
+      "Orbital/intracranial complications require stabilization and appropriate transfer to facility with ENT/neurosurgery/ophthalmology",
+      "Document antibiotic stewardship rationale (viral vs bacterial criteria)"
+    ]
+  }
+]

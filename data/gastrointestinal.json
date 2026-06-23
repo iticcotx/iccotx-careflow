@@ -1,0 +1,1146 @@
+[
+  {
+    "id": "abdominal-pain-generalized",
+    "name": "Abdominal Pain (Generalized)",
+    "category": "Gastrointestinal",
+    "synonyms": ["belly pain", "stomach ache", "diffuse abdominal pain", "tummy pain", "gut pain"],
+    "acuity": "2-3",
+    "summary": "Undifferentiated abdominal pain; differentiate surgical/vascular emergencies (AAA, perforation, ischemia, ectopic) from benign causes.",
+    "stages": {
+      "triage": [
+        "Vital signs incl. temperature; flag SBP <90 or HR >110",
+        "Pain onset/location/migration/severity; last oral intake",
+        "LMP and pregnancy possibility in all females of childbearing age",
+        "Screen for syncope, GI bleed, prior aortic/abdominal surgery",
+        "Immediate physician notification if peritoneal signs or hemodynamic instability"
+      ],
+      "nursing": [
+        "Place on cardiac monitor and pulse oximetry if unstable",
+        "NPO until surgical cause excluded",
+        "Establish IV access; collect labs with first stick",
+        "Serial abdominal exams and pain reassessment",
+        "Strict I&O; notify MD for hypotension or worsening pain"
+      ],
+      "keyOrders": [
+        "Two large-bore IVs if unstable",
+        "Cardiac monitor and continuous SpO2",
+        "12-lead ECG if epigastric pain or age >50*",
+        "NPO",
+        "Point-of-care glucose"
+      ],
+      "labs": [
+        "CBC, CMP, lipase",
+        "Urinalysis",
+        "Urine or serum hCG (all childbearing-age females)",
+        "Lactate if ill-appearing or suspected ischemia*",
+        "Type & screen if surgical/hemorrhage suspected*"
+      ],
+      "imaging": [
+        "CT abdomen/pelvis with IV contrast (first-line for undifferentiated pain)",
+        "Bedside US/FAST if unstable or suspected AAA",
+        "Upright chest/abdominal X-ray for free air*",
+        "RUQ US if hepatobiliary suspicion* if indicated"
+      ],
+      "meds": [
+        "Ondansetron 4 mg IV for nausea",
+        "Morphine 0.1 mg/kg IV titrated, or fentanyl 1 mcg/kg IV",
+        "Acetaminophen 1 g IV/PO for mild pain*",
+        "Isotonic crystalloid (NS/LR) 500-1000 mL IV bolus if hypovolemic*",
+        "Piperacillin-tazobactam 3.375 g IV if perforation/sepsis suspected* if indicated"
+      ],
+      "reassess": [
+        "Repeat exam after analgesia; document pain score change",
+        "Trend vitals and lactate if abnormal",
+        "Reassess for evolving peritonitis",
+        "Review labs/imaging before disposition"
+      ],
+      "disposition": [
+        "Surgical consult/transfer for peritonitis, obstruction, perforation, ischemia",
+        "Admit/observe for intractable pain or abnormal imaging",
+        "Discharge if benign cause, tolerating PO, pain controlled",
+        "Document EMTALA stabilization prior to any transfer"
+      ],
+      "discharge": [
+        "Return precautions: worsening pain, fever, vomiting, bloody stool",
+        "Clear liquids advanced as tolerated",
+        "Short-course analgesia and antiemetic prescriptions",
+        "PCP/surgical follow-up within 24-48 h"
+      ],
+      "followup": [
+        "PCP in 1-2 days for symptom check",
+        "Repeat imaging if unresolved*",
+        "Surgical clinic if structural cause identified",
+        "Strict ER return for red-flag symptoms"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability or syncope",
+      "Rigid abdomen / rebound / guarding (peritonitis)",
+      "Pulsatile mass or suspected AAA",
+      "Out-of-proportion pain suggesting mesenteric ischemia",
+      "Positive pregnancy test with pain (possible ectopic)"
+    ],
+    "compliance": [
+      "Perform and document EMTALA medical screening exam before disposition",
+      "Stabilize then arrange appropriate transfer to facility with surgical/ICU capability if FSED lacks resources",
+      "Observation appropriate only if pain/vitals stabilize and serial exams reassuring",
+      "Texas FSED must disclose facility/physician fee status; document transfer acceptance and physician-to-physician communication"
+    ]
+  },
+  {
+    "id": "right-upper-quadrant-pain",
+    "name": "Right Upper Quadrant Pain",
+    "category": "Gastrointestinal",
+    "synonyms": ["RUQ pain", "gallbladder pain", "upper right belly pain", "biliary colic"],
+    "acuity": "2-3",
+    "summary": "Hepatobiliary-focused pain; differentiate biliary colic, cholecystitis, cholangitis, hepatitis from atypical cardiac/pulmonary causes.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; screen for fever/jaundice",
+        "Relation to fatty meals, duration, radiation to shoulder",
+        "History of gallstones, alcohol use, hepatitis risk",
+        "Pregnancy status in childbearing females",
+        "Flag SIRS criteria for possible cholangitis"
+      ],
+      "nursing": [
+        "IV access and labs with first stick",
+        "NPO pending evaluation",
+        "Cardiac monitor if age >50 or atypical features",
+        "Reassess pain and temperature serially",
+        "Notify MD for fever + jaundice + hypotension (Reynolds pentad)"
+      ],
+      "keyOrders": [
+        "IV access",
+        "NPO",
+        "12-lead ECG to exclude cardiac mimic*",
+        "Continuous pulse oximetry",
+        "Point-of-care glucose*"
+      ],
+      "labs": [
+        "CBC, CMP, lipase",
+        "LFTs incl. bilirubin, ALP, GGT",
+        "Urine/serum hCG",
+        "Blood cultures x2 if febrile/septic*",
+        "Lactate if ill-appearing* if indicated"
+      ],
+      "imaging": [
+        "RUQ ultrasound (first-line for biliary disease)",
+        "CT abdomen with contrast if US nondiagnostic*",
+        "Chest X-ray to exclude lower lobe pneumonia*",
+        "HIDA scan referral if acalculous cholecystitis suspected* if indicated"
+      ],
+      "meds": [
+        "Ketorolac 15-30 mg IV (biliary colic first-line)",
+        "Morphine 0.1 mg/kg IV or hydromorphone 0.5-1 mg IV for severe pain",
+        "Ondansetron 4 mg IV",
+        "Piperacillin-tazobactam 3.375 g IV for cholangitis/cholecystitis*",
+        "IV crystalloid resuscitation if septic* if indicated"
+      ],
+      "reassess": [
+        "Recheck pain after analgesia and US results",
+        "Trend vitals for evolving sepsis",
+        "Reassess Murphy sign",
+        "Review LFT trend"
+      ],
+      "disposition": [
+        "Surgical consult/transfer for acute cholecystitis or cholangitis",
+        "Cholangitis needs urgent biliary decompression (ERCP) facility",
+        "Discharge uncomplicated biliary colic with surgical follow-up",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Low-fat diet instructions",
+        "Return for fever, jaundice, persistent vomiting, worsening pain",
+        "Analgesia and antiemetic prescriptions",
+        "General surgery referral for elective cholecystectomy"
+      ],
+      "followup": [
+        "Surgery clinic within 1 week for biliary colic",
+        "PCP for LFT recheck if elevated",
+        "Hepatology if hepatitis suspected*",
+        "ER return for red-flag symptoms"
+      ]
+    },
+    "redFlags": [
+      "Charcot triad (fever, jaundice, RUQ pain) / Reynolds pentad",
+      "Hypotension or sepsis physiology",
+      "Marked transaminase or bilirubin elevation",
+      "Peritoneal signs",
+      "Severe pain unrelieved by analgesia"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented prior to disposition",
+      "Cholangitis requires transfer to ERCP-capable hospital; arrange appropriate transfer and physician acceptance",
+      "Observation acceptable for stable biliary colic; transfer if surgical admission needed",
+      "Texas FSED fee/insurance disclosure required; document transfer paperwork and stabilizing treatment"
+    ]
+  },
+  {
+    "id": "right-lower-quadrant-pain",
+    "name": "Right Lower Quadrant Pain",
+    "category": "Gastrointestinal",
+    "synonyms": ["RLQ pain", "appendix pain", "lower right belly pain", "iliac fossa pain"],
+    "acuity": "2-3",
+    "summary": "Classic appendicitis territory; also ovarian/tubal pathology, ectopic, diverticulitis, renal colic, mesenteric adenitis.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; flag fever/tachycardia",
+        "Pain migration (periumbilical to RLQ), anorexia, nausea",
+        "LMP, pregnancy possibility, GYN history in females",
+        "Onset and progression timeline",
+        "Notify MD for peritoneal signs or instability"
+      ],
+      "nursing": [
+        "IV access and labs first stick",
+        "NPO pending surgical evaluation",
+        "Serial pain and abdominal exams",
+        "Antiemetic per protocol",
+        "Reassess vitals q30-60 min"
+      ],
+      "keyOrders": [
+        "IV access",
+        "NPO",
+        "Continuous pulse oximetry",
+        "Point-of-care glucose*",
+        "Urine specimen collection"
+      ],
+      "labs": [
+        "CBC with differential, CMP",
+        "Urinalysis",
+        "Urine/serum hCG (mandatory in females of childbearing age)",
+        "Lipase, lactate if ill-appearing*",
+        "Type & screen if surgery likely* if indicated"
+      ],
+      "imaging": [
+        "CT abdomen/pelvis with IV contrast (adult appendicitis first-line)",
+        "Pelvic/transvaginal US if female with GYN concern or pregnant",
+        "Graded-compression US as alternative to limit radiation*",
+        "MRI abdomen if pregnant and US nondiagnostic* if indicated"
+      ],
+      "meds": [
+        "Morphine 0.1 mg/kg IV or fentanyl 1 mcg/kg IV",
+        "Ondansetron 4 mg IV",
+        "IV crystalloid 500-1000 mL bolus if dehydrated/septic",
+        "Piperacillin-tazobactam 3.375 g IV or ceftriaxone 1 g + metronidazole 500 mg IV if appendicitis/perforation*",
+        "Acetaminophen 1 g IV for adjunct analgesia* if indicated"
+      ],
+      "reassess": [
+        "Repeat exam after analgesia and imaging",
+        "Trend WBC and vitals",
+        "Reassess for evolving peritonitis",
+        "Confirm pregnancy status before disposition"
+      ],
+      "disposition": [
+        "Surgical consult/transfer for confirmed appendicitis",
+        "GYN consult/transfer for ovarian torsion or ectopic",
+        "Discharge nonspecific pain if stable, tolerating PO, reassuring serial exam",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Return precautions: worsening/migrating pain, fever, vomiting",
+        "Advance diet as tolerated",
+        "Short course antiemetic/analgesia",
+        "Follow-up within 24 h for unresolved pain"
+      ],
+      "followup": [
+        "Surgery clinic if appendicitis managed nonoperatively elsewhere",
+        "GYN follow-up for ovarian pathology",
+        "PCP recheck in 1-2 days",
+        "Strict ER return instructions"
+      ]
+    },
+    "redFlags": [
+      "Peritoneal signs / rebound suggesting perforated appendicitis",
+      "Positive hCG with pain (ectopic)",
+      "Sudden severe pain with adnexal mass (torsion)",
+      "Sepsis physiology",
+      "Inability to tolerate PO with rising WBC"
+    ],
+    "compliance": [
+      "Document EMTALA screening exam and stabilization before any transfer",
+      "Appendicitis/torsion/ectopic require transfer to surgical/GYN-capable hospital with accepting physician",
+      "Observation only if serial exams reassuring and patient stable",
+      "Texas FSED insurance/fee disclosure; complete transfer documentation and risk-benefit consent"
+    ]
+  },
+  {
+    "id": "epigastric-pain",
+    "name": "Epigastric Pain",
+    "category": "Gastrointestinal",
+    "synonyms": ["upper stomach pain", "indigestion pain", "heartburn", "central abdominal pain"],
+    "acuity": "2-3",
+    "summary": "Epigastric pain spanning gastritis/PUD/pancreatitis to life threats: ACS, aortic dissection, perforated ulcer.",
+    "stages": {
+      "triage": [
+        "Vitals; obtain ECG within 10 min for any cardiac concern",
+        "Characterize pain: burning vs tearing vs band-like radiation",
+        "Cardiac risk factors, NSAID/alcohol use, prior PUD",
+        "Screen for melena/hematemesis",
+        "Notify MD immediately for ischemic ECG or instability"
+      ],
+      "nursing": [
+        "Cardiac monitor and pulse oximetry",
+        "IV access and labs first stick",
+        "NPO until cardiac/surgical cause excluded",
+        "Reassess pain after therapy",
+        "Notify MD for hypotension or worsening pain"
+      ],
+      "keyOrders": [
+        "12-lead ECG immediately",
+        "Cardiac monitor and continuous SpO2",
+        "IV access",
+        "NPO",
+        "Point-of-care glucose"
+      ],
+      "labs": [
+        "Troponin (rule out ACS)",
+        "CBC, CMP, lipase",
+        "LFTs",
+        "Type & screen if GI bleed/surgical suspicion*",
+        "Lactate if ill-appearing* if indicated"
+      ],
+      "imaging": [
+        "Chest X-ray (free air, mediastinum)",
+        "CT abdomen with contrast for pancreatitis/perforation*",
+        "CT angiography chest if dissection suspected*",
+        "RUQ/abdominal US if biliary cause* if indicated"
+      ],
+      "meds": [
+        "GI cocktail: viscous lidocaine + antacid PO (non-cardiac)*",
+        "Pantoprazole 40 mg IV for PUD/gastritis",
+        "Ondansetron 4 mg IV",
+        "Morphine/fentanyl IV titrated for severe pain (e.g., pancreatitis)",
+        "IV crystalloid resuscitation for pancreatitis/hypovolemia* if indicated"
+      ],
+      "reassess": [
+        "Reassess after GI cocktail or ACS workup",
+        "Trend troponin per protocol",
+        "Recheck vitals and pain score",
+        "Review lipase/imaging results"
+      ],
+      "disposition": [
+        "Admit/transfer for ACS, dissection, severe pancreatitis, perforation",
+        "Observe for serial troponin if intermediate cardiac risk",
+        "Discharge gastritis/dyspepsia if pain resolved and stable",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Start PPI; avoid NSAIDs/alcohol",
+        "Return for chest pressure, vomiting blood, black stool, syncope",
+        "H. pylori testing referral*",
+        "PCP follow-up 1-3 days"
+      ],
+      "followup": [
+        "PCP for dyspepsia and possible EGD referral",
+        "Cardiology if cardiac workup indeterminate",
+        "GI for refractory symptoms",
+        "ER return for red flags"
+      ]
+    },
+    "redFlags": [
+      "Ischemic ECG changes or positive troponin",
+      "Tearing pain radiating to back / pulse deficit (dissection)",
+      "Rigid abdomen / free air (perforation)",
+      "Hematemesis or melena with hemodynamic change",
+      "Severe pancreatitis with organ dysfunction"
+    ],
+    "compliance": [
+      "EMTALA screening exam with mandatory early ECG and stabilization documented",
+      "ACS/dissection require transfer to PCI/CT-surgery-capable hospital with accepting physician",
+      "Observation acceptable for low-risk chest/epigastric pain with negative serial markers",
+      "Texas FSED fee/insurance disclosure; document time-sensitive transfer communications"
+    ]
+  },
+  {
+    "id": "nausea-and-vomiting",
+    "name": "Nausea & Vomiting",
+    "category": "Gastrointestinal",
+    "synonyms": ["throwing up", "emesis", "vomiting", "queasy", "upset stomach"],
+    "acuity": "3",
+    "summary": "Symptom of broad differential; assess for obstruction, DKA, CNS cause, pregnancy, and dehydration.",
+    "stages": {
+      "triage": [
+        "Vitals and orthostatics; assess hydration",
+        "Character of vomitus (bilious, bloody, feculent)",
+        "Associated headache, abdominal pain, chest pain",
+        "Pregnancy status; diabetic history",
+        "Notify MD for bilious/bloody emesis or altered mentation"
+      ],
+      "nursing": [
+        "IV access; labs first stick",
+        "Antiemetic per protocol",
+        "Strict I&O; monitor for ongoing losses",
+        "NPO or sips pending evaluation",
+        "Reassess hydration and symptom relief"
+      ],
+      "keyOrders": [
+        "IV access",
+        "Point-of-care glucose",
+        "Continuous pulse oximetry if ill*",
+        "NPO/sips",
+        "NG tube if obstruction suspected* if indicated"
+      ],
+      "labs": [
+        "CMP (electrolytes, BUN/Cr)",
+        "CBC, lipase",
+        "Urine/serum hCG",
+        "Urinalysis/ketones; VBG if DKA suspected*",
+        "Lactate if ill-appearing* if indicated"
+      ],
+      "imaging": [
+        "Abdominal X-ray/obstruction series if SBO suspected*",
+        "CT abdomen/pelvis for refractory or pathologic vomiting*",
+        "CT/MRI head if neuro signs or worst headache*",
+        "RUQ US if biliary cause* if indicated"
+      ],
+      "meds": [
+        "Ondansetron 4 mg IV (first-line)",
+        "Metoclopramide 10 mg IV (consider in pregnancy/gastroparesis)",
+        "Promethazine 12.5-25 mg IV/IM or prochlorperazine 10 mg IV*",
+        "IV crystalloid (NS/LR) 1 L bolus then maintenance for dehydration",
+        "Potassium replacement if hypokalemic* if indicated"
+      ],
+      "reassess": [
+        "Reassess hydration and ability to tolerate PO trial",
+        "Recheck electrolytes if severely abnormal",
+        "Trend vitals/orthostatics",
+        "Confirm no surgical/CNS cause emerging"
+      ],
+      "disposition": [
+        "Admit/transfer for SBO, DKA, intractable vomiting, CNS cause",
+        "Discharge if PO tolerated and hydration restored",
+        "Observe for IV hydration if borderline",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Oral rehydration and BRAT-type diet guidance",
+        "Ondansetron ODT prescription",
+        "Return for inability to keep fluids down, blood in vomit, severe pain",
+        "PCP follow-up 1-2 days"
+      ],
+      "followup": [
+        "PCP for persistent symptoms",
+        "OB for hyperemesis gravidarum*",
+        "GI for recurrent/cyclic vomiting",
+        "ER return for red flags"
+      ]
+    },
+    "redFlags": [
+      "Bilious or feculent vomiting (obstruction)",
+      "Hematemesis",
+      "Altered mental status / severe headache",
+      "Signs of DKA or severe electrolyte derangement",
+      "Persistent vomiting with dehydration/hypotension"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before disposition",
+      "Transfer to surgical/medical hospital for SBO, DKA, or neuro emergency with accepting physician",
+      "Observation acceptable for hydration if patient stabilizes and tolerates PO",
+      "Texas FSED fee/insurance disclosure; complete transfer documentation when indicated"
+    ]
+  },
+  {
+    "id": "diarrhea",
+    "name": "Diarrhea",
+    "category": "Gastrointestinal",
+    "synonyms": ["loose stools", "watery stools", "the runs", "frequent bowel movements"],
+    "acuity": "3-4",
+    "summary": "Mostly self-limited viral/bacterial; identify dehydration, invasive/bloody disease, C. diff, and toxic megacolon.",
+    "stages": {
+      "triage": [
+        "Vitals and orthostatics; assess dehydration",
+        "Duration, frequency, blood/mucus, recent travel/antibiotics",
+        "Fever, abdominal pain, immunocompromise",
+        "Sick contacts and food exposures",
+        "Notify MD for bloody stool with toxic appearance"
+      ],
+      "nursing": [
+        "IV access if dehydrated; labs as indicated",
+        "Contact/enteric isolation precautions",
+        "Strict I&O and stool documentation",
+        "Antiemetic/oral rehydration per protocol",
+        "Reassess hydration status"
+      ],
+      "keyOrders": [
+        "Point-of-care glucose if ill*",
+        "IV access if moderate-severe dehydration",
+        "Oral rehydration trial",
+        "Stool specimen collection*",
+        "Continuous pulse oximetry if unstable*"
+      ],
+      "labs": [
+        "CMP if dehydrated/severe",
+        "CBC",
+        "Stool studies (culture, ova/parasites, C. diff toxin/PCR) if bloody/prolonged/recent abx*",
+        "Lactate if ill-appearing*",
+        "Blood cultures if septic* if indicated"
+      ],
+      "imaging": [
+        "Usually none for uncomplicated diarrhea",
+        "Abdominal X-ray if toxic megacolon suspected*",
+        "CT abdomen/pelvis if severe pain or complication*",
+        "Imaging guided by alternate diagnosis* if indicated"
+      ],
+      "meds": [
+        "IV crystalloid (NS/LR) bolus then rehydration as needed",
+        "Ondansetron 4 mg IV for associated nausea",
+        "Loperamide 4 mg PO then 2 mg per loose stool (avoid if bloody/febrile)*",
+        "Ciprofloxacin 500 mg PO or azithromycin 500 mg PO for invasive/traveler's*",
+        "Oral/IV potassium replacement if hypokalemic* if indicated"
+      ],
+      "reassess": [
+        "Reassess hydration and PO tolerance",
+        "Recheck electrolytes if abnormal",
+        "Trend vitals/orthostatics",
+        "Reassess for evolving systemic illness"
+      ],
+      "disposition": [
+        "Admit/transfer for severe dehydration, sepsis, toxic megacolon, GI bleed",
+        "Discharge most uncomplicated cases after rehydration",
+        "Observe for IV fluids if borderline hydration",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Oral rehydration solutions; advance bland diet",
+        "Hand hygiene and return-to-work guidance",
+        "Return for bloody stool, high fever, signs of dehydration",
+        "PCP follow-up if not improving in 48-72 h"
+      ],
+      "followup": [
+        "PCP for persistent or recurrent diarrhea",
+        "GI for chronic/inflammatory disease workup",
+        "Public health reporting for select pathogens*",
+        "ER return for red flags"
+      ]
+    },
+    "redFlags": [
+      "Bloody diarrhea with toxic appearance",
+      "Severe dehydration / hypotension",
+      "Suspected toxic megacolon or peritonitis",
+      "Immunocompromised host with high fever",
+      "Severe electrolyte derangement"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented",
+      "Texas mandatory reporting for select enteric pathogens (e.g., Salmonella, Shigella, E. coli O157:H7, Vibrio, Campylobacter) to local/state health dept",
+      "Transfer to hospital for severe/complicated cases with accepting physician",
+      "Texas FSED fee/insurance disclosure; observation acceptable for rehydration if patient stabilizes"
+    ]
+  },
+  {
+    "id": "constipation",
+    "name": "Constipation",
+    "category": "Gastrointestinal",
+    "synonyms": ["can't poop", "hard stools", "infrequent bowel movements", "blocked up", "impaction"],
+    "acuity": "3-4",
+    "summary": "Common functional complaint; exclude obstruction, fecal impaction, and serious secondary causes.",
+    "stages": {
+      "triage": [
+        "Vitals; assess pain and distension",
+        "Last bowel movement, flatus, vomiting",
+        "Medication review (opioids, anticholinergics)",
+        "Red-flag screen: weight loss, blood, new onset >50",
+        "Notify MD for vomiting/distension suggesting obstruction"
+      ],
+      "nursing": [
+        "Assess abdominal distension and bowel sounds",
+        "IV access if vomiting/dehydrated*",
+        "Digital rectal exam preparation for impaction",
+        "Administer bowel regimen per order",
+        "Reassess comfort and output"
+      ],
+      "keyOrders": [
+        "Abdominal exam and DRE for impaction",
+        "IV access if obstruction suspected*",
+        "NPO if obstruction suspected*",
+        "Point-of-care glucose*",
+        "Bladder scan if urinary retention suspected*"
+      ],
+      "labs": [
+        "CMP (electrolytes, calcium)",
+        "CBC",
+        "TSH if chronic/secondary cause suspected*",
+        "Lipase if pain prominent*",
+        "Urinalysis* if indicated"
+      ],
+      "imaging": [
+        "Abdominal X-ray for stool burden/obstruction",
+        "CT abdomen/pelvis if obstruction or mass suspected*",
+        "Imaging usually unnecessary for simple constipation",
+        "Further imaging per alternate diagnosis* if indicated"
+      ],
+      "meds": [
+        "Polyethylene glycol 17 g PO daily",
+        "Bisacodyl 10 mg PR or senna PO",
+        "Saline or mineral oil enema for distal impaction",
+        "Manual disimpaction with analgesia for hard impaction*",
+        "Methylnaltrexone for opioid-induced constipation* if indicated"
+      ],
+      "reassess": [
+        "Reassess for stool passage and symptom relief",
+        "Recheck abdomen after intervention",
+        "Confirm no obstruction emerging",
+        "Review electrolyte abnormalities"
+      ],
+      "disposition": [
+        "Transfer/admit for obstruction, volvulus, or surgical cause",
+        "Discharge most simple constipation after relief",
+        "Observe if disimpaction or enema ongoing",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Daily fiber, fluids, and bowel regimen instructions",
+        "Avoid chronic stimulant overuse guidance",
+        "Return for vomiting, severe pain, no stool/flatus, bleeding",
+        "PCP follow-up for chronic management"
+      ],
+      "followup": [
+        "PCP for bowel regimen titration",
+        "GI/colonoscopy referral if new onset >50 or alarm features",
+        "Medication review for offending agents",
+        "ER return for obstruction symptoms"
+      ]
+    },
+    "redFlags": [
+      "Obstipation with vomiting and distension (obstruction)",
+      "Suspected sigmoid volvulus",
+      "Peritoneal signs",
+      "GI bleeding or unintentional weight loss",
+      "New onset over age 50 with alarm features"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented",
+      "Transfer to surgical-capable hospital for obstruction/volvulus with accepting physician",
+      "Observation appropriate for disimpaction/enema management if patient stable",
+      "Texas FSED fee/insurance disclosure prior to treatment when feasible"
+    ]
+  },
+  {
+    "id": "upper-gi-bleeding",
+    "name": "Upper GI Bleeding",
+    "category": "Gastrointestinal",
+    "synonyms": ["vomiting blood", "hematemesis", "coffee-ground emesis", "melena", "bleeding ulcer"],
+    "acuity": "1-2",
+    "summary": "Bleeding proximal to ligament of Treitz (PUD, varices, Mallory-Weiss); high mortality if massive/variceal.",
+    "stages": {
+      "triage": [
+        "Immediate vitals; activate for SBP <90 or HR >110",
+        "Quantify hematemesis/melena; anticoagulant and alcohol use",
+        "History of varices, PUD, liver disease",
+        "Orthostatic vitals if stable",
+        "Immediate physician notification for any instability"
+      ],
+      "nursing": [
+        "Two large-bore IVs (16-18 g)",
+        "Cardiac monitor, continuous SpO2, frequent vitals",
+        "NPO; prepare for possible NG/airway management",
+        "Send type & crossmatch; activate blood per protocol",
+        "Reassess hemodynamics continuously"
+      ],
+      "keyOrders": [
+        "Two large-bore IVs",
+        "Cardiac monitor and continuous SpO2",
+        "12-lead ECG",
+        "NPO",
+        "Type & crossmatch; initiate massive transfusion protocol if unstable*"
+      ],
+      "labs": [
+        "CBC, CMP, LFTs",
+        "Type & crossmatch",
+        "Coagulation panel (PT/INR, PTT)",
+        "Lactate",
+        "Troponin if demand ischemia suspected* if indicated"
+      ],
+      "imaging": [
+        "Endoscopy (EGD) is definitive - arrange/transfer",
+        "Chest X-ray to assess aspiration*",
+        "CT angiography if brisk bleed and endoscopy unavailable*",
+        "Bedside US for volume status* if indicated"
+      ],
+      "meds": [
+        "IV crystalloid resuscitation; transfuse PRBCs targeting Hgb >7",
+        "Pantoprazole 80 mg IV bolus then 8 mg/h infusion",
+        "Octreotide 50 mcg IV bolus then 50 mcg/h for variceal bleed*",
+        "Ceftriaxone 1 g IV for variceal bleed with cirrhosis*",
+        "Reverse anticoagulation (e.g., PCC/vitamin K) per agent* if indicated"
+      ],
+      "reassess": [
+        "Continuous hemodynamic monitoring and serial Hgb",
+        "Reassess response to resuscitation",
+        "Monitor airway, especially with massive hematemesis",
+        "Recalculate risk (Glasgow-Blatchford) for disposition"
+      ],
+      "disposition": [
+        "Emergent transfer to endoscopy/ICU-capable hospital",
+        "Stabilize hemodynamics before/during transfer",
+        "Admit only if FSED has inpatient/endoscopy capability",
+        "Document EMTALA stabilization and transfer acceptance"
+      ],
+      "discharge": [
+        "Rarely discharged from FSED; only very low-risk after physician judgment",
+        "If discharged: PPI, avoid NSAIDs/alcohol, strict return precautions",
+        "Arrange outpatient EGD",
+        "Document detailed return instructions"
+      ],
+      "followup": [
+        "GI for endoscopy and ulcer/varices management",
+        "Hepatology for varices/cirrhosis",
+        "PCP for anemia and medication review",
+        "Immediate ER return for recurrent bleeding"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability / shock",
+      "Massive hematemesis with airway compromise",
+      "Variceal bleeding in cirrhosis",
+      "Hemoglobin drop or ongoing brisk bleeding",
+      "Coagulopathy or anticoagulant-associated bleed"
+    ],
+    "compliance": [
+      "EMTALA: perform screening exam, begin stabilization, then emergent appropriate transfer to endoscopy/ICU hospital",
+      "Document physician-to-physician acceptance and transfer mode (often ALS/critical care)",
+      "FSED generally cannot definitively treat; transfer is the expected pathway, not observation, for active bleeding",
+      "Texas FSED fee/insurance disclosure; document stabilizing transfusion and resuscitation"
+    ]
+  },
+  {
+    "id": "lower-gi-rectal-bleeding",
+    "name": "Lower GI / Rectal Bleeding",
+    "category": "Gastrointestinal",
+    "synonyms": ["blood in stool", "rectal bleeding", "hematochezia", "bright red blood per rectum", "BRBPR"],
+    "acuity": "2-3",
+    "summary": "Bleeding distal to ligament of Treitz (diverticular, angiodysplasia, hemorrhoids, malignancy, brisk UGIB).",
+    "stages": {
+      "triage": [
+        "Vitals and orthostatics; flag instability",
+        "Quantify and characterize bleeding; anticoagulant use",
+        "Pain, weight loss, change in bowel habits",
+        "History of diverticulosis, hemorrhoids, cancer",
+        "Notify MD for hemodynamic compromise"
+      ],
+      "nursing": [
+        "Two IVs if significant bleeding",
+        "Cardiac monitor if unstable; frequent vitals",
+        "Type & screen/crossmatch per volume",
+        "DRE/anoscopy preparation",
+        "Reassess hemodynamics serially"
+      ],
+      "keyOrders": [
+        "IV access (two large-bore if significant)",
+        "Cardiac monitor and SpO2 if unstable*",
+        "DRE and anoscopy",
+        "Type & screen or crossmatch*",
+        "NPO if brisk bleeding/possible procedure*"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "Coagulation panel (PT/INR) esp. if anticoagulated",
+        "Type & screen/crossmatch",
+        "Lactate if ill-appearing*",
+        "LFTs* if indicated"
+      ],
+      "imaging": [
+        "CT angiography for active/brisk bleeding localization*",
+        "Colonoscopy referral for definitive evaluation",
+        "Consider NG lavage/EGD if brisk to exclude UGIB source*",
+        "Tagged RBC scan via referral center* if indicated"
+      ],
+      "meds": [
+        "IV crystalloid resuscitation; PRBC transfusion targeting Hgb >7*",
+        "Reverse anticoagulation per agent if life-threatening bleed*",
+        "Topical analgesia/hydrocortisone for hemorrhoidal source*",
+        "Ondansetron 4 mg IV if nausea*",
+        "Stool softener for hemorrhoidal bleeding* if indicated"
+      ],
+      "reassess": [
+        "Trend Hgb and vitals",
+        "Reassess for ongoing vs resolved bleeding",
+        "Identify whether source is benign (hemorrhoid) vs concerning",
+        "Risk-stratify for disposition"
+      ],
+      "disposition": [
+        "Transfer/admit for significant or ongoing bleeding, instability",
+        "Discharge stable minor hemorrhoidal bleeding with normal Hgb",
+        "Observe borderline cases with serial Hgb",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "High-fiber diet, stool softeners, sitz baths for hemorrhoids",
+        "Return for heavy bleeding, dizziness, weakness",
+        "Avoid straining; topical care instructions",
+        "Arrange outpatient colonoscopy"
+      ],
+      "followup": [
+        "GI for colonoscopy (mandatory for unexplained bleeding/age >45)",
+        "PCP for anemia follow-up",
+        "Surgery/colorectal for symptomatic hemorrhoids",
+        "ER return for recurrent significant bleeding"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability with hematochezia (consider brisk UGIB)",
+      "Large-volume or ongoing bleeding",
+      "Significant anemia or Hgb drop",
+      "Anticoagulant-associated bleeding",
+      "Weight loss/mass suggesting malignancy"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before disposition",
+      "Transfer to endoscopy/ICU-capable hospital for significant bleeding with accepting physician",
+      "Observation acceptable for stable minor bleeds with reassuring serial Hgb",
+      "Texas FSED fee/insurance disclosure; document transfusion and transfer paperwork"
+    ]
+  },
+  {
+    "id": "dysphagia",
+    "name": "Dysphagia",
+    "category": "Gastrointestinal",
+    "synonyms": ["trouble swallowing", "difficulty swallowing", "food sticking", "choking on food"],
+    "acuity": "2-3",
+    "summary": "Difficulty swallowing; distinguish oropharyngeal (neuro/stroke) from esophageal (obstruction, stricture, motility, malignancy).",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2; assess airway and drooling",
+        "Solids vs liquids, onset, progression, odynophagia",
+        "Focal neuro deficits suggesting stroke",
+        "Weight loss, GERD history, food impaction",
+        "Notify MD for airway compromise or stroke signs"
+      ],
+      "nursing": [
+        "NPO until swallow safety assessed",
+        "IV access; aspiration precautions and suction at bedside",
+        "Elevate head of bed",
+        "Reassess for drooling/respiratory distress",
+        "Bedside swallow screen if neuro cause suspected"
+      ],
+      "keyOrders": [
+        "NPO",
+        "IV access",
+        "Continuous pulse oximetry",
+        "Aspiration precautions / suction setup",
+        "Neuro exam and stroke screen if oropharyngeal*"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "Coagulation panel if procedure likely*",
+        "TSH if motility/secondary cause suspected*",
+        "Type & screen if intervention anticipated*",
+        "Glucose / metabolic screen* if indicated"
+      ],
+      "imaging": [
+        "CT/CTA head & neck if stroke suspected (oropharyngeal)*",
+        "Soft-tissue neck/chest X-ray for foreign body or air*",
+        "Barium/contrast swallow study (non-emergent) referral*",
+        "CT neck/chest for mass or perforation* if indicated"
+      ],
+      "meds": [
+        "Treat underlying cause; avoid PO meds until safe swallow",
+        "Pantoprazole 40 mg IV for esophagitis/reflux*",
+        "Stroke pathway therapy if acute CVA identified*",
+        "Glucagon 1-2 mg IV if esophageal obstruction suspected*",
+        "IV fluids for hydration while NPO* if indicated"
+      ],
+      "reassess": [
+        "Reassess airway and ability to handle secretions",
+        "Reevaluate after any intervention",
+        "Confirm safe swallow before PO trial",
+        "Review imaging/neuro findings"
+      ],
+      "disposition": [
+        "Transfer for stroke, esophageal obstruction needing endoscopy, or perforation",
+        "Admit/observe for aspiration risk or dehydration",
+        "Discharge stable chronic dysphagia with outpatient workup",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Soft/pureed diet and upright eating instructions",
+        "Return for inability to swallow secretions, chest pain, fever",
+        "Aspiration warning signs reviewed",
+        "Arrange GI/swallow evaluation"
+      ],
+      "followup": [
+        "GI for EGD/manometry and stricture/malignancy workup",
+        "Neurology for oropharyngeal/stroke-related dysphagia",
+        "Speech therapy swallow evaluation",
+        "ER return for airway or impaction symptoms"
+      ]
+    },
+    "redFlags": [
+      "Airway compromise or inability to manage secretions",
+      "Acute focal neuro deficit (stroke)",
+      "Complete esophageal obstruction",
+      "Suspected esophageal perforation (chest pain, fever, crepitus)",
+      "Progressive dysphagia with weight loss (malignancy)"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before disposition",
+      "Acute stroke or perforation requires transfer to stroke/surgical-capable hospital with accepting physician",
+      "Observation acceptable for hydration/aspiration monitoring if stable",
+      "Texas FSED fee/insurance disclosure; document time-sensitive stroke transfer communication"
+    ]
+  },
+  {
+    "id": "jaundice",
+    "name": "Jaundice",
+    "category": "Gastrointestinal",
+    "synonyms": ["yellow skin", "yellow eyes", "icterus", "yellowing"],
+    "acuity": "2-3",
+    "summary": "Hyperbilirubinemia from hemolytic, hepatocellular, or obstructive causes; identify cholangitis, fulminant failure, and hemolysis.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature and mental status",
+        "Onset, dark urine, pale stools, pruritus, abdominal pain",
+        "Alcohol, hepatotoxins, hepatitis risk, medications",
+        "Screen for fever (cholangitis) and confusion (encephalopathy)",
+        "Notify MD for sepsis or altered mentation"
+      ],
+      "nursing": [
+        "IV access; labs first stick",
+        "Assess for asterixis and mental status changes",
+        "Cardiac monitor if unstable*",
+        "Reassess vitals and neuro status",
+        "Notify MD for fever + hypotension"
+      ],
+      "keyOrders": [
+        "IV access",
+        "Point-of-care glucose",
+        "Continuous SpO2 if ill*",
+        "NPO if biliary obstruction suspected*",
+        "Mental status / asterixis assessment"
+      ],
+      "labs": [
+        "LFTs with fractionated bilirubin, ALP, GGT",
+        "CBC, CMP, lipase",
+        "Coagulation panel (PT/INR for synthetic function)",
+        "Hemolysis labs (haptoglobin, LDH, retic, smear) if indicated*",
+        "Hepatitis panel, ammonia, blood cultures if septic* if indicated"
+      ],
+      "imaging": [
+        "RUQ ultrasound (first-line for biliary obstruction)",
+        "CT abdomen with contrast for mass/obstruction*",
+        "MRCP referral for biliary tree detail*",
+        "Further imaging per cause* if indicated"
+      ],
+      "meds": [
+        "IV crystalloid resuscitation if septic/hypovolemic",
+        "Piperacillin-tazobactam 3.375 g IV for cholangitis*",
+        "Lactulose 20-30 g PO/PR for hepatic encephalopathy*",
+        "Vitamin K 10 mg IV if coagulopathic*",
+        "Antiemetic (ondansetron 4 mg IV) as needed* if indicated"
+      ],
+      "reassess": [
+        "Reassess mental status and vitals",
+        "Review LFT/INR pattern (obstructive vs hepatocellular)",
+        "Trend for sepsis",
+        "Confirm need for biliary intervention"
+      ],
+      "disposition": [
+        "Transfer/admit for cholangitis, acute liver failure, significant hemolysis",
+        "Cholangitis requires ERCP-capable facility",
+        "Discharge stable, well-appearing patients with outpatient workup",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Avoid alcohol and hepatotoxic agents/acetaminophen limits",
+        "Return for fever, confusion, worsening jaundice, bleeding",
+        "Outpatient lab recheck arranged",
+        "Hepatology/GI referral"
+      ],
+      "followup": [
+        "GI/hepatology for diagnostic workup",
+        "PCP for LFT trending",
+        "ERCP/surgery if obstruction confirmed",
+        "ER return for red-flag symptoms"
+      ]
+    },
+    "redFlags": [
+      "Fever + RUQ pain + jaundice (cholangitis)",
+      "Altered mental status / asterixis (hepatic encephalopathy)",
+      "Coagulopathy or signs of acute liver failure",
+      "Hemodynamic instability / sepsis",
+      "Rapidly rising bilirubin with hemolysis"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before disposition",
+      "Cholangitis/acute liver failure require transfer to ERCP/hepatology/ICU-capable hospital with accepting physician",
+      "Report suspected acute viral hepatitis (A/B/C) to Texas health authorities per reporting rules",
+      "Texas FSED fee/insurance disclosure; observation acceptable only if stable and well-appearing"
+    ]
+  },
+  {
+    "id": "anorectal-pain",
+    "name": "Anorectal Pain",
+    "category": "Gastrointestinal",
+    "synonyms": ["rectal pain", "anal pain", "painful hemorrhoids", "butt pain", "perianal pain"],
+    "acuity": "3-4",
+    "summary": "Usually benign (hemorrhoids, fissure) but must exclude perirectal/perianal abscess, especially in diabetics/immunocompromised.",
+    "stages": {
+      "triage": [
+        "Vitals incl. temperature; screen for fever",
+        "Pain character, bleeding, discharge, bowel habits",
+        "Diabetes/immunocompromise (necrotizing risk)",
+        "Bowel/bladder dysfunction (deep abscess)",
+        "Notify MD for fever or systemic toxicity"
+      ],
+      "nursing": [
+        "Position for perianal exam; provide privacy/chaperone",
+        "IV access if abscess/I&D anticipated*",
+        "Assess for fluctuance, erythema, induration",
+        "Reassess pain and comfort",
+        "Notify MD for crepitus or rapidly spreading erythema"
+      ],
+      "keyOrders": [
+        "Perianal/digital rectal exam and anoscopy",
+        "IV access if procedure or systemic illness*",
+        "Point-of-care glucose (diabetic screen)*",
+        "NPO if OR drainage likely*",
+        "Wound culture if abscess drained*"
+      ],
+      "labs": [
+        "Usually none for simple hemorrhoid/fissure",
+        "CBC, CMP if abscess/systemic signs*",
+        "Glucose/A1c context in diabetics*",
+        "Lactate if septic*",
+        "Coagulation panel if anticoagulated* if indicated"
+      ],
+      "imaging": [
+        "None for uncomplicated external disease",
+        "CT/MRI pelvis for suspected deep/complex perirectal abscess*",
+        "Bedside US to localize superficial abscess*",
+        "Imaging if necrotizing infection suspected* if indicated"
+      ],
+      "meds": [
+        "Topical lidocaine and hydrocortisone for hemorrhoids/fissure",
+        "Stool softener (docusate 100 mg PO BID) + fiber",
+        "Nitroglycerin 0.4% or nifedipine topical for anal fissure*",
+        "Bedside I&D with local anesthesia for simple perianal abscess",
+        "Antibiotics (e.g., amoxicillin-clavulanate) if cellulitis/immunocompromised* if indicated"
+      ],
+      "reassess": [
+        "Reassess pain after topical therapy or I&D",
+        "Confirm adequate drainage if abscess",
+        "Reassess for systemic signs",
+        "Verify no deeper extension"
+      ],
+      "disposition": [
+        "Transfer/surgery for complex/deep abscess, necrotizing infection, immunocompromised",
+        "Discharge simple hemorrhoids/fissure and drained simple abscess",
+        "Observe if systemic signs evolving",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Sitz baths, high-fiber diet, stool softeners",
+        "Wound care/packing instructions after I&D",
+        "Return for fever, spreading redness, increasing pain",
+        "Colorectal/surgery follow-up"
+      ],
+      "followup": [
+        "Surgery/colorectal for recurrent abscess or thrombosed hemorrhoids",
+        "Wound recheck in 24-48 h after I&D",
+        "GI/colonoscopy if bleeding unexplained or age >45",
+        "ER return for systemic infection signs"
+      ]
+    },
+    "redFlags": [
+      "Perirectal/deep abscess with fever or systemic toxicity",
+      "Crepitus / rapidly spreading erythema (necrotizing fasciitis/Fournier)",
+      "Immunocompromised or diabetic with perianal infection",
+      "Urinary retention or saddle anesthesia",
+      "Significant bleeding"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before disposition",
+      "Necrotizing infection/complex abscess require emergent transfer to surgical hospital with accepting physician",
+      "Observation acceptable after simple I&D if patient stable and non-toxic",
+      "Texas FSED fee/insurance disclosure; document any procedure consent and transfer paperwork"
+    ]
+  },
+  {
+    "id": "esophageal-food-impaction",
+    "name": "Esophageal Food Impaction",
+    "category": "Gastrointestinal",
+    "synonyms": ["food stuck in throat", "food bolus", "steakhouse syndrome", "food won't go down"],
+    "acuity": "2",
+    "summary": "Food bolus lodged in esophagus; risk of airway compromise, aspiration, and perforation if prolonged or with sharp/disk objects.",
+    "stages": {
+      "triage": [
+        "Vitals incl. SpO2; assess airway and drooling",
+        "Time of onset, complete vs partial obstruction, ability to swallow saliva",
+        "Underlying eosinophilic esophagitis, stricture, or rings",
+        "Foreign body type (bone, disk battery concern)",
+        "Immediate MD notification for airway distress or inability to handle secretions"
+      ],
+      "nursing": [
+        "Strict NPO; suction at bedside",
+        "Upright positioning; aspiration precautions",
+        "IV access",
+        "Continuous pulse oximetry and frequent reassessment",
+        "Prepare for possible sedation/endoscopy transfer"
+      ],
+      "keyOrders": [
+        "NPO",
+        "IV access",
+        "Continuous pulse oximetry",
+        "Aspiration precautions / suction setup",
+        "12-lead ECG before glucagon if cardiac history*"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "Coagulation panel if endoscopy anticipated*",
+        "Type & screen if perforation/procedure risk*",
+        "Glucose* if indicated",
+        "Lactate if perforation suspected* if indicated"
+      ],
+      "imaging": [
+        "Avoid barium (impairs endoscopy and aspiration risk)",
+        "Soft-tissue neck and chest X-ray for radiopaque object/free air*",
+        "CT neck/chest if perforation or sharp object suspected*",
+        "Endoscopy is both diagnostic and therapeutic - arrange/transfer"
+      ],
+      "meds": [
+        "Glucagon 1-2 mg IV (may relax LES) - limited efficacy*",
+        "Ondansetron 4 mg IV for nausea before glucagon",
+        "IV fluids for hydration while NPO",
+        "Avoid meat tenderizer/papain (perforation risk)",
+        "Procedural sedation meds per endoscopy setting* if indicated"
+      ],
+      "reassess": [
+        "Reassess airway and secretion handling continuously",
+        "Determine spontaneous passage vs persistent impaction",
+        "Reassess after glucagon trial",
+        "Confirm no signs of perforation"
+      ],
+      "disposition": [
+        "Transfer to endoscopy-capable hospital if not resolved (within ~6-12 h, sooner if complete)",
+        "Emergent transfer if airway compromise or suspected perforation",
+        "Discharge only after confirmed passage and tolerating PO",
+        "Document EMTALA stabilization before transfer"
+      ],
+      "discharge": [
+        "Soft diet, thorough chewing, avoid large meat boluses",
+        "Return for recurrent impaction, chest pain, fever, inability to swallow",
+        "Counsel on underlying esophageal disease evaluation",
+        "Arrange GI follow-up"
+      ],
+      "followup": [
+        "GI for EGD, biopsy (eosinophilic esophagitis), stricture dilation",
+        "PCP for reflux management",
+        "Allergy/GI for EoE workup*",
+        "ER return for recurrent or persistent symptoms"
+      ]
+    },
+    "redFlags": [
+      "Inability to handle secretions / drooling (airway risk)",
+      "Respiratory distress or aspiration",
+      "Chest pain, fever, subcutaneous emphysema (perforation)",
+      "Disk battery or sharp object impaction (emergent)",
+      "Complete obstruction persisting beyond several hours"
+    ],
+    "compliance": [
+      "EMTALA screening exam and stabilization documented before transfer",
+      "Unresolved impaction requires timely transfer to endoscopy-capable hospital with accepting physician (urgent if complete/airway risk)",
+      "FSED observation acceptable only briefly while monitoring for spontaneous passage in a stable patient",
+      "Texas FSED fee/insurance disclosure; document transfer mode and physician-to-physician communication"
+    ]
+  }
+]

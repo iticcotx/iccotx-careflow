@@ -1,0 +1,722 @@
+[
+  {
+    "id": "major-trauma-mvc",
+    "name": "Major Trauma / MVC",
+    "category": "Trauma",
+    "synonyms": ["multisystem trauma", "car wreck", "motor vehicle collision", "polytrauma", "high-speed crash", "blunt trauma"],
+    "acuity": "1-2",
+    "summary": "High-energy blunt mechanism with potential for occult life-threatening hemorrhage and multisystem injury.",
+    "stages": {
+      "triage": [
+        "Apply primary survey ABCDE on arrival; do not delay for registration (EMTALA)",
+        "Obtain mechanism: speed, restraint, airbag, ejection, rollover, death at scene",
+        "Full set of vitals + SpO2; recheck q5min if unstable",
+        "Activate trauma protocol/transfer pathway early given FSED resource limits"
+      ],
+      "nursing": [
+        "Expose patient fully; maintain normothermia with warming blanket",
+        "Maintain spinal motion restriction until cleared",
+        "Two large-bore (16-18G) IVs; draw labs on access",
+        "Strict I/O; place patient on continuous monitoring"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2, automated BP q5min",
+        "High-flow O2 to keep SpO2 >=94%",
+        "Two large-bore IVs; initiate warmed isotonic fluids judiciously",
+        "12-lead ECG if blunt cardiac injury suspected",
+        "NPO; foley if no urethral injury*; if indicated"
+      ],
+      "labs": [
+        "Type & screen/crossmatch, CBC, CMP",
+        "Coagulation panel (PT/INR, aPTT, fibrinogen)",
+        "Venous/arterial lactate and base deficit",
+        "VBG, ethanol, urine/serum tox, hCG in women of childbearing age"
+      ],
+      "imaging": [
+        "FAST ultrasound for free fluid/pericardial blood",
+        "Portable CXR and pelvic X-ray",
+        "CT pan-scan (head/c-spine/chest/abd/pelvis)* if indicated and available",
+        "Transfer for CT if not on-site"
+      ],
+      "meds": [
+        "Tranexamic acid 1 g IV over 10 min then 1 g over 8 h if hemorrhagic and <3 h from injury",
+        "Fentanyl 25-50 mcg IV q5-10min titrated for pain",
+        "Ondansetron 4 mg IV for nausea",
+        "Tdap/Td if wounds present and not up to date"
+      ],
+      "reassess": [
+        "Repeat primary survey after each intervention",
+        "Trend lactate, base deficit, hemodynamics for occult shock",
+        "Reassess GCS and pupils serially",
+        "Repeat FAST if deterioration"
+      ],
+      "disposition": [
+        "Emergent transfer to Level I/II trauma center for unstable or operative injury",
+        "Initiate massive transfusion/blood product if available while arranging transfer",
+        "Air vs ground transport based on stability and distance"
+      ],
+      "discharge": [
+        "Discharge only if truly minor mechanism with negative workup and reliable observation",
+        "Return precautions: worsening pain, dyspnea, abdominal distension, syncope",
+        "Provide written instructions and 24-h contact"
+      ],
+      "followup": [
+        "Trauma clinic or PCP within 24-48 h for cleared patients",
+        "Repeat imaging if delayed injury suspected",
+        "Document advice to avoid driving while on opioids"
+      ]
+    },
+    "redFlags": [
+      "SBP <90, tachycardia, or rising lactate suggesting occult hemorrhage",
+      "Distended/rigid abdomen or positive FAST",
+      "GCS <=8 or rapidly declining mental status",
+      "Mechanism: ejection, rollover, death of co-occupant, prolonged extrication"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization required before any transfer",
+      "FSED is non-operative: emergent appropriate-transfer with physician certification of benefit > risk",
+      "Send copies of records, imaging, and labs with patient; physician-to-physician acceptance documented",
+      "Report MVC injuries per state requirements; preserve evidence if suspected impairment/crime"
+    ]
+  },
+  {
+    "id": "head-and-neck-trauma",
+    "name": "Head & Neck Trauma",
+    "category": "Trauma",
+    "synonyms": ["head injury", "TBI", "concussion", "cervical spine injury", "scalp laceration", "neck trauma"],
+    "acuity": "2-3",
+    "summary": "Blunt or penetrating injury to head/neck with risk of intracranial bleed, c-spine injury, or airway compromise.",
+    "stages": {
+      "triage": [
+        "Assess GCS and pupils immediately; recheck serially",
+        "Maintain c-spine precautions until clinically/radiographically cleared",
+        "Identify anticoagulant/antiplatelet use and bleeding disorders",
+        "Screen for LOC, amnesia, vomiting, seizure, severe headache"
+      ],
+      "nursing": [
+        "Elevate head of bed 30 degrees if no spinal contraindication",
+        "Neuro checks q15-30min and document trend",
+        "IV access; keep NPO pending imaging",
+        "Control external scalp bleeding with direct pressure"
+      ],
+      "keyOrders": [
+        "Cardiac monitor and continuous SpO2",
+        "12-lead ECG if syncope/cardiac cause of fall",
+        "IV access; O2 to keep SpO2 >=94%",
+        "Cervical collar; spinal motion restriction",
+        "NPO until cleared"
+      ],
+      "labs": [
+        "CBC, CMP, coagulation panel (esp. if on anticoagulants)",
+        "Type & screen if significant bleeding",
+        "Ethanol/tox and hCG if relevant",
+        "Glucose to exclude metabolic cause of AMS"
+      ],
+      "imaging": [
+        "Non-contrast head CT per Canadian CT Head Rule",
+        "CT c-spine per NEXUS/Canadian C-spine criteria",
+        "CTA neck* if penetrating or seatbelt sign; if indicated",
+        "Transfer for CT if unavailable on-site"
+      ],
+      "meds": [
+        "Acetaminophen 1000 mg PO/IV for headache",
+        "Ondansetron 4 mg IV for vomiting",
+        "Reverse anticoagulation if ICH (e.g., 4-factor PCC 25-50 units/kg, vitamin K 10 mg IV)* if indicated",
+        "Keppra/levetiracetam 1000 mg IV for seizure prophylaxis in significant TBI* if indicated"
+      ],
+      "reassess": [
+        "Serial GCS, pupils, and focal neuro exam",
+        "Watch for Cushing response (HTN, bradycardia, irregular respirations)",
+        "Reassess for delayed bleed in anticoagulated patients",
+        "Repeat CT if neuro decline"
+      ],
+      "disposition": [
+        "Emergent transfer to facility with neurosurgery for any ICH or unstable c-spine",
+        "Intubate for GCS <=8 prior to transfer",
+        "Admit/observe minor TBI per shared decision if observation capacity exists"
+      ],
+      "discharge": [
+        "Discharge if negative CT, GCS 15, normal exam, reliable observer",
+        "Concussion precautions and graded return-to-activity instructions",
+        "Strict return precautions: worsening headache, repeated vomiting, confusion, weakness"
+      ],
+      "followup": [
+        "PCP or concussion clinic within 1 week",
+        "Neurosurgery follow-up if any abnormal finding",
+        "Avoid driving/anticoagulant resumption until cleared* if indicated"
+      ]
+    },
+    "redFlags": [
+      "GCS <=8, anisocoria, or new focal deficit",
+      "Anticoagulated patient with any intracranial bleed",
+      "Suspected expanding hematoma or basilar skull fracture signs",
+      "Penetrating neck wound with expanding hematoma, bruit, or airway distress"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; appropriate-transfer with neurosurgery acceptance documented",
+      "FSED lacks neurosurgery/ICU: low threshold for transfer of any ICH",
+      "Send CT images and reversal-agent administration record with patient",
+      "Report assault-related injuries and suspected abuse per Texas mandatory reporting"
+    ]
+  },
+  {
+    "id": "penetrating-trauma",
+    "name": "Penetrating Trauma",
+    "category": "Trauma",
+    "synonyms": ["stab wound", "gunshot wound", "GSW", "impalement", "knife wound", "puncture injury"],
+    "acuity": "1-2",
+    "summary": "Stab/GSW/impalement with risk of vascular, visceral, or cavity injury and rapid exsanguination.",
+    "stages": {
+      "triage": [
+        "Primary survey; control compressible hemorrhage immediately with direct pressure/tourniquet",
+        "Identify wound number, location, weapon/caliber, and time of injury",
+        "Do not remove impaled objects; stabilize in place",
+        "Activate transfer/trauma pathway immediately for torso/junctional wounds"
+      ],
+      "nursing": [
+        "Expose fully; log-roll to find exit/posterior wounds; count all wounds",
+        "Two large-bore IVs; draw labs and type & cross",
+        "Apply occlusive dressing to open chest wounds",
+        "Continuous monitoring and frequent vitals"
+      ],
+      "keyOrders": [
+        "Cardiac monitor, continuous SpO2, BP q5min",
+        "High-flow O2 to keep SpO2 >=94%",
+        "Two large-bore IVs; warmed fluids/blood",
+        "12-lead ECG for precordial wounds (cardiac box)",
+        "NPO; tourniquet for extremity hemorrhage* if indicated"
+      ],
+      "labs": [
+        "Type & crossmatch, CBC, CMP",
+        "Coagulation panel and fibrinogen",
+        "Lactate and base deficit",
+        "VBG, hCG, tox if relevant"
+      ],
+      "imaging": [
+        "FAST for pericardial/peritoneal blood",
+        "CXR for pneumo/hemothorax (mark wounds with radiopaque markers)",
+        "CT angiography* if hemodynamically stable and available; if indicated",
+        "Transfer for definitive imaging/OR if unstable"
+      ],
+      "meds": [
+        "Tranexamic acid 1 g IV over 10 min if hemorrhagic and <3 h",
+        "Fentanyl 25-50 mcg IV titrated for pain",
+        "Cefazolin 2 g IV for wound prophylaxis* if indicated",
+        "Tdap/Td if not up to date"
+      ],
+      "reassess": [
+        "Repeat primary survey and hemodynamics frequently",
+        "Reassess for tension pneumothorax (decompress if present)",
+        "Trend lactate and mental status",
+        "Repeat FAST if deterioration"
+      ],
+      "disposition": [
+        "Emergent transfer to trauma center/OR for torso, vascular, or cardiac box wounds",
+        "Needle/finger decompression and chest tube if tension pneumothorax",
+        "Initiate blood products while arranging transport"
+      ],
+      "discharge": [
+        "Discharge only isolated superficial extremity wounds with negative workup",
+        "Wound care, infection precautions, and return instructions",
+        "Tetanus status documented"
+      ],
+      "followup": [
+        "Wound recheck in 48 h",
+        "Surgery/trauma follow-up for any deep or cavity-adjacent wound",
+        "Suture/staple removal timeline given"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability or positive FAST",
+      "Wound to cardiac box, neck zones, or junctional region",
+      "Expanding hematoma, pulsatile bleeding, or absent distal pulses",
+      "Evisceration or peritonitis"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization before transfer; certify benefit > risk",
+      "FSED is non-operative: emergent appropriate-transfer to trauma center is standard",
+      "Mandatory law-enforcement reporting of gunshot and stab wounds in Texas; preserve clothing/evidence",
+      "Document chain of custody and notify police; send all records with patient"
+    ]
+  },
+  {
+    "id": "fall",
+    "name": "Fall",
+    "category": "Trauma",
+    "synonyms": ["slip and fall", "ground-level fall", "fall from height", "tripped", "syncopal fall", "elderly fall"],
+    "acuity": "2-4",
+    "summary": "Fall with injury spectrum from minor contusion to occult fracture/ICH, especially in elderly or anticoagulated.",
+    "stages": {
+      "triage": [
+        "Determine height, surface, mechanism, and whether syncope/medical cause preceded",
+        "Identify anticoagulant/antiplatelet use and osteoporosis risk",
+        "Assess GCS, focal pain, and ability to bear weight",
+        "Screen elderly for elder abuse and recurrent falls"
+      ],
+      "nursing": [
+        "Vitals including orthostatics if syncope suspected",
+        "C-spine precautions if axial pain or AMS",
+        "IV access if significant injury anticipated",
+        "Pain assessment and immobilize suspected fractures"
+      ],
+      "keyOrders": [
+        "Cardiac monitor if syncope/medical cause suspected",
+        "12-lead ECG to evaluate for arrhythmia/cardiac syncope",
+        "IV access* if indicated",
+        "Point-of-care glucose",
+        "NPO if surgical injury likely* if indicated"
+      ],
+      "labs": [
+        "CBC, CMP",
+        "Coagulation panel if anticoagulated",
+        "Troponin/BNP if cardiac syncope suspected* if indicated",
+        "UA and infection workup if precipitating illness suspected* if indicated"
+      ],
+      "imaging": [
+        "Targeted X-rays of injured extremity/pelvis/hip",
+        "Non-contrast head CT if anticoagulated, AMS, or head strike (per CT Head Rule)",
+        "CT c-spine per NEXUS/Canadian criteria* if indicated",
+        "Transfer for CT if unavailable"
+      ],
+      "meds": [
+        "Acetaminophen 1000 mg PO/IV for pain",
+        "Fentanyl 25-50 mcg IV or morphine 0.1 mg/kg IV for fracture pain",
+        "Reverse anticoagulation if ICH (4-factor PCC)* if indicated",
+        "Tdap/Td if open wound and not up to date"
+      ],
+      "reassess": [
+        "Serial neuro checks if head strike/anticoagulated",
+        "Reassess pain control and neurovascular status of injured limb",
+        "Re-evaluate for delayed bleed in elderly on blood thinners",
+        "Reassess gait/safety before discharge"
+      ],
+      "disposition": [
+        "Transfer for ortho/neurosurgery for hip fracture, unstable fracture, or ICH",
+        "Admit/observe for high fall risk or precipitating medical cause",
+        "Arrange safe discharge with assistive devices and home assessment"
+      ],
+      "discharge": [
+        "Discharge if negative workup, ambulatory, and safe home environment",
+        "Fall-prevention counseling and review of medications",
+        "Return precautions for worsening pain, new neuro symptoms, or repeat fall"
+      ],
+      "followup": [
+        "PCP within 1 week for fall risk and medication review",
+        "Orthopedics for fractures; physical therapy referral",
+        "Consider DEXA/osteoporosis evaluation in elderly"
+      ]
+    },
+    "redFlags": [
+      "Anticoagulated patient with head strike (delayed ICH risk)",
+      "Inability to bear weight, deformity, or neurovascular compromise",
+      "Syncope/medical cause requiring cardiac workup",
+      "Signs of elder abuse or inconsistent history"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; appropriate-transfer for operative fractures/ICH",
+      "FSED lacks ortho/neurosurgery: arrange accepting facility and send imaging",
+      "Mandatory reporting of suspected elder abuse/neglect to Texas APS",
+      "Document home-safety and fall-prevention counseling"
+    ]
+  },
+  {
+    "id": "laceration",
+    "name": "Laceration",
+    "category": "Trauma",
+    "synonyms": ["cut", "gash", "open wound", "skin tear", "wound repair", "stitches"],
+    "acuity": "3-4",
+    "summary": "Traumatic skin/soft-tissue wound requiring hemostasis, exploration, and closure with infection prevention.",
+    "stages": {
+      "triage": [
+        "Control bleeding with direct pressure; elevate",
+        "Assess mechanism, contamination, time since injury, and bite/crush component",
+        "Screen for tendon/nerve/vessel involvement and retained foreign body",
+        "Document tetanus immunization status"
+      ],
+      "nursing": [
+        "Irrigate and clean wound; assess depth",
+        "Neurovascular and motor check distal to wound",
+        "Pain control prior to exploration",
+        "Prepare repair tray and appropriate suture"
+      ],
+      "keyOrders": [
+        "Wound irrigation with normal saline (tap water acceptable)",
+        "Hemostasis with direct pressure/lidocaine with epi (avoid in end-arteries)",
+        "Neurovascular and tendon function exam",
+        "Tetanus prophylaxis order",
+        "X-ray for radiopaque foreign body* if indicated"
+      ],
+      "labs": [
+        "Generally none for simple lacerations",
+        "CBC if significant blood loss* if indicated",
+        "Coagulation panel if anticoagulated and bleeding* if indicated",
+        "Wound culture only if clearly infected* if indicated"
+      ],
+      "imaging": [
+        "Plain X-ray if glass/metal foreign body suspected",
+        "Ultrasound for radiolucent (wood/organic) foreign body* if indicated",
+        "No imaging for clean simple lacerations",
+        "CT for deep/complex facial or suspected open fracture* if indicated"
+      ],
+      "meds": [
+        "Lidocaine 1% (with epi except digits/tip of nose/ears/penis) for local anesthesia",
+        "Tdap/Td if >5 y (dirty) or >10 y (clean); TIG if high-risk and unimmunized",
+        "Cephalexin 500 mg PO QID for high-risk/contaminated wounds* if indicated",
+        "Acetaminophen 1000 mg PO for pain"
+      ],
+      "reassess": [
+        "Confirm hemostasis and approximation after closure",
+        "Recheck distal neurovascular status post-repair",
+        "Assess for adequate anesthesia before suturing",
+        "Reassess wound tension and need for layered closure"
+      ],
+      "disposition": [
+        "Discharge most after repair",
+        "Refer/transfer for specialist repair (deep facial, tendon, nerve, vascular)",
+        "Consider hand surgery for complex hand/flexor tendon injuries"
+      ],
+      "discharge": [
+        "Wound care: keep clean/dry 24-48 h, watch for infection",
+        "Suture removal schedule (face 5 d, scalp/trunk 7-10 d, extremity 10-14 d)",
+        "Return precautions: redness, pus, spreading erythema, fever"
+      ],
+      "followup": [
+        "PCP or wound clinic for suture/staple removal",
+        "Hand/plastic surgery for complex repairs",
+        "Recheck in 48 h if high infection risk"
+      ]
+    },
+    "redFlags": [
+      "Arterial bleeding or expanding hematoma",
+      "Tendon, nerve, or joint capsule involvement",
+      "Signs of deep-space infection or necrotizing process",
+      "Heavily contaminated/bite wound over hand or near joint"
+    ],
+    "compliance": [
+      "EMTALA MSE for all presenting patients regardless of payment",
+      "FSED appropriate-transfer if specialist repair beyond capability",
+      "Report assault- or abuse-related wounds per Texas mandatory reporting",
+      "Document tetanus status and wound-care instructions given"
+    ]
+  },
+  {
+    "id": "burns",
+    "name": "Burns",
+    "category": "Trauma",
+    "synonyms": ["thermal burn", "scald", "chemical burn", "electrical burn", "flame injury", "smoke inhalation"],
+    "acuity": "2-3",
+    "summary": "Thermal/chemical/electrical injury with risk of airway compromise, fluid loss, and need for burn-center transfer.",
+    "stages": {
+      "triage": [
+        "Stop the burning process; remove clothing/jewelry; brush off dry chemicals",
+        "Assess airway for inhalation injury (soot, singed hairs, hoarseness, stridor)",
+        "Estimate %TBSA (Rule of Nines) and depth; note circumferential burns",
+        "Identify mechanism: enclosed-space fire, electrical, chemical"
+      ],
+      "nursing": [
+        "Cover burns with clean dry sheets; maintain normothermia",
+        "Large-bore IV access through unburned skin if possible",
+        "Continuous monitoring; foley for large-TBSA fluid tracking",
+        "Irrigate chemical burns copiously; remove contact lenses for eye exposure"
+      ],
+      "keyOrders": [
+        "High-flow O2; consider early airway control if inhalation injury",
+        "Cardiac monitor (esp. electrical burns for arrhythmia)",
+        "Two large-bore IVs; begin lactated Ringer's per Parkland",
+        "12-lead ECG for electrical injury",
+        "NPO; foley for TBSA >20%* if indicated"
+      ],
+      "labs": [
+        "CBC, CMP, lactate",
+        "Carboxyhemoglobin and ABG/VBG if enclosed-space fire",
+        "CK and UA for myoglobinuria (electrical/deep burns)",
+        "Coagulation panel and type & screen if extensive* if indicated"
+      ],
+      "imaging": [
+        "CXR if inhalation injury suspected",
+        "ECG/cardiac monitoring for electrical injury",
+        "Imaging for associated trauma (e.g., blast/fall)* if indicated",
+        "No routine imaging for isolated minor burns"
+      ],
+      "meds": [
+        "Lactated Ringer's: Parkland 2-4 mL/kg/%TBSA, half over first 8 h from time of burn",
+        "Fentanyl 25-50 mcg IV titrated for pain",
+        "100% oxygen for suspected CO poisoning; cyanide kit (hydroxocobalamin 5 g IV)* if indicated",
+        "Tdap/Td if not up to date; topical bacitracin/silver sulfadiazine for minor burns"
+      ],
+      "reassess": [
+        "Reassess airway repeatedly; intubate early if progressive edema",
+        "Monitor urine output goal 0.5 mL/kg/h (adult) and titrate fluids",
+        "Recheck distal perfusion for circumferential burns (escharotomy need)",
+        "Trend lactate and acid-base status"
+      ],
+      "disposition": [
+        "Transfer to burn center per ABA criteria (>10% TBSA, full-thickness, face/hands/feet/perineum/joints, electrical/chemical, inhalation)",
+        "Begin resuscitation and pain control before transport",
+        "Admit/observe minor burns only if reliable outpatient care unavailable"
+      ],
+      "discharge": [
+        "Discharge minor superficial/partial-thickness burns with wound care",
+        "Daily dressing changes; signs of infection to watch for",
+        "Adequate oral analgesia and hydration instructions"
+      ],
+      "followup": [
+        "Burn clinic or PCP within 24-48 h for wound recheck",
+        "Earlier follow-up for hand/face burns",
+        "Reassess depth at 48-72 h as burns evolve"
+      ]
+    },
+    "redFlags": [
+      "Stridor, hoarseness, soot in airway, or facial/neck burns (impending airway loss)",
+      "Circumferential full-thickness burns with distal ischemia",
+      "TBSA >10-20%, electrical, or chemical burns",
+      "Elevated carboxyhemoglobin or suspected cyanide toxicity"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization; secure airway before transfer if at risk",
+      "FSED appropriate-transfer to ABA-verified burn center with documented acceptance",
+      "Report suspected abuse (esp. inconsistent pattern, immersion scald) per Texas law",
+      "Send fluid-resuscitation record, TBSA estimate, and time of burn with patient"
+    ]
+  },
+  {
+    "id": "traumatic-amputation",
+    "name": "Traumatic Amputation",
+    "category": "Trauma",
+    "synonyms": ["severed limb", "amputated finger", "degloving", "limb loss", "digit amputation", "avulsion"],
+    "acuity": "1-2",
+    "summary": "Partial/complete loss of digit or limb with hemorrhage risk and time-sensitive replantation potential.",
+    "stages": {
+      "triage": [
+        "Control hemorrhage with direct pressure then tourniquet if uncontrolled",
+        "Note time of injury and warm/cold ischemia clock for amputated part",
+        "Identify mechanism (sharp/avulsion/crush) affecting replant candidacy",
+        "Activate hand/replant center pathway immediately"
+      ],
+      "nursing": [
+        "Wrap amputated part in saline-moistened gauze, seal in bag, place on ice (do NOT freeze or submerge directly)",
+        "Two large-bore IVs; draw labs and type & screen",
+        "Elevate and immobilize stump; document neurovascular status",
+        "Continuous monitoring and frequent vitals"
+      ],
+      "keyOrders": [
+        "Cardiac monitor and continuous SpO2",
+        "Two large-bore IVs; warmed fluids/blood as needed",
+        "Tourniquet for uncontrolled extremity hemorrhage",
+        "Preserve and label amputated part per protocol",
+        "NPO in anticipation of OR"
+      ],
+      "labs": [
+        "Type & crossmatch, CBC, CMP",
+        "Coagulation panel",
+        "Lactate if significant blood loss",
+        "VBG and hCG if relevant"
+      ],
+      "imaging": [
+        "X-ray of stump and amputated part (for fracture/replant planning)",
+        "CXR if associated major trauma* if indicated",
+        "CT angiography for proximal limb vascular mapping* if indicated",
+        "Transfer for definitive imaging if unavailable"
+      ],
+      "meds": [
+        "Tranexamic acid 1 g IV if significant hemorrhage and <3 h",
+        "Fentanyl 25-50 mcg IV or morphine 0.1 mg/kg IV titrated",
+        "Cefazolin 2 g IV for wound prophylaxis",
+        "Tdap/Td if not up to date"
+      ],
+      "reassess": [
+        "Reassess hemorrhage control and tourniquet time",
+        "Monitor hemodynamics and pain control",
+        "Re-document neurovascular status of stump",
+        "Confirm amputated part properly preserved and accompanying patient"
+      ],
+      "disposition": [
+        "Emergent transfer to replantation/hand-surgery center with the amputated part",
+        "Coordinate rapid transport to minimize ischemia time",
+        "Surgery consult/acceptance before transfer"
+      ],
+      "discharge": [
+        "Rarely discharged; only for minor distal tip amputations not requiring replant after specialist input",
+        "Wound care and strict infection/return precautions",
+        "Tetanus status documented"
+      ],
+      "followup": [
+        "Hand/plastic surgery follow-up arranged",
+        "Wound recheck in 48 h for non-operative cases",
+        "Occupational therapy/rehab referral"
+      ]
+    },
+    "redFlags": [
+      "Uncontrolled hemorrhage or hemodynamic instability",
+      "Proximal/major limb amputation",
+      "Prolonged warm ischemia time threatening replant viability",
+      "Crush/avulsion mechanism with extensive tissue loss"
+    ],
+    "compliance": [
+      "EMTALA MSE and stabilization before transfer; certify benefit > risk",
+      "FSED is non-operative: emergent appropriate-transfer to replant center with documented acceptance",
+      "Ensure amputated part transported with patient; document ischemia times",
+      "Report work-related injuries appropriately; preserve evidence if assault-related"
+    ]
+  },
+  {
+    "id": "animal-human-bite",
+    "name": "Animal / Human Bite",
+    "category": "Trauma",
+    "synonyms": ["dog bite", "cat bite", "human bite", "fight bite", "clenched-fist injury", "rabies exposure"],
+    "acuity": "3-4",
+    "summary": "Bite wound with infection, deep-structure, and rabies/tetanus risk; closure decisions vary by site.",
+    "stages": {
+      "triage": [
+        "Identify species, provocation, animal availability for observation, and rabies vaccination status",
+        "Assess wound location, depth, and joint/tendon involvement",
+        "Note clenched-fist 'fight bite' over MCP (high-risk for septic joint)",
+        "Document tetanus immunization status"
+      ],
+      "nursing": [
+        "Copious irrigation with normal saline",
+        "Neurovascular and tendon function exam distal to wound",
+        "Pain control before exploration",
+        "Photograph/document wound* if indicated"
+      ],
+      "keyOrders": [
+        "High-pressure wound irrigation and debridement of devitalized tissue",
+        "Explore for tendon/joint/bone involvement (esp. hand)",
+        "Tetanus prophylaxis order",
+        "Rabies risk assessment and PEP initiation* if indicated",
+        "X-ray for fracture/tooth fragment/air in joint* if indicated"
+      ],
+      "labs": [
+        "Generally none for simple bites",
+        "Wound culture if clinically infected",
+        "CBC and inflammatory markers if systemic infection* if indicated",
+        "Blood cultures if febrile/septic* if indicated"
+      ],
+      "imaging": [
+        "X-ray for suspected fracture, retained tooth, or joint air (fight bite)",
+        "Ultrasound for abscess/foreign body* if indicated",
+        "CT/MRI for deep-space or osteomyelitis concern* if indicated",
+        "No imaging for superficial uncomplicated bites"
+      ],
+      "meds": [
+        "Amoxicillin-clavulanate 875/125 mg PO BID (first-line prophylaxis/treatment)",
+        "Cefuroxime + metronidazole or doxycycline + metronidazole if penicillin-allergic",
+        "Rabies PEP: RIG 20 IU/kg infiltrated + vaccine days 0,3,7,14 if indicated",
+        "Tdap/Td +/- TIG per immunization status"
+      ],
+      "reassess": [
+        "Reassess for adequate irrigation and infection signs",
+        "Recheck neurovascular/tendon status",
+        "Determine closure vs leaving open (delayed primary closure for high-risk)",
+        "Confirm rabies/tetanus decisions documented"
+      ],
+      "disposition": [
+        "Discharge most low-risk bites on prophylaxis",
+        "Refer/transfer hand surgery for fight bite, joint/tendon involvement, or deep infection",
+        "Admit for IV antibiotics if cellulitis/sepsis"
+      ],
+      "discharge": [
+        "Wound care and prophylactic antibiotics as prescribed",
+        "Generally do not primarily close cat bites/hand bites/high-risk wounds",
+        "Return precautions: spreading redness, pus, fever, increasing pain"
+      ],
+      "followup": [
+        "Wound recheck in 24-48 h (sooner for hand)",
+        "Complete rabies PEP series on schedule",
+        "Hand surgery follow-up for complex wounds"
+      ]
+    },
+    "redFlags": [
+      "Fight-bite over MCP with joint penetration (septic arthritis risk)",
+      "Spreading cellulitis, systemic toxicity, or sepsis",
+      "Deep hand/tendon/joint involvement",
+      "High-risk rabies exposure (bat, wild carnivore, unprovoked attack)"
+    ],
+    "compliance": [
+      "EMTALA MSE for all bite presentations",
+      "Mandatory reporting of animal bites to Texas/local health authority for rabies surveillance",
+      "Report suspected human-bite assault or abuse per Texas mandatory reporting",
+      "FSED appropriate-transfer if surgical/specialist care exceeds capability; document rabies decisions"
+    ]
+  },
+  {
+    "id": "soft-tissue-foreign-body",
+    "name": "Soft-Tissue Foreign Body",
+    "category": "Trauma",
+    "synonyms": ["splinter", "retained glass", "metal fragment", "wood splinter", "embedded object", "FB removal"],
+    "acuity": "3-4",
+    "summary": "Embedded object (glass/metal/wood/organic) requiring localization, removal decision, and infection prevention.",
+    "stages": {
+      "triage": [
+        "Identify material (glass/metal vs organic/wood), entry site, and time since injury",
+        "Assess for neurovascular/tendon involvement and joint proximity",
+        "Determine if object is high-risk (organic, near vital structure)",
+        "Document tetanus immunization status"
+      ],
+      "nursing": [
+        "Clean and irrigate entry site",
+        "Distal neurovascular and motor check",
+        "Pain control before exploration",
+        "Prepare removal/imaging as indicated"
+      ],
+      "keyOrders": [
+        "Wound irrigation and gentle exploration",
+        "Neurovascular and tendon function exam",
+        "Imaging to localize foreign body",
+        "Tetanus prophylaxis order",
+        "Local anesthesia for removal* if indicated"
+      ],
+      "labs": [
+        "Generally none",
+        "CBC/inflammatory markers if infected or retained long-standing* if indicated",
+        "Wound culture if signs of infection* if indicated",
+        "Coagulation panel if anticoagulated and deep removal planned* if indicated"
+      ],
+      "imaging": [
+        "Plain X-ray (detects glass >2 mm and most metal)",
+        "Ultrasound for radiolucent organic material (wood, thorns, plastic)",
+        "CT for deep or non-localized foreign body* if indicated",
+        "Avoid MRI if metallic FB suspected"
+      ],
+      "meds": [
+        "Lidocaine 1% local anesthesia for removal",
+        "Cephalexin 500 mg PO QID for contaminated/retained organic FB* if indicated",
+        "Acetaminophen 1000 mg PO or ibuprofen 600 mg PO for pain",
+        "Tdap/Td if not up to date"
+      ],
+      "reassess": [
+        "Confirm complete removal (re-image if multiple/fragmenting)",
+        "Recheck neurovascular/tendon status after removal",
+        "Assess wound for closure vs leaving open",
+        "Decide on retained deep FB referral if removal unsuccessful"
+      ],
+      "disposition": [
+        "Discharge most after successful removal",
+        "Refer to surgery/hand/ortho for deep, periarticular, or hard-to-localize FB",
+        "Leave inert deep asymptomatic FB and refer if removal high-risk"
+      ],
+      "discharge": [
+        "Wound care and infection precautions",
+        "Explain that some inert FBs may be left and observed",
+        "Return precautions: redness, swelling, pus, increasing pain, fever"
+      ],
+      "followup": [
+        "Wound recheck in 48-72 h",
+        "Surgery/specialist follow-up for retained or deep FB",
+        "Imaging follow-up if FB intentionally left in place"
+      ]
+    },
+    "redFlags": [
+      "Foreign body near vessel, nerve, tendon, or joint",
+      "Signs of deep-space infection or abscess",
+      "Organic/wood FB (high infection/granuloma risk) that cannot be fully removed",
+      "Retained FB causing neurovascular compromise"
+    ],
+    "compliance": [
+      "EMTALA MSE for all presentations regardless of ability to pay",
+      "FSED appropriate-transfer if specialist removal beyond capability",
+      "Report assault- or abuse-related injuries per Texas mandatory reporting",
+      "Document tetanus status, removal attempts, and any retained FB disclosed to patient"
+    ]
+  }
+]

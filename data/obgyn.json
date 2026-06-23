@@ -1,0 +1,200 @@
+[
+  {
+    "id": "vaginal-bleeding-pregnant",
+    "name": "Vaginal Bleeding (Pregnant)",
+    "category": "OB / GYN",
+    "synonyms": ["bleeding in pregnancy", "spotting while pregnant", "threatened miscarriage", "first-trimester bleeding", "antepartum hemorrhage"],
+    "acuity": "2-3",
+    "summary": "Bleeding at any gestational age; differential spans ectopic, threatened/incomplete/complete miscarriage, molar pregnancy, subchorionic hemorrhage, and late-pregnancy placenta previa/abruption.",
+    "stages": {
+      "triage": ["Confirm pregnancy and estimate gestational age (LMP, prior dating US)", "Quantify bleeding (pads/hr) and pass of tissue/clots", "Vitals with orthostatics; flag tachycardia/hypotension as shock", "Assess pain, syncope, shoulder tip pain (ectopic concern)", "Triage ESI 2 if hemodynamically unstable or >20 wks bleeding"],
+      "nursing": ["Place on monitor if unstable; large-bore IV x2", "Pad count and weigh pads for blood loss estimate", "Obtain blood type/Rh status early", "Save any passed tissue/products for pathology", "Reassure and keep patient NPO until disposition clear"],
+      "keyOrders": ["IV access x2 (18g) with crystalloid", "Cardiac monitor and pulse oximetry if unstable", "Type & screen / type & crossmatch if heavy bleeding", "Bedside transabdominal/transvaginal US (FAST if unstable)", "NPO pending evaluation"],
+      "labs": ["Quantitative beta-hCG", "CBC, type & Rh", "Comprehensive metabolic panel", "Coagulation studies if heavy bleeding or >20 wks", "Type & crossmatch 2 units if hemorrhage*if indicated"],
+      "imaging": ["Pelvic ultrasound (TVUS) for IUP vs ectopic vs products", "Compare beta-hCG to discriminatory zone (~1500-2000) if no IUP seen", "Late pregnancy: NO digital/speculum exam until previa excluded by US", "Repeat/serial US per OB if indeterminate*if indicated"],
+      "meds": ["Rho(D) immune globulin (RhoGAM) 300 mcg IM if Rh-negative", "Ondansetron 4 mg IV for nausea*if indicated", "Crystalloid bolus 1-2 L for hypotension", "Tranexamic acid 1 g IV for severe hemorrhage*if indicated", "Analgesia: acetaminophen 1 g PO or fentanyl 25-50 mcg IV titrated"],
+      "reassess": ["Recheck vitals/orthostatics after fluids", "Reassess ongoing blood loss (pad count)", "Trend hemoglobin if active bleeding", "Confirm fetal viability/heart tones if viable gestation", "Escalate to OB immediately if unstable or ectopic confirmed"],
+      "disposition": ["OB consult for ectopic, molar, incomplete/septic abortion, or hemorrhage", "Admit/transfer for surgical or unstable cases", "Discharge stable threatened abortion with confirmed IUP and reliable follow-up", "Transfer to OB-capable facility if no OB/surgical coverage on site"],
+      "discharge": ["Strict return precautions: heavy bleeding (>1 pad/hr), severe pain, fever, syncope", "Pelvic rest (no intercourse/tampons) until follow-up", "Document RhoGAM given if Rh-negative", "Provide serial beta-hCG instructions if pregnancy of unknown location"],
+      "followup": ["OB/Gyn within 48-72 hrs for repeat beta-hCG and US", "Early pregnancy assessment unit referral if available", "Emotional support / pregnancy loss resources as indicated"]
+    },
+    "redFlags": ["Hemodynamic instability / hypovolemic shock", "Confirmed or suspected ruptured ectopic", "Heavy bleeding >20 wks (previa/abruption)", "Fever + bleeding suggesting septic abortion", "Beta-hCG >discriminatory zone with empty uterus"],
+    "compliance": ["EMTALA medical screening exam required for any pregnant bleeder regardless of payment", "Stabilize hemorrhage before any transfer; document appropriate-transfer criteria and accepting OB facility", "FSED must arrange EMTALA-compliant transfer for surgical/OB cases beyond capability", "Observation acceptable for stable threatened abortion with reliable follow-up; transfer if deterioration", "Document Rh status and RhoGAM administration per standard of care"]
+  },
+  {
+    "id": "vaginal-bleeding-non-pregnant",
+    "name": "Vaginal Bleeding (Non-Pregnant)",
+    "category": "OB / GYN",
+    "synonyms": ["abnormal uterine bleeding", "AUB", "heavy menstrual bleeding", "menorrhagia", "postmenopausal bleeding"],
+    "acuity": "3",
+    "summary": "Abnormal uterine bleeding in confirmed non-pregnant patient; differential includes structural (PALM) and non-structural (COEIN) causes; postmenopausal bleeding is cancer until proven otherwise.",
+    "stages": {
+      "triage": ["Confirm negative pregnancy test before classifying as non-pregnant", "Quantify bleeding (pads/hr, clots, duration)", "Vitals with orthostatics; flag instability", "Assess for anemia symptoms (fatigue, dyspnea, lightheadedness)", "Note menopausal status and anticoagulant use"],
+      "nursing": ["IV access if heavy bleeding or symptomatic anemia", "Pad count for blood loss tracking", "Obtain orthostatic vitals", "Prepare pelvic exam tray and chaperone", "Type & screen if transfusion possible"],
+      "keyOrders": ["Urine/serum pregnancy test FIRST", "IV access with crystalloid if symptomatic", "Cardiac monitor if unstable*if indicated", "Pelvic/speculum exam to localize source", "Type & screen if heavy bleeding"],
+      "labs": ["Beta-hCG (rule out pregnancy)", "CBC with platelets", "Type & screen", "Coagulation panel and TSH if heavy/recurrent", "Ferritin/iron studies if chronic anemia*if indicated"],
+      "imaging": ["Transvaginal pelvic ultrasound for fibroids/polyps/endometrial stripe", "Endometrial thickness assessment in postmenopausal bleeding", "Refer for endometrial biopsy (outpatient) for postmenopausal or high-risk*if indicated"],
+      "meds": ["Tranexamic acid 1.3 g PO TID or 1 g IV for acute heavy bleeding", "Medroxyprogesterone 10 mg PO daily or norethindrone for hormonal control", "Combined estrogen-progestin (high-dose OCP taper) for acute AUB", "Conjugated estrogen 25 mg IV q4-6h for severe acute hemorrhage*if indicated", "Iron supplementation (ferrous sulfate 325 mg PO) for anemia"],
+      "reassess": ["Recheck orthostatics and bleeding after intervention", "Trend hemoglobin if active loss", "Assess response to hormonal/TXA therapy", "Escalate to Gyn for uncontrolled hemorrhage"],
+      "disposition": ["Discharge most stable AUB with hormonal therapy and Gyn follow-up", "Transfuse and admit/transfer for hemodynamic instability or severe anemia", "Urgent Gyn consult for uncontrolled bleeding", "Transfer to Gyn-capable facility if procedural intervention needed"],
+      "discharge": ["Return precautions: soaking >1 pad/hr, lightheadedness, syncope", "Hormonal medication instructions and adherence counseling", "Iron repletion guidance", "Stress importance of endometrial evaluation if postmenopausal"],
+      "followup": ["Gyn within 1-2 weeks (urgent if postmenopausal for cancer workup)", "Outpatient endometrial biopsy / hysteroscopy referral", "Hematology if suspected bleeding disorder*if indicated"]
+    },
+    "redFlags": ["Hemodynamic instability / hypovolemic shock", "Hemoglobin <7 or symptomatic severe anemia", "Postmenopausal bleeding (malignancy risk)", "Bleeding refractory to medical therapy", "Signs of coagulopathy"],
+    "compliance": ["EMTALA medical screening exam applies regardless of insurance/payment", "Stabilize and transfuse before transfer; document appropriate-transfer paperwork", "Observation acceptable for stable patients responding to therapy", "Transfer to facility with Gyn/OR capability for uncontrolled hemorrhage", "Document chaperone presence for pelvic exam"]
+  },
+  {
+    "id": "pelvic-pain",
+    "name": "Pelvic Pain",
+    "category": "OB / GYN",
+    "synonyms": ["lower abdominal pain female", "ovarian pain", "PID", "ovarian cyst", "ovarian torsion"],
+    "acuity": "2-3",
+    "summary": "Acute lower abdominal/pelvic pain in females; must exclude ectopic, ovarian torsion, tubo-ovarian abscess/PID, ruptured cyst, and appendicitis.",
+    "stages": {
+      "triage": ["Pregnancy test status and LMP", "Pain onset, character, laterality, and severity", "Vitals; flag peritoneal signs or sepsis criteria", "Screen for sudden severe unilateral pain (torsion) or syncope (ectopic)", "ESI 2 for suspected torsion, ruptured ectopic, or sepsis"],
+      "nursing": ["IV access and analgesia early", "Obtain vitals and reassess pain score", "Prepare pelvic exam tray and chaperone", "Collect urine for hCG and UA", "NPO if surgical pathology suspected"],
+      "keyOrders": ["Urine/serum beta-hCG FIRST", "IV access with crystalloid", "Pelvic exam with chaperone", "Cardiac monitor if unstable*if indicated", "NPO if surgical abdomen suspected"],
+      "labs": ["Beta-hCG", "CBC with differential", "Comprehensive metabolic panel", "Urinalysis and urine culture", "Gonorrhea/chlamydia NAAT and wet mount if PID suspected", "Lactate if sepsis concern*if indicated"],
+      "imaging": ["Transvaginal + transabdominal pelvic US with Doppler (torsion, cyst, TOA)", "CT abdomen/pelvis if appendicitis or non-gyn source suspected*if indicated", "Urgent US for suspected torsion (do not delay surgical consult)"],
+      "meds": ["Analgesia: ketorolac 15-30 mg IV or morphine 0.1 mg/kg IV", "Ondansetron 4 mg IV for nausea", "PID outpatient: ceftriaxone 500 mg IM + doxycycline 100 mg PO BID x14d + metronidazole 500 mg BID", "PID inpatient: cefotetan 2 g IV q12h + doxycycline 100 mg IV/PO q12h", "IV crystalloid bolus for hypotension*if indicated"],
+      "reassess": ["Reassess pain after analgesia", "Recheck vitals and peritoneal signs", "Confirm US findings with Gyn for torsion", "Escalate for worsening exam or instability"],
+      "disposition": ["Emergent Gyn/surgery for torsion or ruptured ectopic", "Admit/transfer TOA or sepsis for IV antibiotics", "Discharge mild PID or simple cyst with follow-up", "Transfer to surgical-capable facility if no Gyn/OR on site"],
+      "discharge": ["Complete full PID antibiotic course; abstain from intercourse until treated", "Return precautions: worsening pain, fever, vomiting, syncope", "Partner treatment and STI counseling for PID", "Pain control plan and Gyn follow-up"],
+      "followup": ["Gyn within 48-72 hrs for PID re-evaluation", "Repeat US for cyst surveillance*if indicated", "STI test-of-cure and partner notification per CDC"]
+    },
+    "redFlags": ["Suspected ovarian torsion (sudden severe pain, adnexal mass)", "Ruptured ectopic / hemodynamic instability", "Tubo-ovarian abscess or septic PID", "Peritonitis / surgical abdomen", "Pregnancy with pelvic pain"],
+    "compliance": ["EMTALA MSE required; stabilize before transfer", "Time-sensitive transfer for torsion (ovarian salvage) or ruptured ectopic to surgical facility", "Mandatory Texas reporting of gonorrhea/chlamydia to DSHS", "Document chaperone for pelvic exam", "Observation appropriate for indeterminate stable cases with serial exams"]
+  },
+  {
+    "id": "first-trimester-abdominal-pain",
+    "name": "First-Trimester Abdominal Pain",
+    "category": "OB / GYN",
+    "synonyms": ["early pregnancy pain", "pregnancy cramping", "ectopic pregnancy concern", "abdominal pain less than 13 weeks"],
+    "acuity": "2-3",
+    "summary": "Abdominal/pelvic pain at <13 weeks gestation; ectopic pregnancy must be excluded; also consider corpus luteum cyst, miscarriage, UTI, and appendicitis.",
+    "stages": {
+      "triage": ["Confirm pregnancy and gestational age", "Assess pain location, severity, syncope, shoulder pain", "Vitals with orthostatics; flag instability", "Quantify any vaginal bleeding", "ESI 2 if unstable or high ectopic concern"],
+      "nursing": ["Large-bore IV access x2", "Continuous monitoring if unstable", "Obtain blood type/Rh", "Collect urine for hCG and UA", "NPO pending evaluation"],
+      "keyOrders": ["Quantitative beta-hCG", "IV access x2 with crystalloid", "Bedside/formal pelvic US", "Type & screen", "NPO pending US and surgical clearance"],
+      "labs": ["Quantitative beta-hCG", "CBC, type & Rh", "Comprehensive metabolic panel", "Urinalysis", "Coagulation/crossmatch if bleeding or unstable*if indicated"],
+      "imaging": ["Transvaginal ultrasound to confirm IUP vs ectopic", "Correlate beta-hCG with discriminatory zone if no IUP", "FAST exam for free fluid if unstable", "OB consult for indeterminate/pregnancy of unknown location"],
+      "meds": ["Rho(D) immune globulin 300 mcg IM if Rh-negative", "Analgesia: acetaminophen 1 g PO; fentanyl 25-50 mcg IV if severe", "Ondansetron 4 mg IV for nausea", "Crystalloid bolus for hypotension*if indicated", "Methotrexate per OB protocol for confirmed unruptured ectopic*if indicated"],
+      "reassess": ["Recheck vitals/orthostatics and pain", "Reassess for evolving peritoneal signs", "Confirm US interpretation with OB", "Escalate immediately if rupture suspected"],
+      "disposition": ["Emergent OB/surgery for ruptured or confirmed ectopic", "Discharge confirmed viable IUP with benign exam and follow-up", "Serial beta-hCG protocol for pregnancy of unknown location", "Transfer to OB/surgical facility if no coverage"],
+      "discharge": ["Return precautions: worsening pain, heavy bleeding, dizziness, syncope", "Document RhoGAM if Rh-negative", "Pelvic rest until follow-up", "Clear instructions on serial beta-hCG timing"],
+      "followup": ["OB within 48 hrs for repeat beta-hCG and US", "Early pregnancy assessment clinic if available", "Strict ectopic precautions reviewed and documented"]
+    },
+    "redFlags": ["Hemodynamic instability / syncope", "Free fluid on US or peritoneal signs", "Beta-hCG above discriminatory zone with empty uterus", "Confirmed ectopic pregnancy", "Severe unrelenting unilateral pain"],
+    "compliance": ["EMTALA MSE mandatory regardless of payment status", "Stabilize suspected ruptured ectopic before EMTALA-compliant transfer to surgical facility", "Document appropriate-transfer criteria and accepting physician", "Observation/serial labs acceptable for stable PUL with reliable follow-up", "Document Rh status and RhoGAM administration"]
+  },
+  {
+    "id": "hyperemesis-gravidarum",
+    "name": "Hyperemesis Gravidarum",
+    "category": "OB / GYN",
+    "synonyms": ["severe morning sickness", "intractable vomiting pregnancy", "nausea vomiting of pregnancy", "HG"],
+    "acuity": "3",
+    "summary": "Severe persistent nausea/vomiting of pregnancy with dehydration, ketosis, electrolyte derangement, and >5% weight loss; exclude other causes of vomiting.",
+    "stages": {
+      "triage": ["Confirm pregnancy and gestational age", "Assess dehydration (tachycardia, dry mucosa, weight loss)", "Quantify emesis frequency and oral intake", "Check for warning signs (fever, abdominal pain, hematemesis)", "Vitals with orthostatics"],
+      "nursing": ["IV access and begin rehydration", "Obtain finger-stick glucose and urine ketones", "Strict intake/output monitoring", "Antiemetics per orders", "Dim, calm environment to reduce stimuli"],
+      "keyOrders": ["IV access with isotonic fluids", "Urine dip for ketones and specific gravity", "Beta-hCG confirmation", "Antiemetic administration", "Daily weight comparison if available"],
+      "labs": ["CBC", "Comprehensive metabolic panel (electrolytes, BUN/Cr)", "Urinalysis with ketones", "TSH/free T4 if severe or hyperthyroid signs*if indicated", "Lipase if epigastric pain*if indicated"],
+      "imaging": ["Obstetric US to confirm viability and exclude molar/multiple gestation", "RUQ US if hepatobiliary cause suspected*if indicated"],
+      "meds": ["IV normal saline or LR 1-2 L bolus then maintenance", "Pyridoxine (B6) 10-25 mg + doxylamine 12.5 mg PO", "Ondansetron 4-8 mg IV (counsel re: first-trimester data)", "Promethazine 12.5-25 mg IV or metoclopramide 10 mg IV", "Thiamine 100 mg IV before dextrose if prolonged vomiting", "Methylprednisolone for refractory cases per OB*if indicated"],
+      "reassess": ["Reassess hydration, orthostatics, and symptom relief", "Recheck electrolytes if abnormal", "Confirm tolerance of oral fluids before discharge", "Escalate if persistent vomiting despite therapy"],
+      "disposition": ["Discharge once tolerating PO and rehydrated", "Admit/transfer for refractory vomiting, severe electrolyte abnormality, or weight loss", "OB consult for refractory or molar pregnancy", "Transfer to OB-capable facility if admission needed"],
+      "discharge": ["Antiemetic regimen and small frequent bland meals", "Return precautions: inability to keep fluids down, dizziness, decreased urination", "Prescribe pyridoxine/doxylamine and oral ondansetron as needed", "Hydration and rest guidance"],
+      "followup": ["OB within 2-3 days to reassess and trend weight", "Nutrition/dietitian referral if persistent*if indicated", "Consider home health/IV hydration program if recurrent"]
+    },
+    "redFlags": ["Severe electrolyte abnormality (hypokalemia, hyponatremia)", "Persistent vomiting despite aggressive therapy", "Hematemesis or severe abdominal pain", "Signs of Wernicke encephalopathy (confusion, ataxia)", "Weight loss >5% with ketosis and dehydration"],
+    "compliance": ["EMTALA MSE required regardless of ability to pay", "Stabilize dehydration/electrolytes before transfer; thiamine before dextrose", "Observation appropriate for fluid/antiemetic trial; transfer if requiring admission and no OB beds", "Document appropriate-transfer criteria for refractory cases", "Exclude and document molar pregnancy on US"]
+  },
+  {
+    "id": "preeclampsia-hypertension-in-pregnancy",
+    "name": "Preeclampsia / Hypertension in Pregnancy",
+    "category": "OB / GYN",
+    "synonyms": ["high blood pressure pregnancy", "preeclampsia", "eclampsia", "HELLP syndrome", "gestational hypertension"],
+    "acuity": "1-2",
+    "summary": "Hypertension at >=20 weeks (or postpartum) with possible end-organ damage; spectrum includes preeclampsia, severe features, eclampsia, and HELLP - obstetric emergency.",
+    "stages": {
+      "triage": ["Confirm gestational age (>=20 wks or postpartum up to 6 wks)", "Repeat BP; severe range >=160/110", "Screen for headache, visual changes, RUQ pain, seizure", "Immediate ESI 1-2 for severe-range BP or eclampsia", "Continuous monitoring and call OB early"],
+      "nursing": ["Cardiac monitor, automated BP cycling q5-15 min", "IV access x2", "Seizure precautions and quiet environment", "Strict I/O and seizure-watch", "Prepare magnesium sulfate per protocol"],
+      "keyOrders": ["Serial/automated BP monitoring", "IV access x2", "Cardiac monitor and pulse oximetry", "Fetal heart tones / continuous fetal monitoring if viable", "Magnesium sulfate ready for seizure prophylaxis"],
+      "labs": ["CBC with platelets", "Comprehensive metabolic panel (creatinine, LFTs)", "LDH, uric acid, haptoglobin (HELLP workup)", "Urine protein/creatinine ratio or dipstick", "Coagulation studies if HELLP/low platelets*if indicated"],
+      "imaging": ["Obstetric US for fetal status if time permits", "Head CT if focal deficit or atypical seizure*if indicated", "RUQ assessment if hepatic involvement*if indicated"],
+      "meds": ["Magnesium sulfate 4-6 g IV load then 1-2 g/hr for seizure prophylaxis/eclampsia", "Labetalol 20 mg IV, escalate 40-80 mg q10min (max 300 mg)", "Hydralazine 5-10 mg IV q20min for severe BP", "Nifedipine 10 mg PO if no IV access", "Calcium gluconate 1 g IV available as magnesium antidote"],
+      "reassess": ["Recheck BP q10-15 min targeting <160/<110", "Monitor magnesium toxicity (reflexes, RR, urine output)", "Reassess neuro status and fetal heart tones", "Escalate to OB/MFM emergently; delivery is definitive treatment"],
+      "disposition": ["Emergent OB consult; transfer to L&D-capable facility for definitive care", "Admit all severe features / eclampsia / HELLP", "Do NOT discharge severe-range hypertension", "Stabilize then EMTALA transfer if no obstetric services on site"],
+      "discharge": ["Only mild gestational HTN without severe features may be discharged with OB", "Return precautions: severe headache, visual changes, RUQ pain, seizure, decreased fetal movement", "Home BP monitoring instructions", "Strict short-interval OB follow-up"],
+      "followup": ["OB/MFM within 24-48 hrs (sooner per severity)", "Daily-to-weekly BP and lab surveillance per OB", "Postpartum BP follow-up (preeclampsia can present postpartum)"]
+    },
+    "redFlags": ["Severe-range BP >=160/110", "Eclamptic seizure", "HELLP syndrome (hemolysis, low platelets, elevated LFTs)", "Neurologic symptoms (severe headache, visual changes)", "Pulmonary edema or oliguria"],
+    "compliance": ["Obstetric emergency under EMTALA - immediate MSE and stabilization (Mg, antihypertensives)", "FSED without L&D must stabilize then perform appropriate transfer to obstetric facility", "Document accepting OB physician, treatments given, and maternal-fetal stability for transfer", "Severe preeclampsia/eclampsia is NOT appropriate for outpatient observation", "Treat severe-range BP within 30-60 minutes per ACOG"]
+  },
+  {
+    "id": "imminent-delivery",
+    "name": "Imminent Delivery",
+    "category": "OB / GYN",
+    "synonyms": ["precipitous labor", "crowning", "baby coming now", "active labor", "emergency childbirth"],
+    "acuity": "1-2",
+    "summary": "Active labor with delivery imminent or in progress; manage controlled delivery, anticipate neonatal resuscitation and postpartum hemorrhage; under EMTALA delivery is an emergency medical condition.",
+    "stages": {
+      "triage": ["Assess contractions, urge to push, and crowning", "Gestational age, gravidity/parity, prenatal complications", "Maternal vitals and fetal heart tones", "If crowning - do NOT transfer; prepare for delivery", "Activate OB/neonatal team and notify receiving facility"],
+      "nursing": ["IV access x2 and prepare delivery/precipitous kit", "Set up infant warmer and neonatal resuscitation equipment", "Continuous fetal heart tone monitoring", "Position mother; prepare suction and clamps", "Call additional staff and pediatric/EMS support"],
+      "keyOrders": ["Two large-bore IVs with crystalloid", "Continuous fetal monitoring if feasible", "Prepare oxytocin for third stage", "Neonatal warmer and resuscitation setup", "Type & screen for mother"],
+      "labs": ["Maternal CBC and type & screen", "Rh status", "Group B strep status from prenatal records if available", "Cord blood gas/type at delivery*if indicated"],
+      "imaging": ["Bedside US for fetal presentation/position if time permits*if indicated", "Do not delay delivery for imaging if crowning"],
+      "meds": ["Oxytocin 10 units IM or 10-40 units in 1 L IV after delivery (active third stage)", "Tranexamic acid 1 g IV for postpartum hemorrhage", "Misoprostol 800-1000 mcg PR for atony", "Methylergonovine 0.2 mg IM for atony (avoid if hypertensive)", "Neonatal resuscitation per NRP; warm, dry, stimulate, vitamin K + erythromycin eyes"],
+      "reassess": ["Assess maternal bleeding and uterine tone post-delivery", "Apgar scoring and neonatal status at 1 and 5 min", "Estimate blood loss; massage fundus", "Reassess for retained placenta or lacerations", "Escalate hemorrhage to massive transfusion protocol if needed"],
+      "disposition": ["Stabilize mother and neonate; transfer both to OB/NICU-capable facility", "Postpartum hemorrhage or distressed neonate - emergent transfer with EMS", "Notify accepting facility before/during transfer", "Do not transfer during active crowning/delivery"],
+      "discharge": ["Discharge from FSED not appropriate; arrange transfer/admission", "If imminent transfer delayed, continue maternal/neonatal monitoring", "Document delivery time, Apgars, blood loss, placenta delivery"],
+      "followup": ["Inpatient OB and newborn care at receiving hospital", "Postpartum and newborn follow-up arranged by receiving facility", "Social work/lactation support as available"]
+    },
+    "redFlags": ["Postpartum hemorrhage / uterine atony", "Abnormal presentation (breech, shoulder dystocia, cord prolapse)", "Fetal distress / bradycardia", "Maternal hypotension or seizure", "Retained placenta or significant lacerations"],
+    "compliance": ["Active labor is an EMTALA emergency medical condition - cannot refuse or delay for payment", "A woman in active labor is NOT in stable condition for transfer until after delivery (mother and baby stabilized)", "FSED must attempt delivery if birth is imminent; transfer only if delivery not imminent and benefits outweigh risks", "Document EMTALA active-labor assessment, delivery details, and appropriate-transfer paperwork", "Mandatory birth reporting and newborn handoff to receiving facility"]
+  },
+  {
+    "id": "sexual-assault",
+    "name": "Sexual Assault",
+    "category": "OB / GYN",
+    "synonyms": ["sexual assault exam", "rape kit", "SANE exam", "sexual violence", "forensic exam"],
+    "acuity": "2-3",
+    "summary": "Acute care of sexual assault survivor; prioritize safety, medical stabilization, trauma-informed care, forensic evidence collection, prophylaxis, and mandated reporting.",
+    "stages": {
+      "triage": ["Ensure physical safety and private, secure area", "Trauma-informed, patient-led approach; obtain consent at every step", "Address acute injuries first (ABCs, trauma)", "Activate SANE (Sexual Assault Nurse Examiner) if available", "Offer victim advocate / support person"],
+      "nursing": ["Maintain chain of custody for all evidence", "Offer SANE exam and evidence kit with explicit consent", "Provide clean clothing; preserve clothing as evidence", "Document injuries with body maps/photography per consent", "Provide private, calm, supportive environment"],
+      "keyOrders": ["Address and treat acute traumatic injuries first", "Consent-based forensic evidence collection (SANE kit)", "Pregnancy test", "STI baseline testing", "Offer law-enforcement notification (patient's choice unless mandated)"],
+      "labs": ["Beta-hCG (baseline pregnancy)", "HIV, hepatitis B/C, RPR (syphilis) baseline serologies", "Gonorrhea/chlamydia/trichomonas NAAT", "Toxicology if drug-facilitated assault suspected*if indicated", "Baseline labs prior to HIV PEP (CBC, CMP)"],
+      "imaging": ["Imaging only as needed for traumatic injuries*if indicated", "Document genital/extragenital injuries via exam and photography"],
+      "meds": ["Emergency contraception: levonorgestrel 1.5 mg PO or ulipristal 30 mg PO", "GC/CT/trich prophylaxis: ceftriaxone 500 mg IM + doxycycline 100 mg BID x7d + metronidazole 2 g PO", "Hepatitis B vaccine +/- HBIG if unvaccinated", "HIV nPEP (tenofovir-emtricitabine + dolutegravir) x28d if indicated within 72 hrs", "Tetanus prophylaxis and analgesia as needed"],
+      "reassess": ["Reassess for occult injuries and emotional status", "Confirm prophylaxis offered/given and documented", "Verify safety plan before discharge", "Confirm chain of custody intact"],
+      "disposition": ["Discharge to safe environment with advocate when medically stable", "Admit/transfer for serious traumatic injuries", "Arrange SANE/forensic transfer if no SANE on site", "Transfer to facility with SANE/trauma capability if needed"],
+      "discharge": ["Provide written follow-up, prophylaxis instructions, and crisis hotline numbers", "Safety planning and connection to advocacy services", "STI/HIV follow-up testing schedule", "Counseling/mental health referral"],
+      "followup": ["STI re-testing and HIV PEP follow-up at 2 weeks and serologies at 4-6 weeks/3 months", "Pregnancy test follow-up", "Sexual assault advocacy and mental health services", "Primary care / Gyn follow-up"]
+    },
+    "redFlags": ["Significant physical trauma or hemodynamic instability", "Strangulation injury (delayed airway/vascular risk)", "Suicidal ideation or acute psychological crisis", "Drug-facilitated assault with altered mental status", "Ongoing safety threat from perpetrator"],
+    "compliance": ["EMTALA MSE and stabilization of any emergency medical condition required", "Texas: mandatory reporting if victim is a child, elderly, or disabled adult (suspected abuse)", "Preserve chain of custody; do not condition care on reporting to police (adult competent victim chooses)", "Offer SANE exam; transfer to SANE-capable facility if unavailable, documenting appropriate transfer", "Texas hospitals/FSEDs must provide or arrange emergency contraception and forensic exam information to survivors"]
+  },
+  {
+    "id": "vaginal-discharge",
+    "name": "Vaginal Discharge",
+    "category": "OB / GYN",
+    "synonyms": ["abnormal discharge", "vaginitis", "yeast infection", "bacterial vaginosis", "STI symptoms"],
+    "acuity": "4",
+    "summary": "Abnormal vaginal discharge; differential includes candidiasis, bacterial vaginosis, trichomoniasis, gonorrhea/chlamydia cervicitis, and PID - exclude upper-tract infection.",
+    "stages": {
+      "triage": ["Assess discharge color/odor/itching and duration", "Screen for fever, pelvic/abdominal pain (PID concern)", "Pregnancy status and LMP", "Vitals; usually stable/low acuity", "Sexual history and STI risk factors"],
+      "nursing": ["Prepare pelvic/speculum exam tray and chaperone", "Collect wet mount, pH, and NAAT swabs", "Obtain urine for hCG and UA", "Ensure privacy and comfort", "Provide patient education materials"],
+      "keyOrders": ["Pregnancy test", "Pelvic/speculum exam with chaperone", "Vaginal pH and whiff test", "Wet mount microscopy (clue cells, hyphae, trichomonads)", "GC/CT NAAT"],
+      "labs": ["Beta-hCG", "Wet mount and KOH prep", "Gonorrhea/chlamydia/trichomonas NAAT", "Vaginal pH", "HIV/syphilis screening if STI risk*if indicated"],
+      "imaging": ["Generally none required", "Pelvic US only if PID/TOA suspected*if indicated"],
+      "meds": ["Bacterial vaginosis: metronidazole 500 mg PO BID x7d or metronidazole gel", "Candidiasis: fluconazole 150 mg PO single dose or topical azole", "Trichomoniasis: metronidazole 500 mg PO BID x7d (treat partners)", "Gonorrhea: ceftriaxone 500 mg IM; Chlamydia: doxycycline 100 mg BID x7d", "Counsel: avoid alcohol with metronidazole"],
+      "reassess": ["Confirm exam findings match diagnosis", "Reassess for PID signs warranting escalation", "Ensure pregnancy-safe regimen if pregnant", "Review treatment and partner-management plan"],
+      "disposition": ["Discharge nearly all with appropriate antimicrobials", "Escalate/treat as PID if cervical motion or adnexal tenderness", "Gyn referral if recurrent/refractory", "Transfer rarely needed (only if complicated PID/TOA)"],
+      "discharge": ["Complete full medication course; abstain from intercourse during treatment", "Return precautions: fever, worsening pelvic pain, vomiting", "Partner treatment and STI counseling", "Safe-sex education and condom use"],
+      "followup": ["PCP/Gyn for persistent or recurrent symptoms", "STI test-of-cure where indicated (e.g., pregnancy, persistent symptoms)", "Partner notification and treatment per CDC guidance"]
+    },
+    "redFlags": ["Signs of PID (cervical motion/adnexal tenderness, fever)", "Tubo-ovarian abscess or sepsis", "Pregnancy with ascending infection", "Toxic-appearing patient", "Refractory infection despite appropriate therapy"],
+    "compliance": ["EMTALA MSE applies even for low-acuity complaints", "Texas mandatory DSHS reporting of gonorrhea, chlamydia, syphilis, and HIV", "Expedited partner therapy permitted in Texas for chlamydia/gonorrhea per protocol", "Observation/transfer rarely needed; transfer only complicated PID/TOA with appropriate-transfer documentation", "Document chaperone presence for pelvic exam"]
+  }
+]

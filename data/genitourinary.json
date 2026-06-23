@@ -1,0 +1,611 @@
+[
+  {
+    "id": "dysuria-uti",
+    "name": "Dysuria / UTI",
+    "category": "Genitourinary",
+    "synonyms": ["burning with urination", "bladder infection", "cystitis", "painful urination", "frequency and urgency", "pyelonephritis"],
+    "acuity": "3-4",
+    "summary": "Lower urinary tract irritative symptoms; differentiate simple cystitis from pyelonephritis, STI urethritis, and complicated/septic UTI.",
+    "stages": {
+      "triage": [
+        "Vital signs; flag fever >38C, tachycardia, hypotension for sepsis screen",
+        "Onset, dysuria, frequency, urgency, hematuria, flank pain, vaginal/urethral discharge",
+        "Pregnancy status in all persons of childbearing potential",
+        "Risk factors: recurrent UTI, indwelling catheter, immunosuppression, recent instrumentation, diabetes"
+      ],
+      "nursing": [
+        "Clean-catch midstream urine collection (or straight cath if unable)",
+        "Point-of-care urine dipstick",
+        "Urine pregnancy test (hCG) for childbearing-age patients",
+        "Vital signs q4h; recheck temp if febrile*",
+        "IV access if signs of pyelonephritis or sepsis* if indicated"
+      ],
+      "keyOrders": [
+        "Urinalysis with microscopy and reflex urine culture",
+        "Vital signs with temperature",
+        "IV access if febrile/ill-appearing* if indicated",
+        "Sepsis screen (qSOFA/SIRS) if febrile* if indicated"
+      ],
+      "labs": [
+        "Urinalysis with microscopy; urine culture and sensitivity",
+        "Urine hCG (childbearing potential)",
+        "CBC, BMP if pyelonephritis or systemic illness* if indicated",
+        "Blood cultures if septic/admitting* if indicated",
+        "NAAT for gonorrhea/chlamydia if urethritis/STI suspected* if indicated",
+        "Lactate if sepsis suspected* if indicated"
+      ],
+      "imaging": [
+        "Imaging not required for uncomplicated cystitis",
+        "CT abdomen/pelvis with contrast if obstructive pyelonephritis or abscess suspected* if indicated",
+        "Renal/bladder ultrasound if obstruction or retention suspected* if indicated"
+      ],
+      "meds": [
+        "Simple cystitis: nitrofurantoin 100 mg PO BID x5d, OR TMP-SMX DS PO BID x3d, OR fosfomycin 3 g PO x1",
+        "Pyelonephritis (outpatient): ceftriaxone 1 g IV/IM once then cefpodoxime, OR ciprofloxacin 500 mg PO BID x7d",
+        "Pyelonephritis (parenteral): ceftriaxone 1 g IV daily or piperacillin-tazobactam 3.375 g IV q6h if resistant risk",
+        "Phenazopyridine 200 mg PO TID x2d for dysuria (urine discoloration counseling)",
+        "Antipyretic/analgesic: acetaminophen 1 g PO/IV",
+        "IV crystalloid bolus 30 mL/kg if septic* if indicated"
+      ],
+      "reassess": [
+        "Reassess pain, fever, and hydration after analgesia/fluids",
+        "Confirm tolerating PO before discharge",
+        "Re-evaluate vitals and sepsis criteria if initially febrile",
+        "Reconsider obstruction if persistent fever despite antibiotics"
+      ],
+      "disposition": [
+        "Discharge home: uncomplicated cystitis or stable pyelonephritis tolerating PO",
+        "Observation: borderline pyelonephritis, dehydration, vomiting",
+        "Admit/transfer: sepsis, obstruction, pregnancy with pyelonephritis, immunocompromise, failed outpatient therapy",
+        "Transfer to facility with surgical/urology and ICU capability if obstructive infection"
+      ],
+      "discharge": [
+        "Complete full antibiotic course even if symptoms resolve",
+        "Increase oral fluids; phenazopyridine no more than 2 days",
+        "Return for fever, flank pain, vomiting, or inability to keep fluids down",
+        "Counsel that culture results may change antibiotic choice"
+      ],
+      "followup": [
+        "Primary care in 48-72h or sooner if not improving",
+        "Telephone follow-up of urine culture and tailor antibiotics",
+        "Urology referral for recurrent or complicated UTI",
+        "STI partner notification/treatment if urethritis confirmed"
+      ]
+    },
+    "redFlags": [
+      "Sepsis: hypotension, lactate elevation, altered mentation",
+      "Obstructive pyelonephritis (stone with infection) - urologic emergency",
+      "Pregnancy with pyelonephritis",
+      "Immunocompromised or post-transplant with febrile UTI",
+      "Inability to tolerate oral intake or rapid clinical deterioration"
+    ],
+    "compliance": [
+      "EMTALA medical screening exam and stabilization required before any transfer; document hemodynamic stability",
+      "Obstructive infected stone requires emergent appropriate-transfer to urology/ICU-capable facility with physician-to-physician acceptance",
+      "Observation appropriate for borderline pyelonephritis needing IV fluids/antibiotics; transfer if deteriorating",
+      "Texas-reportable communicable diseases: report confirmed gonorrhea/chlamydia to DSHS if STI urethritis diagnosed",
+      "Document pregnancy status and EMTALA stabilization for pregnant patients with pyelonephritis"
+    ]
+  },
+  {
+    "id": "hematuria",
+    "name": "Hematuria",
+    "category": "Genitourinary",
+    "synonyms": ["blood in urine", "red urine", "gross hematuria", "microscopic hematuria", "bloody urine", "clots in urine"],
+    "acuity": "2-4",
+    "summary": "Gross or microscopic blood in urine; differentiate UTI, stone, trauma, malignancy, and clot retention from pseudohematuria.",
+    "stages": {
+      "triage": [
+        "Vital signs; assess for hemodynamic instability and clot retention",
+        "Gross vs microscopic; timing in stream; presence of clots",
+        "Pain (flank, suprapubic), trauma, anticoagulation, recent instrumentation",
+        "Smoking history and age (malignancy risk stratification)"
+      ],
+      "nursing": [
+        "Urine collection for UA; note color and clots",
+        "IV access if gross hematuria with clots or instability",
+        "Bladder scan; prepare for catheter/irrigation if retention*",
+        "Monitor vitals and urine output"
+      ],
+      "keyOrders": [
+        "Urinalysis with microscopy",
+        "IV access for significant gross hematuria",
+        "Three-way Foley with continuous bladder irrigation if clot retention* if indicated",
+        "Type and screen if transfusion possible* if indicated"
+      ],
+      "labs": [
+        "Urinalysis with microscopy; urine culture if infection suspected",
+        "CBC to assess for anemia",
+        "BMP for renal function",
+        "Coagulation panel (PT/INR, PTT) if anticoagulated",
+        "Urine hCG if childbearing potential",
+        "Urine cytology not done in ED (outpatient)*"
+      ],
+      "imaging": [
+        "CT urogram (CT with/without contrast) for evaluation of source in gross painless hematuria* if indicated",
+        "Non-contrast CT if stone suspected* if indicated",
+        "Renal/bladder ultrasound as alternative if contrast contraindicated* if indicated",
+        "FAST/CT for trauma-related hematuria* if indicated"
+      ],
+      "meds": [
+        "Analgesia: ketorolac 15-30 mg IV or acetaminophen 1 g IV if pain present",
+        "Reverse/hold anticoagulation per agent if bleeding significant* if indicated",
+        "Antibiotics if concurrent UTI per cystitis regimen* if indicated",
+        "IV crystalloid for volume support if anemic/unstable* if indicated",
+        "Tranexamic acid only on urology guidance* if indicated"
+      ],
+      "reassess": [
+        "Reassess hemodynamics and serial hemoglobin if significant bleeding",
+        "Confirm clearing of irrigation and resolution of clot retention",
+        "Re-evaluate pain control",
+        "Check post-void residual after catheter removal*"
+      ],
+      "disposition": [
+        "Discharge: stable microscopic or minor gross hematuria without retention/anemia",
+        "Observation: gross hematuria requiring irrigation, monitoring of hemoglobin",
+        "Admit/transfer: hemodynamic instability, ongoing transfusion need, clot retention not cleared, trauma",
+        "Urgent urology consult/transfer for significant gross hematuria"
+      ],
+      "discharge": [
+        "Strict return precautions for inability to void, large clots, or dizziness",
+        "Maintain hydration; avoid strenuous activity if exertional hematuria",
+        "Bring medication list including anticoagulants to follow-up",
+        "Emphasize importance of outpatient hematuria workup even if resolved"
+      ],
+      "followup": [
+        "Urology referral for gross hematuria and for microscopic hematuria with risk factors",
+        "Primary care for blood pressure, renal function, anticoagulation management",
+        "Outpatient cystoscopy and CT urogram if not completed",
+        "Nephrology if glomerular pattern (dysmorphic RBCs, proteinuria, casts)"
+      ]
+    },
+    "redFlags": [
+      "Hemodynamic instability or symptomatic anemia from urinary blood loss",
+      "Clot retention with inability to void (urologic emergency)",
+      "Gross hematuria after significant trauma (possible renal/bladder injury)",
+      "Painless gross hematuria in patient >35 or smoker (malignancy concern)",
+      "Hematuria with acute kidney injury or glomerulonephritis pattern"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; transfusion/irrigation stabilization documented before transfer",
+      "Appropriate-transfer to urology-capable facility for clot retention or trauma needing operative care",
+      "Observation acceptable for irrigation and serial hemoglobin; transfer if uncontrolled",
+      "Trauma with suspected nonaccidental injury or assault triggers Texas mandatory reporting",
+      "Document anticoagulation reconciliation and reversal decisions in transfer paperwork"
+    ]
+  },
+  {
+    "id": "flank-pain-renal-colic",
+    "name": "Flank Pain / Renal Colic",
+    "category": "Genitourinary",
+    "synonyms": ["kidney stone", "ureteral colic", "nephrolithiasis", "side pain", "stone pain", "loin pain"],
+    "acuity": "2-3",
+    "summary": "Acute flank pain suggesting urolithiasis; exclude AAA, obstructive infected stone, and renal infarct/dissection.",
+    "stages": {
+      "triage": [
+        "Vital signs; flag fever (obstructive infection) and hypotension (AAA)",
+        "Pain onset, colicky character, radiation to groin, hematuria, vomiting",
+        "Age >50 with first episode raises AAA concern",
+        "Pregnancy status; prior stone history"
+      ],
+      "nursing": [
+        "IV access and early analgesia",
+        "Urine collection for UA and pregnancy test",
+        "Strain urine for stone if passing*",
+        "Antiemetic administration; monitor pain scores"
+      ],
+      "keyOrders": [
+        "IV access",
+        "Urinalysis with microscopy",
+        "Urine hCG (childbearing potential)",
+        "Early multimodal analgesia",
+        "Vital signs with temperature for infection screen"
+      ],
+      "labs": [
+        "Urinalysis with microscopy (hematuria, nitrites, leukocytes)",
+        "BMP for renal function",
+        "CBC if infection or significant illness",
+        "Urine culture if pyuria/fever* if indicated",
+        "Lactate and blood cultures if septic* if indicated"
+      ],
+      "imaging": [
+        "Non-contrast CT abdomen/pelvis (stone protocol) - primary study",
+        "Point-of-care or formal ultrasound (preferred in pregnancy and young patients)* if indicated",
+        "CT angiogram if AAA or dissection suspected* if indicated",
+        "KUB for stone burden follow-up* if indicated"
+      ],
+      "meds": [
+        "Ketorolac 15-30 mg IV (if normal renal function)",
+        "Morphine 0.1 mg/kg IV or hydromorphone 0.5-1 mg IV for breakthrough pain",
+        "Ondansetron 4 mg IV for nausea",
+        "Tamsulosin 0.4 mg PO daily for medical expulsive therapy (stones 5-10 mm distal)*",
+        "IV crystalloid for hydration as needed",
+        "Antibiotics (ceftriaxone 1 g IV) if obstructive infection* if indicated"
+      ],
+      "reassess": [
+        "Reassess pain after analgesia (goal acceptable pain control)",
+        "Confirm tolerating PO fluids and antiemetic effect",
+        "Re-check vitals for evolving fever/sepsis",
+        "Reassess need for urology if obstruction or large stone"
+      ],
+      "disposition": [
+        "Discharge: stone <10 mm, controlled pain, no infection, normal renal function, single kidney excluded",
+        "Observation: borderline pain control or persistent vomiting",
+        "Admit/transfer: obstructing stone with infection, AKI, solitary kidney, intractable pain",
+        "Emergent urology transfer for infected obstructed system (decompression needed)"
+      ],
+      "discharge": [
+        "Strain all urine and bring stone for analysis",
+        "Increase fluid intake; NSAIDs scheduled for pain",
+        "Return immediately for fever, chills, uncontrolled pain, or vomiting",
+        "Tamsulosin instructions if prescribed (orthostasis counseling)"
+      ],
+      "followup": [
+        "Urology follow-up within 1-2 weeks for stones not yet passed",
+        "Repeat imaging if stone not passed in 4-6 weeks",
+        "Primary care for metabolic stone-prevention workup",
+        "Return-to-ED instructions if obstruction symptoms recur"
+      ]
+    },
+    "redFlags": [
+      "Fever with obstructing stone - infected obstructed kidney requires emergent decompression",
+      "AAA mimicking renal colic in patients >50 (pulsatile mass, hypotension)",
+      "Acute kidney injury or solitary/transplant kidney with obstruction",
+      "Intractable pain or persistent vomiting",
+      "Bilateral obstruction or anuria"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; rule out AAA before attributing pain to colic",
+      "Infected obstructed system mandates emergent appropriate-transfer for urologic/IR decompression with accepting physician",
+      "Observation acceptable for pain/nausea control; transfer if infection or AKI",
+      "Document imaging-confirmed diagnosis and renal function in transfer record",
+      "FSED must arrange timely transfer if no on-site urology or surgical capability"
+    ]
+  },
+  {
+    "id": "urinary-retention",
+    "name": "Urinary Retention",
+    "category": "Genitourinary",
+    "synonyms": ["cannot urinate", "unable to void", "bladder not emptying", "acute retention", "obstructed bladder", "AUR"],
+    "acuity": "2-3",
+    "summary": "Acute inability to void with bladder distension; identify obstructive (BPH, clot, stricture), neurogenic, and medication causes; exclude cauda equina.",
+    "stages": {
+      "triage": [
+        "Vital signs; assess discomfort and palpable bladder",
+        "Duration of inability to void, prior episodes, BPH history",
+        "Neuro symptoms: saddle anesthesia, leg weakness, back pain (cauda equina)",
+        "Medication review (anticholinergics, opioids, decongestants)"
+      ],
+      "nursing": [
+        "Bladder ultrasound/scan for volume",
+        "Immediate urethral catheterization for decompression",
+        "Measure and document drained volume",
+        "Monitor for post-obstructive diuresis"
+      ],
+      "keyOrders": [
+        "Bladder scan",
+        "Foley catheter placement (leave to gravity drainage)",
+        "Record drained urine volume and characteristics",
+        "Urinalysis and culture from catheter",
+        "Monitor urine output hourly after decompression*"
+      ],
+      "labs": [
+        "BMP for renal function and electrolytes",
+        "Urinalysis with culture",
+        "CBC if infection suspected",
+        "PSA not drawn acutely in ED (outpatient)*",
+        "Urine hCG if applicable*"
+      ],
+      "imaging": [
+        "Bladder ultrasound to confirm retention",
+        "Renal ultrasound if hydronephrosis or AKI suspected* if indicated",
+        "MRI lumbar spine emergently if cauda equina suspected* if indicated",
+        "CT for pelvic mass or stone if suspected* if indicated"
+      ],
+      "meds": [
+        "Tamsulosin 0.4 mg PO daily started for men with presumed BPH",
+        "Analgesia: acetaminophen 1 g PO/IV for catheter discomfort",
+        "Antibiotics only if concurrent UTI per regimen* if indicated",
+        "Stop offending medications (anticholinergics/opioids) when feasible",
+        "IV fluids to monitor and replace post-obstructive diuresis if large output*"
+      ],
+      "reassess": [
+        "Reassess comfort after decompression",
+        "Monitor for post-obstructive diuresis (>200 mL/h) and replace fluids",
+        "Re-evaluate renal function if elevated",
+        "Assess neuro exam if cauda equina was on differential"
+      ],
+      "disposition": [
+        "Discharge: successful decompression with leg bag and outpatient follow-up (trial of void planned)",
+        "Observation: significant post-obstructive diuresis or AKI requiring monitoring",
+        "Admit/transfer: cauda equina, sepsis, severe AKI, hematuria with clot retention",
+        "Emergent transfer for suspected cauda equina to facility with neurosurgery/MRI"
+      ],
+      "discharge": [
+        "Leg bag care and catheter hygiene instructions",
+        "Tamsulosin counseling (orthostatic hypotension)",
+        "Return for no urine output, fever, severe pain, or catheter dislodgement",
+        "Trial-of-void plan and timing communicated"
+      ],
+      "followup": [
+        "Urology within 3-7 days for trial of void and catheter removal",
+        "Primary care for medication review and BPH management",
+        "Neurosurgery/spine if neurogenic cause identified",
+        "Document expected post-obstructive diuresis monitoring needs"
+      ]
+    },
+    "redFlags": [
+      "Cauda equina syndrome: saddle anesthesia, bilateral leg weakness, back pain - surgical emergency",
+      "Acute kidney injury or significant post-obstructive diuresis",
+      "Urosepsis with retention",
+      "Inability to pass catheter (possible stricture/false passage) requiring urology",
+      "Gross hematuria with clot retention"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; decompress bladder as part of stabilization before transfer",
+      "Suspected cauda equina mandates emergent appropriate-transfer to facility with MRI/neurosurgery",
+      "Observation acceptable for post-obstructive diuresis monitoring; transfer if severe AKI/sepsis",
+      "Document drained volume, renal function, and catheter status in transfer paperwork",
+      "FSED must arrange urology follow-up or transfer if catheter cannot be placed on site"
+    ]
+  },
+  {
+    "id": "testicular-pain",
+    "name": "Testicular Pain",
+    "category": "Genitourinary",
+    "synonyms": ["testicle pain", "groin pain", "scrotal pain", "ball pain", "torsion", "sudden testicle pain"],
+    "acuity": "1-2",
+    "summary": "Acute testicular pain - time-critical exclusion of testicular torsion versus epididymitis, torsed appendage, and referred pain.",
+    "stages": {
+      "triage": [
+        "IMMEDIATE physician notification for sudden severe pain (possible torsion)",
+        "Onset/duration (torsion typically <6h, abrupt), nausea/vomiting",
+        "Prior episodes, trauma, recent activity, sexual history",
+        "Vital signs; note that torsion is a time-dependent emergency"
+      ],
+      "nursing": [
+        "Expedite to physician; do not delay for labs",
+        "IV access and analgesia/antiemetic",
+        "Prepare for emergent scrotal ultrasound",
+        "Keep patient NPO in case of operative intervention"
+      ],
+      "keyOrders": [
+        "Immediate scrotal Doppler ultrasound (do not delay surgical consult if high suspicion)",
+        "NPO status",
+        "IV access",
+        "Urgent urology consultation if torsion suspected",
+        "Analgesia and antiemetic"
+      ],
+      "labs": [
+        "Urinalysis with microscopy",
+        "Urine NAAT gonorrhea/chlamydia if epididymitis suspected* if indicated",
+        "CBC if systemic infection* if indicated",
+        "Urine hCG not applicable*"
+      ],
+      "imaging": [
+        "Color Doppler scrotal ultrasound (decreased/absent flow suggests torsion)",
+        "Do NOT delay surgical exploration for imaging if clinical suspicion high",
+        "Consider repeat/dynamic ultrasound if intermittent torsion suspected* if indicated"
+      ],
+      "meds": [
+        "Morphine 0.1 mg/kg IV or hydromorphone 0.5-1 mg IV for pain",
+        "Ondansetron 4 mg IV for nausea",
+        "Epididymitis (STI likely): ceftriaxone 500 mg IM x1 plus doxycycline 100 mg PO BID x10d",
+        "Epididymitis (enteric/older): levofloxacin 500 mg PO daily x10d",
+        "Manual detorsion by physician as temporizing measure if surgery delayed*"
+      ],
+      "reassess": [
+        "Continuous reassessment of pain and exam while awaiting urology",
+        "Document time of symptom onset and time of evaluation (testicular viability window)",
+        "Reassess after manual detorsion attempt (pain relief, restored lie)*",
+        "Confirm antibiotic response if epididymitis"
+      ],
+      "disposition": [
+        "Emergent OR/urology: confirmed or suspected torsion (surgical detorsion within 6h goal)",
+        "Discharge: epididymitis with controlled pain on antibiotics and reliable follow-up",
+        "Observation: equivocal cases pending urology re-evaluation",
+        "Emergent transfer to surgical/urology-capable facility if none on site"
+      ],
+      "discharge": [
+        "Epididymitis: complete antibiotics, scrotal support, NSAIDs, ice",
+        "Return immediately for worsening pain, swelling, or fever",
+        "STI partner treatment and abstinence counseling if applicable",
+        "Strict torsion return precautions if diagnosis uncertain"
+      ],
+      "followup": [
+        "Urology follow-up for all epididymitis and post-torsion patients",
+        "STI reporting and partner notification if gonorrhea/chlamydia",
+        "Primary care follow-up in 1-2 weeks",
+        "Re-evaluate if symptoms not improving in 48-72h"
+      ]
+    },
+    "redFlags": [
+      "Testicular torsion - sudden severe pain, high-riding testis, absent cremasteric reflex, absent Doppler flow",
+      "Time since onset approaching/exceeding 6 hours (viability threatened)",
+      "Signs of Fournier gangrene (necrotizing infection, crepitus, systemic toxicity)",
+      "Failed manual detorsion or recurrent torsion",
+      "Pediatric difference: torsion peaks in neonates and adolescents - treat as torsion until excluded"
+    ],
+    "compliance": [
+      "EMTALA screening with emergent surgical evaluation; torsion is a true emergency requiring rapid stabilization/transfer",
+      "If no on-site urology/OR, initiate immediate appropriate-transfer with accepting surgeon - do not delay for full workup",
+      "Document onset time, exam, ultrasound, and detorsion attempts for medicolegal/transfer record",
+      "Report confirmed gonorrhea/chlamydia to Texas DSHS",
+      "If sexual assault suspected, follow Texas mandatory reporting and preserve evidence"
+    ]
+  },
+  {
+    "id": "scrotal-swelling",
+    "name": "Scrotal Swelling",
+    "category": "Genitourinary",
+    "synonyms": ["swollen scrotum", "testicle swelling", "hydrocele", "scrotal mass", "swollen testicle", "scrotal edema"],
+    "acuity": "2-3",
+    "summary": "Scrotal enlargement - differentiate emergent Fournier gangrene, torsion, and incarcerated hernia from hydrocele, varicocele, and tumor.",
+    "stages": {
+      "triage": [
+        "Vital signs; flag fever, toxicity, or skin necrosis (Fournier)",
+        "Onset, pain, trauma, fever, reducibility (hernia)",
+        "Diabetes, immunosuppression, alcohol use (Fournier risk)",
+        "Assess for associated severe pain suggesting torsion"
+      ],
+      "nursing": [
+        "Expedite exam if painful/toxic-appearing",
+        "IV access if systemic illness or surgical concern",
+        "Prepare for scrotal ultrasound",
+        "Mark erythema borders and monitor for spread*"
+      ],
+      "keyOrders": [
+        "Scrotal Doppler ultrasound",
+        "IV access if febrile/toxic or surgical concern",
+        "Urinalysis",
+        "Surgical/urology consult if torsion, hernia, or necrotizing infection suspected",
+        "NPO if operative intervention possible*"
+      ],
+      "labs": [
+        "CBC with differential",
+        "BMP and lactate if systemic illness/Fournier* if indicated",
+        "Blood cultures if septic* if indicated",
+        "Urinalysis and culture",
+        "CRP/procalcitonin if necrotizing infection suspected* if indicated"
+      ],
+      "imaging": [
+        "Color Doppler scrotal ultrasound (flow, mass, fluid, hernia contents)",
+        "CT/ultrasound for soft tissue gas if Fournier gangrene suspected* if indicated",
+        "Inguinal/abdominal imaging if incarcerated hernia* if indicated"
+      ],
+      "meds": [
+        "Analgesia: morphine 0.1 mg/kg IV or acetaminophen 1 g IV",
+        "Broad-spectrum antibiotics for Fournier: piperacillin-tazobactam 4.5 g IV plus vancomycin 15-20 mg/kg IV plus clindamycin 900 mg IV*",
+        "Antibiotics for infectious epididymo-orchitis per regimen* if indicated",
+        "IV crystalloid resuscitation if septic* if indicated",
+        "Antiemetic ondansetron 4 mg IV if needed"
+      ],
+      "reassess": [
+        "Serial exams for spreading erythema/crepitus (necrotizing infection)",
+        "Reassess hemodynamics and sepsis criteria",
+        "Re-evaluate reducibility/viability if hernia",
+        "Confirm pain control and ultrasound findings reviewed"
+      ],
+      "disposition": [
+        "Emergent OR/transfer: Fournier gangrene, torsion, strangulated hernia",
+        "Discharge: stable benign cause (hydrocele, small varicocele) with urology follow-up",
+        "Observation: epididymo-orchitis needing IV antibiotics/monitoring",
+        "Admit/transfer for surgical management or sepsis"
+      ],
+      "discharge": [
+        "Scrotal support, ice, NSAIDs for benign causes",
+        "Return immediately for worsening pain, fever, spreading redness, or skin changes",
+        "Antibiotic instructions if infection treated",
+        "Emphasize urology evaluation of any solid mass (tumor concern)"
+      ],
+      "followup": [
+        "Urology referral for masses, varicocele, persistent swelling",
+        "Primary care follow-up for benign self-limited causes",
+        "Surgical follow-up after hernia or Fournier management",
+        "STI reporting/partner treatment if applicable"
+      ]
+    },
+    "redFlags": [
+      "Fournier gangrene - rapidly spreading necrosis, crepitus, pain out of proportion, sepsis (surgical emergency)",
+      "Testicular torsion presenting as swelling",
+      "Incarcerated/strangulated inguinal hernia",
+      "Solid testicular mass concerning for malignancy",
+      "Systemic toxicity or septic shock"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; necrotizing infection requires emergent appropriate-transfer to surgical/ICU facility",
+      "Begin broad-spectrum antibiotics and resuscitation before transfer for Fournier gangrene; document timing",
+      "Observation acceptable for stable epididymo-orchitis; transfer if surgical or septic",
+      "Document ultrasound findings and surgical consultation in transfer record",
+      "Report reportable STIs to Texas DSHS; follow assault reporting if trauma from abuse suspected"
+    ]
+  },
+  {
+    "id": "acute-kidney-injury",
+    "name": "Acute Kidney Injury",
+    "category": "Genitourinary",
+    "synonyms": ["AKI", "acute renal failure", "rising creatinine", "kidney failure", "oliguria", "anuria"],
+    "acuity": "2-3",
+    "summary": "Acute decline in renal function; categorize prerenal, intrinsic, and postrenal causes; identify life-threatening hyperkalemia, acidosis, and volume overload.",
+    "stages": {
+      "triage": [
+        "Vital signs; assess volume status and mental status",
+        "Urine output, oliguria/anuria, recent illness, vomiting/diarrhea",
+        "Medication/nephrotoxin review (NSAIDs, ACEi/ARB, contrast, antibiotics)",
+        "Screen for hyperkalemia symptoms and obtain early ECG"
+      ],
+      "nursing": [
+        "Immediate 12-lead ECG to screen for hyperkalemia",
+        "IV access; strict intake/output and daily weight",
+        "Bladder scan to exclude retention (postrenal)",
+        "Hold nephrotoxic and renally cleared medications"
+      ],
+      "keyOrders": [
+        "12-lead ECG (hyperkalemia screen)",
+        "IV access",
+        "Cardiac monitor if hyperkalemia or arrhythmia risk",
+        "Bladder scan/Foley if obstruction suspected",
+        "Strict input/output measurement"
+      ],
+      "labs": [
+        "BMP/CMP (creatinine, BUN, potassium, bicarbonate)",
+        "CBC",
+        "Venous blood gas for acid-base status",
+        "Urinalysis with microscopy (casts, protein, blood)",
+        "Urine electrolytes for FENa/FEUrea* if indicated",
+        "CK if rhabdomyolysis suspected; consider lactate* if indicated"
+      ],
+      "imaging": [
+        "Renal/bladder ultrasound for hydronephrosis and kidney size",
+        "Chest X-ray if volume overload/pulmonary edema* if indicated",
+        "CT only if obstruction or stone needs delineation (mind contrast)* if indicated"
+      ],
+      "meds": [
+        "Hyperkalemia: calcium gluconate 1-2 g IV (membrane stabilization) if ECG changes",
+        "Hyperkalemia: insulin 10 units IV with dextrose 25 g IV, plus albuterol 10-20 mg nebulized",
+        "IV isotonic crystalloid for prerenal/hypovolemic AKI (avoid if overloaded)",
+        "Furosemide 40-80 mg IV for volume overload (not to treat AKI itself)*",
+        "Sodium bicarbonate for severe acidosis per indication* if indicated",
+        "Stop nephrotoxins; renally dose all medications"
+      ],
+      "reassess": [
+        "Recheck potassium and repeat ECG after hyperkalemia treatment",
+        "Reassess volume status, urine output, and respiratory status",
+        "Trend creatinine and acid-base",
+        "Determine need for emergent dialysis"
+      ],
+      "disposition": [
+        "Admit/transfer: hyperkalemia refractory to therapy, severe acidosis, volume overload, uremia, oliguria/anuria",
+        "Observation: mild prerenal AKI responding to fluids with reliable follow-up",
+        "Discharge: mild AKI with clear reversible cause, corrected labs, and prompt follow-up",
+        "Emergent transfer to facility with dialysis/nephrology and ICU capability"
+      ],
+      "discharge": [
+        "Stop offending nephrotoxins; avoid NSAIDs",
+        "Maintain hydration as advised; clear sick-day medication guidance",
+        "Return for decreased urination, swelling, shortness of breath, or confusion",
+        "Provide list of medications to hold and recheck timing"
+      ],
+      "followup": [
+        "Repeat BMP/creatinine within 24-72h",
+        "Nephrology referral for unexplained or severe AKI",
+        "Primary care for medication reconciliation and chronic kidney disease screening",
+        "Urology if postrenal/obstructive cause identified"
+      ]
+    },
+    "redFlags": [
+      "Severe hyperkalemia with ECG changes (peaked T waves, widened QRS) - dialysis emergency",
+      "Refractory metabolic acidosis or fluid overload with pulmonary edema",
+      "Anuria or rapidly rising creatinine",
+      "Uremic symptoms: pericarditis, encephalopathy, bleeding",
+      "Postrenal obstruction requiring urgent decompression"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; treat hyperkalemia/acidosis before transfer",
+      "Emergent appropriate-transfer to dialysis/nephrology and ICU-capable facility for emergent dialysis indications with accepting physician",
+      "Observation acceptable for mild prerenal AKI responsive to fluids; transfer if deteriorating",
+      "Document potassium, ECG, fluid status, and treatments given in transfer record",
+      "FSED must arrange timely transfer as freestanding ERs lack on-site dialysis"
+    ]
+  }
+]

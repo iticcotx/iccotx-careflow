@@ -1,0 +1,841 @@
+[
+  {
+    "id": "headache",
+    "name": "Headache",
+    "category": "Neurological",
+    "synonyms": ["cephalgia", "migraine", "bad headache", "worst headache of life", "thunderclap headache"],
+    "acuity": "2-4",
+    "summary": "Differentiate benign primary headache from dangerous secondary causes (SAH, meningitis, mass, CVST, GCA, ICH).",
+    "stages": {
+      "triage": [
+        "Screen for thunderclap onset, fever/neck stiffness, neuro deficit, immunosuppression, pregnancy/postpartum",
+        "Vital signs incl BP both arms; pain score; document time and tempo of onset",
+        "Ask about anticoagulation, recent LP/trauma, prior similar headaches",
+        "Assign ESI 2 if sudden 'worst-ever', neuro deficit, or AMS; otherwise ESI 3-4"
+      ],
+      "nursing": [
+        "Place in low-stimulation/dim room",
+        "IV access if abortive therapy or imaging contrast anticipated*",
+        "Cardiac monitor and SpO2 if AMS or abnormal vitals* if indicated",
+        "Serial neuro checks if red-flag features"
+      ],
+      "keyOrders": [
+        "Establish IV access (consider 18g if CTA planned)*",
+        "Capillary glucose",
+        "12-lead ECG if older or cardiac risk* if indicated",
+        "NPO until SAH/secondary cause excluded if procedure likely*"
+      ],
+      "labs": [
+        "CBC, BMP",
+        "ESR and CRP if age >50 or GCA suspected* if indicated",
+        "Coags/INR if anticoagulated or LP planned",
+        "Pregnancy test (urine/serum) in reproductive-age females",
+        "CSF studies (cell count, protein, glucose, xanthochromia, culture) if LP performed* if indicated"
+      ],
+      "imaging": [
+        "Non-contrast head CT if thunderclap, deficit, AMS, trauma, or anticoagulation",
+        "CT angiography head/neck if aneurysm/dissection suspected* if indicated",
+        "CT venogram or MRV if CVST risk (postpartum, OCP, hypercoagulable)* if indicated",
+        "LP after negative CT if SAH still suspected (>6h onset) or meningitis* if indicated"
+      ],
+      "meds": [
+        "Prochlorperazine 10 mg IV + diphenhydramine 25 mg IV for migraine",
+        "Ketorolac 15-30 mg IV or ibuprofen 600 mg PO",
+        "Metoclopramide 10 mg IV as alternative antiemetic/abortive",
+        "IV crystalloid bolus 500-1000 mL NS",
+        "Sumatriptan 6 mg SC if migraine and no vascular contraindication*",
+        "Dexamethasone 10 mg IV to reduce migraine recurrence*"
+      ],
+      "reassess": [
+        "Re-evaluate pain score and neuro exam 30-60 min after therapy",
+        "Reassess BP; treat hypertensive emergency if end-organ signs",
+        "If incomplete relief, consider second-line agent or expand workup",
+        "Confirm no new deficit before discharge"
+      ],
+      "disposition": [
+        "Discharge if benign primary headache with relief and reassuring exam",
+        "Admit/observe for intractable pain, abnormal imaging, or LP findings",
+        "Transfer to neurosurgery/neurology center for SAH, ICH, mass, CVST",
+        "Neuro consult if focal deficit or first severe headache with abnormal exam"
+      ],
+      "discharge": [
+        "Return precautions: sudden worsening, fever, neck stiffness, weakness, vision change, vomiting",
+        "Oral analgesic/abortive plan and antiemetic as needed",
+        "Headache diary and trigger avoidance counseling",
+        "Avoid analgesic overuse (medication-overuse headache)"
+      ],
+      "followup": [
+        "PCP within 1-2 weeks for primary headache",
+        "Neurology referral for new, frequent, or refractory headaches",
+        "Urgent neurosurgery/neurology if any imaging abnormality"
+      ]
+    },
+    "redFlags": [
+      "Thunderclap or 'worst headache of life' onset",
+      "Fever with neck stiffness or photophobia (meningitis)",
+      "Focal neuro deficit, papilledema, or altered mental status",
+      "New headache age >50 with jaw claudication/visual loss (GCA)",
+      "Headache on anticoagulation or with trauma",
+      "Pregnancy/postpartum new severe headache (pre-eclampsia, CVST)"
+    ],
+    "compliance": [
+      "Perform and document EMTALA medical screening exam before any disposition",
+      "Stabilize and arrange appropriate transfer with accepting neurosurgery for SAH/ICH; document risks/benefits and mode of transport",
+      "Observation acceptable for intractable benign headache; transfer if neurosurgical pathology or capability gap",
+      "Report suspected assault-related head trauma per Texas requirements if applicable"
+    ]
+  },
+  {
+    "id": "suspected-stroke-tia",
+    "name": "Suspected Stroke / TIA",
+    "category": "Neurological",
+    "synonyms": ["CVA", "brain attack", "mini-stroke", "facial droop", "sudden weakness", "slurred speech"],
+    "acuity": "1-2",
+    "summary": "Time-critical evaluation of acute focal deficit to identify ischemic vs hemorrhagic stroke and reperfusion eligibility.",
+    "stages": {
+      "triage": [
+        "Activate stroke protocol; establish last-known-well time immediately",
+        "Perform FAST/BE-FAST and NIHSS; capillary glucose",
+        "Assign ESI 1-2; notify physician and stroke/transfer line at once",
+        "Screen for anticoagulant use, recent surgery, bleeding history"
+      ],
+      "nursing": [
+        "Cardiac monitor, continuous SpO2, frequent BP (both arms initially)",
+        "Two large-bore IVs",
+        "Keep NPO until dysphagia screen passed",
+        "HOB per protocol; oxygen to keep SpO2 >94%"
+      ],
+      "keyOrders": [
+        "STAT non-contrast head CT (door-to-CT <25 min goal)",
+        "STAT capillary glucose and 12-lead ECG",
+        "Establish IV access and draw labs en route to CT",
+        "Weigh or estimate weight for thrombolytic dosing"
+      ],
+      "labs": [
+        "Capillary glucose (rule out hypoglycemia mimic)",
+        "CBC with platelets, BMP",
+        "Coags/INR, PTT (and anti-Xa if on DOAC)*",
+        "Troponin",
+        "Type and screen if hemorrhage* if indicated"
+      ],
+      "imaging": [
+        "Non-contrast head CT first to exclude hemorrhage",
+        "CT angiography head/neck for large-vessel occlusion (thrombectomy)*",
+        "CT perfusion if extended window 6-24h being considered* if indicated",
+        "MRI/MRA if diagnosis unclear or TIA workup* if indicated"
+      ],
+      "meds": [
+        "Alteplase 0.9 mg/kg IV (max 90 mg, 10% bolus) if eligible and within window*",
+        "Tenecteplase 0.25 mg/kg IV (max 25 mg) per protocol alternative*",
+        "Labetalol 10-20 mg IV to keep BP <185/110 before thrombolysis*",
+        "Nicardipine infusion 5 mg/h titrated for BP control*",
+        "Aspirin 325 mg PO/PR after hemorrhage excluded and if no lytic given",
+        "Reverse anticoagulation (PCC/idarucizumab/andexanet) if ICH* if indicated"
+      ],
+      "reassess": [
+        "Serial NIHSS and neuro checks every 15 min during/after lytic",
+        "Strict BP monitoring per thrombolysis protocol",
+        "Watch for angioedema or bleeding after thrombolytic",
+        "Recheck glucose; correct if <60 mg/dL"
+      ],
+      "disposition": [
+        "Emergent transfer to certified stroke center for thrombolysis/thrombectomy",
+        "Telestroke consult to guide lytic decision if available",
+        "Admit only if comprehensive stroke capability on site (uncommon at FSED)",
+        "TIA: expedited transfer/admit for workup; do not simply discharge high-risk"
+      ],
+      "discharge": [
+        "Generally NOT discharged from FSED; arrange transfer",
+        "If low-risk TIA fully resolved and rapid neurology follow-up secured, document shared decision*",
+        "Provide stroke warning signs and call-911 instructions",
+        "Antiplatelet and risk-factor counseling if discharged*"
+      ],
+      "followup": [
+        "Neurology and stroke clinic within 24-48 h for TIA",
+        "Carotid imaging and echocardiogram arrangement",
+        "Risk-factor management (BP, lipids, glucose, anticoagulation for AF)"
+      ]
+    },
+    "redFlags": [
+      "Any acute focal deficit or new aphasia/facial droop",
+      "Decreasing level of consciousness or new severe headache (possible hemorrhage)",
+      "Large-vessel occlusion signs (gaze deviation, dense hemiplegia, high NIHSS)",
+      "Rapidly fluctuating or crescendo TIA symptoms",
+      "BP >185/110 limiting thrombolysis eligibility"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization are mandatory; FSEDs are typically not stroke-certified, so plan emergent appropriate transfer",
+      "Document last-known-well, thrombolytic contraindications, and accepting stroke-center physician for transfer",
+      "Use telestroke if available; record transfer mode (often ALS/air) and risks/benefits",
+      "Avoid observation when reperfusion therapy is indicated and not deliverable on site"
+    ]
+  },
+  {
+    "id": "seizure",
+    "name": "Seizure",
+    "category": "Neurological",
+    "synonyms": ["convulsion", "fit", "epileptic episode", "status epilepticus", "shaking spell"],
+    "acuity": "1-3",
+    "summary": "Stabilize active seizure, identify provoked vs unprovoked cause, and recognize status epilepticus.",
+    "stages": {
+      "triage": [
+        "If actively seizing, treat as ESI 1 and start time clock for status (>5 min)",
+        "Check capillary glucose immediately; protect airway",
+        "Obtain seizure history, AED adherence, alcohol/drug use, pregnancy",
+        "Postictal patients ESI 2-3; assess for trauma and recurrence risk"
+      ],
+      "nursing": [
+        "Position laterally, suction, protect head; do not restrain",
+        "Cardiac monitor, continuous SpO2, supplemental O2",
+        "Establish IV access; have benzodiazepines and airway equipment ready",
+        "Seizure precautions and padded rails"
+      ],
+      "keyOrders": [
+        "STAT capillary glucose",
+        "IV access x2 and continuous monitoring",
+        "12-lead ECG (assess QT, arrhythmia, ingestion)",
+        "Airway adjuncts/BVM at bedside; NPO if ongoing AMS"
+      ],
+      "labs": [
+        "CBC, BMP (Na, Ca, Mg), glucose",
+        "AED levels if on therapy (e.g., phenytoin, valproate, levetiracetam)*",
+        "Pregnancy test in reproductive-age females (eclampsia)",
+        "Lactate, ammonia, tox screen if etiology unclear*",
+        "ABG/VBG if prolonged or status*"
+      ],
+      "imaging": [
+        "Non-contrast head CT for first seizure, focal deficit, trauma, or AMS",
+        "MRI brain for new-onset focal seizure workup (often outpatient/transfer)* if indicated",
+        "CXR if aspiration suspected* if indicated"
+      ],
+      "meds": [
+        "Lorazepam 4 mg IV (repeat once in 5-10 min) for active seizure/status",
+        "Midazolam 10 mg IM if no IV access",
+        "Levetiracetam 60 mg/kg IV (max 4500 mg) as second-line",
+        "Fosphenytoin 20 mg PE/kg IV or valproate 40 mg/kg IV alternative second-line",
+        "Dextrose 50% 25 g IV + thiamine 100 mg IV if hypoglycemic/alcoholic*",
+        "Magnesium sulfate 4-6 g IV for eclamptic seizure*"
+      ],
+      "reassess": [
+        "Confirm seizure termination; monitor for recurrence and respiratory depression",
+        "Recheck glucose and electrolytes; correct abnormalities",
+        "Serial neuro exam through postictal recovery",
+        "Escalate to RSI/anesthetic infusion if refractory status*"
+      ],
+      "disposition": [
+        "Admit/observe for status, refractory seizures, or unresolved AMS",
+        "Transfer for ICU, neurology, or neurosurgical needs not available on site",
+        "Discharge known epileptic with single typical seizure who returns to baseline*",
+        "Neurology consult for first unprovoked seizure"
+      ],
+      "discharge": [
+        "Driving restrictions per Texas law and physician counseling",
+        "AED resumption/initiation instructions and adherence counseling",
+        "Avoid alcohol, sleep deprivation, and known triggers",
+        "Return for recurrent seizures, injury, prolonged confusion, or fever"
+      ],
+      "followup": [
+        "Neurology within 1-2 weeks (sooner for new-onset)",
+        "Outpatient EEG and MRI arrangement",
+        "PCP for medication monitoring and levels"
+      ]
+    },
+    "redFlags": [
+      "Continuous or recurrent seizures >5 min (status epilepticus)",
+      "Failure to return to baseline mental status (nonconvulsive status)",
+      "Focal deficit, fever with seizure (CNS infection), or head trauma",
+      "Pregnancy/postpartum seizure (eclampsia)",
+      "Hypoglycemia, toxic ingestion, or severe electrolyte derangement"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization required; transfer if ICU/neurology capability lacking",
+      "Document accepting facility and stable airway/hemodynamics before transfer",
+      "Counsel and document Texas driving restrictions after seizure",
+      "Report suspected abuse if seizure linked to nonaccidental trauma"
+    ]
+  },
+  {
+    "id": "altered-mental-status",
+    "name": "Altered Mental Status",
+    "category": "Neurological",
+    "synonyms": ["confusion", "AMS", "encephalopathy", "obtunded", "not acting right", "delirium"],
+    "acuity": "1-3",
+    "summary": "Broad differential (metabolic, toxic, infectious, structural, hypoxic) requiring rapid reversible-cause screen.",
+    "stages": {
+      "triage": [
+        "ABCs and GCS; capillary glucose immediately",
+        "Vital signs including temperature and SpO2; check for hypoxia/hypercarbia",
+        "Obtain collateral history, medication/toxin exposure, onset/tempo",
+        "Assign ESI 1-2 if depressed consciousness or unstable vitals"
+      ],
+      "nursing": [
+        "Cardiac monitor, continuous SpO2, frequent vitals",
+        "IV access; protect airway and position to prevent aspiration",
+        "Fall and aspiration precautions; reorient frequently",
+        "Foley/urine sample if infection suspected* if indicated"
+      ],
+      "keyOrders": [
+        "STAT capillary glucose",
+        "IV access and continuous monitoring",
+        "12-lead ECG",
+        "Empiric thiamine before glucose in malnourished/alcoholic; consider naloxone if opioid suspected"
+      ],
+      "labs": [
+        "CBC, CMP, calcium, magnesium, phosphate",
+        "VBG/ABG with ammonia and lactate*",
+        "Urinalysis, urine and blood cultures if infection*",
+        "TSH, troponin, tox screen, acetaminophen/salicylate levels*",
+        "Blood alcohol and pregnancy test as indicated*"
+      ],
+      "imaging": [
+        "Non-contrast head CT for focal deficit, trauma, anticoagulation, or unexplained AMS",
+        "CXR for pneumonia/hypoxia* if indicated",
+        "LP if CNS infection suspected after imaging* if indicated"
+      ],
+      "meds": [
+        "Thiamine 100-500 mg IV before glucose if Wernicke risk",
+        "Dextrose 50% 25 g IV if glucose <60 mg/dL",
+        "Naloxone 0.04-0.4 mg IV/IM titrated if opioid toxicity suspected",
+        "Empiric antibiotics (e.g., ceftriaxone 2 g IV) + acyclovir 10 mg/kg IV if meningoencephalitis*",
+        "Lorazepam 1-2 mg IV for agitation/withdrawal* if indicated",
+        "Isotonic fluids for hypotension/dehydration*"
+      ],
+      "reassess": [
+        "Serial GCS/mental status and vitals",
+        "Recheck glucose and oxygenation after interventions",
+        "Reassess airway protection continuously; intubate if unable to protect*",
+        "Track response to reversal agents and fluids"
+      ],
+      "disposition": [
+        "Admit/observe for most AMS pending cause resolution",
+        "ICU transfer for airway compromise, sepsis, or intracranial pathology",
+        "Transfer for neurosurgery, dialysis, or specialty care not on site",
+        "Discharge only if fully reversible cause corrected and back to baseline*"
+      ],
+      "discharge": [
+        "Only after return to baseline with caregiver and clear cause",
+        "Medication reconciliation to remove offending agents",
+        "Caregiver return precautions for recurrence or worsening",
+        "Address dehydration, infection follow-up as relevant"
+      ],
+      "followup": [
+        "PCP within days for delirium workup and med review",
+        "Specialty follow-up per cause (neurology, nephrology, endocrine)",
+        "Cognitive evaluation if persistent deficits"
+      ]
+    },
+    "redFlags": [
+      "GCS decline, inability to protect airway, or hypoxia/hypercarbia",
+      "Focal neuro deficit or signs of increased ICP",
+      "Fever with meningismus (CNS infection)",
+      "Hypoglycemia, severe sodium derangement, or toxic ingestion",
+      "Sepsis or hemodynamic instability"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization mandatory; secure airway before transfer if at risk",
+      "Document accepting physician, capability gap, and transfer mode for ICU/neurosurgical needs",
+      "Mandatory reporting for suspected elder abuse/neglect if AMS from neglect or intoxication of vulnerable adult",
+      "Observation only when monitoring and reversal can be safely delivered on site"
+    ]
+  },
+  {
+    "id": "dizziness-vertigo",
+    "name": "Dizziness / Vertigo",
+    "category": "Neurological",
+    "synonyms": ["lightheadedness", "spinning", "off balance", "room spinning", "presyncope"],
+    "acuity": "2-4",
+    "summary": "Distinguish benign peripheral vertigo from dangerous central causes (posterior stroke) and non-vestibular dizziness.",
+    "stages": {
+      "triage": [
+        "Characterize timing/triggers; screen for neuro deficits, gait failure",
+        "Orthostatic vitals; capillary glucose",
+        "Identify cardiac/stroke risk factors and anticoagulation",
+        "ESI 2 if neuro signs/inability to walk; otherwise ESI 3-4"
+      ],
+      "nursing": [
+        "Fall precautions; assist with ambulation",
+        "Cardiac monitor and SpO2 if cardiac/presyncope features*",
+        "IV access if antiemetics/fluids planned*",
+        "Quiet positioning to minimize symptoms"
+      ],
+      "keyOrders": [
+        "Orthostatic blood pressures",
+        "Capillary glucose",
+        "12-lead ECG (arrhythmia, ischemia)",
+        "HINTS exam in acute continuous vestibular syndrome with nystagmus"
+      ],
+      "labs": [
+        "CBC, BMP",
+        "Troponin if cardiac etiology suspected*",
+        "Hemoglobin/hematocrit if anemia/bleeding suspected*",
+        "Pregnancy test if reproductive-age female*"
+      ],
+      "imaging": [
+        "MRI brain with DWI for suspected central/posterior stroke (often via transfer)* if indicated",
+        "Non-contrast head CT if acute and MRI unavailable (low sensitivity early)* if indicated",
+        "CTA head/neck if vertebrobasilar disease/dissection suspected* if indicated"
+      ],
+      "meds": [
+        "Meclizine 25 mg PO for peripheral vertigo",
+        "Ondansetron 4 mg IV/ODT for nausea",
+        "Prochlorperazine 10 mg IV or promethazine 12.5-25 mg IV for vomiting",
+        "Diazepam 2-5 mg PO/IV short-term vestibular suppressant*",
+        "IV crystalloid for dehydration/orthostasis*",
+        "Epley maneuver (procedure) for confirmed posterior canal BPPV"
+      ],
+      "reassess": [
+        "Reassess gait and ability to ambulate safely",
+        "Repeat HINTS/neuro exam if symptoms persist",
+        "Confirm symptom control after antiemetics/maneuvers",
+        "Re-evaluate orthostatics after fluids"
+      ],
+      "disposition": [
+        "Discharge benign peripheral vertigo (BPPV, vestibular neuritis) if ambulatory",
+        "Transfer/admit for suspected central cause or inability to ambulate",
+        "Neurology consult for central HINTS or new neuro deficit",
+        "Cardiology evaluation if presyncope/arrhythmia"
+      ],
+      "discharge": [
+        "Vestibular suppressant short-term only; home Epley/Brandt-Daroff instructions",
+        "Fall precautions and hydration guidance",
+        "Return for new weakness, double vision, slurred speech, severe headache, or inability to walk",
+        "Avoid driving while symptomatic"
+      ],
+      "followup": [
+        "PCP or ENT for recurrent peripheral vertigo",
+        "Neurology if central features or persistent symptoms",
+        "Vestibular rehab referral as needed"
+      ]
+    },
+    "redFlags": [
+      "Inability to walk or truncal ataxia (central until proven otherwise)",
+      "Direction-changing or vertical nystagmus; abnormal HINTS (central pattern)",
+      "Associated diplopia, dysarthria, dysphagia, or focal weakness",
+      "Sudden severe headache or neck pain with vertigo (dissection)",
+      "New deficit in patient with vascular risk factors"
+    ],
+    "compliance": [
+      "EMTALA screening and documentation distinguishing peripheral vs central cause",
+      "Transfer for MRI/neurology when posterior stroke suspected and unavailable on site; document accepting physician",
+      "Observation reasonable for symptomatic but ambulatory peripheral vertigo",
+      "Document ambulation assessment before discharge to mitigate fall risk"
+    ]
+  },
+  {
+    "id": "weakness-numbness",
+    "name": "Weakness / Numbness",
+    "category": "Neurological",
+    "synonyms": ["paresthesia", "tingling", "limb weakness", "paralysis", "loss of sensation", "pins and needles"],
+    "acuity": "1-3",
+    "summary": "Localize deficit (central vs peripheral vs neuromuscular) and exclude stroke, cord compression, and ascending paralysis.",
+    "stages": {
+      "triage": [
+        "Determine onset, distribution, and progression; screen for stroke (BE-FAST)",
+        "Assess for bowel/bladder dysfunction, saddle anesthesia, respiratory effort",
+        "Capillary glucose; vitals including SpO2",
+        "ESI 1-2 if acute focal deficit, ascending pattern, or respiratory compromise"
+      ],
+      "nursing": [
+        "Cardiac monitor and SpO2 if acute/diffuse",
+        "IV access",
+        "Fall precautions; assist mobility",
+        "Bladder scan/Foley if retention suspected* if indicated"
+      ],
+      "keyOrders": [
+        "Capillary glucose",
+        "12-lead ECG",
+        "IV access and monitoring",
+        "Serial motor/sensory exam with documented level; NPO if surgical pathology likely*"
+      ],
+      "labs": [
+        "CBC, CMP, calcium, magnesium",
+        "TSH and B12 if subacute/chronic*",
+        "CK if rhabdomyolysis/myopathy suspected*",
+        "ESR/CRP if inflammatory/infectious cause*",
+        "Negative inspiratory force/vital capacity if neuromuscular weakness*"
+      ],
+      "imaging": [
+        "Non-contrast head CT if stroke pattern (then per stroke pathway)",
+        "MRI spine emergently if cord compression/cauda equina suspected* if indicated",
+        "MRI brain for central localization (often via transfer)* if indicated",
+        "CTA if vascular cause suspected* if indicated"
+      ],
+      "meds": [
+        "Follow stroke pathway meds if acute central deficit (see Suspected Stroke)*",
+        "Dexamethasone 10 mg IV for suspected cord compression from tumor*",
+        "IV crystalloid for hypotension*",
+        "Correct electrolytes (e.g., potassium, calcium, magnesium) per labs*",
+        "Analgesia per protocol for radicular pain* if indicated"
+      ],
+      "reassess": [
+        "Serial neuro exam tracking motor strength and sensory level",
+        "Monitor respiratory status/vital capacity if ascending weakness",
+        "Reassess for stroke progression and need for reperfusion transfer",
+        "Recheck glucose/electrolytes after correction"
+      ],
+      "disposition": [
+        "Emergent transfer for stroke, cord compression, or cauda equina (neurosurgery/spine)",
+        "Admit for Guillain-Barre/myasthenic crisis monitoring (ICU)",
+        "Neurology/neurosurgery consult for new central or cord findings",
+        "Discharge only for clearly benign/peripheral, resolving cause* if indicated"
+      ],
+      "discharge": [
+        "Return precautions: spreading weakness, breathing difficulty, bladder/bowel changes",
+        "Activity and safety counseling; mobility aids if needed",
+        "Address reversible cause (electrolytes, medication)",
+        "Provide specialist appointment details"
+      ],
+      "followup": [
+        "Neurology for new or progressive deficits",
+        "Spine surgery if disc/cord pathology",
+        "PCP for metabolic/nutritional causes"
+      ]
+    },
+    "redFlags": [
+      "Acute focal weakness consistent with stroke",
+      "Saddle anesthesia, urinary retention, bilateral leg weakness (cauda equina)",
+      "Ascending weakness with respiratory compromise (Guillain-Barre)",
+      "Fluctuating weakness with bulbar/respiratory symptoms (myasthenic crisis)",
+      "Sensory level on the trunk (spinal cord lesion)"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; emergent transfer for stroke/cord emergencies with documented accepting specialist",
+      "Time-sensitive cord compression and stroke should not be observed if definitive care unavailable on site",
+      "Document neuro exam, respiratory status, and transfer mode",
+      "Report suspected abuse if deficits from inflicted trauma"
+    ]
+  },
+  {
+    "id": "head-injury-concussion",
+    "name": "Head Injury / Concussion",
+    "category": "Neurological",
+    "synonyms": ["TBI", "head trauma", "concussion", "head bump", "loss of consciousness", "mTBI"],
+    "acuity": "2-4",
+    "summary": "Risk-stratify traumatic brain injury and identify intracranial hemorrhage, especially in anticoagulated patients.",
+    "stages": {
+      "triage": [
+        "GCS, mechanism, LOC/amnesia, anticoagulant/antiplatelet use",
+        "Apply validated decision rule (Canadian CT Head Rule)",
+        "Assess for c-spine tenderness; maintain spinal precautions if indicated",
+        "ESI 2 for GCS <15, anticoagulation, or severe mechanism"
+      ],
+      "nursing": [
+        "Spinal motion restriction until c-spine cleared* if indicated",
+        "Cardiac monitor and SpO2 if moderate-severe TBI*",
+        "IV access for symptomatic or high-risk patients*",
+        "Serial GCS/neuro checks"
+      ],
+      "keyOrders": [
+        "GCS documentation and serial neuro exams",
+        "Capillary glucose if AMS*",
+        "IV access if imaging contrast or intervention likely*",
+        "NPO if surgical intervention possible*"
+      ],
+      "labs": [
+        "Coags/INR in anticoagulated patients",
+        "CBC and type and screen if significant trauma*",
+        "BMP and glucose if AMS*",
+        "Ethanol/tox screen if intoxication confounds exam*"
+      ],
+      "imaging": [
+        "Non-contrast head CT per decision rule, anticoagulation, or GCS <15",
+        "CT cervical spine if midline tenderness or high-risk mechanism* if indicated",
+        "Repeat/delayed CT in anticoagulated patients with initial negative scan*",
+        "CT angiography if vascular injury suspected* if indicated"
+      ],
+      "meds": [
+        "Acetaminophen 1000 mg PO for headache (avoid NSAIDs if bleeding risk)",
+        "Ondansetron 4 mg IV for nausea/vomiting",
+        "Reverse anticoagulation (PCC, vitamin K, idarucizumab, andexanet) if ICH*",
+        "Hypertonic saline 3% or mannitol 0.5-1 g/kg IV for herniation signs*",
+        "Levetiracetam 60 mg/kg IV for post-traumatic seizure prophylaxis in severe TBI*"
+      ],
+      "reassess": [
+        "Serial GCS and pupil checks",
+        "Re-evaluate for delayed deterioration, especially if anticoagulated",
+        "Reassess for vomiting, worsening headache, or new deficit",
+        "Confirm c-spine clearance clinically/radiographically before removing precautions"
+      ],
+      "disposition": [
+        "Emergent neurosurgical transfer for intracranial hemorrhage or GCS decline",
+        "Observe anticoagulated patients with negative initial CT per protocol",
+        "Discharge minor concussion with normal exam and reliable caregiver",
+        "Admit/transfer for moderate-severe TBI"
+      ],
+      "discharge": [
+        "Concussion return-to-activity and return-to-play/work guidance with cognitive rest",
+        "Caregiver awakening/observation instructions and head-injury return precautions",
+        "Avoid alcohol, anticoagulants per provider, and high-risk activity",
+        "Symptoms of worsening: repeated vomiting, severe/worsening headache, confusion, seizure, unequal pupils"
+      ],
+      "followup": [
+        "PCP or concussion clinic within 1 week",
+        "Neurology/neurosurgery if persistent or severe symptoms",
+        "Repeat imaging only if clinically indicated"
+      ]
+    },
+    "redFlags": [
+      "GCS <15 or declining, focal deficit, or seizure",
+      "Anticoagulation/antiplatelet use with head trauma",
+      "Repeated vomiting, severe headache, or post-traumatic amnesia",
+      "Signs of basilar skull fracture (raccoon eyes, Battle sign, CSF leak)",
+      "Unequal/fixed pupils or Cushing response (herniation)"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; emergent transfer to trauma/neurosurgery for ICH with documented accepting physician",
+      "Observation acceptable for anticoagulated patients with negative CT if monitoring and repeat imaging available",
+      "Mandatory reporting of suspected assault, intimate partner violence, or child/elder abuse-related head injury per Texas law",
+      "Document mechanism, decision rule applied, and transfer mode"
+    ]
+  },
+  {
+    "id": "acute-vision-changes",
+    "name": "Acute Vision Changes",
+    "category": "Neurological",
+    "synonyms": ["vision loss", "blurred vision", "double vision", "diplopia", "blind spot", "curtain over eye"],
+    "acuity": "2-3",
+    "summary": "Differentiate vascular/neuro causes (CRAO, stroke, GCA, ICP) from primary ocular emergencies requiring rapid action.",
+    "stages": {
+      "triage": [
+        "Determine monocular vs binocular, painless vs painful, onset/tempo",
+        "Check visual acuity each eye, pupils (RAPD), and confrontation fields",
+        "Screen for stroke signs, GCA symptoms (age >50, jaw claudication, scalp tenderness)",
+        "ESI 2 for sudden painless vision loss or neuro deficit"
+      ],
+      "nursing": [
+        "Quiet positioning; assist ambulation",
+        "Cardiac monitor and SpO2 if stroke suspected*",
+        "IV access if treatment/imaging planned*",
+        "Avoid pressure on a potentially ruptured globe* if indicated"
+      ],
+      "keyOrders": [
+        "Visual acuity and pupil exam (RAPD)",
+        "Bedside intraocular pressure if acute angle-closure suspected*",
+        "12-lead ECG if vascular/stroke etiology*",
+        "Fundoscopic exam"
+      ],
+      "labs": [
+        "ESR and CRP STAT if GCA suspected*",
+        "CBC, BMP",
+        "Glucose (diabetic causes)",
+        "Coags if anticoagulated or thrombolysis considered*"
+      ],
+      "imaging": [
+        "MRI brain with DWI if stroke/optic pathway lesion suspected (often transfer)* if indicated",
+        "CT/CTA head and orbits for vascular or compressive lesion* if indicated",
+        "Carotid imaging if amaurosis fugax/CRAO* if indicated"
+      ],
+      "meds": [
+        "High-dose corticosteroids (methylprednisolone 500-1000 mg IV) immediately if GCA suspected*",
+        "Acetazolamide 500 mg IV plus topical agents for acute angle-closure glaucoma*",
+        "Aspirin 325 mg for retinal artery occlusion/TIA after evaluation*",
+        "Antiemetic (ondansetron 4 mg IV) for associated nausea*",
+        "Treat hypertensive emergency if end-organ involvement*"
+      ],
+      "reassess": [
+        "Recheck visual acuity after interventions",
+        "Reassess for evolving neuro deficits (stroke)",
+        "Confirm IOP response in angle-closure*",
+        "Document GCA treatment started while awaiting biopsy*"
+      ],
+      "disposition": [
+        "Emergent ophthalmology consult/transfer for CRAO, angle-closure, retinal detachment, endophthalmitis",
+        "Stroke-center transfer if central/neurologic cause",
+        "Admit/transfer for GCA with vision loss for IV steroids and biopsy",
+        "Discharge benign causes with rapid ophthalmology follow-up*"
+      ],
+      "discharge": [
+        "Specific ophthalmology/neurology appointment timing",
+        "Return precautions: worsening or new vision loss, eye pain, neuro symptoms",
+        "Eye protection and medication instructions",
+        "Avoid driving while vision impaired"
+      ],
+      "followup": [
+        "Ophthalmology within 24 h for urgent ocular causes",
+        "Neurology/stroke clinic for neuro-visual causes",
+        "Rheumatology for confirmed/suspected GCA"
+      ]
+    },
+    "redFlags": [
+      "Sudden painless monocular vision loss (CRAO, retinal detachment)",
+      "Age >50 with vision loss, headache, jaw claudication (GCA)",
+      "Painful red eye with halos, fixed mid-dilated pupil (angle-closure)",
+      "New diplopia with neuro deficit or severe headache (aneurysm/stroke)",
+      "RAPD or visual field cut suggesting optic/retrochiasmal pathology"
+    ],
+    "compliance": [
+      "EMTALA screening; emergent transfer when ophthalmology or stroke care is unavailable on site",
+      "Document time-critical interventions (GCA steroids, CRAO measures) and accepting specialist",
+      "Observation generally not appropriate for vision-threatening emergencies needing specialty care",
+      "Record visual acuity at arrival and disposition"
+    ]
+  },
+  {
+    "id": "new-tremor",
+    "name": "New Tremor",
+    "category": "Neurological",
+    "synonyms": ["shaking", "trembling", "shakiness", "involuntary movement", "the shakes"],
+    "acuity": "2-4",
+    "summary": "Identify dangerous causes (withdrawal, toxicity, hypoglycemia, serotonin syndrome, thyroid storm) vs benign tremor.",
+    "stages": {
+      "triage": [
+        "Characterize tremor (rest vs action), onset, medications, alcohol/substance history",
+        "Vitals including temperature; capillary glucose",
+        "Screen for autonomic instability, agitation, and AMS",
+        "ESI 2 if hyperthermia, autonomic instability, or AMS"
+      ],
+      "nursing": [
+        "Cardiac monitor and SpO2 if toxic/withdrawal etiology*",
+        "IV access if symptomatic or unstable*",
+        "Fall precautions; cooling measures if hyperthermic*",
+        "Frequent vitals and neuro checks"
+      ],
+      "keyOrders": [
+        "Capillary glucose",
+        "12-lead ECG (QT, ischemia, arrhythmia)",
+        "IV access and monitoring if unstable*",
+        "Temperature monitoring; institute cooling if hyperthermic*"
+      ],
+      "labs": [
+        "CBC, CMP, calcium, magnesium",
+        "TSH and free T4 (thyrotoxicosis)*",
+        "CK if rigidity/serotonin syndrome/NMS suspected*",
+        "Tox screen, acetaminophen/salicylate, ethanol level*",
+        "Ammonia/lactate if hepatic encephalopathy suspected*"
+      ],
+      "imaging": [
+        "Non-contrast head CT if focal deficit or AMS accompanies tremor* if indicated",
+        "Generally no imaging for isolated benign tremor",
+        "Further neuroimaging typically outpatient (MRI)* if indicated"
+      ],
+      "meds": [
+        "Dextrose 50% 25 g IV if hypoglycemic",
+        "Lorazepam 2-4 mg IV for alcohol withdrawal or agitation",
+        "Cyproheptadine 12 mg PO and cooling for serotonin syndrome*",
+        "Beta-blocker (propranolol 20-40 mg PO) for thyrotoxic/essential tremor*",
+        "Active cooling and supportive care for hyperthermic syndromes*",
+        "Thiamine 100 mg IV in alcohol-related presentations*"
+      ],
+      "reassess": [
+        "Reassess temperature, mental status, and autonomic stability",
+        "Monitor response to benzodiazepines in withdrawal (CIWA-guided)*",
+        "Recheck glucose and electrolytes after correction",
+        "Watch for progression to seizure or instability"
+      ],
+      "disposition": [
+        "Admit/transfer for severe withdrawal, serotonin syndrome, NMS, or thyroid storm (ICU)",
+        "Discharge benign essential/medication-related tremor that is stable",
+        "Neurology referral for new parkinsonian or unexplained tremor",
+        "Transfer if ICU-level monitoring unavailable on site"
+      ],
+      "discharge": [
+        "Medication review and removal of offending/serotonergic agents",
+        "Alcohol-cessation resources and outpatient withdrawal plan if applicable",
+        "Return precautions: fever, confusion, seizures, worsening shaking, palpitations",
+        "Avoid stimulants/caffeine if exacerbating"
+      ],
+      "followup": [
+        "Neurology for persistent or progressive tremor",
+        "PCP for medication adjustment and thyroid management",
+        "Substance-use treatment referral if applicable"
+      ]
+    },
+    "redFlags": [
+      "Hyperthermia with rigidity/clonus (serotonin syndrome or NMS)",
+      "Autonomic instability with tremor (thyroid storm, severe withdrawal)",
+      "Altered mental status or seizure accompanying tremor",
+      "Hypoglycemia as cause",
+      "Asterixis with confusion (hepatic/uremic encephalopathy)"
+    ],
+    "compliance": [
+      "EMTALA screening and stabilization; transfer for ICU-level toxidromes/withdrawal with documented accepting physician",
+      "Observation acceptable for mild withdrawal if monitoring and CIWA protocol available on site",
+      "Document substance-use history and any mandated reporting (e.g., vulnerable adult neglect)",
+      "Record vitals trend and treatment response before disposition"
+    ]
+  },
+  {
+    "id": "gait-disturbance-ataxia",
+    "name": "Gait Disturbance / Ataxia",
+    "category": "Neurological",
+    "synonyms": ["unsteady walking", "loss of balance", "coordination problems", "stumbling", "wobbly", "incoordination"],
+    "acuity": "2-3",
+    "summary": "Determine acute vs chronic and central vs peripheral cause; exclude posterior stroke, intoxication, and cord pathology.",
+    "stages": {
+      "triage": [
+        "Assess onset/tempo, associated neuro symptoms, fall history, toxin/alcohol use",
+        "Capillary glucose; vitals including SpO2",
+        "Screen for stroke (BE-FAST) and ability to ambulate safely",
+        "ESI 2 if acute ataxia with neuro deficit or inability to walk"
+      ],
+      "nursing": [
+        "Fall precautions; assist all transfers/ambulation",
+        "Cardiac monitor and SpO2 if central cause suspected*",
+        "IV access if treatment/imaging anticipated*",
+        "Document gait assessment and assistive needs"
+      ],
+      "keyOrders": [
+        "Capillary glucose",
+        "12-lead ECG if vascular/syncopal features*",
+        "Detailed neuro exam (cerebellar testing, Romberg, gait)",
+        "IV access and monitoring if unstable*"
+      ],
+      "labs": [
+        "CBC, CMP, calcium, magnesium",
+        "TSH and B12 if subacute/chronic*",
+        "Ethanol level and tox screen if intoxication suspected*",
+        "Vitamin B1 consideration in alcoholic/malnourished*",
+        "Ammonia/lactate if metabolic encephalopathy*"
+      ],
+      "imaging": [
+        "MRI brain with DWI for suspected posterior circulation stroke (often transfer)* if indicated",
+        "Non-contrast head CT if acute and hemorrhage/mass suspected* if indicated",
+        "MRI spine if myelopathy/sensory ataxia suspected* if indicated",
+        "CTA head/neck if vertebrobasilar disease/dissection* if indicated"
+      ],
+      "meds": [
+        "Thiamine 100-500 mg IV if Wernicke suspected (give before glucose)*",
+        "Dextrose 50% 25 g IV if hypoglycemic*",
+        "Antiemetic (ondansetron 4 mg IV) for associated nausea*",
+        "Treat underlying cause per workup (e.g., correct electrolytes)*",
+        "Follow stroke pathway meds if acute central deficit*"
+      ],
+      "reassess": [
+        "Reassess gait and fall risk after interventions",
+        "Repeat neuro/cerebellar exam to track progression",
+        "Re-evaluate for evolving stroke needing transfer",
+        "Recheck glucose/electrolytes after correction"
+      ],
+      "disposition": [
+        "Emergent transfer/admit for acute cerebellar stroke or hemorrhage",
+        "Admit for Wernicke encephalopathy or unsafe gait without support",
+        "Neurology consult for new central ataxia",
+        "Discharge chronic/benign ataxia with safe gait and support*"
+      ],
+      "discharge": [
+        "Fall-prevention measures and assistive device (walker/cane) and PT referral",
+        "Address reversible causes (medication, electrolytes, B12)",
+        "Return precautions: sudden worsening, weakness, speech/vision changes, headache",
+        "Avoid driving until cleared"
+      ],
+      "followup": [
+        "Neurology for new or progressive ataxia",
+        "PCP for metabolic/nutritional contributors",
+        "Physical therapy and home-safety evaluation"
+      ]
+    },
+    "redFlags": [
+      "Acute ataxia with vertigo, diplopia, dysarthria (cerebellar stroke)",
+      "Inability to walk or truncal ataxia",
+      "Confusion, ophthalmoplegia, ataxia triad (Wernicke encephalopathy)",
+      "Sensory level or bilateral leg involvement (cord pathology)",
+      "Severe headache or neck pain with ataxia (hemorrhage/dissection)"
+    ],
+    "compliance": [
+      "EMTALA screening; emergent transfer for cerebellar stroke/hemorrhage when neuro/neurosurgery unavailable on site",
+      "Document ambulation/fall-risk assessment before any discharge",
+      "Observation acceptable for stable chronic ataxia with safe disposition support",
+      "Report suspected elder abuse/neglect if gait failure linked to neglect, and document accepting physician/transfer mode"
+    ]
+  }
+]
