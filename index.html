@@ -211,7 +211,7 @@ footer b{color:var(--txt-dim)}
       <h1><b>ICCOTX</b> CareFlow</h1>
       <p>Texas Freestanding ER — Chief-Complaint Clinical Workflows &amp; Compliance</p>
     </div>
-    <button class="installbtn" id="installBtn" hidden>
+    <button class="installbtn" id="installBtn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
       Install app
     </button>
@@ -443,8 +443,8 @@ const isIOS=/iphone|ipad|ipod/i.test(ua)||(/Macintosh/i.test(ua)&&'ontouchend' i
 const isAndroid=/android/i.test(ua);
 window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); deferredPrompt=e; if(!isStandalone) installBtn.hidden=false; });
 window.addEventListener('appinstalled',()=>{ installBtn.hidden=true; deferredPrompt=null; });
-// Always offer the button when not already installed — beforeinstallprompt is unreliable on Android and never fires on iOS.
-if(!isStandalone) installBtn.hidden=false;
+// Visible by default; only hide once the app is actually installed (standalone).
+installBtn.hidden = isStandalone;
 function stepsHTML(){
   if(isIOS) return `<li>Tap the <b>Share</b> button <span class="ihkey">⎋</span> in Safari (bottom of the screen).</li><li>Scroll and tap <b>Add to Home Screen</b> <span class="ihkey">＋</span>.</li><li>Tap <b>Add</b> — CareFlow lands on your home screen.</li>`;
   if(isAndroid) return `<li>Tap the <b>⋮</b> menu (top-right in Chrome).</li><li>Tap <b>Add to Home screen</b> / <b>Install app</b>.</li><li>Tap <b>Install</b> — CareFlow installs like a normal app.</li>`;
