@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#eef2fc" />
+<meta name="theme-color" content="#0a9fc2" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="CareFlow" />
+<meta name="application-name" content="CareFlow" />
 <title>ICCOTX CareFlow — Texas ER Clinical Workflows</title>
 <style>
 :root{
@@ -63,6 +71,34 @@ header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 
 .cchip:hover{border-color:var(--cyan-deep);color:var(--cyan-deep)}
 .cchip.active{background:rgba(10,159,194,.13);border-color:var(--cyan-deep);color:var(--cyan-deep)}
 .cchip .dotc{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:middle;background:var(--accent,var(--cyan))}
+
+/* install button + help */
+.installbtn{margin-left:auto;display:flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;
+  font-weight:750;font-size:14px;color:#fff;padding:11px 18px;border-radius:12px;
+  background:linear-gradient(135deg,#0db0d4,#0488a8);box-shadow:0 12px 26px -12px rgba(10,159,194,.85);transition:transform var(--speed)}
+.installbtn:hover{transform:translateY(-1px)}
+.installbtn svg{width:18px;height:18px}
+.installbtn[hidden]{display:none}
+.hbadges{margin-left:14px}
+.ihelp{position:fixed;inset:0;z-index:140;display:none;align-items:flex-end;justify-content:center;
+  background:rgba(20,30,60,.5);backdrop-filter:blur(8px);padding:0}
+.ihelp.show{display:flex;animation:fade .22s}
+.ihcard{width:100%;max-width:460px;margin:0 14px 14px;border-radius:20px;padding:24px 22px 26px;position:relative;
+  background:linear-gradient(160deg,rgba(255,255,255,.99),rgba(240,244,255,.99));border:1px solid var(--stroke-strong);
+  box-shadow:0 -10px 60px -16px rgba(20,40,90,.6);animation:rise .3s cubic-bezier(.2,.7,.2,1)}
+@media(min-width:560px){.ihelp{align-items:center}.ihcard{margin:0}}
+.ihx{position:absolute;top:14px;right:14px;width:34px;height:34px;border:none;border-radius:10px;cursor:pointer;font-size:21px;
+  background:rgba(20,40,90,.06);color:var(--txt-dim)}
+.ihx:hover{background:rgba(230,56,88,.16);color:var(--danger)}
+.ihicon{width:64px;height:64px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
+.ihicon img{width:100%;height:100%;display:block}
+.ihcard h2{margin:0 0 8px;font-size:21px;font-weight:800}
+.ihcard p{margin:0 0 16px;font-size:14.5px;color:var(--txt-dim);line-height:1.5}
+.ihcard ol{margin:0;padding-left:20px}
+.ihcard li{font-size:14.5px;color:var(--txt);line-height:1.6;margin-bottom:8px}
+.ihcard li b{color:var(--cyan-deep)}
+.ihkey{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 6px;border-radius:7px;
+  background:rgba(10,159,194,.12);color:var(--cyan-deep);font-weight:800;vertical-align:middle}
 
 /* mode toggle */
 .modes{display:flex;gap:8px;background:var(--panel);border:1px solid var(--stroke);border-radius:15px;padding:6px;
@@ -175,6 +211,10 @@ footer b{color:var(--txt-dim)}
       <h1><b>ICCOTX</b> CareFlow</h1>
       <p>Texas Freestanding ER — Chief-Complaint Clinical Workflows &amp; Compliance</p>
     </div>
+    <button class="installbtn" id="installBtn" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+      Install app
+    </button>
     <div class="hbadges">
       <span class="hbadge">EMTALA-aware</span>
       <span class="hbadge">Evidence-Based</span>
@@ -203,6 +243,17 @@ footer b{color:var(--txt-dim)}
     <div><b>ICCOTX CareFlow</b> — Evidence-based clinical decision support for Texas freestanding ERs.</div>
     <div>Clinical decision support only — does not replace physician judgment. All workflows subject to Medical Director approval &amp; periodic review.</div>
   </footer>
+</div>
+
+<!-- INSTALL HELP -->
+<div class="ihelp" id="ihelp">
+  <div class="ihcard">
+    <button class="ihx" id="ihClose">×</button>
+    <div class="ihicon"><img src="icon-192.png" alt="CareFlow" width="56" height="56"/></div>
+    <h2>Install CareFlow</h2>
+    <p id="ihText">Add CareFlow to your home screen to launch it full-screen, like a normal app — works offline too.</p>
+    <ol id="ihSteps"></ol>
+  </div>
 </div>
 
 <!-- DETAIL OVERLAY -->
@@ -377,6 +428,36 @@ async function load(){
   }
 }
 load();
+
+/* ====================== PWA INSTALL ====================== */
+if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{})); }
+const installBtn=document.getElementById('installBtn'), ihelp=document.getElementById('ihelp');
+let deferredPrompt=null;
+const isStandalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+const ua=navigator.userAgent||'';
+const isIOS=/iphone|ipad|ipod/i.test(ua)||(/Macintosh/i.test(ua)&&'ontouchend' in document);
+window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); deferredPrompt=e; if(!isStandalone) installBtn.hidden=false; });
+window.addEventListener('appinstalled',()=>{ installBtn.hidden=true; deferredPrompt=null; });
+if(!isStandalone && isIOS) installBtn.hidden=false;
+function stepsHTML(ios){
+  return ios
+    ? `<li>Tap the <b>Share</b> button <span class="ihkey">⎋</span> in Safari’s toolbar.</li><li>Scroll down and tap <b>Add to Home Screen</b> <span class="ihkey">＋</span>.</li><li>Tap <b>Add</b> — CareFlow lands on your home screen.</li>`
+    : `<li>Open the browser menu <span class="ihkey">⋮</span>.</li><li>Tap <b>Install app</b> (or <b>Add to Home screen</b>).</li><li>Confirm — CareFlow installs like a normal app.</li>`;
+}
+function openHelp(){
+  document.getElementById('ihText').textContent=isIOS
+    ? 'On iPhone/iPad you install from Safari’s Share menu — takes a few seconds, and it works offline afterward.'
+    : 'Add CareFlow to your home screen to launch it full-screen, like a normal app — works offline too.';
+  document.getElementById('ihSteps').innerHTML=stepsHTML(isIOS);
+  ihelp.classList.add('show');
+}
+installBtn.addEventListener('click', async ()=>{
+  if(deferredPrompt){ deferredPrompt.prompt(); const {outcome}=await deferredPrompt.userChoice; deferredPrompt=null; if(outcome==='accepted') installBtn.hidden=true; return; }
+  openHelp();
+});
+document.getElementById('ihClose').addEventListener('click',()=>ihelp.classList.remove('show'));
+ihelp.addEventListener('click',e=>{ if(e.target.id==='ihelp') ihelp.classList.remove('show'); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') ihelp.classList.remove('show'); });
 </script>
 </body>
 </html>
