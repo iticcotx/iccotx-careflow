@@ -430,25 +430,32 @@ async function load(){
 load();
 
 /* ====================== PWA INSTALL ====================== */
-if('serviceWorker' in navigator){ window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{})); }
+if('serviceWorker' in navigator){
+  let refreshed=false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{ if(refreshed) return; refreshed=true; location.reload(); });
+  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').then(reg=>reg.update()).catch(()=>{}));
+}
 const installBtn=document.getElementById('installBtn'), ihelp=document.getElementById('ihelp');
 let deferredPrompt=null;
 const isStandalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
 const ua=navigator.userAgent||'';
 const isIOS=/iphone|ipad|ipod/i.test(ua)||(/Macintosh/i.test(ua)&&'ontouchend' in document);
+const isAndroid=/android/i.test(ua);
 window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); deferredPrompt=e; if(!isStandalone) installBtn.hidden=false; });
 window.addEventListener('appinstalled',()=>{ installBtn.hidden=true; deferredPrompt=null; });
-if(!isStandalone && isIOS) installBtn.hidden=false;
-function stepsHTML(ios){
-  return ios
-    ? `<li>Tap the <b>Share</b> button <span class="ihkey">⎋</span> in Safari’s toolbar.</li><li>Scroll down and tap <b>Add to Home Screen</b> <span class="ihkey">＋</span>.</li><li>Tap <b>Add</b> — CareFlow lands on your home screen.</li>`
-    : `<li>Open the browser menu <span class="ihkey">⋮</span>.</li><li>Tap <b>Install app</b> (or <b>Add to Home screen</b>).</li><li>Confirm — CareFlow installs like a normal app.</li>`;
+// Always offer the button when not already installed — beforeinstallprompt is unreliable on Android and never fires on iOS.
+if(!isStandalone) installBtn.hidden=false;
+function stepsHTML(){
+  if(isIOS) return `<li>Tap the <b>Share</b> button <span class="ihkey">⎋</span> in Safari (bottom of the screen).</li><li>Scroll and tap <b>Add to Home Screen</b> <span class="ihkey">＋</span>.</li><li>Tap <b>Add</b> — CareFlow lands on your home screen.</li>`;
+  if(isAndroid) return `<li>Tap the <b>⋮</b> menu (top-right in Chrome).</li><li>Tap <b>Add to Home screen</b> / <b>Install app</b>.</li><li>Tap <b>Install</b> — CareFlow installs like a normal app.</li>`;
+  return `<li>Click the <b>install</b> icon in the address bar, or open the <b>⋮</b> menu.</li><li>Choose <b>Install ICCOTX CareFlow</b>.</li><li>Confirm — it opens in its own window.</li>`;
 }
 function openHelp(){
-  document.getElementById('ihText').textContent=isIOS
-    ? 'On iPhone/iPad you install from Safari’s Share menu — takes a few seconds, and it works offline afterward.'
-    : 'Add CareFlow to your home screen to launch it full-screen, like a normal app — works offline too.';
-  document.getElementById('ihSteps').innerHTML=stepsHTML(isIOS);
+  document.getElementById('ihText').textContent = isIOS
+    ? 'On iPhone/iPad you install from Safari’s Share menu — a few taps, and it works offline afterward.'
+    : (isAndroid ? 'Install from Chrome’s menu — a few taps, and it works offline afterward.'
+                 : 'Add CareFlow to your home screen / app list to launch it full-screen — works offline too.');
+  document.getElementById('ihSteps').innerHTML=stepsHTML();
   ihelp.classList.add('show');
 }
 installBtn.addEventListener('click', async ()=>{
