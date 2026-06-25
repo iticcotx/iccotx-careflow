@@ -580,10 +580,12 @@ document.getElementById('dEdit').addEventListener('click',()=>{
   document.getElementById('edTitle').textContent='Edit · '+CURRENT.name;
   document.getElementById('edApproved').checked=!!CURRENT.approved;
   document.getElementById('edBody').innerHTML=EDIT_KEYS.map(([k,label])=>`<div class="edsection"><label>${esc(label)}</label><textarea data-k="${k}" rows="3">${esc(valOf(CURRENT,k))}</textarea></div>`).join('');
+  closeDetail();
   document.getElementById('edit').classList.add('show');
 });
-document.getElementById('edClose').addEventListener('click',()=>document.getElementById('edit').classList.remove('show'));
-document.getElementById('edit').addEventListener('click',e=>{ if(e.target.id==='edit') document.getElementById('edit').classList.remove('show'); });
+function closeEdit(){ document.getElementById('edit').classList.remove('show'); if(CURRENT) openDetail(CURRENT.id); }
+document.getElementById('edClose').addEventListener('click',closeEdit);
+document.getElementById('edit').addEventListener('click',e=>{ if(e.target.id==='edit') closeEdit(); });
 document.getElementById('edSave').addEventListener('click',async()=>{
   if(!CURRENT) return;
   const data={ stages:{...(CURRENT.stages||{})} };
