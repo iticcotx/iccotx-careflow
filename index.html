@@ -277,12 +277,15 @@ footer b{color:var(--txt-dim)}
 const CAT_COLORS=['#e63858','#1492d6','#8a3fe0','#0fa873','#dd9015','#e8702f','#5566e6','#d6479e','#10ad95','#c6498f','#0a9fc2','#7d54e0','#2f9e6b'];
 const SECTIONS=[
   {k:'redFlags',label:'Red Flags',cls:'flag',icon:'<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>'},
+  {k:'includes',label:'Includes',icon:'<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>'},
   {k:'triage',label:'Triage',icon:'<path d="M3 12h4l3 8 4-16 3 8h4"/>'},
   {k:'nursing',label:'Nursing',icon:'<path d="M9 2h6v4l3 3v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9l3-3z"/>'},
   {k:'keyOrders',label:'Key Orders',icon:'<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'},
   {k:'labs',label:'Labs',icon:'<path d="M9 2v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V2"/><path d="M7 2h10"/>'},
   {k:'imaging',label:'Imaging',icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>'},
   {k:'meds',label:'Medications',icon:'<path d="m10.5 20.5 10-10a5 5 0 1 0-7-7l-10 10a5 5 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/>'},
+  {k:'riskTools',label:'Risk Tools & Scores',icon:'<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>'},
+  {k:'eligibility',label:'Eligibility Check',icon:'<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'},
   {k:'reassess',label:'Reassessment',icon:'<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>'},
   {k:'disposition',label:'Disposition',icon:'<path d="M3 12h18M14 7l5 5-5 5"/>'},
   {k:'discharge',label:'Discharge',icon:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/>'},
@@ -306,6 +309,9 @@ function toggleFav(id){
 function getList(wf,key){
   if(key==='redFlags') return wf.redFlags||[];
   if(key==='compliance') return wf.compliance||[];
+  if(key==='includes') return wf.includes||[];
+  if(key==='riskTools') return wf.riskTools||[];
+  if(key==='eligibility') return wf.eligibility||[];
   return (wf.stages&&wf.stages[key])||[];
 }
 const badgeText=w=> w.setting==='ER' ? (parseEsi(w.acuity)?'ESI '+parseEsi(w.acuity):'') : (w.acuity||'');
