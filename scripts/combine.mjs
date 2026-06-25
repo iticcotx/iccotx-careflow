@@ -116,6 +116,7 @@ function normalize(w, setting){
   for (const k of STAGE_KEYS) if (!Array.isArray(w.stages[k])) w.stages[k] = [];
   for (const k of ['redFlags','compliance','synonyms','includes','riskTools','eligibility']) if (!Array.isArray(w[k])) w[k] = [];
   if (typeof w.top !== 'number') w.top = 0;
+  if (typeof w.approved !== 'boolean') w.approved = false;
   return w;
 }
 
@@ -140,7 +141,7 @@ all = all.filter(w => !(w.setting === 'ER' && replaceKw.some(kw => w.name.toLowe
 report.push(`Removed ${before - all.length} ER AI entries replaced by PDF Top 10`);
 
 // Add the exact PDF Top-10 ER protocols
-ER_TOP.forEach(t => { const { replaces, ...keep } = t; all.push(normalize(keep, 'ER')); });
+ER_TOP.forEach(t => { const { replaces, ...keep } = t; const n = normalize(keep, 'ER'); n.approved = true; all.push(n); });
 
 // de-dupe by setting+id (keep first)
 const seen = new Set();

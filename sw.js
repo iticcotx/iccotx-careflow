@@ -1,5 +1,5 @@
 /* ICCOTX CareFlow service worker — offline-capable PWA */
-const CACHE = 'careflow-v2';
+const CACHE = 'careflow-v3';
 const CORE = ['./', 'index.html', 'catalog.json', 'manifest.webmanifest',
   'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 

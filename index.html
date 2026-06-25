@@ -13,6 +13,8 @@
 <meta name="apple-mobile-web-app-title" content="CareFlow" />
 <meta name="application-name" content="CareFlow" />
 <title>ICCOTX CareFlow — Texas ER Clinical Workflows</title>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{
   --bg:#eef2fc;--bg-2:#e6ecf9;--grid:rgba(70,110,220,.06);
@@ -194,6 +196,51 @@ header.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 
 footer{margin-top:46px;text-align:center;font-size:12px;color:var(--txt-mute);line-height:1.7}
 footer b{color:var(--txt-dim)}
 
+/* detail actions + status + draft/approved */
+.dact{width:40px;height:40px;border:none;border-radius:11px;cursor:pointer;background:rgba(20,40,90,.06);color:var(--txt-dim);display:grid;place-items:center}
+.dact:hover{background:rgba(10,159,194,.14);color:var(--cyan-deep)}
+.dact svg{width:18px;height:18px}.dact[hidden]{display:none}
+.status{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.status.approved{color:#0b7a54;background:rgba(15,168,115,.14);border:1px solid rgba(15,168,115,.4)}
+.status.draft{color:#a5660a;background:rgba(221,144,21,.14);border:1px solid rgba(221,144,21,.4)}
+.ccard .stat{flex:none;font-size:9.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 7px;border-radius:7px;
+  color:#a5660a;background:rgba(221,144,21,.14)}
+/* share sheet */
+.shrow{display:flex;gap:8px;margin-bottom:12px}
+.shrow input{flex:1;min-width:0;padding:11px 12px;border-radius:11px;border:1px solid var(--stroke);background:var(--bg-2);color:var(--txt);font-size:13px}
+.shcopy,.shbtn{border:none;border-radius:11px;cursor:pointer;font-family:inherit;font-weight:750;color:#fff;background:linear-gradient(135deg,#0db0d4,#0488a8);padding:11px 16px;font-size:13.5px}
+.shbtn{width:100%;margin-bottom:14px}
+.qrwrap{text-align:center;margin-top:4px}
+.qrtitle{font-size:12px;color:var(--txt-mute);margin-bottom:8px}
+.qrwrap img{border-radius:12px;border:1px solid var(--stroke);background:#fff;padding:8px;max-width:100%}
+/* edit sheet */
+.edsection{margin-bottom:15px}
+.edsection label{display:block;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--cyan-deep);margin-bottom:6px}
+.edsection textarea{width:100%;min-height:78px;padding:11px 13px;border-radius:11px;border:1px solid var(--stroke);background:rgba(255,255,255,.75);font-family:inherit;font-size:14px;color:var(--txt);resize:vertical;line-height:1.5}
+.edsection textarea:focus{outline:none;border-color:var(--cyan-deep)}
+.edbar{display:flex;align-items:center;gap:14px;padding:14px 24px;border-top:1px solid var(--stroke);background:rgba(255,255,255,.8);flex-wrap:wrap}
+.edappr{font-size:14px;color:var(--txt-dim);display:flex;align-items:center;gap:8px;cursor:pointer}
+.edappr input{width:18px;height:18px}
+.edsave{margin-left:auto;border:none;border-radius:12px;cursor:pointer;font-family:inherit;font-weight:750;font-size:14px;color:#fff;background:linear-gradient(135deg,#0fa873,#0b8b5f);padding:12px 24px}
+.mdlink{border:none;background:none;cursor:pointer;font-family:inherit;font-size:12px;color:var(--txt-mute);text-decoration:underline}
+.mdlink:hover{color:var(--cyan-deep)}
+
+/* installed (standalone) + mobile polish */
+@media (display-mode: standalone){ .wrap{padding-top:max(18px, env(safe-area-inset-top))} .installbtn{display:none!important} }
+@media(max-width:560px){
+  .wrap{padding:16px 12px calc(40px + env(safe-area-inset-bottom))}
+  header.top{padding:14px 16px;gap:12px}
+  .mark{width:44px;height:44px}.mark svg{width:24px;height:24px}
+  .installbtn{margin-left:auto;padding:10px 14px;font-size:13px}
+  .modes{width:100%}.mode{flex:1;justify-content:center;padding:12px 8px;font-size:13.5px}
+  .searchbar input{font-size:16px}
+  .detail{padding:0}
+  .dpanel{max-width:none;height:100vh;height:100dvh;max-height:100vh;max-height:100dvh;border-radius:0;border:none}
+  .dhead{position:sticky;top:0;z-index:2;background:#fff;padding-top:max(14px, env(safe-area-inset-top))}
+  .dbody{padding:16px 16px calc(26px + env(safe-area-inset-bottom))}
+  .dsections{column-count:1}
+}
+
 @media print{
   body{background:#fff}body::before,.searchbar,.cats,.wrap>header,footer{display:none!important}
   .detail{position:static;background:none;backdrop-filter:none;padding:0;display:block!important}
@@ -237,7 +284,36 @@ footer b{color:var(--txt-dim)}
   <footer>
     <div><b>ICCOTX CareFlow</b> — Evidence-based clinical decision support for Texas freestanding ERs.</div>
     <div>Clinical decision support only — does not replace physician judgment. All workflows subject to Medical Director approval &amp; periodic review.</div>
+    <div style="margin-top:10px"><button class="mdlink" id="mdLink">🔒 Medical Director sign-in</button></div>
   </footer>
+</div>
+
+<!-- SHARE SHEET -->
+<div class="ihelp" id="share">
+  <div class="ihcard">
+    <button class="ihx" id="shClose">×</button>
+    <div class="ihicon"><img src="icon-192.png" alt="" width="56" height="56"/></div>
+    <h2>Share workflow</h2>
+    <p id="shName" style="font-weight:700;color:var(--txt);margin-bottom:6px"></p>
+    <div class="shrow"><input id="shUrl" readonly /><button class="shcopy" id="shCopy">Copy</button></div>
+    <button class="shbtn" id="shNative" hidden>Share via…</button>
+    <div class="qrwrap"><div class="qrtitle">Scan to open on a phone</div><img id="shQr" alt="QR code" width="180" height="180"/></div>
+  </div>
+</div>
+
+<!-- EDIT SHEET -->
+<div class="detail" id="edit">
+  <div class="dpanel">
+    <div class="dhead">
+      <div class="dt"><h2 id="edTitle">Edit workflow</h2><div class="dcat">Medical Director editing</div></div>
+      <button class="dx" id="edClose">×</button>
+    </div>
+    <div class="dbody" id="edBody"></div>
+    <div class="edbar">
+      <label class="edappr"><input type="checkbox" id="edApproved"/> Mark as <b>Approved</b></label>
+      <button class="edsave" id="edSave">Save</button>
+    </div>
+  </div>
 </div>
 
 <!-- INSTALL HELP -->
@@ -256,8 +332,11 @@ footer b{color:var(--txt-dim)}
   <div class="dpanel">
     <div class="dhead" id="dhead">
       <div class="dt"><h2 id="dTitle">—</h2><div class="dcat" id="dCat"></div></div>
+      <span class="status" id="dStatus"></span>
       <span class="desi" id="dEsi"></span>
-      <button class="dprint" id="dPrint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Print</button>
+      <button class="dact" id="dShare" title="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+      <button class="dact" id="dEdit" hidden title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+      <button class="dact" id="dPrint" title="Print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg></button>
       <button class="dx" id="dClose">×</button>
     </div>
     <div class="dbody">
@@ -292,6 +371,9 @@ const parseEsi=a=>{ if(!a) return ''; const m=String(a).replace(/esi/ig,'').matc
 
 let DATA=[], catColor={}, activeSetting='ER', activeCat='all', query='', othersOpen=false;
 let favs=new Set(); try{ favs=new Set(JSON.parse(localStorage.getItem('iccotx_favs')||'[]')); }catch(e){}
+const CFG=window.ICCOTX_CONFIG||{};
+let db=null; try{ if(CFG.SUPABASE_URL&&CFG.SUPABASE_ANON_KEY&&window.supabase) db=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY); }catch(e){}
+let CURRENT=null, mdMode=false;
 
 const favKey=w=>w.setting+'|'+w.id;
 const isFav=w=>favs.has(favKey(w));
@@ -316,6 +398,7 @@ function cardHtml(w){
   return `<div class="ccard" style="--accent:${col}" data-id="${esc(w.id)}">
     <button class="fav ${fav?'on':''}" data-fav="${esc(w.id)}" aria-label="Favourite"><svg viewBox="0 0 24 24" fill="${fav?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 17.3l-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.8 1.6 7z"/></svg></button>
     <div class="nm"><b>${esc(w.name)}</b>${w.summary?`<span>${esc(w.summary)}</span>`:''}</div>
+    ${w.approved?'':'<span class="stat">Draft</span>'}
     ${b?`<span class="esi">${esc(b)}</span>`:''}
     <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
   </div>`;
@@ -365,6 +448,10 @@ function openDetail(id){
   document.getElementById('dEsi').style.setProperty('--accent',col);
   document.getElementById('dEsi').style.display=b?'':'none';
   document.getElementById('dSummary').textContent=wf.summary||'';
+  CURRENT=wf;
+  const st=document.getElementById('dStatus'); st.className='status '+(wf.approved?'approved':'draft'); st.textContent=wf.approved?'Approved':'Draft';
+  document.getElementById('dEdit').hidden=!mdMode;
+  try{ history.replaceState(null,'',location.pathname+'#w='+encodeURIComponent(wf.setting+'/'+wf.id)); }catch(e){}
   let html='';
   SECTIONS.forEach(s=>{
     const list=getList(wf,s.k); if(!list||!list.length) return;
@@ -376,7 +463,7 @@ function openDetail(id){
   const body=document.querySelector('.dbody'); if(body) body.scrollTop=0;
   document.getElementById('detail').classList.add('show');
 }
-function closeDetail(){document.getElementById('detail').classList.remove('show');}
+function closeDetail(){document.getElementById('detail').classList.remove('show'); try{ history.replaceState(null,'',location.pathname); }catch(e){}}
 
 document.getElementById('directory').addEventListener('click',e=>{
   const ot=e.target.closest('.othtoggle'); if(ot){ othersOpen=!othersOpen; render(); return; }
@@ -422,7 +509,7 @@ async function load(){
     [...new Set(DATA.map(w=>w.category))].forEach((c,i)=>{ if(!(c in catColor)) catColor[c]=CAT_COLORS[i%CAT_COLORS.length]; });
     activeSetting=DATA.some(w=>w.setting==='ER')?'ER':((DATA[0]&&DATA[0].setting)||'ER');
     [...document.getElementById('modes').children].forEach(x=>x.classList.toggle('active',x.dataset.set===activeSetting));
-    buildCats(); render();
+    buildCats(); render(); openDeepLink(); mergeOverrides();
   }catch(e){
     document.getElementById('directory').innerHTML='<div class="empty"><div class="spin"></div><h3>Building the workflow catalog…</h3><div>The clinical workflows are being generated. Refresh in a moment.</div></div>';
     document.getElementById('count').textContent='0';
@@ -466,6 +553,85 @@ installBtn.addEventListener('click', async ()=>{
 document.getElementById('ihClose').addEventListener('click',()=>ihelp.classList.remove('show'));
 ihelp.addEventListener('click',e=>{ if(e.target.id==='ihelp') ihelp.classList.remove('show'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') ihelp.classList.remove('show'); });
+
+/* ====================== EDIT & APPROVE (Supabase) ====================== */
+async function mergeOverrides(){
+  if(!db) return;
+  try{
+    const {data,error}=await db.from('overrides').select('*');
+    if(error||!data) return;
+    const map={}; data.forEach(o=>map[o.setting+'|'+o.wid]=o);
+    DATA.forEach(w=>{ const o=map[w.setting+'|'+w.id]; if(o){ Object.assign(w,o.data||{}); w.approved=!!o.approved; } });
+    render(); if(CURRENT) { /* keep open view fresh */ }
+  }catch(e){}
+}
+const EDIT_KEYS=[['summary','Summary (one line)'],['redFlags','Red Flags'],['includes','Includes'],['keyOrders','Key Orders'],['labs','Labs'],['imaging','Imaging'],['meds','Medications'],['riskTools','Risk Tools & Scores'],['eligibility','Eligibility Check'],['reassess','Reassessment'],['disposition','Disposition'],['discharge','Discharge'],['followup','Follow-Up'],['compliance','Compliance']];
+const valOf=(wf,k)=> k==='summary' ? (wf.summary||'') : getList(wf,k).join('\n');
+
+document.getElementById('mdLink').addEventListener('click',()=>{
+  const link=document.getElementById('mdLink');
+  if(mdMode){ mdMode=false; link.textContent='🔒 Medical Director sign-in'; document.getElementById('dEdit').hidden=true; return; }
+  const code=prompt('Medical Director passcode:'); if(code===null) return;
+  if(code==='iccotx'){ mdMode=true; link.textContent='🔓 Medical Director mode — sign out'; if(document.getElementById('detail').classList.contains('show')) document.getElementById('dEdit').hidden=false; }
+  else alert('Incorrect passcode.');
+});
+document.getElementById('dEdit').addEventListener('click',()=>{
+  if(!CURRENT) return;
+  document.getElementById('edTitle').textContent='Edit · '+CURRENT.name;
+  document.getElementById('edApproved').checked=!!CURRENT.approved;
+  document.getElementById('edBody').innerHTML=EDIT_KEYS.map(([k,label])=>`<div class="edsection"><label>${esc(label)}</label><textarea data-k="${k}" rows="3">${esc(valOf(CURRENT,k))}</textarea></div>`).join('');
+  document.getElementById('edit').classList.add('show');
+});
+document.getElementById('edClose').addEventListener('click',()=>document.getElementById('edit').classList.remove('show'));
+document.getElementById('edit').addEventListener('click',e=>{ if(e.target.id==='edit') document.getElementById('edit').classList.remove('show'); });
+document.getElementById('edSave').addEventListener('click',async()=>{
+  if(!CURRENT) return;
+  const data={ stages:{...(CURRENT.stages||{})} };
+  document.querySelectorAll('#edBody textarea').forEach(t=>{
+    const k=t.dataset.k, lines=t.value.split('\n').map(s=>s.trim()).filter(Boolean);
+    if(k==='summary') data.summary=t.value.trim();
+    else if(['redFlags','includes','riskTools','eligibility','compliance'].includes(k)) data[k]=lines;
+    else data.stages[k]=lines;
+  });
+  const approved=document.getElementById('edApproved').checked;
+  Object.assign(CURRENT,data); CURRENT.approved=approved;
+  const btn=document.getElementById('edSave'); btn.textContent='Saving…';
+  if(db){ try{ await db.from('overrides').upsert({setting:CURRENT.setting,wid:CURRENT.id,data,approved}); }catch(e){ alert('Saved on this device; cloud sync failed.'); } }
+  btn.textContent='Save';
+  document.getElementById('edit').classList.remove('show');
+  render(); openDetail(CURRENT.id);
+});
+
+/* ====================== SHARE + DEEP LINK ====================== */
+const shareUrl=wf=>location.origin+location.pathname+'#w='+encodeURIComponent(wf.setting+'/'+wf.id);
+document.getElementById('dShare').addEventListener('click',()=>{
+  if(!CURRENT) return;
+  const url=shareUrl(CURRENT);
+  document.getElementById('shName').textContent=CURRENT.name;
+  document.getElementById('shUrl').value=url;
+  document.getElementById('shNative').hidden=!navigator.share;
+  document.getElementById('shQr').src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=0&data='+encodeURIComponent(url);
+  document.getElementById('share').classList.add('show');
+});
+document.getElementById('shCopy').addEventListener('click',async()=>{
+  const url=document.getElementById('shUrl').value, b=document.getElementById('shCopy');
+  try{ await navigator.clipboard.writeText(url); }catch(e){ const i=document.getElementById('shUrl'); i.select(); try{document.execCommand('copy');}catch(_){} }
+  b.textContent='Copied!'; setTimeout(()=>b.textContent='Copy',1500);
+});
+document.getElementById('shNative').addEventListener('click',()=>{ if(navigator.share&&CURRENT) navigator.share({title:CURRENT.name+' — ICCOTX CareFlow',url:shareUrl(CURRENT)}).catch(()=>{}); });
+document.getElementById('shClose').addEventListener('click',()=>document.getElementById('share').classList.remove('show'));
+document.getElementById('share').addEventListener('click',e=>{ if(e.target.id==='share') document.getElementById('share').classList.remove('show'); });
+
+function openDeepLink(){
+  const m=location.hash.match(/w=([^&]+)/); if(!m) return;
+  const [setting,id]=decodeURIComponent(m[1]).split('/'); if(!id) return;
+  if(setting&&setting!==activeSetting&&DATA.some(w=>w.setting===setting)){
+    activeSetting=setting;
+    [...document.getElementById('modes').children].forEach(x=>x.classList.toggle('active',x.dataset.set===setting));
+    buildCats(); render();
+  }
+  if(DATA.some(w=>w.id===id&&w.setting===activeSetting)) openDetail(id);
+}
 </script>
 </body>
 </html>
