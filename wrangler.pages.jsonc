@@ -1,0 +1,35 @@
+/**
+ * Cloudflare PAGES deployment. Rename this file to wrangler.jsonc if iccotx.com
+ * is a Pages project (branch pushes give you <branch>.<project>.pages.dev).
+ *
+ * On Pages, the D1 binding for PREVIEW deployments is configured separately from
+ * production. Set both in the dashboard:
+ *   Workers & Pages → iccotx → Settings → Bindings
+ *     · Production  → D1 database  DB → icco-forms
+ *     · Preview     → D1 database  DB → icco-forms-staging
+ * The block below covers local `wrangler pages dev`; the dashboard values are what
+ * the deployed site actually uses.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "iccotx",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "vars": {
+    "ENVIRONMENT": "production",
+    "CF_ACCESS_TEAM_DOMAIN": "https://YOURTEAM.cloudflareaccess.com",
+    "CF_ACCESS_AUD": "PASTE_PRODUCTION_AUD_TAG"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "icco-forms",
+      "database_id": "PASTE_PRODUCTION_DATABASE_ID",
+      "preview_database_id": "PASTE_STAGING_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

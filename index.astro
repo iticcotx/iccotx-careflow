@@ -1,0 +1,648 @@
+---
+/**
+ * /staff/ — submissions dashboard.
+ *
+ * Server-rendered shell + a small vanilla-JS client. No React/Vue/Svelte, so it
+ * drops into any Astro project without adding an integration. Styling is Tailwind
+ * utility classes only — no config changes needed.
+ *
+ * Auth is handled entirely by src/middleware.ts, which verifies the Cloudflare
+ * Access JWT before this page renders. If you have a site Layout you want to keep,
+ * wrap the <main> below in it — but do NOT put the staff dashboard inside a layout
+ * that loads analytics or chat widgets.
+ */
+
+export const prerender = false;
+
+const user = Astro.locals.staffUser;
+const initialTab = Astro.url.searchParams.get('tab') === 'enquiries' ? 'enquiries' : 'applications';
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Staff Dashboard · ICCO</title>
+    <style>
+      [x-cloak] { display: none !important; }
+    </style>
+  </head>
+
+  <body class="h-full bg-slate-50 text-slate-900 antialiased">
+    <div class="min-h-full">
+      <!-- ── Header ─────────────────────────────────────────────────────── -->
+      <header class="border-b border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+          <div>
+            <h1 class="text-lg font-semibold tracking-tight">Submissions</h1>
+            <p class="text-sm text-slate-500">Applications and enquiries from iccotx.com</p>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <span class="hidden text-slate-600 sm:inline">{user?.email}</span>
+            <a
+              href="/cdn-cgi/access/logout"
+              class="rounded-md border border-slate-300 px-3 py-1.5 font-medium text-slate-700 transition hover:bg-slate-100"
+              >Sign out</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <!-- ── Tabs ─────────────────────────────────────────────────────── -->
+        <div class="border-b border-slate-200">
+          <nav class="-mb-px flex gap-6" aria-label="Submission type">
+            <button
+              type="button"
+              data-tab="applications"
+              class="tab-btn border-b-2 px-1 pb-3 text-sm font-medium transition"
+              aria-current="page"
+            >
+              Applications
+              <span
+                data-tab-count="applications"
+                class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600"
+                >–</span
+              >
+            </button>
+            <button
+              type="button"
+              data-tab="enquiries"
+              class="tab-btn border-b-2 px-1 pb-3 text-sm font-medium transition"
+            >
+              Enquiries
+              <span
+                data-tab-count="enquiries"
+                class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600"
+                >–</span
+              >
+            </button>
+          </nav>
+        </div>
+
+        <!-- ── Filters ──────────────────────────────────────────────────── -->
+        <section class="mt-5 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+            <div class="lg:col-span-2">
+              <label for="f-q" class="mb-1 block text-xs font-medium text-slate-600">Search</label>
+              <input
+                id="f-q"
+                type="search"
+                placeholder="Name, email, phone, message…"
+                autocomplete="off"
+                class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+              />
+            </div>
+
+            <div>
+              <label for="f-status" class="mb-1 block text-xs font-medium text-slate-600">Status</label>
+              <select
+                id="f-status"
+                class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+              >
+                <option value="all">All statuses</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f-from" class="mb-1 block text-xs font-medium text-slate-600">From</label>
+              <input
+                id="f-from"
+                type="date"
+                class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+              />
+            </div>
+
+            <div>
+              <label for="f-to" class="mb-1 block text-xs font-medium text-slate-600">To</label>
+              <input
+                id="f-to"
+                type="date"
+                class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+              />
+            </div>
+
+            <div class="flex items-end gap-2">
+              <button
+                id="f-reset"
+                type="button"
+                class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-3">
+            <p id="result-summary" class="text-sm text-slate-500" aria-live="polite">Loading…</p>
+            <div class="flex items-center gap-2">
+              <label for="f-per" class="text-xs text-slate-600">Rows</label>
+              <select
+                id="f-per"
+                class="rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm focus:border-teal-500 focus:outline-none"
+              >
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+              </select>
+              <a
+                id="export-link"
+                href="#"
+                class="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+                >Export CSV</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Table ────────────────────────────────────────────────────── -->
+        <section class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-200 text-sm">
+              <thead class="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
+                <tr id="table-head"></tr>
+              </thead>
+              <tbody id="table-body" class="divide-y divide-slate-100"></tbody>
+            </table>
+          </div>
+
+          <div class="flex items-center justify-between gap-4 border-t border-slate-200 px-4 py-3">
+            <button
+              id="page-prev"
+              type="button"
+              class="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Previous
+            </button>
+            <span id="page-label" class="text-sm text-slate-600">Page 1</span>
+            <button
+              id="page-next"
+              type="button"
+              class="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Next
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ── Detail drawer ──────────────────────────────────────────────── -->
+    <div id="drawer" class="fixed inset-0 z-40 hidden">
+      <div id="drawer-backdrop" class="absolute inset-0 bg-slate-900/40"></div>
+      <aside
+        class="absolute right-0 top-0 flex h-full w-full max-w-xl flex-col bg-white shadow-xl"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="drawer-title"
+      >
+        <div class="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4">
+          <div>
+            <h2 id="drawer-title" class="text-base font-semibold">Record</h2>
+            <p id="drawer-sub" class="text-sm text-slate-500"></p>
+          </div>
+          <button
+            id="drawer-close"
+            type="button"
+            class="rounded-md p-1.5 text-slate-500 transition hover:bg-slate-100"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div id="drawer-body" class="flex-1 overflow-y-auto px-5 py-4"></div>
+
+        <div class="space-y-3 border-t border-slate-200 bg-slate-50 px-5 py-4">
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div>
+              <label for="d-status" class="mb-1 block text-xs font-medium text-slate-600">Status</label>
+              <select
+                id="d-status"
+                class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm"
+              ></select>
+            </div>
+            <div>
+              <label for="d-assigned" class="mb-1 block text-xs font-medium text-slate-600"
+                >Assigned to</label
+              >
+              <input
+                id="d-assigned"
+                type="text"
+                placeholder="name@wcgtx.com"
+                class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="d-notes" class="mb-1 block text-xs font-medium text-slate-600">Internal notes</label>
+            <textarea
+              id="d-notes"
+              rows="3"
+              class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+            ></textarea>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <span id="d-msg" class="text-sm" aria-live="polite"></span>
+            <button
+              id="d-save"
+              type="button"
+              class="rounded-md bg-teal-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-800 disabled:opacity-50"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script is:inline define:vars={{ initialTab }}>
+      (function () {
+        'use strict';
+
+        const API = '/api/staff/submissions';
+        const COLUMNS = {
+          applications: [
+            { key: 'created_at', label: 'Received', sortable: true, fmt: 'date' },
+            { key: '_name', label: 'Applicant', sortable: true, sortKey: 'last_name' },
+            { key: 'role_applied', label: 'Role', sortable: true },
+            { key: 'state', label: 'State', sortable: true },
+            { key: 'availability', label: 'Availability' },
+            { key: 'status', label: 'Status', sortable: true, fmt: 'status' },
+          ],
+          enquiries: [
+            { key: 'created_at', label: 'Received', sortable: true, fmt: 'date' },
+            { key: 'name', label: 'From', sortable: true },
+            { key: 'organization', label: 'Organization', sortable: true },
+            { key: 'enquiry_type', label: 'Type', sortable: true },
+            { key: 'subject', label: 'Subject' },
+            { key: 'status', label: 'Status', sortable: true, fmt: 'status' },
+          ],
+        };
+
+        const STATUS_STYLES = {
+          new: 'bg-teal-50 text-teal-800 ring-teal-600/20',
+          reviewing: 'bg-amber-50 text-amber-800 ring-amber-600/20',
+          in_progress: 'bg-amber-50 text-amber-800 ring-amber-600/20',
+          interview: 'bg-indigo-50 text-indigo-800 ring-indigo-600/20',
+          responded: 'bg-indigo-50 text-indigo-800 ring-indigo-600/20',
+          placed: 'bg-emerald-50 text-emerald-800 ring-emerald-600/20',
+          closed: 'bg-slate-100 text-slate-600 ring-slate-500/20',
+          rejected: 'bg-rose-50 text-rose-800 ring-rose-600/20',
+          spam: 'bg-rose-50 text-rose-800 ring-rose-600/20',
+          archived: 'bg-slate-100 text-slate-600 ring-slate-500/20',
+        };
+
+        const state = {
+          entity: initialTab,
+          q: '',
+          status: 'all',
+          from: '',
+          to: '',
+          page: 1,
+          per: 25,
+          sort: 'created_at',
+          dir: 'desc',
+          statuses: [],
+          current: null,
+        };
+
+        const $ = (sel) => document.querySelector(sel);
+        const esc = (v) =>
+          String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+        const titled = (v) => String(v ?? '').replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
+
+        function fmtDate(iso) {
+          if (!iso) return '—';
+          const d = new Date(iso);
+          if (Number.isNaN(d.getTime())) return esc(iso);
+          return d.toLocaleString('en-US', {
+            month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit',
+          });
+        }
+
+        function statusPill(s) {
+          const cls = STATUS_STYLES[s] || 'bg-slate-100 text-slate-700 ring-slate-500/20';
+          return `<span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${cls}">${esc(titled(s))}</span>`;
+        }
+
+        /* ── URL <-> state, so filters survive a refresh and can be shared ── */
+        function syncUrl() {
+          const p = new URLSearchParams();
+          p.set('tab', state.entity);
+          if (state.q) p.set('q', state.q);
+          if (state.status !== 'all') p.set('status', state.status);
+          if (state.from) p.set('from', state.from);
+          if (state.to) p.set('to', state.to);
+          if (state.page > 1) p.set('page', String(state.page));
+          if (state.per !== 25) p.set('per', String(state.per));
+          history.replaceState(null, '', `${location.pathname}?${p.toString()}`);
+        }
+
+        function readUrl() {
+          const p = new URLSearchParams(location.search);
+          state.entity = p.get('tab') === 'enquiries' ? 'enquiries' : 'applications';
+          state.q = p.get('q') || '';
+          state.status = p.get('status') || 'all';
+          state.from = p.get('from') || '';
+          state.to = p.get('to') || '';
+          state.page = Math.max(1, Number(p.get('page') || 1));
+          state.per = Number(p.get('per') || 25);
+          $('#f-q').value = state.q;
+          $('#f-from').value = state.from;
+          $('#f-to').value = state.to;
+          $('#f-per').value = String(state.per);
+        }
+
+        function queryString() {
+          const p = new URLSearchParams({
+            entity: state.entity,
+            q: state.q,
+            status: state.status,
+            from: state.from,
+            to: state.to,
+            page: String(state.page),
+            per: String(state.per),
+            sort: state.sort,
+            dir: state.dir,
+          });
+          return p.toString();
+        }
+
+        /* ── Rendering ─────────────────────────────────────────────────── */
+        function renderHead() {
+          $('#table-head').innerHTML = COLUMNS[state.entity]
+            .map((c) => {
+              const key = c.sortKey || c.key;
+              const active = state.sort === key;
+              const arrow = active ? (state.dir === 'asc' ? ' ↑' : ' ↓') : '';
+              const inner = c.sortable
+                ? `<button type="button" data-sort="${esc(key)}" class="font-semibold uppercase tracking-wide hover:text-slate-900">${esc(c.label)}${arrow}</button>`
+                : esc(c.label);
+              return `<th scope="col" class="px-4 py-3 ${active ? 'text-slate-900' : ''}">${inner}</th>`;
+            })
+            .join('');
+        }
+
+        function cellValue(row, col) {
+          if (col.key === '_name') return `${row.first_name || ''} ${row.last_name || ''}`.trim();
+          return row[col.key];
+        }
+
+        function renderRows(rows) {
+          const body = $('#table-body');
+          if (!rows.length) {
+            body.innerHTML = `<tr><td colspan="${COLUMNS[state.entity].length}" class="px-4 py-12 text-center text-slate-500">No ${state.entity} match these filters.</td></tr>`;
+            return;
+          }
+          body.innerHTML = rows
+            .map((row) => {
+              const cells = COLUMNS[state.entity]
+                .map((c) => {
+                  const v = cellValue(row, c);
+                  let html;
+                  if (c.fmt === 'date') html = `<span class="whitespace-nowrap text-slate-600">${esc(fmtDate(v))}</span>`;
+                  else if (c.fmt === 'status') html = statusPill(v);
+                  else html = esc(v || '—');
+                  return `<td class="px-4 py-3 align-top">${html}</td>`;
+                })
+                .join('');
+              const sub =
+                state.entity === 'applications'
+                  ? `${row.email || ''}${row.phone ? ' · ' + row.phone : ''}`
+                  : `${row.email || ''}`;
+              return `<tr data-id="${esc(row.id)}" tabindex="0" class="cursor-pointer transition hover:bg-slate-50 focus:bg-slate-50 focus:outline-none" title="${esc(sub)}">${cells}</tr>`;
+            })
+            .join('');
+        }
+
+        function renderStatusFilter(statuses) {
+          const sel = $('#f-status');
+          const current = state.status;
+          sel.innerHTML =
+            '<option value="all">All statuses</option>' +
+            statuses.map((s) => `<option value="${esc(s)}">${esc(titled(s))}</option>`).join('');
+          sel.value = statuses.includes(current) ? current : 'all';
+        }
+
+        let inFlight = 0;
+
+        async function load() {
+          const ticket = ++inFlight;
+          $('#result-summary').textContent = 'Loading…';
+
+          let data;
+          try {
+            const res = await fetch(`${API}?${queryString()}`, {
+              headers: { accept: 'application/json' },
+            });
+            if (res.status === 401 || res.status === 403) {
+              $('#result-summary').textContent = 'Session expired — reload to sign in again.';
+              return;
+            }
+            if (!res.ok) throw new Error(`Request failed (${res.status})`);
+            data = await res.json();
+          } catch (err) {
+            if (ticket !== inFlight) return;
+            $('#result-summary').textContent = `Could not load submissions: ${err.message}`;
+            return;
+          }
+
+          if (ticket !== inFlight) return; // a newer keystroke already won
+
+          state.statuses = data.statuses || [];
+          renderStatusFilter(state.statuses);
+          renderHead();
+          renderRows(data.rows || []);
+
+          const first = data.total === 0 ? 0 : (data.page - 1) * data.per + 1;
+          const last = Math.min(data.page * data.per, data.total);
+          $('#result-summary').textContent =
+            data.total === 0
+              ? 'No results'
+              : `Showing ${first}–${last} of ${data.total.toLocaleString()}`;
+          $('#page-label').textContent = `Page ${data.page} of ${data.pages}`;
+          $('#page-prev').disabled = data.page <= 1;
+          $('#page-next').disabled = data.page >= data.pages;
+
+          const counts = data.counts || {};
+          const newCount = counts.new || 0;
+          const badge = document.querySelector(`[data-tab-count="${state.entity}"]`);
+          if (badge) badge.textContent = newCount ? `${newCount} new` : String(data.total);
+
+          $('#export-link').href = `/api/staff/export?${queryString()}`;
+          syncUrl();
+        }
+
+        /* ── Drawer ────────────────────────────────────────────────────── */
+        const HIDE = ['user_agent', 'ip_country', 'updated_at'];
+
+        async function openRecord(id) {
+          const drawer = $('#drawer');
+          drawer.classList.remove('hidden');
+          $('#drawer-body').innerHTML = '<p class="text-sm text-slate-500">Loading…</p>';
+          $('#d-msg').textContent = '';
+
+          const res = await fetch(`${API}?entity=${state.entity}&id=${encodeURIComponent(id)}`, {
+            headers: { accept: 'application/json' },
+          });
+          if (!res.ok) {
+            $('#drawer-body').innerHTML = '<p class="text-sm text-rose-700">Could not load this record.</p>';
+            return;
+          }
+          const { row, statuses } = await res.json();
+          state.current = row;
+
+          $('#drawer-title').textContent =
+            state.entity === 'applications'
+              ? `${row.first_name || ''} ${row.last_name || ''}`.trim() || 'Application'
+              : row.name || 'Enquiry';
+          $('#drawer-sub').textContent = `${row.email || ''} · received ${fmtDate(row.created_at)}`;
+
+          $('#drawer-body').innerHTML = Object.entries(row)
+            .filter(([k, v]) => !HIDE.includes(k) && v !== null && v !== '')
+            .map(
+              ([k, v]) => `
+                <div class="border-b border-slate-100 py-2">
+                  <dt class="text-xs font-medium uppercase tracking-wide text-slate-500">${esc(titled(k))}</dt>
+                  <dd class="mt-0.5 whitespace-pre-wrap break-words text-sm text-slate-900">${
+                    k === 'status' ? statusPill(v) : k === 'created_at' ? esc(fmtDate(v)) : esc(v)
+                  }</dd>
+                </div>`
+            )
+            .join('');
+
+          $('#d-status').innerHTML = (statuses || [])
+            .map((s) => `<option value="${esc(s)}"${s === row.status ? ' selected' : ''}>${esc(titled(s))}</option>`)
+            .join('');
+          $('#d-assigned').value = row.assigned_to || '';
+          $('#d-notes').value = row.staff_notes || '';
+        }
+
+        function closeDrawer() {
+          $('#drawer').classList.add('hidden');
+          state.current = null;
+        }
+
+        async function saveRecord() {
+          if (!state.current) return;
+          const btn = $('#d-save');
+          btn.disabled = true;
+          $('#d-msg').textContent = 'Saving…';
+          $('#d-msg').className = 'text-sm text-slate-500';
+
+          try {
+            const res = await fetch('/api/staff/update', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json', accept: 'application/json' },
+              body: JSON.stringify({
+                entity: state.entity,
+                id: state.current.id,
+                status: $('#d-status').value,
+                assigned_to: $('#d-assigned').value.trim(),
+                staff_notes: $('#d-notes').value,
+              }),
+            });
+            if (!res.ok) throw new Error((await res.json().catch(() => ({}))).message || `Failed (${res.status})`);
+            $('#d-msg').textContent = 'Saved';
+            $('#d-msg').className = 'text-sm text-emerald-700';
+            await load();
+          } catch (err) {
+            $('#d-msg').textContent = err.message;
+            $('#d-msg').className = 'text-sm text-rose-700';
+          } finally {
+            btn.disabled = false;
+          }
+        }
+
+        /* ── Wiring ────────────────────────────────────────────────────── */
+        function setTab(entity) {
+          if (state.entity === entity) return;
+          state.entity = entity;
+          state.page = 1;
+          state.status = 'all';
+          state.sort = 'created_at';
+          state.dir = 'desc';
+          paintTabs();
+          load();
+        }
+
+        function paintTabs() {
+          document.querySelectorAll('.tab-btn').forEach((btn) => {
+            const active = btn.dataset.tab === state.entity;
+            btn.className =
+              'tab-btn border-b-2 px-1 pb-3 text-sm font-medium transition ' +
+              (active
+                ? 'border-teal-700 text-teal-800'
+                : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700');
+            if (active) btn.setAttribute('aria-current', 'page');
+            else btn.removeAttribute('aria-current');
+          });
+        }
+
+        let debounce;
+        $('#f-q').addEventListener('input', (e) => {
+          clearTimeout(debounce);
+          debounce = setTimeout(() => {
+            state.q = e.target.value.trim();
+            state.page = 1;
+            load();
+          }, 250);
+        });
+
+        $('#f-status').addEventListener('change', (e) => {
+          state.status = e.target.value;
+          state.page = 1;
+          load();
+        });
+        $('#f-from').addEventListener('change', (e) => { state.from = e.target.value; state.page = 1; load(); });
+        $('#f-to').addEventListener('change', (e) => { state.to = e.target.value; state.page = 1; load(); });
+        $('#f-per').addEventListener('change', (e) => { state.per = Number(e.target.value); state.page = 1; load(); });
+
+        $('#f-reset').addEventListener('click', () => {
+          state.q = ''; state.status = 'all'; state.from = ''; state.to = ''; state.page = 1;
+          $('#f-q').value = ''; $('#f-from').value = ''; $('#f-to').value = '';
+          load();
+        });
+
+        $('#page-prev').addEventListener('click', () => { if (state.page > 1) { state.page -= 1; load(); window.scrollTo({ top: 0, behavior: 'smooth' }); } });
+        $('#page-next').addEventListener('click', () => { state.page += 1; load(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        document.querySelectorAll('.tab-btn').forEach((btn) =>
+          btn.addEventListener('click', () => setTab(btn.dataset.tab))
+        );
+
+        $('#table-head').addEventListener('click', (e) => {
+          const key = e.target.closest('[data-sort]')?.dataset.sort;
+          if (!key) return;
+          if (state.sort === key) state.dir = state.dir === 'asc' ? 'desc' : 'asc';
+          else { state.sort = key; state.dir = 'desc'; }
+          load();
+        });
+
+        $('#table-body').addEventListener('click', (e) => {
+          const id = e.target.closest('tr')?.dataset.id;
+          if (id) openRecord(id);
+        });
+        $('#table-body').addEventListener('keydown', (e) => {
+          if (e.key !== 'Enter') return;
+          const id = e.target.closest('tr')?.dataset.id;
+          if (id) openRecord(id);
+        });
+
+        $('#drawer-close').addEventListener('click', closeDrawer);
+        $('#drawer-backdrop').addEventListener('click', closeDrawer);
+        $('#d-save').addEventListener('click', saveRecord);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !$('#drawer').classList.contains('hidden')) closeDrawer();
+        });
+
+        readUrl();
+        paintTabs();
+        load();
+      })();
+    </script>
+  </body>
+</html>

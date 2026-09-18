@@ -1,0 +1,72 @@
+/**
+ * Cloudflare WORKERS deployment (Astro built to a Worker).
+ * If iccotx.com is on Cloudflare PAGES instead, use wrangler.pages.jsonc from this
+ * bundle and rename it to wrangler.jsonc — the two are not interchangeable.
+ *
+ * Which am I on?  In the dashboard, Compute (Workers) → your project. The
+ * "Deployments" tab showing pages.dev preview URLs = Pages. A "Versions" tab with
+ * a Settings → Build section = Workers Builds.
+ *
+ * Never commit secrets here. `vars` are plaintext in the repo; anything sensitive
+ * goes in with `npx wrangler secret put NAME`.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "iccotx",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+
+  "observability": { "enabled": true },
+
+  // @astrojs/cloudflare turns on Astro sessions and expects a KV binding named
+  // SESSION. If your build logs "Invalid binding `SESSION`", create one
+  // (npx wrangler kv namespace create SESSION) and uncomment this block.
+  // "kv_namespaces": [{ "binding": "SESSION", "id": "PASTE_KV_NAMESPACE_ID" }],
+
+  // ── Production ──────────────────────────────────────────────────────────
+  "vars": {
+    "ENVIRONMENT": "production",
+    "CF_ACCESS_TEAM_DOMAIN": "https://YOURTEAM.cloudflareaccess.com",
+    "CF_ACCESS_AUD": "PASTE_PRODUCTION_AUD_TAG",
+    "STAFF_ALLOWED_EMAILS": ""
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "icco-forms",
+      "database_id": "PASTE_PRODUCTION_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // ── Staging ─────────────────────────────────────────────────────────────
+  // Deployed from the `staging` branch. Separate D1 database, so test rows never
+  // touch real applicant data. Create it with:
+  //   npx wrangler d1 create icco-forms-staging
+  "env": {
+    "staging": {
+      "name": "iccotx-staging",
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "CF_ACCESS_TEAM_DOMAIN": "https://YOURTEAM.cloudflareaccess.com",
+        "CF_ACCESS_AUD": "PASTE_STAGING_AUD_TAG",
+        "STAFF_ALLOWED_EMAILS": "it@wcgtx.com"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "icco-forms-staging",
+          "database_id": "PASTE_STAGING_DATABASE_ID",
+          "migrations_dir": "migrations"
+        }
+      ]
+    }
+  }
+}

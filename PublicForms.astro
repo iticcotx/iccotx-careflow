@@ -1,0 +1,126 @@
+---
+/**
+ * Reference markup for the two public forms. Copy the bits you need into your
+ * existing components — the parts that matter to the backend are:
+ *
+ *   1. action="/api/applications" (or /api/enquiries), method="post"
+ *   2. the honeypot input named `company_website`, visually hidden
+ *   3. the hidden `form_loaded_at` timestamp (blocks instant bot submits)
+ *   4. field `name` attributes matching the validators in src/pages/api/*.ts
+ *
+ * Without JS the form does a normal POST and lands on /thank-you/.
+ * With JS it submits via fetch and shows inline errors.
+ */
+---
+
+<form
+  class="space-y-4"
+  method="post"
+  action="/api/applications"
+  data-ajax-form
+  novalidate
+>
+  <!-- Honeypot: real people never see or fill this -->
+  <div class="absolute left-[-9999px]" aria-hidden="true">
+    <label>Company website <input type="text" name="company_website" tabindex="-1" autocomplete="off" /></label>
+  </div>
+  <input type="hidden" name="form_loaded_at" value="" />
+  <input type="hidden" name="source_page" value="" />
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label class="block">
+      <span class="text-sm font-medium">First name *</span>
+      <input name="first_name" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+    </label>
+    <label class="block">
+      <span class="text-sm font-medium">Last name *</span>
+      <input name="last_name" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+    </label>
+    <label class="block">
+      <span class="text-sm font-medium">Email *</span>
+      <input type="email" name="email" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+    </label>
+    <label class="block">
+      <span class="text-sm font-medium">Phone</span>
+      <input type="tel" name="phone" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2" />
+    </label>
+    <label class="block">
+      <span class="text-sm font-medium">Role</span>
+      <select name="role_applied" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2">
+        <option value="">Select…</option>
+        <option>RN</option><option>LVN</option><option>LPN</option><option>CNA</option>
+        <option>CMA</option><option>Medical Assistant</option><option>Physical Therapist</option>
+        <option>Occupational Therapist</option><option>Respiratory Therapist</option>
+        <option>Caregiver</option><option>Other</option>
+      </select>
+    </label>
+    <label class="block">
+      <span class="text-sm font-medium">Availability</span>
+      <select name="availability" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2">
+        <option value="">Select…</option>
+        <option value="immediate">Immediately</option>
+        <option value="2_weeks">Within 2 weeks</option>
+        <option value="30_days">Within 30 days</option>
+        <option value="flexible">Flexible</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="block">
+    <span class="text-sm font-medium">Anything else we should know?</span>
+    <textarea name="message" rows="4" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"></textarea>
+  </label>
+
+  <p data-form-error class="hidden text-sm text-rose-700"></p>
+
+  <button type="submit" class="rounded-md bg-teal-700 px-5 py-2.5 font-semibold text-white hover:bg-teal-800">
+    Submit application
+  </button>
+</form>
+
+<script is:inline>
+  document.querySelectorAll('[data-ajax-form]').forEach((form) => {
+    form.querySelector('[name="form_loaded_at"]').value = String(Date.now());
+    const sp = form.querySelector('[name="source_page"]');
+    if (sp) sp.value = location.pathname + location.search;
+
+    // Carry UTM parameters through without extra fields on the page.
+    const params = new URLSearchParams(location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach((k) => {
+      if (!params.get(k)) return;
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = k;
+      input.value = params.get(k);
+      form.appendChild(input);
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const errEl = form.querySelector('[data-form-error]');
+      btn.disabled = true;
+      errEl.classList.add('hidden');
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          location.href = '/thank-you/';
+          return;
+        }
+        errEl.textContent = data.errors?._form || Object.values(data.errors || {})[0] || 'Please check your details.';
+        errEl.classList.remove('hidden');
+      } catch {
+        errEl.textContent = 'Network problem — please try again.';
+        errEl.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
